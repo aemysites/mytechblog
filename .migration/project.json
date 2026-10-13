@@ -1,0 +1,9 @@
+{
+  "sites": {
+    "mytechblog": {
+      "previewOrg": "aemysites",
+      "previewSite": "mytechblog",
+      "contentHostUrl": "https://content.da.live/aemysites/mytechblog/"
+    }
+  }
+}
