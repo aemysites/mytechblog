@@ -1,0 +1,2754 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:rollout/inventory",
+    "writtenAt": "2026-10-12T18:47:55.973Z",
+    "readArtifacts": [
+      "stardust/migrated",
+      "stardust/state.json"
+    ],
+    "stardustVersion": "0.0.0"
+  },
+  "generatedAt": "2026-10-12T21:05:01.336Z",
+  "pages": [
+    {
+      "slug": "2007-06-maven-207-is-out",
+      "path": "/2007/06/maven-207-is-out",
+      "title": "Maven 2.0.7 is out - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:0a6d8fc9eeb7152e7e40c54c783db3f617518e1facb21d272711b808a63b1c55",
+        "currentStatePath": "stardust/current/pages/2007-06-maven-207-is-out.json",
+        "sourceUrl": "https://blog.osoco.de/2007/06/maven-207-is-out/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2007/06/maven-207-is-out",
+        "deployedAt": "2026-10-12T20:49:25.300Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 4.21,
+          "heightDelta": -24,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2007-06-silence-is-over",
+      "path": "/2007/06/silence-is-over",
+      "title": "Silence is over - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:6035542517f04f02c7ea986db59934cdef9348661deb53a7d5586d26546f7a13",
+        "currentStatePath": "stardust/current/pages/2007-06-silence-is-over.json",
+        "sourceUrl": "https://blog.osoco.de/2007/06/silence-is-over/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2007/06/silence-is-over",
+        "deployedAt": "2026-10-12T20:49:25.348Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 2.7,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 49,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2007-06-turn-it-on-again-singing-in-the-rain",
+      "path": "/2007/06/turn-it-on-again-singing-in-the-rain",
+      "title": "Turn It On Again - Singing in the rain - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:b6e1f43e2abbea9a0d12a58e788c69fa59eaf59382ee14dab2347d33bc824e69",
+        "currentStatePath": "stardust/current/pages/2007-06-turn-it-on-again-singing-in-the-rain.json",
+        "sourceUrl": "https://blog.osoco.de/2007/06/turn-it-on-again-singing-in-the-rain/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2007/06/turn-it-on-again-singing-in-the-rain",
+        "deployedAt": "2026-10-12T20:49:25.395Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 5.34,
+          "heightDelta": -24,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2007-07-apache-felix-100-released",
+      "path": "/2007/07/apache-felix-100-released",
+      "title": "Apache Felix 1.0.0 Released - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:61ec20cb740de14d06253afb70b3843a85cfb3fa81f223a1508fb88d462d4c0d",
+        "currentStatePath": "stardust/current/pages/2007-07-apache-felix-100-released.json",
+        "sourceUrl": "https://blog.osoco.de/2007/07/apache-felix-100-released/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2007/07/apache-felix-100-released",
+        "deployedAt": "2026-10-12T20:49:25.447Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 2.14,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2007-07-excalibur-sourceresolver-released",
+      "path": "/2007/07/excalibur-sourceresolver-released",
+      "title": "Excalibur SourceResolver Released - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:ab5cc1951f816ee315383546d93a0102182b9138d8df96397cd7b99a738f2868",
+        "currentStatePath": "stardust/current/pages/2007-07-excalibur-sourceresolver-released.json",
+        "sourceUrl": "https://blog.osoco.de/2007/07/excalibur-sourceresolver-released/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2007/07/excalibur-sourceresolver-released",
+        "deployedAt": "2026-10-12T20:49:25.499Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 2.79,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2007-07-movable-type-sucks-wordpress-rocks",
+      "path": "/2007/07/movable-type-sucks-wordpress-rocks",
+      "title": "Movable Type Sucks - WordPress Rocks - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:ec958c72c0b499219132010f2000f5625d208247f5f394369df8398ea6b52563",
+        "currentStatePath": "stardust/current/pages/2007-07-movable-type-sucks-wordpress-rocks.json",
+        "sourceUrl": "https://blog.osoco.de/2007/07/movable-type-sucks-wordpress-rocks/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2007/07/movable-type-sucks-wordpress-rocks",
+        "deployedAt": "2026-10-12T20:49:25.547Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 2.47,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2007-07-portlet-api-20-and-jcr-20-public-review",
+      "path": "/2007/07/portlet-api-20-and-jcr-20-public-review",
+      "title": "Portlet-API 2.0 and JCR 2.0 Public Review - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:fb24baf9a5011a7766484fa22c5164b5638814a4a330c6a1e58feee068a6feb8",
+        "currentStatePath": "stardust/current/pages/2007-07-portlet-api-20-and-jcr-20-public-review.json",
+        "sourceUrl": "https://blog.osoco.de/2007/07/portlet-api-20-and-jcr-20-public-review/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2007/07/portlet-api-20-and-jcr-20-public-review",
+        "deployedAt": "2026-10-12T20:49:25.599Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 3.47,
+          "heightDelta": -24,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2007-08-maven-release-plugin-removes-headers",
+      "path": "/2007/08/maven-release-plugin-removes-headers",
+      "title": "Maven Release Plugin Removes Headers - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:c527ac8c4f26e9bc739a693c73cd0bcc2637486cee7b1db553b535d5aff636cc",
+        "currentStatePath": "stardust/current/pages/2007-08-maven-release-plugin-removes-headers.json",
+        "sourceUrl": "https://blog.osoco.de/2007/08/maven-release-plugin-removes-headers/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2007/08/maven-release-plugin-removes-headers",
+        "deployedAt": "2026-10-12T20:49:25.654Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 3.42,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2007-10-cocoon-gettogether-2007-in-rome",
+      "path": "/2007/10/cocoon-gettogether-2007-in-rome",
+      "title": "Cocoon GetTogether 2007 in Rome - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:2a4006c085ca2f2e2577192dd0490e6f134ae2fdc84963442e7eaa50d27b7193",
+        "currentStatePath": "stardust/current/pages/2007-10-cocoon-gettogether-2007-in-rome.json",
+        "sourceUrl": "https://blog.osoco.de/2007/10/cocoon-gettogether-2007-in-rome/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2007/10/cocoon-gettogether-2007-in-rome",
+        "deployedAt": "2026-10-12T20:49:25.705Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 4.35,
+          "heightDelta": -24,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2007-10-garbage-collection-in-objective-c",
+      "path": "/2007/10/garbage-collection-in-objective-c",
+      "title": "Garbage Collection in Objective-C - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:a1d5f2fe3818f18fd526360c8b9b15f906170d95a43014910c39534dd81f225a",
+        "currentStatePath": "stardust/current/pages/2007-10-garbage-collection-in-objective-c.json",
+        "sourceUrl": "https://blog.osoco.de/2007/10/garbage-collection-in-objective-c/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2007/10/garbage-collection-in-objective-c",
+        "deployedAt": "2026-10-12T20:49:25.754Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 5.27,
+          "heightDelta": -24,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2007-10-new-projects-apache-sling-and-apache-sanselan",
+      "path": "/2007/10/new-projects-apache-sling-and-apache-sanselan",
+      "title": "New Projects: Apache Sling and Apache Sanselan - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:5356688d5c2c69e17cdb0d89a1b6e88f156d41f18999d7c2c627cbdcf7dd0227",
+        "currentStatePath": "stardust/current/pages/2007-10-new-projects-apache-sling-and-apache-sanselan.json",
+        "sourceUrl": "https://blog.osoco.de/2007/10/new-projects-apache-sling-and-apache-sanselan/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2007/10/new-projects-apache-sling-and-apache-sanselan",
+        "deployedAt": "2026-10-12T20:49:25.806Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 3.73,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2007-11-apache-ibatis-and-apache-sanselan-session",
+      "path": "/2007/11/apache-ibatis-and-apache-sanselan-session",
+      "title": "Apache iBatis and Apache Sanselan Session - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:e27f599bbb64d73a32e712308ee4460f8f2529656dd0ba91f2302b9d334516c1",
+        "currentStatePath": "stardust/current/pages/2007-11-apache-ibatis-and-apache-sanselan-session.json",
+        "sourceUrl": "https://blog.osoco.de/2007/11/apache-ibatis-and-apache-sanselan-session/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2007/11/apache-ibatis-and-apache-sanselan-session",
+        "deployedAt": "2026-10-12T20:49:25.856Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 2.31,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2007-11-arrived-in-atlanta-for-apachecon",
+      "path": "/2007/11/arrived-in-atlanta-for-apachecon",
+      "title": "Arrived in Atlanta for ApacheCon - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:baa328090649f77f3712f991cc07a0851a11304969a8fe4af74d133eb53ac853",
+        "currentStatePath": "stardust/current/pages/2007-11-arrived-in-atlanta-for-apachecon.json",
+        "sourceUrl": "https://blog.osoco.de/2007/11/arrived-in-atlanta-for-apachecon/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2007/11/arrived-in-atlanta-for-apachecon",
+        "deployedAt": "2026-10-12T20:49:25.904Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 3.47,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2007-11-creating-osgi-services-with-the-apache-felix-scr-plugin",
+      "path": "/2007/11/creating-osgi-services-with-the-apache-felix-scr-plugin",
+      "title": "Creating OSGi Services with the Apache Felix SCR Plugin - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:dcac26b704b58d91fdb69252b1d4c8c767949f5eb52608872ab25ef187ff3d1e",
+        "currentStatePath": "stardust/current/pages/2007-11-creating-osgi-services-with-the-apache-felix-scr-plugin.json",
+        "sourceUrl": "https://blog.osoco.de/2007/11/creating-osgi-services-with-the-apache-felix-scr-plugin/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2007/11/creating-osgi-services-with-the-apache-felix-scr-plugin",
+        "deployedAt": "2026-10-12T20:49:25.957Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 3.81,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2007-11-jcr-in-action-session",
+      "path": "/2007/11/jcr-in-action-session",
+      "title": "JCR in Action Session - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:059e716cf70093ba8eb2247f1196e088570f43a17899a2c3d3003dd5ddef7067",
+        "currentStatePath": "stardust/current/pages/2007-11-jcr-in-action-session.json",
+        "sourceUrl": "https://blog.osoco.de/2007/11/jcr-in-action-session/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2007/11/jcr-in-action-session",
+        "deployedAt": "2026-10-12T20:49:26.006Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 4.27,
+          "heightDelta": -28,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2007-11-leaving-orlando",
+      "path": "/2007/11/leaving-orlando",
+      "title": "Leaving Orlando - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:39d8972a11f480c1a7c449e208fe6ee792b18212955b8b13b74adf4716f83c8f",
+        "currentStatePath": "stardust/current/pages/2007-11-leaving-orlando.json",
+        "sourceUrl": "https://blog.osoco.de/2007/11/leaving-orlando/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2007/11/leaving-orlando",
+        "deployedAt": "2026-10-12T20:49:26.060Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 2.47,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2007-11-orlando-florida",
+      "path": "/2007/11/orlando-florida",
+      "title": "Orlando, Florida - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:3c425f85b4045c532e5bdb0d03eaebaadfca17a1ce6b2a0de858a178b880b2cd",
+        "currentStatePath": "stardust/current/pages/2007-11-orlando-florida.json",
+        "sourceUrl": "https://blog.osoco.de/2007/11/orlando-florida/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2007/11/orlando-florida",
+        "deployedAt": "2026-10-12T20:49:26.111Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 2.12,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2007-11-portals-track-at-apachecon",
+      "path": "/2007/11/portals-track-at-apachecon",
+      "title": "Portals Track at ApacheCon - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:ec766caee52956ee3d93ab4b08e85ca9be3f4ab694fb31b1e0979aae9f3e2ed9",
+        "currentStatePath": "stardust/current/pages/2007-11-portals-track-at-apachecon.json",
+        "sourceUrl": "https://blog.osoco.de/2007/11/portals-track-at-apachecon/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2007/11/portals-track-at-apachecon",
+        "deployedAt": "2026-10-12T20:49:26.161Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 3.6,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2007-11-the-musical-box-live-in-hamburg",
+      "path": "/2007/11/the-musical-box-live-in-hamburg",
+      "title": "The Musical Box Live in Hamburg - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:d60a3e107018520a61b2e36401b089c72c53ed7fdd3e33c1be0ba7ad5ec242fd",
+        "currentStatePath": "stardust/current/pages/2007-11-the-musical-box-live-in-hamburg.json",
+        "sourceUrl": "https://blog.osoco.de/2007/11/the-musical-box-live-in-hamburg/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2007/11/the-musical-box-live-in-hamburg",
+        "deployedAt": "2026-10-12T20:49:26.216Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 3.3,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2007-12-back-in-paderborn",
+      "path": "/2007/12/back-in-paderborn",
+      "title": "Back in Paderborn - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:bfc12d42811763303bee9db9651bbc79de780d3b1c0e8a9f987ef4431784503d",
+        "currentStatePath": "stardust/current/pages/2007-12-back-in-paderborn.json",
+        "sourceUrl": "https://blog.osoco.de/2007/12/back-in-paderborn/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2007/12/back-in-paderborn",
+        "deployedAt": "2026-10-12T20:49:26.268Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 5.03,
+          "heightDelta": -24,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2007-12-cocoon-portal-and-jcr",
+      "path": "/2007/12/cocoon-portal-and-jcr",
+      "title": "Cocoon Portal and JCR - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:25e650e4838c0bb2843b9213eff1054a922c4b3ed08ba4fa355ae9fa23cef694",
+        "currentStatePath": "stardust/current/pages/2007-12-cocoon-portal-and-jcr.json",
+        "sourceUrl": "https://blog.osoco.de/2007/12/cocoon-portal-and-jcr/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2007/12/cocoon-portal-and-jcr",
+        "deployedAt": "2026-10-12T20:49:26.320Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 2.58,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2007-12-conference-season-2008",
+      "path": "/2007/12/conference-season-2008",
+      "title": "Conference Season 2008 - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:d22d2897b45bc5b024b9b8b8c6f4794830c84e45c99ca4713de04076a07134f7",
+        "currentStatePath": "stardust/current/pages/2007-12-conference-season-2008.json",
+        "sourceUrl": "https://blog.osoco.de/2007/12/conference-season-2008/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2007/12/conference-season-2008",
+        "deployedAt": "2026-10-12T20:49:26.374Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 2.55,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2008-04-apachecon-eu-in-amsterdam",
+      "path": "/2008/04/apachecon-eu-in-amsterdam",
+      "title": "ApacheCon EU in Amsterdam - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:0039a158ae14cf32cd1c0e539f3367cb5c8c9841ec31889c5a8bf7b24c1f99df",
+        "currentStatePath": "stardust/current/pages/2008-04-apachecon-eu-in-amsterdam.json",
+        "sourceUrl": "https://blog.osoco.de/2008/04/apachecon-eu-in-amsterdam/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2008/04/apachecon-eu-in-amsterdam",
+        "deployedAt": "2026-10-12T20:49:26.428Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 2.43,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2008-04-cocoon-22-is-released",
+      "path": "/2008/04/cocoon-22-is-released",
+      "title": "Cocoon 2.2 is Released - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:782903fe0294eeb1d92e72f29828de00d7111fbc4e5c9ac44e4018365fbe3d34",
+        "currentStatePath": "stardust/current/pages/2008-04-cocoon-22-is-released.json",
+        "sourceUrl": "https://blog.osoco.de/2008/04/cocoon-22-is-released/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2008/04/cocoon-22-is-released",
+        "deployedAt": "2026-10-12T20:49:26.485Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 2.48,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2008-04-cool-eclipse-plugin-mvn-indexer",
+      "path": "/2008/04/cool-eclipse-plugin-mvn-indexer",
+      "title": "Cool Eclipse Plugin: Mvn Indexer - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:92ea432566f52cafc521c666db59cb0c850f87dd8a9a79c0ce0b39efef9c2b74",
+        "currentStatePath": "stardust/current/pages/2008-04-cool-eclipse-plugin-mvn-indexer.json",
+        "sourceUrl": "https://blog.osoco.de/2008/04/cool-eclipse-plugin-mvn-indexer/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2008/04/cool-eclipse-plugin-mvn-indexer",
+        "deployedAt": "2026-10-12T20:49:26.539Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 2.14,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2008-04-innovation-at-apache-the-fun-is-back-with-apache-sling",
+      "path": "/2008/04/innovation-at-apache-the-fun-is-back-with-apache-sling",
+      "title": "Innovation at Apache: The Fun is Back with Apache Sling - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:21fd3fee26d804409b9ee56a4ee219d66ab2bc8fba3186ef4e382e9440563ce6",
+        "currentStatePath": "stardust/current/pages/2008-04-innovation-at-apache-the-fun-is-back-with-apache-sling.json",
+        "sourceUrl": "https://blog.osoco.de/2008/04/innovation-at-apache-the-fun-is-back-with-apache-sling/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2008/04/innovation-at-apache-the-fun-is-back-with-apache-sling",
+        "deployedAt": "2026-10-12T20:49:26.588Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 5.44,
+          "heightDelta": -24,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2008-04-thanks-to-apache-commons-support-for-osgi",
+      "path": "/2008/04/thanks-to-apache-commons-support-for-osgi",
+      "title": "Thanks to Apache Commons - Support for OSGi - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:e15ca12aa014bedf1590622d73f68bbd4cb63e4dfe66ab27474d8247a7c376f6",
+        "currentStatePath": "stardust/current/pages/2008-04-thanks-to-apache-commons-support-for-osgi.json",
+        "sourceUrl": "https://blog.osoco.de/2008/04/thanks-to-apache-commons-support-for-osgi/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2008/04/thanks-to-apache-commons-support-for-osgi",
+        "deployedAt": "2026-10-12T20:49:26.643Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 2.63,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2008-08-happy-birthday-madonna",
+      "path": "/2008/08/happy-birthday-madonna",
+      "title": "Happy Birthday Madonna - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:870a8575e678d3889828d2896fab5538efb8517db36354ac158ab5a6b807f556",
+        "currentStatePath": "stardust/current/pages/2008-08-happy-birthday-madonna.json",
+        "sourceUrl": "https://blog.osoco.de/2008/08/happy-birthday-madonna/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2008/08/happy-birthday-madonna",
+        "deployedAt": "2026-10-12T20:49:26.697Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 1.74,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2008-10-first-steps-with-jquery",
+      "path": "/2008/10/first-steps-with-jquery",
+      "title": "First Steps With jQuery - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:3bd1a8b4a2eeead451925a6efe6dd17b2492d9ad7e04a4054f1c720c02b746ad",
+        "currentStatePath": "stardust/current/pages/2008-10-first-steps-with-jquery.json",
+        "sourceUrl": "https://blog.osoco.de/2008/10/first-steps-with-jquery/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2008/10/first-steps-with-jquery",
+        "deployedAt": "2026-10-12T20:49:26.756Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 5.56,
+          "heightDelta": 24,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2008-10-ray-wilson-live-in-paderborn",
+      "path": "/2008/10/ray-wilson-live-in-paderborn",
+      "title": "Ray Wilson Live in Paderborn - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:d04182df3a98813287856615b801b4367aa122c0ecff034ec8546300918944fe",
+        "currentStatePath": "stardust/current/pages/2008-10-ray-wilson-live-in-paderborn.json",
+        "sourceUrl": "https://blog.osoco.de/2008/10/ray-wilson-live-in-paderborn/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2008/10/ray-wilson-live-in-paderborn",
+        "deployedAt": "2026-10-12T20:49:26.814Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 3.2,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2008-11-heading-east",
+      "path": "/2008/11/heading-east",
+      "title": "Heading East - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:aa5f6bc6d1041e2f4b03f2d9d94cfa8783ff78af16363a566754061e88ee2f43",
+        "currentStatePath": "stardust/current/pages/2008-11-heading-east.json",
+        "sourceUrl": "https://blog.osoco.de/2008/11/heading-east/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2008/11/heading-east",
+        "deployedAt": "2026-10-12T20:49:26.870Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 2.24,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2008-11-heading-west",
+      "path": "/2008/11/heading-west",
+      "title": "Heading West - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:bb883b8d2c91265453eabcbfea15180b6a56ac5fe1795dbe5031955418811670",
+        "currentStatePath": "stardust/current/pages/2008-11-heading-west.json",
+        "sourceUrl": "https://blog.osoco.de/2008/11/heading-west/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2008/11/heading-west",
+        "deployedAt": "2026-10-12T20:49:26.920Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 3.55,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2008-11-interesting-session-in-new-orleans",
+      "path": "/2008/11/interesting-session-in-new-orleans",
+      "title": "Interesting Sessions in New Orleans - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:25c17782cb2d7c4451873fb6a0b521d1a7e0a48918374dd66b70f07d6ac83d6d",
+        "currentStatePath": "stardust/current/pages/2008-11-interesting-session-in-new-orleans.json",
+        "sourceUrl": "https://blog.osoco.de/2008/11/interesting-session-in-new-orleans/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2008/11/interesting-session-in-new-orleans",
+        "deployedAt": "2026-10-12T20:49:26.971Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 4.46,
+          "heightDelta": -24,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2008-11-osgiapachecon",
+      "path": "/2008/11/osgiapachecon",
+      "title": "OSGi@ApacheCon - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:9513ca1e6b3b8b2f0ff6a341a68f52582213cdb8133b5fd5ac8fe0e66881d389",
+        "currentStatePath": "stardust/current/pages/2008-11-osgiapachecon.json",
+        "sourceUrl": "https://blog.osoco.de/2008/11/osgiapachecon/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2008/11/osgiapachecon",
+        "deployedAt": "2026-10-12T20:49:27.024Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 3.5,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2008-11-sling-polo-shirts-arrived",
+      "path": "/2008/11/sling-polo-shirts-arrived",
+      "title": "Sling Polo Shirts Arrived - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:fdde035a4df351dba95f9be157e3341466c858beff57bb303bc48e0a0a409622",
+        "currentStatePath": "stardust/current/pages/2008-11-sling-polo-shirts-arrived.json",
+        "sourceUrl": "https://blog.osoco.de/2008/11/sling-polo-shirts-arrived/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2008/11/sling-polo-shirts-arrived",
+        "deployedAt": "2026-10-12T20:49:27.086Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 1.81,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2008-11-what-happened-to-the-springframework-site",
+      "path": "/2008/11/what-happened-to-the-springframework-site",
+      "title": "What happened to the Springframework site? - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:0da4f73ccdbece3ee5b864c93655007a7a2073463fa40720ddb581d14335cbe7",
+        "currentStatePath": "stardust/current/pages/2008-11-what-happened-to-the-springframework-site.json",
+        "sourceUrl": "https://blog.osoco.de/2008/11/what-happened-to-the-springframework-site/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2008/11/what-happened-to-the-springframework-site",
+        "deployedAt": "2026-10-12T20:49:27.138Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 2.16,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2009-01-portlets-and-osgi",
+      "path": "/2009/01/portlets-and-osgi",
+      "title": "Portlets and OSGi - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:77d59371a5c041a8111e443d997f64aa11209c2e1179dd81b09c282206643e21",
+        "currentStatePath": "stardust/current/pages/2009-01-portlets-and-osgi.json",
+        "sourceUrl": "https://blog.osoco.de/2009/01/portlets-and-osgi/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2009/01/portlets-and-osgi",
+        "deployedAt": "2026-10-12T20:49:27.191Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 5.45,
+          "heightDelta": -48,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2009-02-getting-started-with-portal-servers-and-spec-compliance",
+      "path": "/2009/02/getting-started-with-portal-servers-and-spec-compliance",
+      "title": "Getting Started with Portal Servers and Spec Compliance - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:d10df7326531e6e252bd5c41e3807e0c2b5dcf471f4c2d998251393466bf58b8",
+        "currentStatePath": "stardust/current/pages/2009-02-getting-started-with-portal-servers-and-spec-compliance.json",
+        "sourceUrl": "https://blog.osoco.de/2009/02/getting-started-with-portal-servers-and-spec-compliance/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2009/02/getting-started-with-portal-servers-and-spec-compliance",
+        "deployedAt": "2026-10-12T20:49:27.241Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 7.58,
+          "heightDelta": -72,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2009-03-conference-season-apachecon-europe-and-jax",
+      "path": "/2009/03/conference-season-apachecon-europe-and-jax",
+      "title": "Conference Season - ApacheCon Europe and JAX - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:054bd2e4f61255b8b0cf2fa398499908dded42520144f2d0526b8b9c2c4650f8",
+        "currentStatePath": "stardust/current/pages/2009-03-conference-season-apachecon-europe-and-jax.json",
+        "sourceUrl": "https://blog.osoco.de/2009/03/conference-season-apachecon-europe-and-jax/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2009/03/conference-season-apachecon-europe-and-jax",
+        "deployedAt": "2026-10-12T20:49:27.291Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 3.05,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2009-03-portals-meetup-at-apachecon-europe",
+      "path": "/2009/03/portals-meetup-at-apachecon-europe",
+      "title": "Portals Meetup at ApacheCon Europe - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:061b327dc5bcdb50cbc02fc9d4721186a4024b2e3f89e2dce4516220e4fdcf31",
+        "currentStatePath": "stardust/current/pages/2009-03-portals-meetup-at-apachecon-europe.json",
+        "sourceUrl": "https://blog.osoco.de/2009/03/portals-meetup-at-apachecon-europe/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2009/03/portals-meetup-at-apachecon-europe",
+        "deployedAt": "2026-10-12T20:49:27.343Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 2.47,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2009-04-jax-apache-sling-and-accidental-complexity",
+      "path": "/2009/04/jax-apache-sling-and-accidental-complexity",
+      "title": "JAX, Apache Sling and Accidental Complexity - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:1b5285eaffcf9d73176a45c2d44d5fa072b4d7e6ec0a95537a333142aee46d35",
+        "currentStatePath": "stardust/current/pages/2009-04-jax-apache-sling-and-accidental-complexity.json",
+        "sourceUrl": "https://blog.osoco.de/2009/04/jax-apache-sling-and-accidental-complexity/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2009/04/jax-apache-sling-and-accidental-complexity",
+        "deployedAt": "2026-10-12T20:49:27.400Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 6.06,
+          "heightDelta": -48,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2009-04-rapid-development-with-apache-sling-using-an-ide",
+      "path": "/2009/04/rapid-development-with-apache-sling-using-an-ide",
+      "title": "Rapid Development with Apache Sling using an IDE - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:d76679a0e26f3f915439af11a6a64a1ac1116c1835839aefefa3b68d6704b525",
+        "currentStatePath": "stardust/current/pages/2009-04-rapid-development-with-apache-sling-using-an-ide.json",
+        "sourceUrl": "https://blog.osoco.de/2009/04/rapid-development-with-apache-sling-using-an-ide/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2009/04/rapid-development-with-apache-sling-using-an-ide",
+        "deployedAt": "2026-10-12T20:49:27.451Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 6.82,
+          "heightDelta": -70,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2009-11-increasing-interest-in-jcr-and-apache-sling",
+      "path": "/2009/11/increasing-interest-in-jcr-and-apache-sling",
+      "title": "Increasing Interest in JCR and Apache Sling - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:36a62579f22a826c13ca543403ab1cba3371b7965cfff7fec6ebcb5dc420f7d6",
+        "currentStatePath": "stardust/current/pages/2009-11-increasing-interest-in-jcr-and-apache-sling.json",
+        "sourceUrl": "https://blog.osoco.de/2009/11/increasing-interest-in-jcr-and-apache-sling/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2009/11/increasing-interest-in-jcr-and-apache-sling",
+        "deployedAt": "2026-10-12T20:49:27.500Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 6.06,
+          "heightDelta": -72,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2011-04-apache-axis2-book",
+      "path": "/2011/04/apache-axis2-book",
+      "title": "Apache Axis2 Book - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:14138f9d672ee44072f998893fca7466b5566297aa921c39d9ad48181713400d",
+        "currentStatePath": "stardust/current/pages/2011-04-apache-axis2-book.json",
+        "sourceUrl": "https://blog.osoco.de/2011/04/apache-axis2-book/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2011/04/apache-axis2-book",
+        "deployedAt": "2026-10-12T20:49:27.552Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 4.61,
+          "heightDelta": -28,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2015-04-hello-world",
+      "path": "/2015/04/hello-world",
+      "title": "Hello world! - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:e6970004ea8ee200954862668537f515c9b8405b4bcdeb836e89429613b03344",
+        "currentStatePath": "stardust/current/pages/2015-04-hello-world.json",
+        "sourceUrl": "https://blog.osoco.de/2015/04/hello-world/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2015/04/hello-world",
+        "deployedAt": "2026-10-12T20:49:27.601Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 2.2,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2015-08-osgi-components-simply-simple-part-i",
+      "path": "/2015/08/osgi-components-simply-simple-part-i",
+      "title": "OSGi Components - Simply Simple - Part I - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:dbbeaebeb01fd9779c0aa65340670499565a4901c93e9742d229bbf76aa5b506",
+        "currentStatePath": "stardust/current/pages/2015-08-osgi-components-simply-simple-part-i.json",
+        "sourceUrl": "https://blog.osoco.de/2015/08/osgi-components-simply-simple-part-i/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2015/08/osgi-components-simply-simple-part-i",
+        "deployedAt": "2026-10-12T20:49:27.645Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 5.45,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 53,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2015-08-osgi-components-simply-simple-part-ii",
+      "path": "/2015/08/osgi-components-simply-simple-part-ii",
+      "title": "OSGi Components – Simply Simple – Part II - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:965052deca759a377d70a0ba1e463778d2715fcbe5e1e9af1874f9d2fa063eef",
+        "currentStatePath": "stardust/current/pages/2015-08-osgi-components-simply-simple-part-ii.json",
+        "sourceUrl": "https://blog.osoco.de/2015/08/osgi-components-simply-simple-part-ii/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2015/08/osgi-components-simply-simple-part-ii",
+        "deployedAt": "2026-10-12T20:49:27.692Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 7.84,
+          "heightDelta": 74,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2015-11-osgi-components-simply-simple-part-iii",
+      "path": "/2015/11/osgi-components-simply-simple-part-iii",
+      "title": "OSGi Components - Simply Simple - Part III - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:ff13fe508ba7bbfb0a6288746a8e87fe49bb23ccf25c7568ff4f6939e02560b6",
+        "currentStatePath": "stardust/current/pages/2015-11-osgi-components-simply-simple-part-iii.json",
+        "sourceUrl": "https://blog.osoco.de/2015/11/osgi-components-simply-simple-part-iii/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2015/11/osgi-components-simply-simple-part-iii",
+        "deployedAt": "2026-10-12T20:49:27.738Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 5.68,
+          "heightDelta": -48,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2016-04-example-osgi-web-application",
+      "path": "/2016/04/example-osgi-web-application",
+      "title": "Example OSGi Web Application - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:85a27cf6d28ded7134429612bbbd073ebf0e959d406c296f8674848bdc235f1f",
+        "currentStatePath": "stardust/current/pages/2016-04-example-osgi-web-application.json",
+        "sourceUrl": "https://blog.osoco.de/2016/04/example-osgi-web-application/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2016/04/example-osgi-web-application",
+        "deployedAt": "2026-10-12T20:49:27.788Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 4.04,
+          "heightDelta": -28,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2016-04-http-whiteboard-simply-simple-part-i",
+      "path": "/2016/04/http-whiteboard-simply-simple-part-i",
+      "title": "Http Whiteboard - Simply Simple - Part I - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:593e23bc92865967d9910a4a0494c94e9d903683afc3ec9ffe742dc005a01350",
+        "currentStatePath": "stardust/current/pages/2016-04-http-whiteboard-simply-simple-part-i.json",
+        "sourceUrl": "https://blog.osoco.de/2016/04/http-whiteboard-simply-simple-part-i/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2016/04/http-whiteboard-simply-simple-part-i",
+        "deployedAt": "2026-10-12T20:49:27.837Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 4.07,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2016-05-building-osgi-bundles-with-apache-maven",
+      "path": "/2016/05/building-osgi-bundles-with-apache-maven",
+      "title": "Building OSGi Bundles with Apache Maven - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:a47fb711aad4492107a44295858d4e679fd7a153580337788c9c2b1da037e0e7",
+        "currentStatePath": "stardust/current/pages/2016-05-building-osgi-bundles-with-apache-maven.json",
+        "sourceUrl": "https://blog.osoco.de/2016/05/building-osgi-bundles-with-apache-maven/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2016/05/building-osgi-bundles-with-apache-maven",
+        "deployedAt": "2026-10-12T20:49:27.883Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 7.17,
+          "heightDelta": -86,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2016-05-migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations",
+      "path": "/2016/05/migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations",
+      "title": "Migrating from the Apache Felix SCR Annotations to the OSGi Declarative Services Annotations - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:aec324c4e97ae3bf9b832c1102c17806257ff1f1c4051124632f594e2b9d4fee",
+        "currentStatePath": "stardust/current/pages/2016-05-migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations.json",
+        "sourceUrl": "https://blog.osoco.de/2016/05/migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2016/05/migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations",
+        "deployedAt": "2026-10-12T20:49:27.934Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 4.49,
+          "heightDelta": 120,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 51,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2016-09-http-whiteboard-simply-simple-part-ii",
+      "path": "/2016/09/http-whiteboard-simply-simple-part-ii",
+      "title": "Http Whiteboard - Simply Simple - Part II - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:c9edcef5dadd38845021b374316502f850045eaed9c0924a749db2d4d92a1acb",
+        "currentStatePath": "stardust/current/pages/2016-09-http-whiteboard-simply-simple-part-ii.json",
+        "sourceUrl": "https://blog.osoco.de/2016/09/http-whiteboard-simply-simple-part-ii/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2016/09/http-whiteboard-simply-simple-part-ii",
+        "deployedAt": "2026-10-12T20:49:27.980Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 6.42,
+          "heightDelta": 31,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2016-10-http-whiteboard-simply-simple-part-iii",
+      "path": "/2016/10/http-whiteboard-simply-simple-part-iii",
+      "title": "Http Whiteboard - Simply Simple - Part III - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:655f3af45bc6ec9f5f40d3edc55e1a8f127c772e33cebafa45a30e4b60e0a3ee",
+        "currentStatePath": "stardust/current/pages/2016-10-http-whiteboard-simply-simple-part-iii.json",
+        "sourceUrl": "https://blog.osoco.de/2016/10/http-whiteboard-simply-simple-part-iii/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2016/10/http-whiteboard-simply-simple-part-iii",
+        "deployedAt": "2026-10-12T20:49:28.030Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 5.49,
+          "heightDelta": -24,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2017-07-new-osgi-configuration-features-r7",
+      "path": "/2017/07/new-osgi-configuration-features-r7",
+      "title": "New OSGi Configuration Features in R7 - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:30483d6fa39c8d3bc05a6d0cd9dd4b97c43c660290049f0977847d9909afc038",
+        "currentStatePath": "stardust/current/pages/2017-07-new-osgi-configuration-features-r7.json",
+        "sourceUrl": "https://blog.osoco.de/2017/07/new-osgi-configuration-features-r7/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2017/07/new-osgi-configuration-features-r7",
+        "deployedAt": "2026-10-12T20:49:28.078Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 7.52,
+          "heightDelta": -138,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2017-08-osgi-declarative-services-configuration-binding",
+      "path": "/2017/08/osgi-declarative-services-configuration-binding",
+      "title": "OSGi Declarative Services - Configuration Binding - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:bae7319073264d49633217ee28c08c8d4f05ccddc15c24017b0cdb76bf7ff25b",
+        "currentStatePath": "stardust/current/pages/2017-08-osgi-declarative-services-configuration-binding.json",
+        "sourceUrl": "https://blog.osoco.de/2017/08/osgi-declarative-services-configuration-binding/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2017/08/osgi-declarative-services-configuration-binding",
+        "deployedAt": "2026-10-12T20:49:28.128Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 4.88,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2020-07-guide-on-using-osgi-configurations",
+      "path": "/2020/07/guide-on-using-osgi-configurations",
+      "title": "Guide on Using OSGi Configurations - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:cd8befd3f189db0dc328652a218597e20d72925ff9f7faac11df773581f3f40f",
+        "currentStatePath": "stardust/current/pages/2020-07-guide-on-using-osgi-configurations.json",
+        "sourceUrl": "https://blog.osoco.de/2020/07/guide-on-using-osgi-configurations/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2020/07/guide-on-using-osgi-configurations",
+        "deployedAt": "2026-10-12T20:49:28.174Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 6.67,
+          "heightDelta": -24,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 50,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2021-07-the-truth-about-aem-run-modes",
+      "path": "/2021/07/the-truth-about-aem-run-modes",
+      "title": "The Truth about AEM Run Modes - A Matter of Unimportance",
+      "templateId": "2021-07-the-truth-about-aem-run-modes",
+      "source": {
+        "migratedHtml": "stardust/migrated/2021/07/the-truth-about-aem-run-modes/index.html",
+        "metaJson": "stardust/migrated/2021/07/the-truth-about-aem-run-modes/_meta.json",
+        "sourceHash": "sha256:fd2a3f12e2ae1f097dcbb7e72c1b511aab7f600cb34f314aa51cb662bb152fb9",
+        "sourceUrl": "https://blog.osoco.de/2021/07/the-truth-about-aem-run-modes/"
+      },
+      "blocks": [
+        "masthead",
+        "sidebar-widgets",
+        "colophon",
+        "post-entry",
+        "code-block",
+        "post-navigation"
+      ],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2021/07/the-truth-about-aem-run-modes",
+        "deployedAt": "2026-10-12T20:49:28.222Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 6.28,
+          "heightDelta": -96,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 51,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "2024-02-value-created-by-developers",
+      "path": "/2024/02/value-created-by-developers",
+      "title": "Value created by Developers - A Matter of Unimportance",
+      "templateId": "article",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:4ecc9a7b3f5703e586b8267c096d3f5cc6f7677b38d1c4ceebc3cd5681353937",
+        "currentStatePath": "stardust/current/pages/2024-02-value-created-by-developers.json",
+        "sourceUrl": "https://blog.osoco.de/2024/02/value-created-by-developers/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/2024/02/value-created-by-developers",
+        "deployedAt": "2026-10-12T20:49:28.267Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 5.32,
+          "heightDelta": -24,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 52,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "blog",
+      "path": "/blog",
+      "title": "Blog - A Matter of Unimportance",
+      "templateId": "blog",
+      "source": {
+        "migratedHtml": "stardust/migrated/blog/index.html",
+        "metaJson": "stardust/migrated/blog/_meta.json",
+        "sourceHash": "sha256:aeb01c4e34ba4f414815fa94b0758680de608944d5aaf3ae2063c57aa3a1d5d9",
+        "sourceUrl": "https://blog.osoco.de/blog/"
+      },
+      "blocks": [
+        "masthead",
+        "sidebar-widgets",
+        "colophon",
+        "post-entry",
+        "code-block",
+        "archive-navigation"
+      ],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/blog",
+        "deployedAt": "2026-10-12T20:49:28.315Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 8.02,
+          "heightDelta": -215,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 133,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "category-everything",
+      "path": "/category/everything",
+      "title": "Everything Archives - A Matter of Unimportance",
+      "templateId": "listing",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:149144856a5d7f7517e11a7d6fd77d8d163887f1b0ae6bb40e407ce70751cc53",
+        "currentStatePath": "stardust/current/pages/category-everything.json",
+        "sourceUrl": "https://blog.osoco.de/category/everything/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/category/everything",
+        "deployedAt": "2026-10-12T20:49:28.366Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 8.36,
+          "heightDelta": -373,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 96,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "category-software",
+      "path": "/category/software",
+      "title": "Software Archives - A Matter of Unimportance",
+      "templateId": "listing",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:830e5acc4691d743a2cca4aa639965b0f512683701b84206855b4f88f2de9923",
+        "currentStatePath": "stardust/current/pages/category-software.json",
+        "sourceUrl": "https://blog.osoco.de/category/software/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/category/software",
+        "deployedAt": "2026-10-12T20:49:28.413Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 8.13,
+          "heightDelta": -254,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 133,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "category-software-osgi",
+      "path": "/category/software/osgi",
+      "title": "OSGi Archives - A Matter of Unimportance",
+      "templateId": "listing",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:e7eaa50a1aa434aa310e1441d1e1e1823b57d886f2a16acee0e13cd62aca7f33",
+        "currentStatePath": "stardust/current/pages/category-software-osgi.json",
+        "sourceUrl": "https://blog.osoco.de/category/software/osgi/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/category/software/osgi",
+        "deployedAt": "2026-10-12T20:49:28.464Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 8.28,
+          "heightDelta": -223,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 133,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "category-uncategorized",
+      "path": "/category/uncategorized",
+      "title": "Uncategorized Archives - A Matter of Unimportance",
+      "templateId": "listing",
+      "representative": null,
+      "source": {
+        "migratedHtml": null,
+        "metaJson": null,
+        "sourceHash": "sha256:d3c550943dc92ca959245983b024263d829c70363ae604f86964cbce22f1c2eb",
+        "currentStatePath": "stardust/current/pages/category-uncategorized.json",
+        "sourceUrl": "https://blog.osoco.de/category/uncategorized/"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/category/uncategorized",
+        "deployedAt": "2026-10-12T20:49:28.513Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 6.04,
+          "heightDelta": -87,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 52,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "index",
+      "path": "/",
+      "title": "Welcome - A Matter of Unimportance",
+      "templateId": "index",
+      "source": {
+        "migratedHtml": "stardust/migrated/index.html",
+        "metaJson": "stardust/migrated/_meta.json",
+        "sourceHash": "sha256:473743335b67439a73cf821c63a249a3b8431244d84ad670519ea6789a34d2d5",
+        "sourceUrl": "https://blog.osoco.de/"
+      },
+      "blocks": [
+        "masthead",
+        "colophon",
+        "post-entry"
+      ],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/",
+        "deployedAt": "2026-10-12T20:49:28.559Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 3.63,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 1,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "privacy-policy",
+      "path": "/privacy-policy",
+      "title": "Privacy Policy - A Matter of Unimportance",
+      "templateId": "privacy-policy",
+      "source": {
+        "migratedHtml": "stardust/migrated/privacy-policy/index.html",
+        "metaJson": "stardust/migrated/privacy-policy/_meta.json",
+        "sourceHash": "sha256:8b259b7ce23488c0c84bb837c24e938c6550cdb374ead4ca92dfc6c6d080e121",
+        "sourceUrl": "https://blog.osoco.de/privacy-policy/"
+      },
+      "blocks": [
+        "masthead",
+        "sidebar-widgets",
+        "colophon",
+        "post-entry"
+      ],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/privacy-policy",
+        "deployedAt": "2026-10-12T20:49:28.608Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null,
+        "gate": {
+          "pass": true,
+          "pct": 2.43,
+          "heightDelta": 0,
+          "clipped": 0,
+          "content": {
+            "missing": 0,
+            "hidden": 0,
+            "controlState": 0,
+            "missingButtons": 0,
+            "hiddenButtons": 0,
+            "findings": 1,
+            "variable": []
+          },
+          "reasons": [],
+          "override": null,
+          "table": "stardust/replica/gates/all-360/summary.json",
+          "at": "2026-10-12T20:49:32.924Z"
+        }
+      }
+    },
+    {
+      "slug": "search",
+      "path": "/search",
+      "title": "Search",
+      "templateId": "search",
+      "source": {
+        "migratedHtml": "dynamics:search",
+        "metaJson": null,
+        "sourceHash": "sha256:43240b3767121a9aee969cf0e070b648bbec2b2faa42583d930319481c7b86eb"
+      },
+      "blocks": [],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--18fbe2a0--aemcoder.aem.live/search",
+        "deployedAt": "2026-10-12T20:59:11.434Z",
+        "verifiedAt": "2026-10-12T21:05:01.336Z",
+        "error": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,540 @@
+{
+  "_provenance": {
+    "renderedBy": "playwright",
+    "fetchedAt": "2026-10-12T18:01:26.532Z",
+    "waitMode": "medium",
+    "waitMs": 2500,
+    "httpStatus": 200
+  },
+  "slug": "2017-08-osgi-declarative-services-configuration-binding",
+  "url": "https://blog.osoco.de/2017/08/osgi-declarative-services-configuration-binding/",
+  "renderedBy": "playwright",
+  "fetchedAt": "2026-10-12T18:01:26.532Z",
+  "finalUrl": "https://blog.osoco.de/2017/08/osgi-declarative-services-configuration-binding/",
+  "title": "OSGi Declarative Services - Configuration Binding - A Matter of Unimportance",
+  "description": "How to find out whether an OSGi configuration is used by an OSGi Declarative Service component or service at runtime.",
+  "og": {
+    "title": "OSGi Declarative Services - Configuration Binding - A Matter of Unimportance",
+    "description": "How to find out whether an OSGi configuration is used by an OSGi Declarative Service component or service at runtime.",
+    "image": null,
+    "type": "article"
+  },
+  "headings": [
+    {
+      "tag": "h1",
+      "text": "A Matter of Unimportance"
+    },
+    {
+      "tag": "h2",
+      "text": "The world won't listen…."
+    },
+    {
+      "tag": "h1",
+      "text": "OSGi Declarative Services – Configuration Binding"
+    },
+    {
+      "tag": "h1",
+      "text": "The ServiceComponentRuntime Service"
+    },
+    {
+      "tag": "h1",
+      "text": "The Declarative Services WebConsole Plugin"
+    },
+    {
+      "tag": "h1",
+      "text": "Bound OSGi Configurations"
+    },
+    {
+      "tag": "h3",
+      "text": "Recent Posts"
+    },
+    {
+      "tag": "h3",
+      "text": "Archives"
+    },
+    {
+      "tag": "h3",
+      "text": "Categories"
+    },
+    {
+      "tag": "h3",
+      "text": "Meta"
+    }
+  ],
+  "body": [
+    "Home",
+    "Blog",
+    "Privacy Policy",
+    "As explained in OSGi Components – Simply Simple – Part II when using Declarative Services (DS) you get support for configurations stored in a Configuration Admin service for free. When debugging a system, you want to find out if a component is actually using a certain configuration. This post gives you some tips on inspecting your application.",
+    "Since R6 of the OSGi specification, the Declarative Service Specification defines the ServiceComponentRuntime service. This service can be used at runtime to get the status of the components and services managed by DS. That service returns the top level DTO named ComponentDescriptionDTO. This is basically a representation of the XML provided by a bundle and read by DS. So the first step is to find the ComponentDescriptionDTO for your component.",
+    "Once you have found the description you can use the ServiceComponentRuntime service to get the ComponentConfigurationDTO(s) for the description. This DTO has some useful information about the status of your component. Most importantly it shows whether the component is satisfied. If the component is not satisfied more information about the reason is provided. For example, a reference might not be satisfied. You can now iterate over the references and find the one(s) which is not satisfied.",
+    "For configurations, the first check is to see whether the PID of the configuration you are interested in is listed in the configurationPid field of the ComponentDescriptionDTO. However this does not provide you the information whether such a configuration exists and is used by your component.",
+    "Therefore you have to check the properties from the ComponentConfigurationDTO and check whether the properties contain a service.pid property and whether the value for this property contains the configuration PID you are interested in. Note that the type of this property can be a String, an array of Strings or a collection of Strings.",
+    "This requires a little bit of coding, iterating over the various DTOs and searching for the info you are interested in.",
+    "Another way of figuring this out without writing code is to use the famous Apache Felix Web Console. The web console allows you to manage and monitor a running OSGi application through a web interface. The Apache Felix project has a plugin for the web console. The Apache Maven coordinates for the current release are org.apache.felix/org.apache.felix.webconsole.plugins.ds/2.0.6.",
+    "Once this plugin is installed it gives you an UI for the previously mentioned ServiceComponentRuntime service and you can browse through the DTOs and find the ones you’re interested in.",
+    "An OSGi configuration supports the concept of configuration binding. By checking the bundle location field of a configuration object, it is possible to figure our whether a managed service is using this configuration.",
+    "However, don’t use this information to figure out whether a configuration is used by a DS component. Configuration binding is considered legacy and more important a DS implementation is not required to bind a configuration to the bundle of a bundle containing the component. While older implementations of the Apache Felix SCR did the configuration binding, newer versions don’t.",
+    "Therefore don’t even look there if you want to figure out whether your configuration is used by a DS component.",
+    "Value created by Developers",
+    "The Truth about AEM Run Modes",
+    "Guide on Using OSGi Configurations",
+    "OSGi Declarative Services – Configuration Binding",
+    "New OSGi Configuration Features in R7",
+    "February 2024",
+    "July 2021",
+    "July 2020",
+    "August 2017",
+    "July 2017",
+    "October 2016",
+    "September 2016",
+    "May 2016",
+    "April 2016",
+    "November 2015",
+    "August 2015",
+    "April 2015",
+    "April 2011",
+    "November 2009",
+    "April 2009",
+    "March 2009",
+    "February 2009",
+    "January 2009",
+    "November 2008",
+    "October 2008",
+    "August 2008",
+    "April 2008",
+    "December 2007",
+    "November 2007",
+    "October 2007",
+    "August 2007",
+    "July 2007",
+    "June 2007",
+    "Everything",
+    "OSGi",
+    "Software",
+    "Uncategorized",
+    "Log in",
+    "Entries feed",
+    "Comments feed",
+    "WordPress.org"
+  ],
+  "codeBlocks": [],
+  "ctas": [
+    {
+      "label": "A Matter of Unimportance",
+      "href": "https://blog.osoco.de/"
+    },
+    {
+      "label": "Home",
+      "href": "https://blog.osoco.de/"
+    },
+    {
+      "label": "Blog",
+      "href": "https://blog.osoco.de/blog/"
+    },
+    {
+      "label": "Privacy Policy",
+      "href": "https://blog.osoco.de/privacy-policy/"
+    },
+    {
+      "label": "OSGi Components – Simply Simple – Part II",
+      "href": "https://blog.osoco.de/2015/08/osgi-components-simply-simple-part-ii/"
+    },
+    {
+      "label": "Apache Felix Web Console",
+      "href": "http://felix.apache.org/documentation/subprojects/apache-felix-web-console.html"
+    },
+    {
+      "label": "OSGi",
+      "href": "https://blog.osoco.de/category/software/osgi/"
+    },
+    {
+      "label": "Software",
+      "href": "https://blog.osoco.de/category/software/"
+    },
+    {
+      "label": "2017-08-01",
+      "href": "https://blog.osoco.de/2017/08/osgi-declarative-services-configuration-binding/"
+    },
+    {
+      "label": "← New OSGi Configuration Features in R7",
+      "href": "https://blog.osoco.de/2017/07/new-osgi-configuration-features-r7/"
+    },
+    {
+      "label": "Guide on Using OSGi Configurations →",
+      "href": "https://blog.osoco.de/2020/07/guide-on-using-osgi-configurations/"
+    },
+    {
+      "label": "Value created by Developers",
+      "href": "https://blog.osoco.de/2024/02/value-created-by-developers/"
+    },
+    {
+      "label": "The Truth about AEM Run Modes",
+      "href": "https://blog.osoco.de/2021/07/the-truth-about-aem-run-modes/"
+    },
+    {
+      "label": "Guide on Using OSGi Configurations",
+      "href": "https://blog.osoco.de/2020/07/guide-on-using-osgi-configurations/"
+    },
+    {
+      "label": "OSGi Declarative Services – Configuration Binding",
+      "href": "https://blog.osoco.de/2017/08/osgi-declarative-services-configuration-binding/"
+    },
+    {
+      "label": "New OSGi Configuration Features in R7",
+      "href": "https://blog.osoco.de/2017/07/new-osgi-configuration-features-r7/"
+    },
+    {
+      "label": "February 2024",
+      "href": "https://blog.osoco.de/2024/02/"
+    },
+    {
+      "label": "July 2021",
+      "href": "https://blog.osoco.de/2021/07/"
+    },
+    {
+      "label": "July 2020",
+      "href": "https://blog.osoco.de/2020/07/"
+    },
+    {
+      "label": "August 2017",
+      "href": "https://blog.osoco.de/2017/08/"
+    },
+    {
+      "label": "July 2017",
+      "href": "https://blog.osoco.de/2017/07/"
+    },
+    {
+      "label": "October 2016",
+      "href": "https://blog.osoco.de/2016/10/"
+    },
+    {
+      "label": "September 2016",
+      "href": "https://blog.osoco.de/2016/09/"
+    },
+    {
+      "label": "May 2016",
+      "href": "https://blog.osoco.de/2016/05/"
+    },
+    {
+      "label": "April 2016",
+      "href": "https://blog.osoco.de/2016/04/"
+    },
+    {
+      "label": "November 2015",
+      "href": "https://blog.osoco.de/2015/11/"
+    },
+    {
+      "label": "August 2015",
+      "href": "https://blog.osoco.de/2015/08/"
+    },
+    {
+      "label": "April 2015",
+      "href": "https://blog.osoco.de/2015/04/"
+    },
+    {
+      "label": "April 2011",
+      "href": "https://blog.osoco.de/2011/04/"
+    },
+    {
+      "label": "November 2009",
+      "href": "https://blog.osoco.de/2009/11/"
+    },
+    {
+      "label": "April 2009",
+      "href": "https://blog.osoco.de/2009/04/"
+    },
+    {
+      "label": "March 2009",
+      "href": "https://blog.osoco.de/2009/03/"
+    },
+    {
+      "label": "February 2009",
+      "href": "https://blog.osoco.de/2009/02/"
+    },
+    {
+      "label": "January 2009",
+      "href": "https://blog.osoco.de/2009/01/"
+    },
+    {
+      "label": "November 2008",
+      "href": "https://blog.osoco.de/2008/11/"
+    },
+    {
+      "label": "October 2008",
+      "href": "https://blog.osoco.de/2008/10/"
+    },
+    {
+      "label": "August 2008",
+      "href": "https://blog.osoco.de/2008/08/"
+    },
+    {
+      "label": "April 2008",
+      "href": "https://blog.osoco.de/2008/04/"
+    },
+    {
+      "label": "December 2007",
+      "href": "https://blog.osoco.de/2007/12/"
+    },
+    {
+      "label": "November 2007",
+      "href": "https://blog.osoco.de/2007/11/"
+    },
+    {
+      "label": "October 2007",
+      "href": "https://blog.osoco.de/2007/10/"
+    },
+    {
+      "label": "August 2007",
+      "href": "https://blog.osoco.de/2007/08/"
+    },
+    {
+      "label": "July 2007",
+      "href": "https://blog.osoco.de/2007/07/"
+    },
+    {
+      "label": "June 2007",
+      "href": "https://blog.osoco.de/2007/06/"
+    },
+    {
+      "label": "Everything",
+      "href": "https://blog.osoco.de/category/everything/"
+    },
+    {
+      "label": "OSGi",
+      "href": "https://blog.osoco.de/category/software/osgi/"
+    },
+    {
+      "label": "Software",
+      "href": "https://blog.osoco.de/category/software/"
+    },
+    {
+      "label": "Uncategorized",
+      "href": "https://blog.osoco.de/category/uncategorized/"
+    },
+    {
+      "label": "Log in",
+      "href": "https://blog.osoco.de/wp-login.php"
+    },
+    {
+      "label": "Entries feed",
+      "href": "https://blog.osoco.de/feed/"
+    },
+    {
+      "label": "Comments feed",
+      "href": "https://blog.osoco.de/comments/feed/"
+    },
+    {
+      "label": "WordPress.org",
+      "href": "https://wordpress.org/"
+    },
+    {
+      "label": "Privacy Policy",
+      "href": "https://blog.osoco.de/privacy-policy/"
+    },
+    {
+      "label": "Proudly powered by WordPress",
+      "href": "https://wordpress.org/"
+    }
+  ],
+  "links": [
+    "https://blog.osoco.de/2017/08/osgi-declarative-services-configuration-binding/#content",
+    "https://blog.osoco.de/",
+    "https://blog.osoco.de/blog/",
+    "https://blog.osoco.de/privacy-policy/",
+    "https://blog.osoco.de/2015/08/osgi-components-simply-simple-part-ii/",
+    "http://felix.apache.org/documentation/subprojects/apache-felix-web-console.html",
+    "https://blog.osoco.de/category/software/osgi/",
+    "https://blog.osoco.de/category/software/",
+    "https://blog.osoco.de/2017/08/osgi-declarative-services-configuration-binding/",
+    "https://blog.osoco.de/author/cziegeler/",
+    "https://blog.osoco.de/2017/07/new-osgi-configuration-features-r7/",
+    "https://blog.osoco.de/2020/07/guide-on-using-osgi-configurations/",
+    "https://blog.osoco.de/2024/02/value-created-by-developers/",
+    "https://blog.osoco.de/2021/07/the-truth-about-aem-run-modes/",
+    "https://blog.osoco.de/2024/02/",
+    "https://blog.osoco.de/2021/07/",
+    "https://blog.osoco.de/2020/07/",
+    "https://blog.osoco.de/2017/08/",
+    "https://blog.osoco.de/2017/07/",
+    "https://blog.osoco.de/2016/10/",
+    "https://blog.osoco.de/2016/09/",
+    "https://blog.osoco.de/2016/05/",
+    "https://blog.osoco.de/2016/04/",
+    "https://blog.osoco.de/2015/11/",
+    "https://blog.osoco.de/2015/08/",
+    "https://blog.osoco.de/2015/04/",
+    "https://blog.osoco.de/2011/04/",
+    "https://blog.osoco.de/2009/11/",
+    "https://blog.osoco.de/2009/04/",
+    "https://blog.osoco.de/2009/03/",
+    "https://blog.osoco.de/2009/02/",
+    "https://blog.osoco.de/2009/01/",
+    "https://blog.osoco.de/2008/11/",
+    "https://blog.osoco.de/2008/10/",
+    "https://blog.osoco.de/2008/08/",
+    "https://blog.osoco.de/2008/04/",
+    "https://blog.osoco.de/2007/12/",
+    "https://blog.osoco.de/2007/11/",
+    "https://blog.osoco.de/2007/10/",
+    "https://blog.osoco.de/2007/08/",
+    "https://blog.osoco.de/2007/07/",
+    "https://blog.osoco.de/2007/06/",
+    "https://blog.osoco.de/category/everything/",
+    "https://blog.osoco.de/category/uncategorized/",
+    "https://blog.osoco.de/wp-login.php",
+    "https://blog.osoco.de/feed/",
+    "https://blog.osoco.de/comments/feed/",
+    "https://wordpress.org/"
+  ],
+  "media": {
+    "imgs": [],
+    "allImgCount": 0,
+    "cssBackgrounds": [],
+    "modals": [],
+    "videos": [],
+    "iframes": []
+  },
+  "customProps": {
+    "--wp-block-synced-color": "#7a00df",
+    "--wp-block-synced-color--rgb": "122,0,223",
+    "--wp-bound-block-color": "#7a00df",
+    "--wp-editor-canvas-background": "#ddd",
+    "--wp-admin-theme-color": "#007cba",
+    "--wp-admin-theme-color--rgb": "0,124,186",
+    "--wp-admin-theme-color-darker-10": "#006ba1",
+    "--wp-admin-theme-color-darker-10--rgb": "0,107,160.5",
+    "--wp-admin-theme-color-darker-20": "#005a87",
+    "--wp-admin-theme-color-darker-20--rgb": "0,90,135",
+    "--wp-admin-border-width-focus": "2px",
+    "--wp--preset--font-size--normal": "16px",
+    "--wp--preset--font-size--huge": "42px",
+    "--wp--preset--aspect-ratio--square": "1",
+    "--wp--preset--aspect-ratio--4-3": "4/3",
+    "--wp--preset--aspect-ratio--3-4": "3/4",
+    "--wp--preset--aspect-ratio--3-2": "3/2",
+    "--wp--preset--aspect-ratio--2-3": "2/3",
+    "--wp--preset--aspect-ratio--16-9": "16/9",
+    "--wp--preset--aspect-ratio--9-16": "9/16",
+    "--wp--preset--color--black": "#000000",
+    "--wp--preset--color--cyan-bluish-gray": "#abb8c3",
+    "--wp--preset--color--white": "#fff",
+    "--wp--preset--color--pale-pink": "#f78da7",
+    "--wp--preset--color--vivid-red": "#cf2e2e",
+    "--wp--preset--color--luminous-vivid-orange": "#ff6900",
+    "--wp--preset--color--luminous-vivid-amber": "#fcb900",
+    "--wp--preset--color--light-green-cyan": "#7bdcb5",
+    "--wp--preset--color--vivid-green-cyan": "#00d084",
+    "--wp--preset--color--pale-cyan-blue": "#8ed1fc",
+    "--wp--preset--color--vivid-cyan-blue": "#0693e3",
+    "--wp--preset--color--vivid-purple": "#9b51e0",
+    "--wp--preset--color--blue": "#21759b",
+    "--wp--preset--color--dark-gray": "#444",
+    "--wp--preset--color--medium-gray": "#9f9f9f",
+    "--wp--preset--color--light-gray": "#e6e6e6",
+    "--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple": "linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%)",
+    "--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan": "linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%)",
+    "--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange": "linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%)",
+    "--wp--preset--gradient--luminous-vivid-orange-to-vivid-red": "linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%)",
+    "--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray": "linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%)",
+    "--wp--preset--gradient--cool-to-warm-spectrum": "linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%)",
+    "--wp--preset--gradient--blush-light-purple": "linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%)",
+    "--wp--preset--gradient--blush-bordeaux": "linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%)",
+    "--wp--preset--gradient--luminous-dusk": "linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%)",
+    "--wp--preset--gradient--pale-ocean": "linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%)",
+    "--wp--preset--gradient--electric-grass": "linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%)",
+    "--wp--preset--gradient--midnight": "linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%)",
+    "--wp--preset--font-size--small": "13px",
+    "--wp--preset--font-size--medium": "20px",
+    "--wp--preset--font-size--large": "36px",
+    "--wp--preset--font-size--x-large": "42px",
+    "--wp--preset--spacing--20": "0.44rem",
+    "--wp--preset--spacing--30": "0.67rem",
+    "--wp--preset--spacing--40": "1rem",
+    "--wp--preset--spacing--50": "1.5rem",
+    "--wp--preset--spacing--60": "2.25rem",
+    "--wp--preset--spacing--70": "3.38rem",
+    "--wp--preset--spacing--80": "5.06rem",
+    "--wp--preset--shadow--natural": "6px 6px 9px rgba(0, 0, 0, 0.2)",
+    "--wp--preset--shadow--deep": "12px 12px 50px rgba(0, 0, 0, 0.4)",
+    "--wp--preset--shadow--sharp": "6px 6px 0px rgba(0, 0, 0, 0.2)",
+    "--wp--preset--shadow--outlined": "6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0)",
+    "--wp--preset--shadow--crisp": "6px 6px 0px rgb(0, 0, 0)"
+  },
+  "_signals": {
+    "filteredInterstitials": 0,
+    "distinctHeadings": 10,
+    "mainTextLen": 8106,
+    "realImageCount": 0,
+    "trackingOnlyMedia": false,
+    "spaShellSuspect": false,
+    "screenshotMode": "fullPage"
+  },
+  "dynamic": {
+    "endpoints": [],
+    "thirdPartyScriptHosts": [],
+    "truncated": false,
+    "inlineData": [
+      {
+        "id": "wp-emoji-settings",
+        "type": "application/json",
+        "bytes": 247,
+        "topLevelKeys": [
+          "baseUrl",
+          "ext",
+          "svgUrl",
+          "svgExt",
+          "source"
+        ]
+      }
+    ],
+    "globalState": [],
+    "frameworkHints": [
+      "wordpress"
+    ],
+    "forms": [
+      {
+        "action": "https://blog.osoco.de/",
+        "hasAction": true,
+        "method": "get",
+        "sameOrigin": true,
+        "fieldCount": 1,
+        "fieldNames": [
+          "s"
+        ],
+        "search": true
+      }
+    ],
+    "ariaLiveRegions": 0,
+    "triggers": [],
+    "mediaIds": [],
+    "summary": {
+      "sameSiteEndpoints": 0,
+      "thirdPartyEndpoints": 0,
+      "thirdPartyScriptHosts": 0,
+      "inlineDataBlobs": 1,
+      "forms": 1,
+      "searchForms": 1,
+      "hydrated": true
+    }
+  },
+  "screenshot": "assets/screenshots/2017-08-osgi-declarative-services-configuration-binding.png",
+  "renderedHtml": "pages/2017-08-osgi-declarative-services-configuration-binding.html",
+  "slots": {
+    "headline": "OSGi Declarative Services – Configuration Binding",
+    "byline": "cziegeler",
+    "meta": "This entry was posted in OSGi, Software on 2017-08-01 by cziegeler.",
+    "body": "#content article .entry-content",
+    "lead-image": null,
+    "related": [
+      {
+        "label": "← New OSGi Configuration Features in R7",
+        "href": "https://blog.osoco.de/2017/07/new-osgi-configuration-features-r7/"
+      },
+      {
+        "label": "Guide on Using OSGi Configurations →",
+        "href": "https://blog.osoco.de/2020/07/guide-on-using-osgi-configurations/"
+      }
+    ]
+  }
+}

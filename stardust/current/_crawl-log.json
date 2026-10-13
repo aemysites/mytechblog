@@ -1,0 +1,391 @@
+{
+  "discovery": {
+    "fetchTechnique": "headless",
+    "count": 66,
+    "concurrency": 3
+  },
+  "consent": {
+    "method": "auto"
+  },
+  "favicon": {
+    "url": "https://blog.osoco.de/favicon.ico",
+    "file": "assets/favicon.png"
+  },
+  "crawl": {
+    "failures": []
+  },
+  "captureGaps": {
+    "roots": [],
+    "detail": "uncaptured first-level targets: none (no locale root captured)"
+  },
+  "dynamicSurface": {
+    "pages": 66,
+    "pagesWithSameSiteData": 0,
+    "pagesWithSearchForm": 65,
+    "pagesHydrated": 66,
+    "truncatedPages": 0,
+    "endpoints": [],
+    "thirdPartyScriptHosts": [],
+    "frameworkHints": [
+      {
+        "hint": "wordpress",
+        "pages": 66,
+        "examples": [
+          "privacy-policy",
+          "index",
+          "blog"
+        ]
+      }
+    ],
+    "globalState": [],
+    "formTargets": [
+      {
+        "action": "https://blog.osoco.de/",
+        "method": "get",
+        "sameOrigin": true,
+        "search": true,
+        "fieldNames": [
+          "s"
+        ],
+        "pages": 65,
+        "examples": [
+          "privacy-policy",
+          "blog",
+          "category-uncategorized"
+        ]
+      }
+    ]
+  },
+  "visionCheck": [
+    {
+      "slug": "index",
+      "verdict": "ok",
+      "notes": "front-page template (no sidebar), short page; hero photo + welcome text match the record"
+    },
+    {
+      "slug": "blog",
+      "verdict": "ok",
+      "notes": "long posts index (full posts, 10 per page) — matches record"
+    },
+    {
+      "slug": "privacy-policy",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "category-everything",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "category-uncategorized",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "category-software",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2024-02-value-created-by-developers",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2021-07-the-truth-about-aem-run-modes",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "category-software-osgi",
+      "verdict": "ok",
+      "notes": "archive nearly identical to category-software (same posts in both)"
+    },
+    {
+      "slug": "2017-08-osgi-declarative-services-configuration-binding",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2020-07-guide-on-using-osgi-configurations",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2015-11-osgi-components-simply-simple-part-iii",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2015-08-osgi-components-simply-simple-part-ii",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2017-07-new-osgi-configuration-features-r7",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2016-09-http-whiteboard-simply-simple-part-ii",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2015-08-osgi-components-simply-simple-part-i",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2016-10-http-whiteboard-simply-simple-part-iii",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2016-05-building-osgi-bundles-with-apache-maven",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2016-04-http-whiteboard-simply-simple-part-i",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2016-04-example-osgi-web-application",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2016-05-migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2015-04-hello-world",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2011-04-apache-axis2-book",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2009-11-increasing-interest-in-jcr-and-apache-sling",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2009-04-rapid-development-with-apache-sling-using-an-ide",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2009-04-jax-apache-sling-and-accidental-complexity",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2009-03-portals-meetup-at-apachecon-europe",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2009-03-conference-season-apachecon-europe-and-jax",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2009-02-getting-started-with-portal-servers-and-spec-compliance",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2009-01-portlets-and-osgi",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2008-11-heading-east",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2008-11-heading-west",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2008-11-osgiapachecon",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2008-11-what-happened-to-the-springframework-site",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2008-11-sling-polo-shirts-arrived",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2008-11-interesting-session-in-new-orleans",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2008-10-first-steps-with-jquery",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2008-10-ray-wilson-live-in-paderborn",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2008-08-happy-birthday-madonna",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2008-04-cool-eclipse-plugin-mvn-indexer",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2008-04-innovation-at-apache-the-fun-is-back-with-apache-sling",
+      "verdict": "ok",
+      "notes": "renders; inline photo broken on the live source (alt text shown) — capture-state, replicate as captured"
+    },
+    {
+      "slug": "2008-04-cocoon-22-is-released",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2008-04-thanks-to-apache-commons-support-for-osgi",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2008-04-apachecon-eu-in-amsterdam",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2007-12-cocoon-portal-and-jcr",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2007-12-conference-season-2008",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2007-12-back-in-paderborn",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2007-11-leaving-orlando",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2007-11-orlando-florida",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2007-11-portals-track-at-apachecon",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2007-11-apache-ibatis-and-apache-sanselan-session",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2007-11-jcr-in-action-session",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2007-11-creating-osgi-services-with-the-apache-felix-scr-plugin",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2007-11-the-musical-box-live-in-hamburg",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2007-11-arrived-in-atlanta-for-apachecon",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2007-10-garbage-collection-in-objective-c",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2007-10-new-projects-apache-sling-and-apache-sanselan",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2007-10-cocoon-gettogether-2007-in-rome",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2007-08-maven-release-plugin-removes-headers",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2007-07-portlet-api-20-and-jcr-20-public-review",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2007-07-apache-felix-100-released",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2007-07-movable-type-sucks-wordpress-rocks",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2007-07-excalibur-sourceresolver-released",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2007-06-maven-207-is-out",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2007-06-turn-it-on-again-singing-in-the-rain",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    },
+    {
+      "slug": "2007-06-silence-is-over",
+      "verdict": "ok",
+      "notes": "rendered page; header/nav/content/sidebar/footer present"
+    }
+  ]
+}

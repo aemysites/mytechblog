@@ -1,0 +1,185 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:replica",
+    "writtenAt": "2026-10-12T18:43:10.426Z"
+  },
+  "breakpoints": [
+    1440,
+    360
+  ],
+  "register": "stardust/replica/inconsistency-register.md (R-01 applied)",
+  "archetypes": {
+    "article": {
+      "slug": "2021-07-the-truth-about-aem-run-modes",
+      "live": "https://blog.osoco.de/2021/07/the-truth-about-aem-run-modes/",
+      "prototype": "stardust/prototypes/2021-07-the-truth-about-aem-run-modes-proposed.html",
+      "status": "passed",
+      "gates": {
+        "360": {
+          "pixel": "0.00%",
+          "dh": 0,
+          "iters": 2,
+          "content": "none",
+          "chrome": "quiet",
+          "clipped": 0,
+          "overflow": "ok"
+        },
+        "1440": {
+          "pixel": "0.00%",
+          "dh": 0,
+          "iters": 2,
+          "content": "none",
+          "chrome": "quiet",
+          "clipped": 0,
+          "overflow": "ok"
+        }
+      },
+      "capRow": "cap-probe PASS 0/4",
+      "iterationsUsed": 1,
+      "residuals": [],
+      "motion": {
+        "observed": [
+          ".menu-toggle click → menu toggled-on (360)"
+        ],
+        "implemented": [
+          "menu toggle (chrome.js)"
+        ],
+        "dead": [
+          "header scroll-morph (static on live)",
+          "nav-menu class added by navigation.js at init (present statically in build)",
+          "hover a: CSS :hover colours carried from source rules"
+        ]
+      },
+      "passedAt": "2026-10-12T18:43:10.427Z"
+    },
+    "listing": {
+      "slug": "blog",
+      "live": "https://blog.osoco.de/blog/",
+      "prototype": "stardust/prototypes/blog-proposed.html",
+      "status": "passed",
+      "gates": {
+        "360": {
+          "pixel": "0.03%",
+          "dh": 0,
+          "iters": 4,
+          "content": "none",
+          "chrome": "quiet",
+          "clipped": 0,
+          "overflow": "ok (R-01 applied)"
+        },
+        "1440": {
+          "pixel": "0.00%",
+          "dh": 0,
+          "iters": 4,
+          "content": "none",
+          "chrome": "quiet",
+          "clipped": 0,
+          "overflow": "ok"
+        }
+      },
+      "capRow": "cap-probe PASS 0/13",
+      "iterationsUsed": 3,
+      "residuals": [],
+      "motion": {
+        "observed": [
+          ".menu-toggle click → menu toggled-on (360)"
+        ],
+        "implemented": [
+          "menu toggle (chrome.js)"
+        ],
+        "dead": [
+          "header scroll-morph (static on live)",
+          "nav-menu class added by navigation.js at init (present statically in build)",
+          "hover a: CSS :hover colours carried from source rules"
+        ]
+      },
+      "passedAt": "2026-10-12T18:43:10.427Z"
+    },
+    "static": {
+      "slug": "privacy-policy",
+      "live": "https://blog.osoco.de/privacy-policy/",
+      "prototype": "stardust/prototypes/privacy-policy-proposed.html",
+      "status": "passed",
+      "gates": {
+        "360": {
+          "pixel": "0.00%",
+          "dh": 0,
+          "iters": 1,
+          "content": "none",
+          "chrome": "quiet",
+          "clipped": 0,
+          "overflow": "ok"
+        },
+        "1440": {
+          "pixel": "0.00%",
+          "dh": 0,
+          "iters": 1,
+          "content": "none",
+          "chrome": "quiet",
+          "clipped": 0,
+          "overflow": "ok"
+        }
+      },
+      "capRow": "cap-probe PASS 0/4",
+      "iterationsUsed": 0,
+      "residuals": [],
+      "motion": {
+        "observed": [
+          ".menu-toggle click → menu toggled-on (360)"
+        ],
+        "implemented": [
+          "menu toggle (chrome.js)"
+        ],
+        "dead": [
+          "header scroll-morph (static on live)",
+          "nav-menu class added by navigation.js at init (present statically in build)",
+          "hover a: CSS :hover colours carried from source rules"
+        ]
+      },
+      "passedAt": "2026-10-12T18:43:10.427Z"
+    },
+    "landing": {
+      "slug": "index",
+      "live": "https://blog.osoco.de/",
+      "prototype": "stardust/prototypes/index-proposed.html",
+      "status": "passed",
+      "gates": {
+        "360": {
+          "pixel": "0.00%",
+          "dh": 0,
+          "iters": 2,
+          "content": "none",
+          "chrome": "quiet",
+          "clipped": 0,
+          "overflow": "ok"
+        },
+        "1440": {
+          "pixel": "0.00%",
+          "dh": 0,
+          "iters": 2,
+          "content": "none",
+          "chrome": "quiet",
+          "clipped": 0,
+          "overflow": "ok"
+        }
+      },
+      "capRow": "cap-probe PASS 0/3",
+      "iterationsUsed": 1,
+      "residuals": [],
+      "motion": {
+        "observed": [
+          ".menu-toggle click → menu toggled-on (360)"
+        ],
+        "implemented": [
+          "menu toggle (chrome.js)"
+        ],
+        "dead": [
+          "header scroll-morph (static on live)",
+          "nav-menu class added by navigation.js at init (present statically in build)",
+          "hover a: CSS :hover colours carried from source rules"
+        ]
+      },
+      "passedAt": "2026-10-12T18:43:10.427Z"
+    }
+  }
+}

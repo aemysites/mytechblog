@@ -1,0 +1,32 @@
+{
+  "frozenAt": "2026-10-12T19:19:17.883Z",
+  "root": ".",
+  "paths": [
+    "styles/",
+    "fonts/",
+    "blocks/header/",
+    "blocks/footer/",
+    "head.html",
+    "scripts/"
+  ],
+  "files": {
+    "blocks/footer/footer.css": "83074b5622842cb8ad379a2881ead0910bf7e76cecd3cd72231bfb11fa8fd624",
+    "blocks/footer/footer.js": "f0249c922b4ad86307ff8474e4346f7e08921f3ce4f253b34e120646af716df7",
+    "blocks/header/header.css": "d601ca4c6b1ed916754c19543e09d661b784dbec02b654c0e504b1d5a6fd2190",
+    "blocks/header/header.js": "6acc6303c9439c3c80f8cfedc231a0bfb8cebe195420e62223b3662315f28dd4",
+    "fonts/open-sans-latin-400-italic.woff2": "9ad0a22b0c58240a7a92b4c01aa31f39a5918dea6a8fdfa77e63042abc4fca31",
+    "fonts/open-sans-latin-400-normal.woff2": "b34551ae25916c460423b82beb8e0675b27f76a9a2908f18286260fbd6de6681",
+    "fonts/open-sans-latin-700-italic.woff2": "8b33044d2ff19c56d1b627cea18478f8ad7b15d7ef5644b32ad5b2ce5b0affdd",
+    "fonts/open-sans-latin-700-normal.woff2": "d1a17abb1a999842fe425e1a4ace9d90f9c18f3595c21a63d89f0611b90cfd72",
+    "fonts/open-sans-latin-ext-400-normal.woff2": "140ef34d138412106d0dc0bf060ba49acf6eaa6610c5bab642b182ddd0d68c8a",
+    "fonts/open-sans-latin-ext-700-normal.woff2": "f7595b9169232ec1d5d75c778d7ec2bc4024495a797b9f2b1ad09da4b3157529",
+    "head.html": "0d603ff98aeebec80350cd723c7419f9231e43a65cc87aea98702574d77f3dca",
+    "scripts/aem.js": "786e8019b14b4c0bee9df38a3162f129c04310d9d00e7a6dd326c7e5830c84ae",
+    "scripts/consent-check.js": "ac21f825288cfc82c52a6acd9c57bbb76a2017ee1b06319d493244f32751249a",
+    "scripts/consented.js": "8a0ec7239cfab36c9bbfd8e7cde178c6c9061f68da8539879411ee9fa09b18ab",
+    "scripts/scripts.js": "9c282a4abc60e2355203139d17079d0df0f59d31ba8e13af50d4f4a4eb222bc3",
+    "styles/fonts.css": "f891a19fbd92eb9d95ee8cde929fa7a2107dd52a4e7ce5f0a9c9710211c9c7e2",
+    "styles/lazy-styles.css": "391d6721991eb169fa04d7c71d9b597361d76c24ab8a3d5f1dcb47457d8ca2d6",
+    "styles/styles.css": "2a2e942d7a81bbcc60d291ed5be8d716376b6145501f7cc37fc7fc91ee340351"
+  }
+}

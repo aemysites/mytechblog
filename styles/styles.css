@@ -1,101 +1,87 @@
 /*
- * Copyright 2020 Adobe. All rights reserved.
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
+ * blog.osoco.de — global layer. Values ported from stardust/prototypes/canon.css (gated recreation
+ * of Twenty Twelve). Mapping: .site → body (the page card), .site-header → body > header,
+ * .site-content → main, article.entry → main .section.entry, .entry-content → the section's
+ * default content, .widget-area → body > aside, .site-footer → body > footer.
+ * Breakpoints kept from the source: 600px and 960px (mobile-first).
  */
 
 :root {
-  /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
-
-  /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
-
-  /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
-
-  /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
-
-  /* nav height */
-  --nav-height: 64px;
+  --c-backdrop: #e6e6e6;
+  --c-page: #fff;
+  --c-rule: #ededed;
+  --c-text: #444;
+  --c-muted: #757575;
+  --c-meta: #636363;
+  --c-title: #515151;
+  --c-nav: #6a6a6a;
+  --c-link: #21759b;
+  --c-link-hover: #0f3647;
+  --c-visited: #9f9f9f;
+  --f-base: 'Open Sans', helvetica, arial, sans-serif;
+  --f-mono: consolas, monaco, 'Lucida Console', monospace;
+  --s-1: 24px;
 }
 
-/* fallback fonts */
-@font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
-  src: local('Arial');
-}
-
-@font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
-  src: local('Arial');
-}
-
-@media (width >= 900px) {
-  :root {
-    /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
-
-    /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
-    --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
-    --heading-font-size-xs: 18px;
-  }
-}
-
-body {
-  display: none;
+/* reset (source L58–L110) */
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+strong,
+ol,
+ul,
+li,
+table,
+tbody,
+tr,
+td,
+th,
+form,
+label,
+article,
+aside,
+footer,
+header,
+nav,
+main {
   margin: 0;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-family: var(--body-font-family);
-  font-size: var(--body-font-size-m);
-  line-height: 1.6;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
-body.appear {
+article,
+aside,
+footer,
+header,
+nav,
+main {
   display: block;
 }
 
-header {
-  height: var(--nav-height);
+ol,
+ul {
+  list-style: none;
 }
 
-header .header,
-footer .footer {
-  visibility: hidden;
-}
-
-header .header[data-block-status="loaded"],
-footer .footer[data-block-status="loaded"] {
-  visibility: visible;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 h1,
@@ -104,222 +90,406 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
-  font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
-  scroll-margin: 40px;
+  clear: both;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
-
-p,
-dl,
-ol,
-ul,
-pre,
-blockquote {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
+img {
+  border: 0;
 }
 
-code,
-pre {
-  font-size: var(--body-font-size-s);
+html {
+  overflow-y: scroll;
+  font-size: 87.5%;
+  text-size-adjust: 100%;
+  background: var(--c-page);
 }
 
-pre {
-  padding: 16px;
-  border-radius: 8px;
-  background-color: var(--light-color);
-  overflow-x: auto;
-  white-space: pre;
+/* body is the page card (.site) */
+body {
+  display: none;
+  font-family: var(--f-base);
+  font-size: 14px;
+  line-height: 1;
+  color: var(--c-text);
+  text-rendering: optimizelegibility;
+  background-color: var(--c-page);
+  padding: 0 var(--s-1);
 }
 
-main > div {
-  margin: 40px 16px;
+body.appear {
+  display: block;
 }
 
-input,
-textarea,
-select,
-button {
-  font: inherit;
+body::after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
-/* links */
-a:any-link {
-  color: var(--link-color);
-  text-decoration: none;
-  overflow-wrap: break-word;
+a {
+  outline: none;
+  color: var(--c-link);
 }
 
 a:hover {
-  color: var(--link-hover-color);
-  text-decoration: underline;
+  color: var(--c-link-hover);
 }
 
-/* buttons */
-p.button-wrapper {
-  margin: 12px 0;
-}
-
-a.button:any-link,
-button.button {
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 100%;
-  margin: 0;
-  border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
-  font: inherit;
-  font-weight: 500;
-  line-height: 1.25;
-  text-decoration: none;
-  cursor: pointer;
+.screen-reader-text {
+  position: absolute !important;
+  clip-path: inset(50%);
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  height: 1px;
+  width: 1px;
 }
 
-a.button[aria-disabled="true"],
-button.button:disabled {
-  cursor: not-allowed;
-  pointer-events: none;
+/* form controls (L209–L293) */
+button,
+input {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: inherit;
+  padding: 6px;
+  line-height: normal;
 }
 
-a.button.primary,
-button.button.primary {
-  border-color: var(--text-color);
-  background-color: var(--text-color);
-  color: var(--background-color);
+.menu-toggle,
+input[type='submit'] {
+  padding: 6px 10px;
+  font-size: 11px;
+  line-height: 1.4286;
+  font-weight: normal;
+  color: #7c7c7c;
+  background-color: #e6e6e6;
+  background-image: linear-gradient(to bottom, #f4f4f4, #e6e6e6);
+  border: 1px solid #d2d2d2;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgb(64 64 64 / 10%);
+  cursor: pointer;
 }
 
-a.button.primary:hover,
-a.button.primary:focus-visible,
-button.button.primary:hover,
-button.button.primary:focus-visible {
-  border-color: var(--dark-color);
-  background-color: var(--dark-color);
-  color: var(--light-color);
+.menu-toggle:hover,
+.menu-toggle:focus,
+input[type='submit']:hover {
+  color: #5e5e5e;
+  background-color: #ebebeb;
+  background-image: linear-gradient(to bottom, #f9f9f9, #ebebeb);
 }
 
-a.button.primary[aria-disabled="true"],
-a.button.primary[aria-disabled="true"]:hover,
-a.button.primary[aria-disabled="true"]:focus-visible,
-button.button.primary:disabled,
-button.button.primary:disabled:hover,
-button.button.primary:disabled:focus-visible {
-  background-color: var(--light-color);
-  border-color: var(--light-color);
-  color: var(--dark-color);
+.menu-toggle.toggled-on {
+  color: #757575;
+  background-color: #e1e1e1;
+  background-image: linear-gradient(to bottom, #ebebeb, #e1e1e1);
+  box-shadow: inset 0 0 8px 2px #c6c6c6, 0 1px 0 0 #f4f4f4;
+  border-color: transparent;
 }
 
-a.button.secondary,
-button.button.secondary {
-  border-color: var(--text-color);
-  background-color: transparent;
-  color: var(--text-color);
+/* content + sidebar */
+main {
+  margin: var(--s-1) 0 0;
 }
 
-a.button.secondary:hover,
-a.button.secondary:focus-visible,
-button.button.secondary:hover,
-button.button.secondary:focus-visible {
-  border-color: var(--dark-color);
-  background-color: var(--light-color);
-  color: var(--dark-color);
+body > aside {
+  margin: var(--s-1) 0 0;
 }
 
-a.button.secondary[aria-disabled="true"],
-a.button.secondary[aria-disabled="true"]:hover,
-a.button.secondary[aria-disabled="true"]:focus-visible,
-button.button.secondary:disabled,
-button.button.secondary:disabled:hover,
-button.button.secondary:disabled:focus-visible {
-  background-color: var(--light-color);
-  border-color: var(--light-color);
-  color: var(--dark-color);
+/* the source's #main clearfix sits after the sidebar: the last widget's margin stays inside */
+body > aside::after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
-/* high-impact call-to-action */
-a.button.accent,
-button.button.accent {
-  border-color: var(--link-color);
-  background-color: var(--link-color);
-  color: var(--background-color);
+/* sidebar widgets (L625–L674) */
+aside .section {
+  hyphens: auto;
+  margin-bottom: 48px;
+  overflow-wrap: break-word;
 }
 
-a.button.accent:hover,
-a.button.accent:focus-visible,
-button.button.accent:hover,
-button.button.accent:focus-visible {
-  border-color: var(--link-hover-color);
-  background-color: var(--link-hover-color);
+.widget-area h3 {
+  margin-bottom: var(--s-1);
+  font-size: 11px;
+  line-height: 2.1819;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--c-meta);
 }
 
-a.button.accent[aria-disabled="true"],
-a.button.accent[aria-disabled="true"]:hover,
-a.button.accent[aria-disabled="true"]:focus-visible,
-button.button.accent:disabled,
-button.button.accent:disabled:hover,
-button.button.accent:disabled:focus-visible {
-  background-color: var(--light-color);
-  border-color: var(--light-color);
-  color: var(--dark-color);
+.widget-area li {
+  font-size: 13px;
+  line-height: 1.8462;
 }
 
-main img {
-  max-width: 100%;
-  width: auto;
-  height: auto;
+.widget-area a {
+  color: var(--c-muted);
 }
 
-.icon {
-  display: inline-block;
-  height: 24px;
-  width: 24px;
+.widget-area a:hover {
+  color: var(--c-link);
 }
 
-.icon img {
-  height: 100%;
+.widget-area a:visited {
+  color: var(--c-visited);
+}
+
+/* article.entry */
+main .section.entry {
+  border-bottom: 4px double var(--c-rule);
+  margin-bottom: 72px;
+  padding-bottom: var(--s-1);
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.landing main .section.entry {
+  border: 0;
+  margin-bottom: 0;
+}
+
+main .entry-header {
+  margin-bottom: var(--s-1);
+}
+
+main .entry-header :is(h1, h2) {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+main .section .entry-header a {
+  text-decoration: none;
+}
+
+main .archive-header {
+  margin-bottom: 48px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--c-rule);
+}
+
+main .archive-header :is(h1, h2),
+main .default-content-wrapper th {
+  font-size: 11px;
+  line-height: 2.1819;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--c-meta);
+}
+
+/* entry content (L763–L986) */
+main .section {
+  line-height: 1.7143;
+}
+
+main .default-content-wrapper :is(h1, h2, h3, h4, h5, h6) {
+  margin: var(--s-1) 0;
+  line-height: 1.7143;
+}
+
+main .default-content-wrapper h1 {
+  font-size: 21px;
+  line-height: 1.5;
+}
+
+main .default-content-wrapper h2 {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+main .default-content-wrapper h3 {
+  font-size: 16px;
+  line-height: 1.8462;
+}
+
+main .default-content-wrapper h4 {
+  font-size: 14px;
+  line-height: 1.8462;
+}
+
+main .default-content-wrapper h5 {
+  font-size: 13px;
+  line-height: 1.8462;
+}
+
+main .default-content-wrapper h6 {
+  font-size: 12px;
+  line-height: 1.8462;
+}
+
+/* sections whose headings were authored one level down (one h1 per page) keep their sizes */
+main .section.demoted .default-content-wrapper h2 {
+  font-size: 21px;
+  line-height: 1.5;
+}
+
+main .section.demoted .default-content-wrapper h3 {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+main .section.demoted .default-content-wrapper h4 {
+  font-size: 16px;
+  line-height: 1.8462;
+}
+
+main .section.demoted .default-content-wrapper h5 {
+  font-size: 14px;
+  line-height: 1.8462;
+}
+
+main .section.demoted .default-content-wrapper h6 {
+  font-size: 13px;
+  line-height: 1.8462;
+}
+
+main .default-content-wrapper p {
+  margin: 0 0 var(--s-1);
+  line-height: 1.7143;
+}
+
+main .default-content-wrapper a:visited {
+  color: var(--c-visited);
+}
+
+main .default-content-wrapper :is(ol, ul) {
+  margin: 0 0 var(--s-1);
+  line-height: 1.7143;
+}
+
+main .default-content-wrapper :is(ul, ol) :is(ul, ol) {
+  margin-bottom: 0;
+}
+
+main .default-content-wrapper ul {
+  list-style: disc outside;
+}
+
+main .default-content-wrapper ol {
+  list-style: decimal outside;
+}
+
+main .default-content-wrapper li {
+  margin: 0 0 0 36px;
+}
+
+main .default-content-wrapper blockquote {
+  margin-bottom: var(--s-1);
+  padding: var(--s-1);
+  font-style: italic;
+}
+
+main .default-content-wrapper blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+main .section code {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  line-height: 2;
+}
+
+main .section pre {
+  border: 1px solid var(--c-rule);
+  color: #666;
+  font-family: var(--f-mono);
+  font-size: 12px;
+  line-height: 1.7143;
+  margin: var(--s-1) 0;
+  overflow: auto;
+  padding: var(--s-1);
+}
+
+main .section pre code {
+  display: block;
+  font-size: inherit;
+}
+
+main .default-content-wrapper table {
+  border-bottom: 1px solid var(--c-rule);
+  color: var(--c-muted);
+  font-size: 12px;
+  line-height: 2;
+  margin: 0 0 var(--s-1);
   width: 100%;
 }
 
-/* sections */
-main > .section {
-  margin: 40px 0;
+main .default-content-wrapper td {
+  border-top: 1px solid var(--c-rule);
+  padding: 6px 10px 6px 0;
 }
 
-main > .section > div {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 24px;
+main .section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 20%);
 }
 
-main > .section:first-of-type {
-  margin-top: 0;
+/* the front page's portrait floats right like the source's img.alignright */
+.landing main .default-content-wrapper picture {
+  float: right;
+  margin: 12px 0 12px var(--s-1);
 }
 
-@media (width >= 900px) {
-  main > .section > div {
-    padding: 0 32px;
+.landing main .default-content-wrapper picture img {
+  display: block;
+}
+
+/* colophon (L679–L705) */
+body > footer {
+  border-top: 1px solid var(--c-rule);
+  clear: both;
+  font-size: 12px;
+  line-height: 2;
+  max-width: 960px;
+  margin: var(--s-1) auto 0;
+  padding: var(--s-1) 0;
+}
+
+@media screen and (width >= 600px) {
+  body {
+    margin: 0 auto;
+    max-width: 960px;
+    overflow: hidden;
+  }
+
+  /* floats sit directly in body: their bottom margin stands in for the source wrapper's
+     clearfix, so the colophon's 24px top margin is not swallowed by clearance */
+  main {
+    float: left;
+    width: 65.1042%;
+    margin-bottom: var(--s-1);
+  }
+
+  .landing main {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .landing main .section {
+    overflow: hidden;
+  }
+
+  body > aside {
+    float: right;
+    width: 26.0417%;
+    margin-bottom: var(--s-1);
+  }
+
+  main .entry-header :is(h1, h2) {
+    font-size: 22px;
   }
 }
 
-/* section metadata */
-main .section.light,
-main .section.highlight {
-  background-color: var(--light-color);
-  margin: 0;
-  padding: 40px 0;
+@media screen and (width >= 960px) {
+  html {
+    background-color: var(--c-backdrop);
+  }
+
+  body {
+    padding: 0 40px;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    box-shadow: 0 2px 6px rgb(100 100 100 / 30%);
+  }
 }

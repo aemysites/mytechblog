@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<!-- stardust:migrate
+  writtenBy:        stardust:migrate
+  writtenAt:        2026-10-12T19:35:52Z
+  page:             Guide on Using OSGi Configurations - A Matter of Unimportance
+  slug:             2020-07-guide-on-using-osgi-configurations
+  pagePath:         migrated/2020/07/guide-on-using-osgi-configurations/index.html
+  renderBranch:     A'
+  template:         2021-07-the-truth-about-aem-run-modes
+  archetypePath:    stardust/prototypes/2021-07-the-truth-about-aem-run-modes-proposed.html
+  archetypeSha:     e1e571a3c534
+  sourceCurrent:    stardust/current/pages/2020-07-guide-on-using-osgi-configurations.json
+  againstDirection: stardust/direction.md (Active)
+  designMd:         DESIGN.md (sha: bae0208daf50)
+  designJson:       DESIGN.json (sha: d9694956c490)
+  canonShas:        header:22a6ff0f57a1 footer:d97fad7587a5 css:4f7dca61ef71
+  decisionTrace:    _meta.json
+  brokenInternalLinks: 41
+  stardustVersion:  local
+-->
+<style>
+:root {
+  --c-backdrop: #e6e6e6;
+  --c-page: #fff;
+  --c-rule: #ededed;
+  --c-text: #444;
+  --c-muted: #757575;
+  --c-meta: #636363;
+  --c-title: #515151;
+  --c-nav: #6a6a6a;
+  --c-link: #21759b;
+  --c-link-hover: #0f3647;
+  --c-visited: #9f9f9f;
+  --f-base: 'Open Sans', helvetica, arial, sans-serif;
+  --f-mono: consolas, monaco, 'Lucida Console', monospace;
+  --s-1: 24px;
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Guide on Using OSGi Configurations - A Matter of Unimportance","mainEntityOfPage":"https://blog.osoco.de/2020/07/guide-on-using-osgi-configurations/"}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Guide on Using OSGi Configurations - A Matter of Unimportance</title>
+<link rel="icon" href="../../../assets/favicon.png">
+<link rel="stylesheet" href="../../../assets/canon.css">
+<link rel="stylesheet" href="../../../assets/article.css">
+</head>
+<body class="tpl-article single-author">
+<div class="site" id="page">
+<header class="site-header" role="banner">
+  <div class="site-branding">
+    <h1 class="site-title"><a href="../../../index.html">A Matter of Unimportance</a></h1>
+    <h2 class="site-description">The world won't listen….</h2>
+  </div>
+  <nav class="main-navigation">
+    <button class="menu-toggle" type="button" aria-expanded="false">Menu</button>
+    <ul class="nav-menu"> <li><a href="../../../index.html">Home</a></li><li><a href="../../../blog/index.html">Blog</a></li> <li><a href="../../../privacy-policy/index.html">Privacy Policy</a></li> </ul>
+  </nav>
+</header>
+<div class="site-main">
+<main class="site-content" id="content" data-template="2021-07-the-truth-about-aem-run-modes">
+<article class="entry" data-section="1">
+  <header class="entry-header"><h1 class="entry-title">Guide on Using OSGi Configurations</h1></header>
+  <div class="entry-content">
+			
+<p><a href="https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.cm.html">Configuration Admin</a> is amongst the most used services from the OSGi specification. But on the other hand, the usage is barely noticed. Component frameworks like <a href="https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.component.html">Declarative Services</a> (DS) or <a href="https://docs.osgi.org/specification/osgi.enterprise/7.0.0/service.cdi.html">CDI Integration</a> take care of the heavy lifting. Configuration Admin allows to create, update and delete configurations. It is up to the implementation where these configurations are stored. A configuration has a unique persistent identifier (PID) and a dictionary of properties. This guide explains how to best interact with Configuration Admin when writing OSGi code. It is based on over a decade of experience working on large enterprise applications using OSGi. It might not apply to every OSGi application.</p>
+
+
+
+<h2>Do not talk to Configuration Admin</h2>
+
+
+
+<p>The basic rule for dealing with OSGi configurations is very simply: do not write code that talks to Configuration Admin directly. But of course you should use OSGi configurations to configure your application. So how does that work? The answer is very easy: let someone else talk to Configuration Admin and do the work for you.</p>
+
+
+
+<p>A very nice way to develop OSGi components and services is to use <a href="https://blog.osoco.de/2015/08/osgi-components-simply-simple-part-i/" data-broken-link="true">Declarative Services</a> (DS). By using Java annotations, the component code tells DS which configuration(s) it wants to consume. DS does all the hard work behind the scenes. Defining a <a href="https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.component.html#service.component-component.property.types">Component Property Type</a> simplifies the usage further. A component property type provides type conversion and default values.</p>
+
+
+
+<p>But if it is that easy why am I writing this? It is good to know some of the details about configuration handling – especially in cases where you cannot use DS.</p>
+
+
+
+<h2>Be Aware of Configuration Plugins</h2>
+
+
+
+<p>OSGi configurations are used to configure the whole system. In many cases that includes configurations for connections to other systems or services. Such configurations usually include endpoints and credentials. The values for these properties might depend on your environment: a different endpoint is used in development than in production. In addition, you don’t want to store credentials or any other secrets directly in your code or configuration.</p>
+
+
+
+<p>A good mechanism for managing such configurations is to use “late binding” of the values. Instead of storing the values directly in the OSGi configuration you use placeholders. The placeholders get replaced at runtime with the real values. Support for such placeholders usually comes in the form of <a href="https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.cm.html#i1459884">Configuration Plugins</a>. The <a href="https://github.com/apache/felix-dev/blob/master/configadmin-plugins/interpolation/README.md">Apache Felix Interpolation Plugin</a> is a very nice plugin supporting environment variables, system properties and secrets. For example, a configuration for a connection could look like this (using the <a href="../../../2017/07/new-osgi-configuration-features-r7/index.html">Configurator JSON notation</a>) :</p>
+
+
+
+<pre class="is-wrapped"><div class="code-block" data-lang="jscript"><table><tbody><tr><td class="gutter"><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></td><td class="code-lines"><div class="line"><code class="plain">{</code></div><div class="line"><code class="spaces">  </code><code class="string">&quot;de.osoco.business.server&quot;</code> <code class="plain">: {</code></div><div class="line"><code class="spaces">    </code><code class="string">&quot;url&quot;</code> <code class="plain">: </code><code class="string">&quot;$[env:BUSINESS_SERVER_URL]&quot;</code><code class="plain">,</code></div><div class="line"><code class="spaces">    </code><code class="string">&quot;user&quot;</code><code class="plain">: </code><code class="string">&quot;$[env:BUSINESS_SERVER_USER]&quot;</code><code class="plain">,</code></div><div class="line"><code class="spaces">    </code><code class="string">&quot;password&quot;</code> <code class="plain">: </code><code class="string">&quot;$[secret:business.server.pw]&quot;</code></div><div class="line"><code class="spaces">  </code><code class="plain">}</code></div><div class="line"><code class="plain">}</code></div></td></tr></tbody></table></div></pre>
+
+
+
+<p>It uses environment variables for the url and the username and a secret for the password. With such an approach, the configuration stored in Configuration Admin only contains the above visible placeholders. However, when the configurations is provided to the code using the configuration, a plugin like the Apache Felix Interpolation Plugin needs to be invoked, replacing the placeholders with real values and then handing out the configuration.</p>
+
+
+
+<p>The good news is, if you are using Declarative Services this happens automatically and you don’t have to worry about it.</p>
+
+
+
+<h2>ManagedService(Factory)</h2>
+
+
+
+<p>However, sometimes there are use cases where you either can’t or want to use Declarative Services (or a similar component framework). The second best way to deal with configurations is to register either a <a href="https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.cm.html#d0e11202">ManagedService</a> or <a href="https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.cm.html#i1299227">ManagedServiceFactory</a>. These are basically callbacks which are called by Configuration Admin with the configurations, the registered service is interested in. And the good part is, Configuration Admin calls the configuration plugins before handing out the configuration.</p>
+
+
+
+<p>Threefore it is advisable to either use Declarative Services or register a managed service for consuming OSGi configurations. But there might be some very rare use cases where both is not possible and you need to talk to Configuration Admin directly.</p>
+
+
+
+<h2>How to Talk to Configuration Admin</h2>
+
+
+
+<p>First, as explained, try to avoid this situation. If you can’t, be aware of the following points. If you want to get a configuration from Configuration Admin do not use one of the getter methods like <em>getConfiguration </em>or <em>getFactoryConfiguration</em>. These methods have side effects and will create such a configuration if it does not exist! Use <em>listConfigurations </em>instead:</p>
+
+
+
+<pre class="is-wrapped"><div class="code-block" data-lang="java"><table><tbody><tr><td class="gutter"><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></td><td class="code-lines"><div class="line"><code class="plain">ConfigurationAdmin ca = ...;</code></div><div class="line"><code class="plain">Configuration[] configs =  </code></div><div class="line"><code class="spaces">      </code><code class="plain">ca.listConfigurations(</code><code class="string">&quot;service.pid=de.osoco.business.server&quot;</code><code class="plain">);</code></div><div class="line"><code class="keyword">if</code> <code class="plain">( configs != </code><code class="keyword">null</code> <code class="plain">&amp;amp;&amp;amp; configs.length &gt; </code><code class="value">0</code> <code class="plain">) {</code></div><div class="line"><code class="spaces">    </code><code class="comments">// use configuration (we just assume we got only one configuration back)</code></div><div class="line"><code class="spaces">    </code><code class="plain">Configuration cfg = configs[</code><code class="value">0</code><code class="plain">];</code></div><div class="line"><code class="spaces">    </code><code class="plain">...</code></div><div class="line"><code class="plain">}</code></div></td></tr></tbody></table></div></pre>
+
+
+
+<p>Once you have the configuration, the next thing is to get its properties – there is a method called <em>getProperties </em>on a Configuration object – but do you remember the placeholders and configuration plugins? If you call <em>getProperties </em>these are not invoked, and the values will be the placeholders  itself! Therefore don’t use that method for consuming configurations – use <em>getProcessedProperties </em>instead. That method invokes all plugins before handing out the properties.</p>
+
+
+
+<p>To identify the caller <em>getProcessedProperties </em>takes a required <em>ServiceReference </em>as a parameter. If you already have a reference at hand, use it – if not, you need to register a service in the service registry.</p>
+
+
+
+<h2>Avoid Configuration Binding</h2>
+
+
+
+<p>Finally, if you want to create configurations, the previously mentioned getter methods (<em>getConfiguration </em>and <em>getFactoryConfiguration</em>) can be used to do so. Make sure that you use the variant which takes the additional <em>location </em>parameter and pass in <em>null </em>for the location. If you don’t do this, then the configuration gets bound to your bundle and will not be delivered to other consumers anymore. Configuration binding and targeting is a complicated topic – which is best to avoid. Of course, as always, there are good use cases for these features. Only use it if you really need it. <a href="../../../2017/08/osgi-declarative-services-configuration-binding/index.html">This article</a> contains some information about configuration binding and DS.</p>
+
+
+
+<p>I hope with these tips, handling OSGi configurations becomes very easy. Just as a recap:</p>
+
+
+
+<ul><li>Use component frameworks like Declarative Services – all hard work is done for you</li><li>If that’s not possible, use ManagedService or ManagedServiceFactory – again most of the hard work is done for you</li><li>If that’s also not possible, make sure to not create configurations as a side effect and use the right method to get properties</li><li>Avoid configuration binding and targeting if possible</li></ul>
+					</div>
+  <footer class="entry-meta">
+			This entry was posted in <a href="https://blog.osoco.de/category/everything/" data-broken-link="true">Everything</a>, <a href="https://blog.osoco.de/category/software/osgi/" data-broken-link="true">OSGi</a>, <a href="https://blog.osoco.de/category/software/" data-broken-link="true">Software</a> and tagged <a href="../../../tag/osgi/index.html" data-broken-link="true">OSGi</a> on <a href="../../../2020/07/guide-on-using-osgi-configurations/index.html" title="10:05"><time datetime="2020-07-10T10:05:53+02:00">2020-07-10</time></a><span class="by-author"> by <a href="../../../author/cziegeler/index.html" title="View all posts by cziegeler" data-broken-link="true">cziegeler</a></span>.								</footer>
+</article>
+<nav class="nav-single" data-section="2">
+  <h3 class="screen-reader-text">Post navigation</h3>
+  <span class="nav-previous"><a href="../../../2017/08/osgi-declarative-services-configuration-binding/index.html"><span class="meta-nav">←</span> OSGi Declarative Services – Configuration Binding</a></span>
+  <span class="nav-next"><a href="../../../2021/07/the-truth-about-aem-run-modes/index.html">The Truth about AEM Run Modes <span class="meta-nav">→</span></a></span>
+</nav>
+</main>
+<aside class="widget-area" role="complementary">
+<section class="widget widget-search">
+  <form class="search-form" role="search" method="get" action="/search">
+    <div><label class="screen-reader-text" for="s">Search for:</label> <input class="search-field" type="text" name="s" id="s" value=""> <input type="submit" value="Search"></div>
+  </form>
+</section>
+<section class="widget">
+  <h3 class="widget-title">Recent Posts</h3>
+  <ul>
+											<li>
+					<a href="../../../2024/02/value-created-by-developers/index.html">Value created by Developers</a>
+									</li>
+											<li>
+					<a href="../../../2021/07/the-truth-about-aem-run-modes/index.html">The Truth about AEM Run Modes</a>
+									</li>
+											<li>
+					<a href="../../../2020/07/guide-on-using-osgi-configurations/index.html">Guide on Using OSGi Configurations</a>
+									</li>
+											<li>
+					<a href="../../../2017/08/osgi-declarative-services-configuration-binding/index.html">OSGi Declarative Services – Configuration Binding</a>
+									</li>
+											<li>
+					<a href="../../../2017/07/new-osgi-configuration-features-r7/index.html">New OSGi Configuration Features in R7</a>
+									</li>
+					</ul>
+</section>
+<section class="widget">
+  <h3 class="widget-title">Archives</h3>
+  <ul>
+					<li><a href="../../../2024/02/index.html" data-broken-link="true">February 2024</a></li>
+	<li><a href="../../../2021/07/index.html" data-broken-link="true">July 2021</a></li>
+	<li><a href="../../../2020/07/index.html" data-broken-link="true">July 2020</a></li>
+	<li><a href="../../../2017/08/index.html" data-broken-link="true">August 2017</a></li>
+	<li><a href="../../../2017/07/index.html" data-broken-link="true">July 2017</a></li>
+	<li><a href="../../../2016/10/index.html" data-broken-link="true">October 2016</a></li>
+	<li><a href="../../../2016/09/index.html" data-broken-link="true">September 2016</a></li>
+	<li><a href="../../../2016/05/index.html" data-broken-link="true">May 2016</a></li>
+	<li><a href="../../../2016/04/index.html" data-broken-link="true">April 2016</a></li>
+	<li><a href="../../../2015/11/index.html" data-broken-link="true">November 2015</a></li>
+	<li><a href="../../../2015/08/index.html" data-broken-link="true">August 2015</a></li>
+	<li><a href="../../../2015/04/index.html" data-broken-link="true">April 2015</a></li>
+	<li><a href="../../../2011/04/index.html" data-broken-link="true">April 2011</a></li>
+	<li><a href="../../../2009/11/index.html" data-broken-link="true">November 2009</a></li>
+	<li><a href="../../../2009/04/index.html" data-broken-link="true">April 2009</a></li>
+	<li><a href="../../../2009/03/index.html" data-broken-link="true">March 2009</a></li>
+	<li><a href="../../../2009/02/index.html" data-broken-link="true">February 2009</a></li>
+	<li><a href="../../../2009/01/index.html" data-broken-link="true">January 2009</a></li>
+	<li><a href="../../../2008/11/index.html" data-broken-link="true">November 2008</a></li>
+	<li><a href="../../../2008/10/index.html" data-broken-link="true">October 2008</a></li>
+	<li><a href="../../../2008/08/index.html" data-broken-link="true">August 2008</a></li>
+	<li><a href="../../../2008/04/index.html" data-broken-link="true">April 2008</a></li>
+	<li><a href="../../../2007/12/index.html" data-broken-link="true">December 2007</a></li>
+	<li><a href="../../../2007/11/index.html" data-broken-link="true">November 2007</a></li>
+	<li><a href="../../../2007/10/index.html" data-broken-link="true">October 2007</a></li>
+	<li><a href="../../../2007/08/index.html" data-broken-link="true">August 2007</a></li>
+	<li><a href="../../../2007/07/index.html" data-broken-link="true">July 2007</a></li>
+	<li><a href="../../../2007/06/index.html" data-broken-link="true">June 2007</a></li>
+			</ul>
+</section>
+<section class="widget">
+  <h3 class="widget-title">Categories</h3>
+  <ul>
+					<li><a href="https://blog.osoco.de/category/everything/" data-broken-link="true">Everything</a>
+</li>
+	<li><a href="https://blog.osoco.de/category/software/osgi/" data-broken-link="true">OSGi</a>
+</li>
+	<li><a href="https://blog.osoco.de/category/software/" data-broken-link="true">Software</a>
+</li>
+	<li><a href="https://blog.osoco.de/category/uncategorized/" data-broken-link="true">Uncategorized</a>
+</li>
+			</ul>
+</section>
+<section class="widget">
+  <h3 class="widget-title">Meta</h3>
+  <ul>
+						<li><a href="../../../wp-login.php" data-broken-link="true">Log in</a></li>
+			<li><a href="../../../feed/index.html" data-broken-link="true">Entries feed</a></li>
+			<li><a href="../../../comments/feed/index.html" data-broken-link="true">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+</section>
+</aside>
+</div>
+<footer class="site-footer" role="contentinfo">
+  <div class="site-info"><a href="../../../privacy-policy/index.html">Privacy Policy</a><span class="sep" role="separator"></span> <a href="https://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a></div>
+</footer>
+</div>
+<script src="../../../assets/chrome.js" defer></script>
+</body>
+</html>

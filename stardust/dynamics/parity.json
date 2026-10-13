@@ -1,0 +1,79 @@
+{
+  "features": [
+    {
+      "id": "s-site-search-form",
+      "pattern": "search-index-backed",
+      "disposition": "self",
+      "checks": [
+        {
+          "type": "fetch-json",
+          "url": "/query-index.json",
+          "minRows": 61,
+          "expectKeys": [
+            "data",
+            "total"
+          ]
+        },
+        {
+          "type": "search-query",
+          "path": "/search",
+          "param": "s",
+          "term": "Sanselan",
+          "resultSelector": "main .section.entry",
+          "titleSelector": ".entry-header a",
+          "expectCount": 2,
+          "expectTitles": [
+            "Apache iBatis and Apache Sanselan Session",
+            "New Projects: Apache Sling and Apache Sanselan"
+          ],
+          "expectIncludes": "Apache iBatis and Apache Sanselan Session"
+        },
+        {
+          "type": "search-query",
+          "path": "/search",
+          "param": "s",
+          "term": "OSGi",
+          "resultSelector": "main .section.entry",
+          "titleSelector": ".entry-header a",
+          "expectCount": 10,
+          "expectTitles": [
+            "Guide on Using OSGi Configurations",
+            "OSGi Declarative Services – Configuration Binding",
+            "New OSGi Configuration Features in R7"
+          ],
+          "expectIncludes": "Portlets and OSGi"
+        },
+        {
+          "type": "dom-count",
+          "path": "/2021/07/the-truth-about-aem-run-modes",
+          "selector": "aside form[role=search][action='/search'] input[name=s]",
+          "min": 1
+        }
+      ],
+      "feature": "Sidebar site search",
+      "class": "search",
+      "status": "implemented"
+    },
+    {
+      "id": "x-sign-in-account-links",
+      "feature": "Meta widget: Log in, feeds, WordPress.org",
+      "class": "static-snapshot",
+      "status": "static-snapshot",
+      "checks": []
+    },
+    {
+      "id": "l-post-listings",
+      "feature": "Blog index + category archives",
+      "class": "static-snapshot",
+      "status": "static-snapshot",
+      "checks": [
+        {
+          "type": "dom-count",
+          "path": "/category/everything",
+          "selector": "main .section.entry",
+          "min": 10
+        }
+      ]
+    }
+  ]
+}

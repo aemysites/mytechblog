@@ -1,0 +1,305 @@
+{
+ "_provenance": {
+  "writtenBy": "stardust:dynamics detect",
+  "writtenAt": "2026-10-12T18:48:13.481Z",
+  "settleMs": 5000,
+  "width": 1440,
+  "urls": [
+   "https://blog.osoco.de/",
+   "https://blog.osoco.de/blog/",
+   "https://blog.osoco.de/privacy-policy/",
+   "https://blog.osoco.de/2024/02/value-created-by-developers/"
+  ],
+  "reachSource": "stardust/current/pages"
+ },
+ "pages": {
+  "/": {
+   "url": "https://blog.osoco.de/",
+   "status": 200,
+   "host": "blog.osoco.de",
+   "title": "Welcome - A Matter of Unimportance",
+   "forms": [],
+   "controlGroups": [],
+   "triggers": [],
+   "dialogs": [],
+   "dialogCount": 0,
+   "media": [],
+   "iframes": [],
+   "mounts": [],
+   "auth": [],
+   "commerce": {
+    "cart": false,
+    "prices": 0
+   },
+   "locale": {
+    "lang": "en-US",
+    "hreflang": [],
+    "switcher": []
+   },
+   "cms": {},
+   "framework": null,
+   "globals": [],
+   "clientRendered": [],
+   "listingCandidates": [],
+   "inlineScripts": 2,
+   "inlineFetch": false,
+   "mainText": 770,
+   "domAddedAfterLoad": 0,
+   "hosts": {
+    "blog.osoco.de": 11
+   },
+   "thirdPartyHosts": [],
+   "scripts": [
+    "https://blog.osoco.de/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+    "https://blog.osoco.de/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+    "https://blog.osoco.de/wp-content/themes/twentytwelve/js/navigation.js?ver=20250303"
+   ],
+   "firstPartyApi": [],
+   "thirdPartyXhr": [],
+   "postBodies": [],
+   "textAtLoad": 770,
+   "mainEmptyAtLoad": false
+  },
+  "/blog/": {
+   "url": "https://blog.osoco.de/blog/",
+   "status": 200,
+   "host": "blog.osoco.de",
+   "title": "Blog - A Matter of Unimportance",
+   "forms": [
+    {
+     "name": "searchform",
+     "action": "https://blog.osoco.de/",
+     "method": "get",
+     "role": "search",
+     "inChrome": false,
+     "fields": 1,
+     "signature": [
+      "text:s"
+     ],
+     "hidden": [],
+     "tokens": [],
+     "search": true,
+     "inlineHandler": false
+    }
+   ],
+   "controlGroups": [],
+   "triggers": [],
+   "dialogs": [],
+   "dialogCount": 0,
+   "media": [],
+   "iframes": [],
+   "mounts": [],
+   "auth": [
+    "https://blog.osoco.de/wp-login.php"
+   ],
+   "commerce": {
+    "cart": false,
+    "prices": 0
+   },
+   "locale": {
+    "lang": "en-US",
+    "hreflang": [],
+    "switcher": []
+   },
+   "cms": {},
+   "framework": null,
+   "globals": [],
+   "clientRendered": [],
+   "listingCandidates": [],
+   "inlineScripts": 3,
+   "inlineFetch": false,
+   "mainText": 44271,
+   "domAddedAfterLoad": 0,
+   "hosts": {
+    "blog.osoco.de": 17
+   },
+   "thirdPartyHosts": [],
+   "scripts": [
+    "https://blog.osoco.de/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+    "https://blog.osoco.de/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJava.js?ver=3.0.9b",
+    "https://blog.osoco.de/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+    "https://blog.osoco.de/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushXml.js?ver=3.0.9b",
+    "https://blog.osoco.de/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJScript.js?ver=3.0.9b",
+    "https://blog.osoco.de/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9b",
+    "https://blog.osoco.de/wp-content/themes/twentytwelve/js/navigation.js?ver=20250303"
+   ],
+   "firstPartyApi": [],
+   "thirdPartyXhr": [],
+   "postBodies": [],
+   "textAtLoad": 44006,
+   "mainEmptyAtLoad": false
+  },
+  "/privacy-policy/": {
+   "url": "https://blog.osoco.de/privacy-policy/",
+   "status": 200,
+   "host": "blog.osoco.de",
+   "title": "Privacy Policy - A Matter of Unimportance",
+   "forms": [
+    {
+     "name": "searchform",
+     "action": "https://blog.osoco.de/",
+     "method": "get",
+     "role": "search",
+     "inChrome": false,
+     "fields": 1,
+     "signature": [
+      "text:s"
+     ],
+     "hidden": [],
+     "tokens": [],
+     "search": true,
+     "inlineHandler": false
+    }
+   ],
+   "controlGroups": [],
+   "triggers": [],
+   "dialogs": [],
+   "dialogCount": 0,
+   "media": [],
+   "iframes": [],
+   "mounts": [],
+   "auth": [
+    "https://blog.osoco.de/wp-login.php"
+   ],
+   "commerce": {
+    "cart": false,
+    "prices": 0
+   },
+   "locale": {
+    "lang": "en-US",
+    "hreflang": [],
+    "switcher": []
+   },
+   "cms": {},
+   "framework": null,
+   "globals": [],
+   "clientRendered": [],
+   "listingCandidates": [],
+   "inlineScripts": 2,
+   "inlineFetch": false,
+   "mainText": 1819,
+   "domAddedAfterLoad": 0,
+   "hosts": {
+    "blog.osoco.de": 11
+   },
+   "thirdPartyHosts": [],
+   "scripts": [
+    "https://blog.osoco.de/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+    "https://blog.osoco.de/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+    "https://blog.osoco.de/wp-content/themes/twentytwelve/js/navigation.js?ver=20250303"
+   ],
+   "firstPartyApi": [],
+   "thirdPartyXhr": [],
+   "postBodies": [],
+   "textAtLoad": 1819,
+   "mainEmptyAtLoad": false
+  },
+  "/2024/02/value-created-by-developers/": {
+   "url": "https://blog.osoco.de/2024/02/value-created-by-developers/",
+   "status": 200,
+   "host": "blog.osoco.de",
+   "title": "Value created by Developers - A Matter of Unimportance",
+   "forms": [
+    {
+     "name": "searchform",
+     "action": "https://blog.osoco.de/",
+     "method": "get",
+     "role": "search",
+     "inChrome": false,
+     "fields": 1,
+     "signature": [
+      "text:s"
+     ],
+     "hidden": [],
+     "tokens": [],
+     "search": true,
+     "inlineHandler": false
+    }
+   ],
+   "controlGroups": [],
+   "triggers": [],
+   "dialogs": [],
+   "dialogCount": 0,
+   "media": [],
+   "iframes": [],
+   "mounts": [],
+   "auth": [
+    "https://blog.osoco.de/wp-login.php"
+   ],
+   "commerce": {
+    "cart": false,
+    "prices": 0
+   },
+   "locale": {
+    "lang": "en-US",
+    "hreflang": [],
+    "switcher": []
+   },
+   "cms": {},
+   "framework": null,
+   "globals": [],
+   "clientRendered": [],
+   "listingCandidates": [],
+   "inlineScripts": 2,
+   "inlineFetch": false,
+   "mainText": 3715,
+   "domAddedAfterLoad": 0,
+   "hosts": {
+    "blog.osoco.de": 11
+   },
+   "thirdPartyHosts": [],
+   "scripts": [
+    "https://blog.osoco.de/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+    "https://blog.osoco.de/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+    "https://blog.osoco.de/wp-content/themes/twentytwelve/js/navigation.js?ver=20250303"
+   ],
+   "firstPartyApi": [],
+   "thirdPartyXhr": [],
+   "postBodies": [],
+   "textAtLoad": 3715,
+   "mainEmptyAtLoad": false
+  }
+ },
+ "findings": [
+  {
+   "id": "s-site-search-form",
+   "class": "S",
+   "feature": "site search form → /",
+   "hint": "search",
+   "evidence": [
+    "text:s"
+   ],
+   "pages": [
+    "/blog/",
+    "/privacy-policy/",
+    "/2024/02/value-created-by-developers/"
+   ],
+   "reach": {
+    "pages": 65,
+    "of": 66
+   }
+  },
+  {
+   "id": "x-sign-in-account-links",
+   "class": "X",
+   "feature": "sign-in / account links",
+   "hint": "decided-out",
+   "evidence": [
+    "https://blog.osoco.de/wp-login.php"
+   ],
+   "pages": [
+    "/blog/",
+    "/privacy-policy/",
+    "/2024/02/value-created-by-developers/"
+   ]
+  }
+ ],
+ "reach": {
+  "pagesWithEvidence": 66,
+  "of": 66,
+  "endpoints": {},
+  "searchFormPages": 65,
+  "formPages": 0,
+  "triggerPages": {}
+ }
+}

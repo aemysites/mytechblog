@@ -1,0 +1,17 @@
+/* post-nav — canon.css (.site-content nav, .nav-previous, .nav-next) */
+.post-nav nav {
+  clear: both;
+  line-height: 2;
+  overflow: hidden;
+}
+
+.post-nav .nav-previous {
+  float: left;
+  width: 50%;
+}
+
+.post-nav .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%;
+}

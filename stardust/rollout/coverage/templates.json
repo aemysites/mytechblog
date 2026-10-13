@@ -1,0 +1,202 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:rollout/inventory",
+    "writtenAt": "2026-10-12T18:47:55.973Z",
+    "readArtifacts": [
+      "stardust/migrated",
+      "stardust/state.json"
+    ],
+    "stardustVersion": "0.0.0"
+  },
+  "generatedAt": "2026-10-12T21:05:01.336Z",
+  "templates": [
+    {
+      "id": "2021-07-the-truth-about-aem-run-modes",
+      "representativeSlug": "2021-07-the-truth-about-aem-run-modes",
+      "pages": [
+        "2021-07-the-truth-about-aem-run-modes"
+      ],
+      "pageCount": 1,
+      "blocks": [
+        "code-block",
+        "colophon",
+        "masthead",
+        "post-entry",
+        "post-navigation",
+        "sidebar-widgets"
+      ],
+      "delivery": {
+        "verified": 1,
+        "deployed": 0,
+        "contentPending": 0,
+        "pending": 0
+      }
+    },
+    {
+      "id": "article",
+      "representativeSlug": "2007-06-maven-207-is-out",
+      "pages": [
+        "2007-06-maven-207-is-out",
+        "2007-06-silence-is-over",
+        "2007-06-turn-it-on-again-singing-in-the-rain",
+        "2007-07-apache-felix-100-released",
+        "2007-07-excalibur-sourceresolver-released",
+        "2007-07-movable-type-sucks-wordpress-rocks",
+        "2007-07-portlet-api-20-and-jcr-20-public-review",
+        "2007-08-maven-release-plugin-removes-headers",
+        "2007-10-cocoon-gettogether-2007-in-rome",
+        "2007-10-garbage-collection-in-objective-c",
+        "2007-10-new-projects-apache-sling-and-apache-sanselan",
+        "2007-11-apache-ibatis-and-apache-sanselan-session",
+        "2007-11-arrived-in-atlanta-for-apachecon",
+        "2007-11-creating-osgi-services-with-the-apache-felix-scr-plugin",
+        "2007-11-jcr-in-action-session",
+        "2007-11-leaving-orlando",
+        "2007-11-orlando-florida",
+        "2007-11-portals-track-at-apachecon",
+        "2007-11-the-musical-box-live-in-hamburg",
+        "2007-12-back-in-paderborn",
+        "2007-12-cocoon-portal-and-jcr",
+        "2007-12-conference-season-2008",
+        "2008-04-apachecon-eu-in-amsterdam",
+        "2008-04-cocoon-22-is-released",
+        "2008-04-cool-eclipse-plugin-mvn-indexer",
+        "2008-04-innovation-at-apache-the-fun-is-back-with-apache-sling",
+        "2008-04-thanks-to-apache-commons-support-for-osgi",
+        "2008-08-happy-birthday-madonna",
+        "2008-10-first-steps-with-jquery",
+        "2008-10-ray-wilson-live-in-paderborn",
+        "2008-11-heading-east",
+        "2008-11-heading-west",
+        "2008-11-interesting-session-in-new-orleans",
+        "2008-11-osgiapachecon",
+        "2008-11-sling-polo-shirts-arrived",
+        "2008-11-what-happened-to-the-springframework-site",
+        "2009-01-portlets-and-osgi",
+        "2009-02-getting-started-with-portal-servers-and-spec-compliance",
+        "2009-03-conference-season-apachecon-europe-and-jax",
+        "2009-03-portals-meetup-at-apachecon-europe",
+        "2009-04-jax-apache-sling-and-accidental-complexity",
+        "2009-04-rapid-development-with-apache-sling-using-an-ide",
+        "2009-11-increasing-interest-in-jcr-and-apache-sling",
+        "2011-04-apache-axis2-book",
+        "2015-04-hello-world",
+        "2015-08-osgi-components-simply-simple-part-i",
+        "2015-08-osgi-components-simply-simple-part-ii",
+        "2015-11-osgi-components-simply-simple-part-iii",
+        "2016-04-example-osgi-web-application",
+        "2016-04-http-whiteboard-simply-simple-part-i",
+        "2016-05-building-osgi-bundles-with-apache-maven",
+        "2016-05-migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations",
+        "2016-09-http-whiteboard-simply-simple-part-ii",
+        "2016-10-http-whiteboard-simply-simple-part-iii",
+        "2017-07-new-osgi-configuration-features-r7",
+        "2017-08-osgi-declarative-services-configuration-binding",
+        "2020-07-guide-on-using-osgi-configurations",
+        "2024-02-value-created-by-developers"
+      ],
+      "pageCount": 58,
+      "blocks": [],
+      "delivery": {
+        "verified": 58,
+        "deployed": 0,
+        "contentPending": 0,
+        "pending": 0
+      }
+    },
+    {
+      "id": "blog",
+      "representativeSlug": "blog",
+      "pages": [
+        "blog"
+      ],
+      "pageCount": 1,
+      "blocks": [
+        "archive-navigation",
+        "code-block",
+        "colophon",
+        "masthead",
+        "post-entry",
+        "sidebar-widgets"
+      ],
+      "delivery": {
+        "verified": 1,
+        "deployed": 0,
+        "contentPending": 0,
+        "pending": 0
+      }
+    },
+    {
+      "id": "index",
+      "representativeSlug": "index",
+      "pages": [
+        "index"
+      ],
+      "pageCount": 1,
+      "blocks": [
+        "colophon",
+        "masthead",
+        "post-entry"
+      ],
+      "delivery": {
+        "verified": 1,
+        "deployed": 0,
+        "contentPending": 0,
+        "pending": 0
+      }
+    },
+    {
+      "id": "listing",
+      "representativeSlug": "category-everything",
+      "pages": [
+        "category-everything",
+        "category-software",
+        "category-software-osgi",
+        "category-uncategorized"
+      ],
+      "pageCount": 4,
+      "blocks": [],
+      "delivery": {
+        "verified": 4,
+        "deployed": 0,
+        "contentPending": 0,
+        "pending": 0
+      }
+    },
+    {
+      "id": "privacy-policy",
+      "representativeSlug": "privacy-policy",
+      "pages": [
+        "privacy-policy"
+      ],
+      "pageCount": 1,
+      "blocks": [
+        "colophon",
+        "masthead",
+        "post-entry",
+        "sidebar-widgets"
+      ],
+      "delivery": {
+        "verified": 1,
+        "deployed": 0,
+        "contentPending": 0,
+        "pending": 0
+      }
+    },
+    {
+      "id": "search",
+      "representativeSlug": "search",
+      "pages": [
+        "search"
+      ],
+      "pageCount": 1,
+      "blocks": [],
+      "delivery": {
+        "verified": 1,
+        "deployed": 0,
+        "contentPending": 0,
+        "pending": 0
+      }
+    }
+  ]
+}

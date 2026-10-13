@@ -1,0 +1,52 @@
+{
+  "slug": "index",
+  "type": "landing",
+  "renderBranch": "A",
+  "template": null,
+  "modules": [
+    "masthead",
+    "colophon",
+    "post-entry"
+  ],
+  "slotsFilled": [
+    "entry"
+  ],
+  "canonShas": {
+    "header": "0250f5302f9b",
+    "footer": "5ce4649ea38e",
+    "css": "4f7dca61ef71"
+  },
+  "deviations": [],
+  "migrationDecisions": [],
+  "metadata": {
+    "title": "Welcome - A Matter of Unimportance",
+    "description": null,
+    "canonical": null,
+    "lang": "en-US"
+  },
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Welcome - A Matter of Unimportance",
+    "url": "https://blog.osoco.de/"
+  },
+  "migratedAt": "2026-10-12T18:46:59Z",
+  "designMdSha": "bae0208daf50",
+  "designJsonSha": "d9694956c490",
+  "sourceCurrentSha": "a0fdeafe682c",
+  "sourceProposedSha": "9754ece12e07",
+  "fidelityTier": "archetype",
+  "archetypeSource": null,
+  "archetypeSha": null,
+  "variants": [],
+  "gatesPassed": [],
+  "gateEvidence": {},
+  "contentDeviations": [],
+  "assetsBundled": 11,
+  "missingAssets": [],
+  "brokenInternalLinks": [],
+  "outputPath": "index.html",
+  "outputPathDefault": null,
+  "sidecar": "_meta.json",
+  "driverVersion": "1"
+}

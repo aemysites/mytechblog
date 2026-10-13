@@ -1,0 +1,21 @@
+/* entry-meta — canon.css footer.entry-meta */
+.entry-meta {
+  clear: both;
+  margin-top: var(--s-1);
+  font-size: 13px;
+  line-height: 1.8462;
+  color: var(--c-muted);
+}
+
+.entry-meta a {
+  color: var(--c-muted);
+}
+
+.entry-meta a:hover {
+  color: var(--c-link);
+}
+
+/* single-author site: the theme hides the author credit (source .single-author .by-author) */
+.entry-meta .by-author {
+  display: none;
+}

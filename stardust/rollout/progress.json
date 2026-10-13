@@ -1,0 +1,193 @@
+{
+  "units": {
+    "foundation": {
+      "status": "done",
+      "kind": "foundation",
+      "templates": [
+        "static",
+        "landing",
+        "listing",
+        "article"
+      ],
+      "pages": 1,
+      "startedAt": "2026-10-12T18:49:56Z",
+      "blocks": 7,
+      "endedAt": "2026-10-12T19:19:17Z",
+      "gates": {
+        "360": {
+          "shell": "privacy-policy",
+          "pct": 2.43,
+          "dh": 0,
+          "clipped": 0,
+          "missing": 0
+        },
+        "1440": {
+          "shell": "privacy-policy",
+          "pct": 1.07,
+          "dh": 0,
+          "clipped": 0,
+          "missing": 0
+        },
+        "crop": "header/footer bands ≤0.32% except 360 footer 2.28% (headed-live vs headless-EDS text raster; same page headed 0.00%)",
+        "chrome": "chrome-compare exit 0"
+      },
+      "verdict": "foundation: shell privacy-policy live, gate 1440 1.07% Δh 0 / 360 2.43% Δh 0, clipped 0, missing 0, chrome-compare exit 0, blocks header, footer, search-form, entry-meta, post-nav, code, table"
+    },
+    "archetype-static": {
+      "status": "done",
+      "kind": "archetype",
+      "templates": [
+        "static"
+      ],
+      "pages": 1,
+      "startedAt": "2026-10-12T19:19:31Z",
+      "endedAt": "2026-10-12T19:19:31Z",
+      "gates": {
+        "360": {
+          "archetype": "privacy-policy",
+          "pct": 2.43,
+          "dh": 0
+        },
+        "1440": {
+          "archetype": "privacy-policy",
+          "pct": 1.07,
+          "dh": 0
+        }
+      },
+      "verdict": "archetype-static: privacy-policy live (the foundation shell), gate-all row PASS 1440 1.07% / 360 2.43%, Δh 0, clipped 0, missing 0"
+    },
+    "archetype-landing": {
+      "status": "done",
+      "kind": "archetype",
+      "templates": [
+        "landing"
+      ],
+      "pages": 1,
+      "startedAt": "2026-10-12T19:19:40Z",
+      "endedAt": "2026-10-12T19:35:09Z",
+      "gates": {
+        "360": {
+          "archetype": "index",
+          "pct": 3.63,
+          "dh": 0
+        },
+        "1440": {
+          "archetype": "index",
+          "pct": 1.07,
+          "dh": 0
+        },
+        "chrome": "menu toggle parity at 360 matches live"
+      },
+      "verdict": "archetype-landing: index live, gate 1440 1.07% Δh 0 / 360 3.63% Δh 0, clipped 0, missing 0, rounds 1"
+    },
+    "archetype-article": {
+      "status": "done",
+      "kind": "archetype",
+      "templates": [
+        "article"
+      ],
+      "pages": 1,
+      "startedAt": "2026-10-12T19:19:40Z",
+      "endedAt": "2026-10-12T19:35:21Z",
+      "gates": {
+        "360": {
+          "archetype": "2021-07-the-truth-about-aem-run-modes",
+          "pct": 6.28,
+          "dh": -96,
+          "note": "within 5% height tol; headed-live vs headless-EDS wrap, headed-both 0.01%/Δ0"
+        },
+        "1440": {
+          "archetype": "2021-07-the-truth-about-aem-run-modes",
+          "pct": 2.63,
+          "dh": 0
+        },
+        "chrome": "menu toggle parity matches live"
+      },
+      "verdict": "archetype-article: 2021-07-the-truth-about-aem-run-modes live, gate 1440 2.63% Δh 0 / 360 6.28% Δh -96, clipped 0, missing 0, rounds 1"
+    },
+    "archetype-listing": {
+      "status": "done",
+      "kind": "archetype",
+      "templates": [
+        "listing"
+      ],
+      "pages": 1,
+      "startedAt": "2026-10-12T19:35:31Z",
+      "endedAt": "2026-10-12T19:42:31Z",
+      "gates": {
+        "360": {
+          "archetype": "blog",
+          "pct": 8.02,
+          "dh": -215,
+          "note": "within 5% height tol; headed-live vs headless-EDS raster"
+        },
+        "1440": {
+          "archetype": "blog",
+          "pct": 3.43,
+          "dh": -175
+        },
+        "lint": "D15 false positive (code inside <pre>) accepted, conversion log"
+      },
+      "verdict": "archetype-listing: blog gate row PASS 1440 3.43%/Δh -175, 360 8.02%/Δh -215, clipped 0, MISSING/HIDDEN 0"
+    },
+    "cluster-listing": {
+      "status": "done",
+      "kind": "cluster",
+      "templates": [
+        "listing"
+      ],
+      "pages": 4,
+      "startedAt": "2026-10-12T19:43:16Z",
+      "endedAt": "2026-10-12T19:49:11Z",
+      "gates": {
+        "360": "4/4 PASS (6.04–8.76 %, |Δh| ≤ 254)",
+        "1440": "4/4 PASS (2.84–3.88 %, |Δh| ≤ 230)",
+        "clipped": 0,
+        "missingHidden": 0
+      },
+      "verdict": "cluster-listing: 4 category archives encoded, lint clean, deployed+published, gate-all 4/4 PASS @1440 and @360"
+    },
+    "cluster-article": {
+      "status": "done",
+      "kind": "cluster",
+      "templates": [
+        "article"
+      ],
+      "pages": 58,
+      "startedAt": "2026-10-12T19:49:27Z",
+      "endedAt": "2026-10-12T20:26:41Z",
+      "gates": {
+        "360": "58/58 PASS (≤ 7.9 %)",
+        "1440": "58/58 PASS (≤ 3.9 %)",
+        "clipped": 0,
+        "missingHidden": 0,
+        "fix": "inline code <br> split (rapid-development post, category/everything re-gated PASS)"
+      },
+      "verdict": "cluster-article: 58 posts encoded, lint clean, deployed+published, gate-all 58/58 PASS @1440 and @360 after one encoder fix"
+    },
+    "gate-all": {
+      "status": "done",
+      "kind": "final",
+      "templates": [],
+      "pages": 66,
+      "startedAt": "2026-10-12T20:27:05Z",
+      "endedAt": "2026-10-12T20:49:32Z",
+      "gates": {
+        "360": "66/66 PASS",
+        "1440": "66/66 PASS",
+        "clipped": 0,
+        "missingHidden": 0
+      },
+      "verdict": "gate-all: roster 66/66 PASS @1440 and @360 (published origin, --skip-existing), coverage 66 deployed with gate rows"
+    },
+    "final": {
+      "status": "done",
+      "kind": "final",
+      "templates": [],
+      "pages": 0,
+      "startedAt": "2026-10-12T20:49:49Z",
+      "endedAt": "2026-10-12T20:49:49Z",
+      "verdict": "final: foundation unchanged (18 files), 0 queued foundation requests, 66/66 delivered and gated"
+    }
+  }
+}

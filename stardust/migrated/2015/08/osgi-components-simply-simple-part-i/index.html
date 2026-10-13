@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<!-- stardust:migrate
+  writtenBy:        stardust:migrate
+  writtenAt:        2026-10-12T19:36:56Z
+  page:             OSGi Components - Simply Simple - Part I - A Matter of Unimportance
+  slug:             2015-08-osgi-components-simply-simple-part-i
+  pagePath:         migrated/2015/08/osgi-components-simply-simple-part-i/index.html
+  renderBranch:     A'
+  template:         2021-07-the-truth-about-aem-run-modes
+  archetypePath:    stardust/prototypes/2021-07-the-truth-about-aem-run-modes-proposed.html
+  archetypeSha:     e1e571a3c534
+  sourceCurrent:    stardust/current/pages/2015-08-osgi-components-simply-simple-part-i.json
+  againstDirection: stardust/direction.md (Active)
+  designMd:         DESIGN.md (sha: bae0208daf50)
+  designJson:       DESIGN.json (sha: d9694956c490)
+  canonShas:        header:22a6ff0f57a1 footer:b9fcd423dfd3 css:4f7dca61ef71
+  decisionTrace:    _meta.json
+  brokenInternalLinks: 43
+  stardustVersion:  local
+-->
+<style>
+:root {
+  --c-backdrop: #e6e6e6;
+  --c-page: #fff;
+  --c-rule: #ededed;
+  --c-text: #444;
+  --c-muted: #757575;
+  --c-meta: #636363;
+  --c-title: #515151;
+  --c-nav: #6a6a6a;
+  --c-link: #21759b;
+  --c-link-hover: #0f3647;
+  --c-visited: #9f9f9f;
+  --f-base: 'Open Sans', helvetica, arial, sans-serif;
+  --f-mono: consolas, monaco, 'Lucida Console', monospace;
+  --s-1: 24px;
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"OSGi Components - Simply Simple - Part I - A Matter of Unimportance","description":"Developing OSGi Components is very simple. Learn how to utilize Declarative Services to implement your application based on services and components.","mainEntityOfPage":"https://blog.osoco.de/2015/08/osgi-components-simply-simple-part-i/"}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>OSGi Components - Simply Simple - Part I - A Matter of Unimportance</title>
+<meta name="description" content="Developing OSGi Components is very simple. Learn how to utilize Declarative Services to implement your application based on services and components.">
+<link rel="icon" href="../../../assets/favicon.png">
+<link rel="stylesheet" href="../../../assets/canon.css">
+<link rel="stylesheet" href="../../../assets/article.css">
+</head>
+<body class="tpl-article single-author">
+<div class="site" id="page">
+<header class="site-header" role="banner">
+  <div class="site-branding">
+    <h1 class="site-title"><a href="../../../index.html">A Matter of Unimportance</a></h1>
+    <h2 class="site-description">The world won't listen….</h2>
+  </div>
+  <nav class="main-navigation">
+    <button class="menu-toggle" type="button" aria-expanded="false">Menu</button>
+    <ul class="nav-menu"> <li><a href="../../../index.html">Home</a></li><li><a href="../../../blog/index.html">Blog</a></li> <li><a href="../../../privacy-policy/index.html">Privacy Policy</a></li> </ul>
+  </nav>
+</header>
+<div class="site-main">
+<main class="site-content" id="content" data-template="2021-07-the-truth-about-aem-run-modes">
+<article class="entry" data-section="1">
+  <header class="entry-header"><h1 class="entry-title">OSGi Components – Simply Simple – Part I</h1></header>
+  <div class="entry-content">
+			<p>There is a lot of prejudice and misunderstanding when it comes to <a href="http://www.osgi.org">OSGi</a>. As with every technology there is a learning curve and some things might be different than you are used to. But change isn’t necessarily a bad thing.</p>
+<p>Component-oriented development is a very common and powerful software engineering style where you assemble your application out of components. A component might offer a service, e.g. a scheduler service. Other components can use this scheduler service.</p>
+<p>Or a little bit more formal: a component is a piece of software managed by a (component) container. In Java this means this is an instance, created and managed by a container. Therefore it is not the task of the developer to create or configure these instances. This is the task of the container. If the component uses other services, it is also the task of the container to pass these services to the component. Therefore a service is a component which provides one or more services. In Java this means a service implements one or more interfaces where an interface represents the service description or contract.</p>
+<h1>OSGi Components with Declarative Services</h1>
+<p>I will show that developing components with OSGi is really simple and straightforward with no additional cruft – and I think it can’t really get much easier than this. We’ll be using the Declarative Services specification(see <a href="https://www.osgi.org/developer/specifications/">OSGi Compendium</a> Chapter 112) in it’s latest version (R6). With the use of the annotations also defined in this specification, components are usually POJOs with all its benefits.</p>
+<p>I will not go into the usual tooling discussion – there are different tools out there for your favorite development environment for processing these annotations, like Ant, Maven, Gradle. In contrast to other solutions, all the annotations are build time annotations. They are processed by some tooling and create additional files which are put in the final jar (bundle). I don’t explain everything in every detail and leave out things here and there – it is advisable to read the mentioned specs in addition!</p>
+<p>Please note, that using Declarative Services (DS) is one way of developing components and services for OSGi, there are other approaches like Blueprint, Apache Felix iPojo, Apache Felix Dependency Manager etc. Each one of these solutions (including DS) has pros in some areas while it has cons in others. I think, DS is a simple and straightforward way of developing components and its a standard maintained by the OSGi alliance. It’s easy to learn, easy to manage and maintain and provides all required features. However, if you plan to use something different than DS, the real good news is: you can mix and match all these approaches – they’re all based on the OSGi service registry and work well together!</p>
+<p>With Declarative Services we have a nice component container managing our components and providing them with configurations and required services. As we’re talking about OSGi here, we’re talking about bundles, so the classes for your component or service go into a bundle. Declarative Services (DS) needs to know which classes are components, what services they might provide etc. Therefore your bundle should contain an XML file for DS which exactly defines this. You might know such XML configuration files from other frameworks – however, the DS format is rather simple and – the good part – you never have to write this by hand and never even have to look at it (ok, if things go wrong, it might sometimes help to check it). At runtime the SCR implementation will read these descriptor files and manage the components and services. Oh, I forgot to explain SCR 🙂 It stands for Service Component Runtime and can be seen as the container defined by DS. Now usually people use SCR and DS as synonyms though that is not quiet correct for the purists amongst us.</p>
+<p>So let’s start…</p>
+<h1>Components</h1>
+<p>If you want to write a component which is managed by the container, just add the @Component annotation to your class:</p>
+<div class="code-block" data-lang="java"><table><tbody><tr><td class="gutter"><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></td><td class="code-lines"><div class="line"><code class="keyword">package</code> <code class="plain">com.mycompany.cool.project.impl;</code></div><div class="line"> </div><div class="line"><code class="keyword">import</code> <code class="plain">org.osgi.service.component.annotations.Component;</code></div><div class="line"> </div><div class="line"><code class="color1">@Component</code></div><div class="line"><code class="keyword">public</code> <code class="keyword">class</code> <code class="plain">MyFirstComponent { }</code></div></td></tr></tbody></table></div>
+<p>Build your project, deploy your bundle into an OSGi framework which has SCR running (I recommend the implementation from <a href="http://felix.apache.org/documentation/subprojects/apache-felix-service-component-runtime.html">Apache Felix</a>, version 2.0 or higher) – and your component will be instantiated by the container on bundle start. As a component has never public API but is a private implementation, the class should go into a private package which is not exported by the bundle! It is good style to add impl or similar somewhere in the package name, like com.mycompany.cool.project.impl.</p>
+<p>Now, while this component runs and works – it’s not really useful as the component does nothing.</p>
+<h1>Lifecycle</h1>
+<p>As noted above, the container manages the lifecycle of the component, its instantiation and removal. In order to make this work, the component class needs the default zero argument constructor. However, if the component wants to do something during the creation or the deletion phase, it can implement an activate and/or deactivate method and mark it with the according annotation:</p>
+<div class="code-block" data-lang="java"><table><tbody><tr><td class="gutter"><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></td><td class="code-lines"><div class="line"><code class="keyword">package</code> <code class="plain">com.mycompany.cool.project.impl;</code></div><div class="line"> </div><div class="line"><code class="keyword">import</code> <code class="plain">org.osgi.service.component.annotations.Component;</code></div><div class="line"><code class="keyword">import</code> <code class="plain">org.osgi.service.component.annotations.Activate;</code></div><div class="line"><code class="keyword">import</code> <code class="plain">org.osgi.service.component.annotations.Deactivate;</code></div><div class="line"><code class="spaces"> </code> </div><div class="line"><code class="color1">@Component</code></div><div class="line"><code class="keyword">public</code> <code class="keyword">class</code> <code class="plain">MyFirstComponent {</code></div><div class="line"><code class="spaces"> </code> </div><div class="line"><code class="spaces">    </code><code class="color1">@Activate</code></div><div class="line"><code class="spaces">    </code><code class="keyword">protected</code> <code class="keyword">void</code> <code class="plain">activate() {</code></div><div class="line"><code class="spaces">        </code><code class="comments">// do something</code></div><div class="line"><code class="spaces">    </code><code class="plain">}</code></div><div class="line"><code class="spaces"> </code> </div><div class="line"><code class="spaces">    </code><code class="color1">@Deactivate</code></div><div class="line"><code class="spaces">    </code><code class="keyword">protected</code> <code class="keyword">void</code> <code class="plain">deactivate() {</code></div><div class="line"><code class="spaces">        </code><code class="comments">// do something</code></div><div class="line"><code class="spaces">    </code><code class="plain">}</code></div><div class="line"><code class="plain">}</code></div></td></tr></tbody></table></div>
+<p>It is good practice to name these methods activate and deactivate – however you could pick any other name if you want. The methods have to be protected with no return value.</p>
+<p>Still, we have a component not doing that much, so lets do something “more” usefull:</p>
+<div class="code-block" data-lang="java"><table><tbody><tr><td class="gutter"><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></td><td class="code-lines"><div class="line"><code class="keyword">package</code> <code class="plain">com.mycompany.cool.project.impl;</code></div><div class="line"> </div><div class="line"><code class="keyword">import</code> <code class="plain">org.osgi.service.component.annotations.Activate;</code></div><div class="line"><code class="keyword">import</code> <code class="plain">org.osgi.service.component.annotations.Component;</code></div><div class="line"><code class="keyword">import</code> <code class="plain">org.osgi.service.component.annotations.Deactivate;</code></div><div class="line"><code class="spaces"> </code> </div><div class="line"><code class="color1">@Component</code></div><div class="line"><code class="keyword">public</code> <code class="keyword">class</code> <code class="plain">MyFirstComponent {</code></div><div class="line"><code class="spaces"> </code> </div><div class="line"><code class="spaces">    </code><code class="keyword">private</code> <code class="keyword">volatile</code> <code class="keyword">boolean</code> <code class="plain">doRun;</code></div><div class="line"><code class="spaces"> </code> </div><div class="line"><code class="spaces">    </code><code class="color1">@Activate</code></div><div class="line"><code class="spaces">    </code><code class="keyword">protected</code> <code class="keyword">void</code> <code class="plain">activate() {</code></div><div class="line"><code class="spaces">        </code><code class="keyword">final</code> <code class="plain">Thread t = </code><code class="keyword">new</code> <code class="plain">Thread() {</code></div><div class="line"><code class="spaces">            </code><code class="keyword">public</code> <code class="keyword">void</code> <code class="plain">run() {</code></div><div class="line"><code class="spaces">                </code><code class="plain">doIt();</code></div><div class="line"><code class="spaces">            </code><code class="plain">}</code></div><div class="line"><code class="spaces">        </code><code class="plain">};</code></div><div class="line"><code class="spaces">        </code><code class="plain">t.setDaemon(</code><code class="keyword">true</code><code class="plain">);</code></div><div class="line"><code class="spaces">        </code><code class="plain">doRun = </code><code class="keyword">true</code><code class="plain">;</code></div><div class="line"><code class="spaces">        </code><code class="plain">t.start();</code></div><div class="line"><code class="spaces">    </code><code class="plain">}</code></div><div class="line"><code class="spaces"> </code> </div><div class="line"><code class="spaces">    </code><code class="keyword">private</code> <code class="keyword">void</code> <code class="plain">doIt() {</code></div><div class="line"><code class="spaces">        </code><code class="keyword">while</code> <code class="plain">(doRun) {</code></div><div class="line"><code class="spaces">            </code><code class="plain">System.out.println(</code><code class="string">&quot;I'm still alive!&quot;</code><code class="plain">);</code></div><div class="line"><code class="spaces">            </code><code class="keyword">try</code> <code class="plain">{</code></div><div class="line"><code class="spaces">                </code><code class="plain">Thread.sleep(</code><code class="value">60</code> <code class="plain">* </code><code class="value">1000</code><code class="plain">);</code></div><div class="line"><code class="spaces">            </code><code class="plain">} </code><code class="keyword">catch</code> <code class="plain">(InterruptedException e) {}</code></div><div class="line"><code class="spaces">        </code><code class="plain">}</code></div><div class="line"><code class="spaces">    </code><code class="plain">}</code></div><div class="line"><code class="spaces"> </code> </div><div class="line"><code class="spaces">    </code><code class="color1">@Deactivate</code></div><div class="line"><code class="spaces">    </code><code class="keyword">protected</code> <code class="keyword">void</code> <code class="plain">deactivate() {</code></div><div class="line"><code class="spaces">        </code><code class="plain">doRun = </code><code class="keyword">false</code><code class="plain">;</code></div><div class="line"><code class="spaces">    </code><code class="plain">}</code></div><div class="line"><code class="plain">}</code></div></td></tr></tbody></table></div>
+<p>We create a new thread in activate and start it – in the thread we print out a message every minute. In addition we use a boolean variable to stop the thread when the component gets deactivated. While this example is not a production ready implementation, it shows that the thread of the activate and deactivate method “belong” to the component container – so the component should return as quickly as possible and do not block this method. Therefore we created an own thread. Please note, that this is just an example to demonstrate something, for things like timed execution, you would rather use a scheduler invoking your component periodically instead of running an own thread inside your component. The Apache Sling scheduler is a great way of doing things like these.</p>
+<h1>Using Services</h1>
+<p>A single component alone does usually not make up an application – it is rather assembled of dozens if not hundreds of components interacting. And interaction happens by using services.<br>
+So let’s extend our example – we use the event admin (another OSGi compendium spec with a great implementation from the Apache Felix project). The event admin is a service which allows us to send out events in a publish/subscrib kind of way. So each event gets a topic, and subscribers subscribe with the topics they are interested in.</p>
+<p>A component can use other services by using the @Reference annotation. The container uses dependency injection and injects references into fields:</p>
+<div class="code-block" data-lang="java"><table><tbody><tr><td class="gutter"><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></td><td class="code-lines"><div class="line"><code class="keyword">package</code> <code class="plain">com.mycompany.cool.project.impl;</code></div><div class="line"><code class="spaces"> </code> </div><div class="line"><code class="keyword">import</code> <code class="plain">org.osgi.service.component.annotations.Activate;</code></div><div class="line"><code class="keyword">import</code> <code class="plain">org.osgi.service.component.annotations.Component;</code></div><div class="line"><code class="keyword">import</code> <code class="plain">org.osgi.service.component.annotations.Deactivate;</code></div><div class="line"><code class="keyword">import</code> <code class="plain">org.osgi.service.component.annotations.Reference;</code></div><div class="line"><code class="keyword">import</code> <code class="plain">org.osgi.service.event.Event;</code></div><div class="line"><code class="keyword">import</code> <code class="plain">org.osgi.service.event.EventAdmin;</code></div><div class="line"><code class="spaces"> </code> </div><div class="line"><code class="color1">@Component</code></div><div class="line"><code class="keyword">public</code> <code class="keyword">class</code> <code class="plain">MyFirstComponent {</code></div><div class="line"><code class="spaces"> </code> </div><div class="line"><code class="spaces">    </code><code class="color1">@Reference</code></div><div class="line"><code class="spaces">    </code><code class="keyword">private</code> <code class="plain">EventAdmin eventAdmin;</code></div><div class="line"><code class="spaces"> </code> </div><div class="line"><code class="spaces">    </code><code class="keyword">private</code> <code class="keyword">volatile</code> <code class="keyword">boolean</code> <code class="plain">doRun;</code></div><div class="line"><code class="spaces"> </code> </div><div class="line"><code class="spaces">    </code><code class="color1">@Activate</code></div><div class="line"><code class="spaces">    </code><code class="keyword">protected</code> <code class="keyword">void</code> <code class="plain">activate() {</code></div><div class="line"><code class="spaces">        </code><code class="keyword">final</code> <code class="plain">Thread t = </code><code class="keyword">new</code> <code class="plain">Thread() {</code></div><div class="line"><code class="spaces">            </code><code class="keyword">public</code> <code class="keyword">void</code> <code class="plain">run() {</code></div><div class="line"><code class="spaces">                </code><code class="plain">doIt();</code></div><div class="line"><code class="spaces">            </code><code class="plain">}</code></div><div class="line"><code class="spaces">        </code><code class="plain">};</code></div><div class="line"><code class="spaces">        </code><code class="plain">t.setDaemon(</code><code class="keyword">true</code><code class="plain">);</code></div><div class="line"><code class="spaces">        </code><code class="plain">doRun = </code><code class="keyword">true</code><code class="plain">;</code></div><div class="line"><code class="spaces">        </code><code class="plain">t.start();</code></div><div class="line"><code class="spaces">    </code><code class="plain">}</code></div><div class="line"><code class="spaces"> </code> </div><div class="line"><code class="spaces">    </code><code class="keyword">private</code> <code class="keyword">void</code> <code class="plain">doIt() {</code></div><div class="line"><code class="spaces">        </code><code class="keyword">while</code> <code class="plain">(doRun) {</code></div><div class="line"><code class="spaces">            </code><code class="keyword">final</code> <code class="plain">Event event = </code><code class="keyword">new</code> <code class="plain">Event(</code><code class="string">&quot;alive&quot;</code><code class="plain">, </code><code class="keyword">null</code><code class="plain">);</code></div><div class="line"><code class="spaces">            </code><code class="keyword">this</code><code class="plain">.eventAdmin.sendEvent(event);</code></div><div class="line"><code class="spaces">            </code><code class="keyword">try</code> <code class="plain">{</code></div><div class="line"><code class="spaces">                </code><code class="plain">Thread.sleep(</code><code class="value">60</code> <code class="plain">* </code><code class="value">1000</code><code class="plain">);</code></div><div class="line"><code class="spaces">            </code><code class="plain">} </code><code class="keyword">catch</code> <code class="plain">(InterruptedException e) {}</code></div><div class="line"><code class="spaces">        </code><code class="plain">}</code></div><div class="line"><code class="spaces">    </code><code class="plain">}</code></div><div class="line"><code class="spaces"> </code> </div><div class="line"><code class="spaces">    </code><code class="color1">@Deactivate</code></div><div class="line"><code class="spaces">    </code><code class="keyword">protected</code> <code class="keyword">void</code> <code class="plain">deactivate() {</code></div><div class="line"><code class="spaces">        </code><code class="plain">doRun = </code><code class="keyword">false</code><code class="plain">;</code></div><div class="line"><code class="spaces">    </code><code class="plain">}</code></div><div class="line"><code class="plain">}</code></div></td></tr></tbody></table></div>
+<p>The above example looks pretty simple and from a developer’s point of view it is simple. You just declare an instance variable with the type of the service you want (services are registered by the interface(s) they implement) and add the @Reference annotation. Before the component is activated (the activate method is called), this instance field is set with the event admin service from the container. Therefore it is safe to assume that the event admin service is available and setup.</p>
+<p>As OSGi is highly dynamic, bundles and services can come and go – so the event admin might be there or not, disappear, reappear etc. You don’t really have to care about this (at least not for the moment). Your component is only active if the event admin is available – if not, your component will either not be activated or will get deactivated. We’ll go deeper into references later on and learn how to cope with all the dynamics of services.</p>
+<p>With just these four annotations you already know the building blocks for developing OSGi components and services. I suggest you test out the examples and make yourself familiar with using your favorite development environment. Once you are able to successfully build and deploy these components, you’re ready for the cool fun stuff of DS which I will show in part two.</p>
+<p>Stay tuned.</p>
+					</div>
+  <footer class="entry-meta">
+			This entry was posted in <a href="https://blog.osoco.de/category/software/osgi/" data-broken-link="true">OSGi</a>, <a href="https://blog.osoco.de/category/software/" data-broken-link="true">Software</a> and tagged <a href="../../../tag/components/index.html" data-broken-link="true">Components</a>, <a href="../../../tag/declarative-services/index.html" data-broken-link="true">Declarative Services</a>, <a href="../../../tag/dependency-injection/index.html" data-broken-link="true">Dependency Injection</a>, <a href="../../../tag/osgi/index.html" data-broken-link="true">OSGi</a>, <a href="../../../tag/services/index.html" data-broken-link="true">Services</a> on <a href="../../../2015/08/osgi-components-simply-simple-part-i/index.html" title="14:56"><time datetime="2015-08-28T14:56:55+02:00">2015-08-28</time></a><span class="by-author"> by <a href="../../../author/cziegeler/index.html" title="View all posts by cziegeler" data-broken-link="true">cziegeler</a></span>.								</footer>
+</article>
+<nav class="nav-single" data-section="2">
+  <h3 class="screen-reader-text">Post navigation</h3>
+  <span class="nav-previous"><a href="../../../2015/04/hello-world/index.html"><span class="meta-nav">←</span> Hello world!</a></span>
+  <span class="nav-next"><a href="../../../2015/08/osgi-components-simply-simple-part-ii/index.html">OSGi Components – Simply Simple – Part II <span class="meta-nav">→</span></a></span>
+</nav>
+</main>
+<aside class="widget-area" role="complementary">
+<section class="widget widget-search">
+  <form class="search-form" role="search" method="get" action="/search">
+    <div><label class="screen-reader-text" for="s">Search for:</label> <input class="search-field" type="text" name="s" id="s" value=""> <input type="submit" value="Search"></div>
+  </form>
+</section>
+<section class="widget">
+  <h3 class="widget-title">Recent Posts</h3>
+  <ul>
+											<li>
+					<a href="../../../2024/02/value-created-by-developers/index.html">Value created by Developers</a>
+									</li>
+											<li>
+					<a href="../../../2021/07/the-truth-about-aem-run-modes/index.html">The Truth about AEM Run Modes</a>
+									</li>
+											<li>
+					<a href="../../../2020/07/guide-on-using-osgi-configurations/index.html">Guide on Using OSGi Configurations</a>
+									</li>
+											<li>
+					<a href="../../../2017/08/osgi-declarative-services-configuration-binding/index.html">OSGi Declarative Services – Configuration Binding</a>
+									</li>
+											<li>
+					<a href="../../../2017/07/new-osgi-configuration-features-r7/index.html">New OSGi Configuration Features in R7</a>
+									</li>
+					</ul>
+</section>
+<section class="widget">
+  <h3 class="widget-title">Archives</h3>
+  <ul>
+					<li><a href="../../../2024/02/index.html" data-broken-link="true">February 2024</a></li>
+	<li><a href="../../../2021/07/index.html" data-broken-link="true">July 2021</a></li>
+	<li><a href="../../../2020/07/index.html" data-broken-link="true">July 2020</a></li>
+	<li><a href="../../../2017/08/index.html" data-broken-link="true">August 2017</a></li>
+	<li><a href="../../../2017/07/index.html" data-broken-link="true">July 2017</a></li>
+	<li><a href="../../../2016/10/index.html" data-broken-link="true">October 2016</a></li>
+	<li><a href="../../../2016/09/index.html" data-broken-link="true">September 2016</a></li>
+	<li><a href="../../../2016/05/index.html" data-broken-link="true">May 2016</a></li>
+	<li><a href="../../../2016/04/index.html" data-broken-link="true">April 2016</a></li>
+	<li><a href="../../../2015/11/index.html" data-broken-link="true">November 2015</a></li>
+	<li><a href="../../../2015/08/index.html" data-broken-link="true">August 2015</a></li>
+	<li><a href="../../../2015/04/index.html" data-broken-link="true">April 2015</a></li>
+	<li><a href="../../../2011/04/index.html" data-broken-link="true">April 2011</a></li>
+	<li><a href="../../../2009/11/index.html" data-broken-link="true">November 2009</a></li>
+	<li><a href="../../../2009/04/index.html" data-broken-link="true">April 2009</a></li>
+	<li><a href="../../../2009/03/index.html" data-broken-link="true">March 2009</a></li>
+	<li><a href="../../../2009/02/index.html" data-broken-link="true">February 2009</a></li>
+	<li><a href="../../../2009/01/index.html" data-broken-link="true">January 2009</a></li>
+	<li><a href="../../../2008/11/index.html" data-broken-link="true">November 2008</a></li>
+	<li><a href="../../../2008/10/index.html" data-broken-link="true">October 2008</a></li>
+	<li><a href="../../../2008/08/index.html" data-broken-link="true">August 2008</a></li>
+	<li><a href="../../../2008/04/index.html" data-broken-link="true">April 2008</a></li>
+	<li><a href="../../../2007/12/index.html" data-broken-link="true">December 2007</a></li>
+	<li><a href="../../../2007/11/index.html" data-broken-link="true">November 2007</a></li>
+	<li><a href="../../../2007/10/index.html" data-broken-link="true">October 2007</a></li>
+	<li><a href="../../../2007/08/index.html" data-broken-link="true">August 2007</a></li>
+	<li><a href="../../../2007/07/index.html" data-broken-link="true">July 2007</a></li>
+	<li><a href="../../../2007/06/index.html" data-broken-link="true">June 2007</a></li>
+			</ul>
+</section>
+<section class="widget">
+  <h3 class="widget-title">Categories</h3>
+  <ul>
+					<li><a href="https://blog.osoco.de/category/everything/" data-broken-link="true">Everything</a>
+</li>
+	<li><a href="https://blog.osoco.de/category/software/osgi/" data-broken-link="true">OSGi</a>
+</li>
+	<li><a href="https://blog.osoco.de/category/software/" data-broken-link="true">Software</a>
+</li>
+	<li><a href="https://blog.osoco.de/category/uncategorized/" data-broken-link="true">Uncategorized</a>
+</li>
+			</ul>
+</section>
+<section class="widget">
+  <h3 class="widget-title">Meta</h3>
+  <ul>
+						<li><a href="../../../wp-login.php" data-broken-link="true">Log in</a></li>
+			<li><a href="../../../feed/index.html" data-broken-link="true">Entries feed</a></li>
+			<li><a href="../../../comments/feed/index.html" data-broken-link="true">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+</section>
+</aside>
+</div>
+<footer class="site-footer" role="contentinfo">
+  <div class="site-info"><a href="../../../privacy-policy/index.html">Privacy Policy</a><span class="sep" role="separator"></span> <a href="https://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a></div>
+</footer>
+</div>
+<script src="../../../assets/chrome.js" defer></script>
+</body>
+</html>

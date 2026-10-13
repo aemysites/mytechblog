@@ -1,0 +1,226 @@
+/* canon.css — shared layer for every blog.osoco.de archetype.
+   Values lifted from the source theme (stardust/current/css/style.css, Twenty Twelve);
+   source breakpoints kept: 600px and 960px (mobile-first). */
+
+@font-face { font-family: 'Open Sans'; font-style: normal; font-weight: 400; font-display: fallback; src: url('fonts/open-sans-latin-400-normal.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Open Sans'; font-style: italic; font-weight: 400; font-display: fallback; src: url('fonts/open-sans-latin-400-italic.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Open Sans'; font-style: normal; font-weight: 700; font-display: fallback; src: url('fonts/open-sans-latin-700-normal.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Open Sans'; font-style: italic; font-weight: 700; font-display: fallback; src: url('fonts/open-sans-latin-700-italic.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Open Sans'; font-style: normal; font-weight: 400; font-display: fallback; src: url('fonts/open-sans-latin-ext-400-normal.woff2') format('woff2'); unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Open Sans'; font-style: normal; font-weight: 700; font-display: fallback; src: url('fonts/open-sans-latin-ext-700-normal.woff2') format('woff2'); unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+:root {
+  --c-backdrop: #e6e6e6;
+  --c-page: #fff;
+  --c-rule: #ededed;
+  --c-text: #444;
+  --c-muted: #757575;
+  --c-meta: #636363;
+  --c-title: #515151;
+  --c-nav: #6a6a6a;
+  --c-link: #21759b;
+  --c-link-hover: #0f3647;
+  --c-visited: #9f9f9f;
+  --f-base: 'Open Sans', helvetica, arial, sans-serif;
+  --f-mono: consolas, monaco, 'Lucida Console', monospace;
+  --s-1: 24px;
+}
+
+/* reset (source L58–L110) */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, strong, ol, ul, li, table, tbody, tr, td, th, form, label, article, aside, footer, header, nav, main {
+  margin: 0; padding: 0; border: 0; font-size: 100%; vertical-align: baseline;
+}
+article, aside, footer, header, nav, main { display: block; }
+ol, ul { list-style: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+h1, h2, h3, h4, h5, h6 { clear: both; }
+img { border: 0; }
+
+html { overflow-y: scroll; font-size: 87.5%; text-size-adjust: 100%; }
+body { font-family: var(--f-base); font-size: 14px; line-height: 1; color: var(--c-text); text-rendering: optimizelegibility; background: var(--c-page); }
+a { outline: none; color: var(--c-link); }
+a:hover { color: var(--c-link-hover); }
+
+.screen-reader-text { position: absolute !important; clip-path: inset(50%); overflow: hidden; height: 1px; width: 1px; }
+
+/* form controls (L209–L293) */
+button, input { border: 1px solid #ccc; border-radius: 3px; font-family: inherit; padding: 6px; line-height: normal; }
+.menu-toggle, input[type="submit"] {
+  padding: 6px 10px; font-size: 11px; line-height: 1.428571429; font-weight: normal; color: #7c7c7c;
+  background-color: #e6e6e6; background-image: linear-gradient(to bottom, #f4f4f4, #e6e6e6);
+  border: 1px solid #d2d2d2; border-radius: 3px; box-shadow: 0 1px 2px rgb(64 64 64 / 10%); cursor: pointer;
+}
+.menu-toggle:hover, .menu-toggle:focus, input[type="submit"]:hover {
+  color: #5e5e5e; background-color: #ebebeb; background-image: linear-gradient(to bottom, #f9f9f9, #ebebeb);
+}
+.menu-toggle.toggled-on { color: #757575; background-color: #e1e1e1; background-image: linear-gradient(to bottom, #ebebeb, #e1e1e1); box-shadow: inset 0 0 8px 2px #c6c6c6, 0 1px 0 0 #f4f4f4; border-color: transparent; }
+
+/* page card */
+.site { padding: 0 var(--s-1); background-color: var(--c-page); }
+.site::after, .site-main::after { content: ''; display: table; clear: both; }
+
+/* masthead */
+.site-header { padding: var(--s-1) 0; }
+.site-header .site-title, .site-header .site-description { text-align: center; }
+.site-header .site-title a, .site-header .site-description a { color: var(--c-title); display: inline-block; text-decoration: none; }
+.site-header .site-title a:hover { color: var(--c-link); }
+.site-header .site-title { font-size: 24px; line-height: 1.285714286; margin-bottom: 14px; }
+.site-header .site-description { font-weight: normal; font-size: 13px; line-height: 1.846153846; color: var(--c-muted); }
+
+.main-navigation { margin-top: var(--s-1); text-align: center; }
+.main-navigation li { margin-top: var(--s-1); font-size: 12px; line-height: 1.42857143; }
+.main-navigation a { color: #5e5e5e; }
+.main-navigation a:hover, .main-navigation a:focus { color: var(--c-link); }
+.main-navigation .nav-menu { display: none; }
+.main-navigation .nav-menu.toggled-on, .menu-toggle { display: inline-block; }
+
+/* content + sidebar */
+.site-content { margin: var(--s-1) 0 0; }
+.widget-area { margin: var(--s-1) 0 0; }
+
+.site-content article {
+  border-bottom: 4px double var(--c-rule); margin-bottom: 72px; padding-bottom: var(--s-1);
+  overflow-wrap: break-word; hyphens: auto;
+}
+.is-front-page .site-content article { border: 0; margin-bottom: 0; }
+.entry-meta { clear: both; }
+.entry-header { margin-bottom: var(--s-1); }
+.entry-header .entry-title { font-size: 20px; line-height: 1.2; font-weight: normal; }
+.entry-header .entry-title a { text-decoration: none; }
+
+.archive-header { margin-bottom: 48px; padding-bottom: 22px; border-bottom: 1px solid var(--c-rule); }
+.archive-title, .widget-title, .entry-content th {
+  font-size: 11px; line-height: 2.181818182; font-weight: bold; text-transform: uppercase; color: var(--c-meta);
+}
+
+/* entry content (L763–L986) */
+.entry-content { line-height: 1.714285714; }
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 { margin: var(--s-1) 0; line-height: 1.714285714; }
+.entry-content h1 { font-size: 21px; line-height: 1.5; }
+.entry-content h2 { font-size: 18px; line-height: 1.6; }
+.entry-content h3 { font-size: 16px; line-height: 1.846153846; }
+.entry-content h4 { font-size: 14px; line-height: 1.846153846; }
+.entry-content h5 { font-size: 13px; line-height: 1.846153846; }
+.entry-content h6 { font-size: 12px; line-height: 1.846153846; }
+.entry-content p { margin: 0 0 var(--s-1); line-height: 1.714285714; }
+.entry-content a:visited { color: var(--c-visited); }
+.entry-content ol, .entry-content ul { margin: 0 0 var(--s-1); line-height: 1.714285714; }
+.entry-content ul ul, .entry-content ol ol, .entry-content ul ol, .entry-content ol ul { margin-bottom: 0; }
+.entry-content ul { list-style: disc outside; }
+.entry-content ol { list-style: decimal outside; }
+.entry-content li { margin: 0 0 0 36px; }
+.entry-content blockquote { margin-bottom: var(--s-1); padding: var(--s-1); font-style: italic; }
+.entry-content blockquote p:last-child { margin-bottom: 0; }
+.entry-content code { font-family: var(--f-mono); font-size: 12px; line-height: 2; }
+.entry-content pre {
+  border: 1px solid var(--c-rule); color: #666; font-family: var(--f-mono); font-size: 12px; line-height: 1.714285714;
+  margin: var(--s-1) 0; overflow: auto; padding: var(--s-1);
+}
+.entry-content pre.is-wrapped { box-sizing: border-box; white-space: pre-wrap; }
+.entry-content pre code { display: block; font-size: inherit; }
+.entry-content table { border-bottom: 1px solid var(--c-rule); color: var(--c-muted); font-size: 12px; line-height: 2; margin: 0 0 var(--s-1); width: 100%; }
+.entry-content td { border-top: 1px solid var(--c-rule); padding: 6px 10px 6px 0; }
+.entry-content img { max-width: 100%; height: auto; border-radius: 3px; box-shadow: 0 1px 4px rgb(0 0 0 / 20%); }
+.alignright { float: right; }
+.alignleft { float: left; }
+img.alignright { margin: 12px 0 12px var(--s-1); }
+img.alignleft { margin: 12px var(--s-1) 12px 0; }
+img.aligncenter { display: block; clear: both; margin: 12px auto; }
+
+footer.entry-meta { margin-top: var(--s-1); font-size: 13px; line-height: 1.846153846; color: var(--c-muted); }
+.entry-meta a { color: var(--c-muted); }
+.entry-meta a:hover { color: var(--c-link); }
+.single-author .entry-meta .by-author { display: none; }
+
+/* post / archive navigation */
+.site-content nav { clear: both; line-height: 2; overflow: hidden; }
+.nav-previous { float: left; width: 50%; }
+.nav-next { float: right; text-align: right; width: 50%; }
+
+/* sidebar widgets (L625–L674) */
+.widget-area .widget { hyphens: auto; margin-bottom: 48px; overflow-wrap: break-word; }
+.widget-area .widget h3 { margin-bottom: var(--s-1); }
+.widget-area .widget li { font-size: 13px; line-height: 1.846153846; }
+.widget-area .widget a { color: var(--c-muted); }
+.widget-area .widget a:hover { color: var(--c-link); }
+.widget-area .widget a:visited { color: var(--c-visited); }
+.widget-area .search-field { width: 53.66666666666%; }
+
+/* colophon (L679–L705) */
+.site-footer {
+  border-top: 1px solid var(--c-rule); clear: both; font-size: 12px; line-height: 2; max-width: 960px;
+  margin: var(--s-1) auto 0; padding: var(--s-1) 0;
+}
+.site-footer a { color: #686868; }
+.site-footer a:hover { color: var(--c-link); }
+.site-info .sep { padding: 0 0.3em 0 0.6em; }
+.site-info .sep::before { content: '\002f'; }
+
+@media screen and (min-width: 600px) {
+  .site { margin: 0 auto; max-width: 960px; overflow: hidden; }
+  .site-content { float: left; width: 65.104166667%; }
+  .is-front-page .site-content { width: 100%; }
+  .is-front-page .site-content, .is-front-page article { overflow: hidden; }
+  .widget-area { float: right; width: 26.041666667%; }
+  .entry-header .entry-title { font-size: 22px; }
+  .site-header .site-title, .site-header .site-description { text-align: left; }
+  .site-header .site-title { font-size: 26px; line-height: 1.846153846; margin-bottom: 0; }
+  .main-navigation .nav-menu {
+    border-bottom: 1px solid var(--c-rule); border-top: 1px solid var(--c-rule);
+    display: inline-block !important; text-align: left; width: 100%; margin: 0; text-indent: 0;
+  }
+  .main-navigation li a, .main-navigation li { display: inline-block; text-decoration: none; }
+  .main-navigation li a { border-bottom: 0; color: var(--c-nav); line-height: 3.692307692; text-transform: uppercase; white-space: nowrap; }
+  .main-navigation li a:hover, .main-navigation li a:focus { color: #000; }
+  .main-navigation li { margin: 0 40px 0 0; position: relative; }
+  .main-navigation .is-current > a { color: var(--c-meta); font-weight: bold; }
+  .menu-toggle { display: none; }
+}
+
+@media screen and (min-width: 960px) {
+  body { background-color: var(--c-backdrop); }
+  body .site { padding: 0 40px; margin-top: 48px; margin-bottom: 48px; box-shadow: 0 2px 6px rgb(100 100 100 / 30%); }
+}
+
+/* code-block — per-section CSS-portation of the SyntaxHighlighter 3.0.9b default theme
+   (stardust/current/css/shCore.css + shThemeDefault.css): numbered gutter + highlighted lines. */
+.code-block {
+  box-sizing: border-box; width: 100%; margin: 1em 0; position: relative; overflow: auto hidden;
+  font-size: 1em; padding: 0.5em 1em; background-color: #fff;
+}
+.entry-content .code-block table { table-layout: auto; width: 100%; border: 0; margin: 0; color: inherit; font-size: inherit; line-height: 1.1em; }
+.code-block td { border: 0; padding: 0; vertical-align: baseline; }
+.code-block td.code-lines { width: 100%; }
+.code-block .line, .code-block code {
+  font-family: monaco, consolas, 'Bitstream Vera Sans Mono', 'Courier New', courier, monospace;
+  font-size: 1em; line-height: 1.1em; font-weight: normal; font-style: normal; text-align: left;
+  min-height: auto; white-space: pre;
+}
+.entry-content .code-block code { display: inline; font-size: 1em; line-height: 1.1em; }
+.code-block .gutter { color: #afafaf; }
+.code-block .gutter .line { text-align: right; padding: 0 0.5em 0 0; margin-right: 1em; border-right: 3px solid #6ce26c; }
+.code-block .plain { color: #000; }
+.code-block .comments { color: #008200; }
+.code-block .string { color: #00f; }
+.code-block .keyword { color: #069; font-weight: bold; }
+.code-block .preprocessor, .code-block .color1 { color: gray; }
+.code-block .variable { color: #a70; }
+.code-block .value { color: #090; }
+.code-block .functions, .code-block .color2 { color: #ff1493; }
+.code-block .constants { color: #06c; }
+.code-block .script { font-weight: bold; color: #069; }
+.code-block .color3 { color: red; }
+
+/* data-table — per-section CSS-portation of TablePress 3.3.3 default.css (stardust/current/css/tablepress.css). */
+.entry-content table.data-table { border-collapse: collapse; clear: both; table-layout: auto; width: 100%; }
+.entry-content .table-scroll { overflow-x: auto; } /* R-01: the source table overflows the 360 viewport */
+.entry-content .data-table td, .entry-content .data-table th {
+  background: none; border: 0; box-sizing: border-box; padding: 7px; text-align: left; vertical-align: top;
+}
+.entry-content .data-table td { color: #111; }
+.entry-content .data-table thead + tbody > tr > *, .entry-content .data-table tbody > tr ~ tr > * { border-top: 1px solid #ddd; }
+.entry-content .data-table thead th { background-color: #d9edf7; font-weight: 700; vertical-align: middle; word-break: normal; }
+.entry-content .data-table tbody.is-striped > tr:nth-child(odd) > * { background-color: #fff; }
+.entry-content .data-table tbody.is-striped > tr:nth-child(even) > * { background-color: #f9f9f9; }
+.entry-content .data-table tbody > tr:hover > * { background-color: #f3f3f3; }
+.entry-content .table-description { clear: both; display: block; }

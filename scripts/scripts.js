@@ -10,7 +10,12 @@ import {
   loadSections,
   loadCSS,
   buildBlock,
+  getMetadata,
+  readBlockConfig,
+  toClassName,
+  toCamelCase,
 } from './aem.js';
+import { decorateArchiveLinks } from './archives.js';
 
 if (window.trustedTypes && window.trustedTypes.createPolicy) {
   const innerTT = window.trustedTypes.createPolicy('tt-inner', {
@@ -143,6 +148,72 @@ function decorateButtons(main) {
 }
 
 /**
+ * Section metadata (a `section-metadata` block): `Style` → section classes, other keys →
+ * data attributes; the block is removed. Runs before blocks are decorated.
+ * @param {Element} main The main element
+ */
+function decorateSectionMetadata(main) {
+  main.querySelectorAll(':scope > .section .section-metadata').forEach((meta) => {
+    const section = meta.closest('.section');
+    const config = readBlockConfig(meta);
+    Object.entries(config).forEach(([key, value]) => {
+      if (key === 'style') {
+        String(value).split(',').map((v) => toClassName(v.trim())).filter(Boolean)
+          .forEach((c) => section.classList.add(c));
+      } else {
+        section.dataset[toCamelCase(key)] = value;
+      }
+    });
+    const wrapper = meta.parentElement;
+    meta.remove();
+    if (wrapper && wrapper !== section && !wrapper.children.length) wrapper.remove();
+  });
+}
+
+/**
+ * Entry structure (source: article.entry > header.entry-header > .entry-title): a section whose
+ * content opens with an h1/h2 is a post entry; that heading MOVES into a header.entry-header
+ * slot at the top of the section and the section gets the `entry` layout class.
+ * @param {Element} main The main element
+ */
+function decorateEntries(main) {
+  main.querySelectorAll(':scope > .section').forEach((section) => {
+    if (section.classList.contains('entry') || section.classList.contains('archive-header')) return;
+    const wrapper = section.querySelector(':scope > .default-content-wrapper');
+    if (!wrapper || wrapper !== section.firstElementChild) return;
+    const heading = wrapper.firstElementChild;
+    if (!heading || !/^H[12]$/.test(heading.tagName)) return;
+    const header = document.createElement('header');
+    header.className = 'entry-header';
+    header.append(heading);
+    section.prepend(header);
+    if (!wrapper.children.length) wrapper.remove();
+    section.classList.add('entry');
+  });
+}
+
+/**
+ * Loads the widget sidebar (the /sidebar document) into an aside after main,
+ * on every template except the landing page (source: #secondary).
+ * @param {Document} doc The document
+ */
+async function loadSidebar(doc) {
+  if (doc.body.classList.contains('landing') || doc.querySelector('body > aside')) return;
+  const main = doc.querySelector('main');
+  if (!main) return;
+  const aside = doc.createElement('aside');
+  aside.className = 'widget-area';
+  aside.setAttribute('role', 'complementary');
+  main.after(aside);
+  const sidebarMeta = getMetadata('sidebar');
+  const path = sidebarMeta ? new URL(sidebarMeta, window.location).pathname : '/sidebar';
+  // eslint-disable-next-line import/no-cycle
+  const { loadFragment } = await import('../blocks/fragment/fragment.js');
+  const fragment = await loadFragment(path);
+  if (fragment) aside.append(...fragment.children);
+}
+
+/**
  * Decorates the main element.
  * @param {Element} main The main element
  */
@@ -151,8 +222,11 @@ export function decorateMain(main) {
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);
+  decorateSectionMetadata(main);
+  if (main === document.querySelector('body > main')) decorateEntries(main);
   decorateBlocks(main);
   decorateButtons(main);
+  decorateArchiveLinks(main);
 }
 
 /**
@@ -160,7 +234,7 @@ export function decorateMain(main) {
  * @param {Element} doc The container element
  */
 async function loadEager(doc) {
-  document.documentElement.lang = 'en';
+  document.documentElement.lang = 'en-US';
   decorateTemplateAndTheme();
   const main = doc.querySelector('main');
   if (main) {
@@ -188,6 +262,7 @@ async function loadLazy(doc) {
 
   const main = doc.querySelector('main');
   await loadSections(main);
+  await loadSidebar(doc);
 
   const { hash } = window.location;
   const element = hash ? doc.getElementById(hash.substring(1)) : false;

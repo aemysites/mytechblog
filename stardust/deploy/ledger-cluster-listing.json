@@ -1,0 +1,38 @@
+{
+  "/category/everything": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:43:29.822Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/category/software/osgi": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:43:29.822Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/category/software": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:43:34.114Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/category/uncategorized": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:43:34.681Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  }
+}

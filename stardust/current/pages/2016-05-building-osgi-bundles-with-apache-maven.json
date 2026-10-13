@@ -1,0 +1,569 @@
+{
+  "_provenance": {
+    "renderedBy": "playwright",
+    "fetchedAt": "2026-10-12T18:01:42.230Z",
+    "waitMode": "medium",
+    "waitMs": 2500,
+    "httpStatus": 200
+  },
+  "slug": "2016-05-building-osgi-bundles-with-apache-maven",
+  "url": "https://blog.osoco.de/2016/05/building-osgi-bundles-with-apache-maven/",
+  "renderedBy": "playwright",
+  "fetchedAt": "2026-10-12T18:01:42.230Z",
+  "finalUrl": "https://blog.osoco.de/2016/05/building-osgi-bundles-with-apache-maven/",
+  "title": "Building OSGi Bundles with Apache Maven - A Matter of Unimportance",
+  "description": null,
+  "og": {
+    "title": "Building OSGi Bundles with Apache Maven - A Matter of Unimportance",
+    "description": "It seems that still today some developers think that creating an OSGi bundle is complicated – in contrast to simply creating a jar. Well, an OSGi bundle is a jar. The factor which distinguishes the two is that an OSGi bundle has additional manifest entries. Adding those using the right tooling is really simple. The […]",
+    "image": null,
+    "type": "article"
+  },
+  "headings": [
+    {
+      "tag": "h1",
+      "text": "A Matter of Unimportance"
+    },
+    {
+      "tag": "h2",
+      "text": "The world won't listen…."
+    },
+    {
+      "tag": "h1",
+      "text": "Building OSGi Bundles with Apache Maven"
+    },
+    {
+      "tag": "h1",
+      "text": "Using Apache Maven to Create a OSGi Bundle"
+    },
+    {
+      "tag": "h2",
+      "text": "Standard OSGi Bundle Headers"
+    },
+    {
+      "tag": "h2",
+      "text": "Public API"
+    },
+    {
+      "tag": "h3",
+      "text": "Recent Posts"
+    },
+    {
+      "tag": "h3",
+      "text": "Archives"
+    },
+    {
+      "tag": "h3",
+      "text": "Categories"
+    },
+    {
+      "tag": "h3",
+      "text": "Meta"
+    }
+  ],
+  "body": [
+    "Home",
+    "Blog",
+    "Privacy Policy",
+    "It seems that still today some developers think that creating an OSGi bundle is complicated – in contrast to simply creating a jar. Well, an OSGi bundle is a jar. The factor which distinguishes the two is that an OSGi bundle has additional manifest entries. Adding those using the right tooling is really simple.",
+    "The more difficult part is creating good modules: clearly separating public API from the implementation and correctly version the API based on the changes you made. But this is a general problem not related to OSGi at all and applies to any Java coding. There are some simple guidelines:",
+    "Leverage packages – put the API in a different package than your implementation. It’s also good still to use a package name for your implementation which makes clear that this is the implementation, e.g. by using impl as one part of the package name.",
+    "Start private and only make public if necessary. Once something is public, you never can make it private without breaking your clients. Starting private makes things easier.",
+    "Use semantic versioning. Whenever you change your public API, make sure to correctly increase the package version depending on the type of change you made.",
+    "Again, these are general guidelines and have nothing to do with OSGi. But OSGi uses headers in the manifest of your jar to know which packages from inside the jar are public API and the version of those packages. This is the export package header. Packages not listed there are private and not accessible to other modules. The other important header is the import package header, specifying which other packages this module is using. This usually comes with a version range, like a bundle is using package foo.bar version 1.1 or higher up to but not including 2.0.",
+    "Therefore, the only required thing to make a bundle out of your jar is more or less calculating these export and import packages headers and adding them to the manifest. But don’t fear, the tooling does this automatically for you. Let’s build a bundle/jar.",
+    "There is always the year old debate on which build tool is the best one, I will not get into this discussion. I simply use what I know best and what I’m forced to use anyway: Apache Maven.",
+    "By default, Maven is not adding the additional manifest information to the jar, but there are different plugins for Maven available. For this tutorial, I’ll use the newer bnd Maven Plugin from the bnd project.",
+    "Add the following two plugin configurations to your pom. It’s usually a good idea to put this into your parent pom:",
+    "The first adds the bnd maven plugin which creates the manifest data and the second instructs the default jar plugin to use the manifest created by the bnd plugin. And that’s it. If you now build your jar project using Maven you’ll have additional manifest entries in there.",
+    "The first entries are standard headers which make your jar a bundle and contain some metadata:",
+    "Bundle-ManifestVersion: This header is required and marks the jar as a bundle, the value is always 2 (newer OSGi specifications might add more features in which case the number would be increased).",
+    "Bundle-Name: A human readable name for your bundle. This defaults to your project name from the pom.",
+    "Bundle-SymbolicName: In combination with the bundle version (see below) the symbolic name provides a key to uniquely identify a bundle. This name should be based on the reverse domain name convention and defaults to the artifact id of your project. I’ll talk a little bit more about this soon.",
+    "Bundle-Version: The version of your bundle, this defaults to the version of your project.",
+    "There is no magic in the above entries and having them in your jar does not hurt at all. As mentioned above, the symbolic name should be based on the reverse domain name convention. Usually in the Maven world you follow this rule for your group id, like org.mycompany.myproject and then use a simple name for the artifact id like scheduler-api. However a good practice is to use a full qualified name for the artifact id (which usually means you prefix the artifact id with the group id), e.g. org.mycompany.myproject.scheduler-api. Why is this a good idea? It has nothing to do with OSGi and simply makes sure that the final name of the artifact is fully qualified. If you don’t add the group id to the artifact id, the jar filename would be scheduler-api-1.2.3.jar – which is not very descriptive and gives you no clue what this thing is (and it might clash with other projects using the same artifact id).",
+    "The bundle version as any version in software development should increase with continued development/releases. For OSGi this information together with the symbolic name provides a unique key for a bundle and allows OSGi to verify if this exact bundle (name and version) is already installed in the OSGi framework. On a technical level, the bundle version information is more a marketing version.",
+    "More important than versioning your bundle (which still is important), it’s more important to correctly version your public API which might be used by others. For this add the following dependency to your pom:",
+    "The above dependency adds some annotations to your project – using the scope “provided” is a good practice as this avoids dragging in transitive dependencies.",
+    "Your public API should be in a separate Java package than your implementation – again this is a general good style and not tied to OSGi at all. If you want to export a package to be used by others, add a package-info.java file within your package:",
+    "If it’s the first version of your package, simply use 1.0 as the version – from now on once you have released this API as version 1.0, follow semantic versioning. Build your project again and you will see a header similar to this:",
+    "As you can see creating the export is really easy, just use the above annotation and done. And the imports are even easier. The plugin analyses your classes and calculates the imports for you. For example for my sample project it looks like this:",
+    "And that’s it, your jar is now a bundle and can be used in any OSGi installation as a first class citizen. It’s really simple – and in 96% of your cases the automatic calculation by the tooling is sufficient. There are only rare and special cases where you want to have them differently. In that case, you can configure the plugin accordingly.",
+    "Value created by Developers",
+    "The Truth about AEM Run Modes",
+    "Guide on Using OSGi Configurations",
+    "OSGi Declarative Services – Configuration Binding",
+    "New OSGi Configuration Features in R7",
+    "February 2024",
+    "July 2021",
+    "July 2020",
+    "August 2017",
+    "July 2017",
+    "October 2016",
+    "September 2016",
+    "May 2016",
+    "April 2016",
+    "November 2015",
+    "August 2015",
+    "April 2015",
+    "April 2011",
+    "November 2009",
+    "April 2009",
+    "March 2009",
+    "February 2009",
+    "January 2009",
+    "November 2008",
+    "October 2008",
+    "August 2008",
+    "April 2008",
+    "December 2007",
+    "November 2007",
+    "October 2007",
+    "August 2007",
+    "July 2007",
+    "June 2007",
+    "Everything",
+    "OSGi",
+    "Software",
+    "Uncategorized",
+    "Log in",
+    "Entries feed",
+    "Comments feed",
+    "WordPress.org"
+  ],
+  "codeBlocks": [
+    "Export-Package                org.osoco.software.samples.guessinggame;version=\"1.0\"",
+    "Import-Package       javax.servlet;version=\"[3.1,4)\",\n                     javax.servlet.http;version=\"[3.1,4)\",\n                     org.osoco.software.samples.guessinggame;version=\"[1.0,1.1)\""
+  ],
+  "ctas": [
+    {
+      "label": "A Matter of Unimportance",
+      "href": "https://blog.osoco.de/"
+    },
+    {
+      "label": "Home",
+      "href": "https://blog.osoco.de/"
+    },
+    {
+      "label": "Blog",
+      "href": "https://blog.osoco.de/blog/"
+    },
+    {
+      "label": "Privacy Policy",
+      "href": "https://blog.osoco.de/privacy-policy/"
+    },
+    {
+      "label": "Apache Maven",
+      "href": "http://maven.apache.org"
+    },
+    {
+      "label": "bnd project",
+      "href": "http://bnd.bndtools.org"
+    },
+    {
+      "label": "semantic versioning",
+      "href": "https://www.osgi.org/wp-content/uploads/SemanticVersioning1.pdf"
+    },
+    {
+      "label": "sample project",
+      "href": "https://github.com/cziegeler/samples.guessinggame"
+    },
+    {
+      "label": "OSGi",
+      "href": "https://blog.osoco.de/category/software/osgi/"
+    },
+    {
+      "label": "Software",
+      "href": "https://blog.osoco.de/category/software/"
+    },
+    {
+      "label": "2016-05-20",
+      "href": "https://blog.osoco.de/2016/05/building-osgi-bundles-with-apache-maven/"
+    },
+    {
+      "label": "← Migrating from the Apache Felix SCR Annotations to the OSGi Declarative Services Annotations",
+      "href": "https://blog.osoco.de/2016/05/migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations/"
+    },
+    {
+      "label": "Http Whiteboard – Simply Simple – Part II →",
+      "href": "https://blog.osoco.de/2016/09/http-whiteboard-simply-simple-part-ii/"
+    },
+    {
+      "label": "Value created by Developers",
+      "href": "https://blog.osoco.de/2024/02/value-created-by-developers/"
+    },
+    {
+      "label": "The Truth about AEM Run Modes",
+      "href": "https://blog.osoco.de/2021/07/the-truth-about-aem-run-modes/"
+    },
+    {
+      "label": "Guide on Using OSGi Configurations",
+      "href": "https://blog.osoco.de/2020/07/guide-on-using-osgi-configurations/"
+    },
+    {
+      "label": "OSGi Declarative Services – Configuration Binding",
+      "href": "https://blog.osoco.de/2017/08/osgi-declarative-services-configuration-binding/"
+    },
+    {
+      "label": "New OSGi Configuration Features in R7",
+      "href": "https://blog.osoco.de/2017/07/new-osgi-configuration-features-r7/"
+    },
+    {
+      "label": "February 2024",
+      "href": "https://blog.osoco.de/2024/02/"
+    },
+    {
+      "label": "July 2021",
+      "href": "https://blog.osoco.de/2021/07/"
+    },
+    {
+      "label": "July 2020",
+      "href": "https://blog.osoco.de/2020/07/"
+    },
+    {
+      "label": "August 2017",
+      "href": "https://blog.osoco.de/2017/08/"
+    },
+    {
+      "label": "July 2017",
+      "href": "https://blog.osoco.de/2017/07/"
+    },
+    {
+      "label": "October 2016",
+      "href": "https://blog.osoco.de/2016/10/"
+    },
+    {
+      "label": "September 2016",
+      "href": "https://blog.osoco.de/2016/09/"
+    },
+    {
+      "label": "May 2016",
+      "href": "https://blog.osoco.de/2016/05/"
+    },
+    {
+      "label": "April 2016",
+      "href": "https://blog.osoco.de/2016/04/"
+    },
+    {
+      "label": "November 2015",
+      "href": "https://blog.osoco.de/2015/11/"
+    },
+    {
+      "label": "August 2015",
+      "href": "https://blog.osoco.de/2015/08/"
+    },
+    {
+      "label": "April 2015",
+      "href": "https://blog.osoco.de/2015/04/"
+    },
+    {
+      "label": "April 2011",
+      "href": "https://blog.osoco.de/2011/04/"
+    },
+    {
+      "label": "November 2009",
+      "href": "https://blog.osoco.de/2009/11/"
+    },
+    {
+      "label": "April 2009",
+      "href": "https://blog.osoco.de/2009/04/"
+    },
+    {
+      "label": "March 2009",
+      "href": "https://blog.osoco.de/2009/03/"
+    },
+    {
+      "label": "February 2009",
+      "href": "https://blog.osoco.de/2009/02/"
+    },
+    {
+      "label": "January 2009",
+      "href": "https://blog.osoco.de/2009/01/"
+    },
+    {
+      "label": "November 2008",
+      "href": "https://blog.osoco.de/2008/11/"
+    },
+    {
+      "label": "October 2008",
+      "href": "https://blog.osoco.de/2008/10/"
+    },
+    {
+      "label": "August 2008",
+      "href": "https://blog.osoco.de/2008/08/"
+    },
+    {
+      "label": "April 2008",
+      "href": "https://blog.osoco.de/2008/04/"
+    },
+    {
+      "label": "December 2007",
+      "href": "https://blog.osoco.de/2007/12/"
+    },
+    {
+      "label": "November 2007",
+      "href": "https://blog.osoco.de/2007/11/"
+    },
+    {
+      "label": "October 2007",
+      "href": "https://blog.osoco.de/2007/10/"
+    },
+    {
+      "label": "August 2007",
+      "href": "https://blog.osoco.de/2007/08/"
+    },
+    {
+      "label": "July 2007",
+      "href": "https://blog.osoco.de/2007/07/"
+    },
+    {
+      "label": "June 2007",
+      "href": "https://blog.osoco.de/2007/06/"
+    },
+    {
+      "label": "Everything",
+      "href": "https://blog.osoco.de/category/everything/"
+    },
+    {
+      "label": "OSGi",
+      "href": "https://blog.osoco.de/category/software/osgi/"
+    },
+    {
+      "label": "Software",
+      "href": "https://blog.osoco.de/category/software/"
+    },
+    {
+      "label": "Uncategorized",
+      "href": "https://blog.osoco.de/category/uncategorized/"
+    },
+    {
+      "label": "Log in",
+      "href": "https://blog.osoco.de/wp-login.php"
+    },
+    {
+      "label": "Entries feed",
+      "href": "https://blog.osoco.de/feed/"
+    },
+    {
+      "label": "Comments feed",
+      "href": "https://blog.osoco.de/comments/feed/"
+    },
+    {
+      "label": "WordPress.org",
+      "href": "https://wordpress.org/"
+    },
+    {
+      "label": "Privacy Policy",
+      "href": "https://blog.osoco.de/privacy-policy/"
+    },
+    {
+      "label": "Proudly powered by WordPress",
+      "href": "https://wordpress.org/"
+    }
+  ],
+  "links": [
+    "https://blog.osoco.de/2016/05/building-osgi-bundles-with-apache-maven/#content",
+    "https://blog.osoco.de/",
+    "https://blog.osoco.de/blog/",
+    "https://blog.osoco.de/privacy-policy/",
+    "http://maven.apache.org/",
+    "http://bnd.bndtools.org/",
+    "https://www.osgi.org/wp-content/uploads/SemanticVersioning1.pdf",
+    "https://github.com/cziegeler/samples.guessinggame",
+    "https://blog.osoco.de/category/software/osgi/",
+    "https://blog.osoco.de/category/software/",
+    "https://blog.osoco.de/2016/05/building-osgi-bundles-with-apache-maven/",
+    "https://blog.osoco.de/author/cziegeler/",
+    "https://blog.osoco.de/2016/05/migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations/",
+    "https://blog.osoco.de/2016/09/http-whiteboard-simply-simple-part-ii/",
+    "https://blog.osoco.de/2024/02/value-created-by-developers/",
+    "https://blog.osoco.de/2021/07/the-truth-about-aem-run-modes/",
+    "https://blog.osoco.de/2020/07/guide-on-using-osgi-configurations/",
+    "https://blog.osoco.de/2017/08/osgi-declarative-services-configuration-binding/",
+    "https://blog.osoco.de/2017/07/new-osgi-configuration-features-r7/",
+    "https://blog.osoco.de/2024/02/",
+    "https://blog.osoco.de/2021/07/",
+    "https://blog.osoco.de/2020/07/",
+    "https://blog.osoco.de/2017/08/",
+    "https://blog.osoco.de/2017/07/",
+    "https://blog.osoco.de/2016/10/",
+    "https://blog.osoco.de/2016/09/",
+    "https://blog.osoco.de/2016/05/",
+    "https://blog.osoco.de/2016/04/",
+    "https://blog.osoco.de/2015/11/",
+    "https://blog.osoco.de/2015/08/",
+    "https://blog.osoco.de/2015/04/",
+    "https://blog.osoco.de/2011/04/",
+    "https://blog.osoco.de/2009/11/",
+    "https://blog.osoco.de/2009/04/",
+    "https://blog.osoco.de/2009/03/",
+    "https://blog.osoco.de/2009/02/",
+    "https://blog.osoco.de/2009/01/",
+    "https://blog.osoco.de/2008/11/",
+    "https://blog.osoco.de/2008/10/",
+    "https://blog.osoco.de/2008/08/",
+    "https://blog.osoco.de/2008/04/",
+    "https://blog.osoco.de/2007/12/",
+    "https://blog.osoco.de/2007/11/",
+    "https://blog.osoco.de/2007/10/",
+    "https://blog.osoco.de/2007/08/",
+    "https://blog.osoco.de/2007/07/",
+    "https://blog.osoco.de/2007/06/",
+    "https://blog.osoco.de/category/everything/",
+    "https://blog.osoco.de/category/uncategorized/",
+    "https://blog.osoco.de/wp-login.php",
+    "https://blog.osoco.de/feed/",
+    "https://blog.osoco.de/comments/feed/",
+    "https://wordpress.org/"
+  ],
+  "media": {
+    "imgs": [],
+    "allImgCount": 0,
+    "cssBackgrounds": [],
+    "modals": [],
+    "videos": [],
+    "iframes": []
+  },
+  "customProps": {
+    "--wp-block-synced-color": "#7a00df",
+    "--wp-block-synced-color--rgb": "122,0,223",
+    "--wp-bound-block-color": "#7a00df",
+    "--wp-editor-canvas-background": "#ddd",
+    "--wp-admin-theme-color": "#007cba",
+    "--wp-admin-theme-color--rgb": "0,124,186",
+    "--wp-admin-theme-color-darker-10": "#006ba1",
+    "--wp-admin-theme-color-darker-10--rgb": "0,107,160.5",
+    "--wp-admin-theme-color-darker-20": "#005a87",
+    "--wp-admin-theme-color-darker-20--rgb": "0,90,135",
+    "--wp-admin-border-width-focus": "2px",
+    "--wp--preset--font-size--normal": "16px",
+    "--wp--preset--font-size--huge": "42px",
+    "--wp--preset--aspect-ratio--square": "1",
+    "--wp--preset--aspect-ratio--4-3": "4/3",
+    "--wp--preset--aspect-ratio--3-4": "3/4",
+    "--wp--preset--aspect-ratio--3-2": "3/2",
+    "--wp--preset--aspect-ratio--2-3": "2/3",
+    "--wp--preset--aspect-ratio--16-9": "16/9",
+    "--wp--preset--aspect-ratio--9-16": "9/16",
+    "--wp--preset--color--black": "#000000",
+    "--wp--preset--color--cyan-bluish-gray": "#abb8c3",
+    "--wp--preset--color--white": "#fff",
+    "--wp--preset--color--pale-pink": "#f78da7",
+    "--wp--preset--color--vivid-red": "#cf2e2e",
+    "--wp--preset--color--luminous-vivid-orange": "#ff6900",
+    "--wp--preset--color--luminous-vivid-amber": "#fcb900",
+    "--wp--preset--color--light-green-cyan": "#7bdcb5",
+    "--wp--preset--color--vivid-green-cyan": "#00d084",
+    "--wp--preset--color--pale-cyan-blue": "#8ed1fc",
+    "--wp--preset--color--vivid-cyan-blue": "#0693e3",
+    "--wp--preset--color--vivid-purple": "#9b51e0",
+    "--wp--preset--color--blue": "#21759b",
+    "--wp--preset--color--dark-gray": "#444",
+    "--wp--preset--color--medium-gray": "#9f9f9f",
+    "--wp--preset--color--light-gray": "#e6e6e6",
+    "--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple": "linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%)",
+    "--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan": "linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%)",
+    "--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange": "linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%)",
+    "--wp--preset--gradient--luminous-vivid-orange-to-vivid-red": "linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%)",
+    "--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray": "linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%)",
+    "--wp--preset--gradient--cool-to-warm-spectrum": "linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%)",
+    "--wp--preset--gradient--blush-light-purple": "linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%)",
+    "--wp--preset--gradient--blush-bordeaux": "linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%)",
+    "--wp--preset--gradient--luminous-dusk": "linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%)",
+    "--wp--preset--gradient--pale-ocean": "linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%)",
+    "--wp--preset--gradient--electric-grass": "linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%)",
+    "--wp--preset--gradient--midnight": "linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%)",
+    "--wp--preset--font-size--small": "13px",
+    "--wp--preset--font-size--medium": "20px",
+    "--wp--preset--font-size--large": "36px",
+    "--wp--preset--font-size--x-large": "42px",
+    "--wp--preset--spacing--20": "0.44rem",
+    "--wp--preset--spacing--30": "0.67rem",
+    "--wp--preset--spacing--40": "1rem",
+    "--wp--preset--spacing--50": "1.5rem",
+    "--wp--preset--spacing--60": "2.25rem",
+    "--wp--preset--spacing--70": "3.38rem",
+    "--wp--preset--spacing--80": "5.06rem",
+    "--wp--preset--shadow--natural": "6px 6px 9px rgba(0, 0, 0, 0.2)",
+    "--wp--preset--shadow--deep": "12px 12px 50px rgba(0, 0, 0, 0.4)",
+    "--wp--preset--shadow--sharp": "6px 6px 0px rgba(0, 0, 0, 0.2)",
+    "--wp--preset--shadow--outlined": "6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0)",
+    "--wp--preset--shadow--crisp": "6px 6px 0px rgb(0, 0, 0)"
+  },
+  "_signals": {
+    "filteredInterstitials": 0,
+    "distinctHeadings": 10,
+    "mainTextLen": 13721,
+    "realImageCount": 0,
+    "trackingOnlyMedia": false,
+    "spaShellSuspect": false,
+    "screenshotMode": "fullPage"
+  },
+  "dynamic": {
+    "endpoints": [],
+    "thirdPartyScriptHosts": [],
+    "truncated": false,
+    "inlineData": [
+      {
+        "id": "wp-emoji-settings",
+        "type": "application/json",
+        "bytes": 247,
+        "topLevelKeys": [
+          "baseUrl",
+          "ext",
+          "svgUrl",
+          "svgExt",
+          "source"
+        ]
+      }
+    ],
+    "globalState": [],
+    "frameworkHints": [
+      "wordpress"
+    ],
+    "forms": [
+      {
+        "action": "https://blog.osoco.de/",
+        "hasAction": true,
+        "method": "get",
+        "sameOrigin": true,
+        "fieldCount": 1,
+        "fieldNames": [
+          "s"
+        ],
+        "search": true
+      }
+    ],
+    "ariaLiveRegions": 0,
+    "triggers": [],
+    "mediaIds": [],
+    "summary": {
+      "sameSiteEndpoints": 0,
+      "thirdPartyEndpoints": 0,
+      "thirdPartyScriptHosts": 0,
+      "inlineDataBlobs": 1,
+      "forms": 1,
+      "searchForms": 1,
+      "hydrated": true
+    }
+  },
+  "screenshot": "assets/screenshots/2016-05-building-osgi-bundles-with-apache-maven.png",
+  "renderedHtml": "pages/2016-05-building-osgi-bundles-with-apache-maven.html",
+  "slots": {
+    "headline": "Building OSGi Bundles with Apache Maven",
+    "byline": "cziegeler",
+    "meta": "This entry was posted in OSGi, Software on 2016-05-20 by cziegeler.",
+    "body": "#content article .entry-content",
+    "lead-image": null,
+    "related": [
+      {
+        "label": "← Migrating from the Apache Felix SCR Annotations to the OSGi Declarative Services Annotations",
+        "href": "https://blog.osoco.de/2016/05/migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations/"
+      },
+      {
+        "label": "Http Whiteboard – Simply Simple – Part II →",
+        "href": "https://blog.osoco.de/2016/09/http-whiteboard-simply-simple-part-ii/"
+      }
+    ]
+  }
+}

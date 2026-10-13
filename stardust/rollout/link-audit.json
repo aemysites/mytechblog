@@ -1,0 +1,9 @@
+{
+  "internalOk": 68,
+  "internalBad": [],
+  "sourceOk": 43,
+  "sourceBad": [
+    "503 https://blog.osoco.de/wp-login.php (content/sidebar.html)",
+    "403 https://blog.osoco.de/comments/feed/ (content/sidebar.html)"
+  ]
+}

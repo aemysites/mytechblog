@@ -1,0 +1,534 @@
+{
+  "/2007/06/maven-207-is-out": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:13.320Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2007/06/silence-is-over": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:13.320Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2007/06/turn-it-on-again-singing-in-the-rain": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:13.320Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2007/07/apache-felix-100-released": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:17.408Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2007/07/excalibur-sourceresolver-released": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:17.511Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2007/07/movable-type-sucks-wordpress-rocks": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:17.639Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2007/07/portlet-api-20-and-jcr-20-public-review": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:21.056Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2007/08/maven-release-plugin-removes-headers": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:21.393Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2007/10/cocoon-gettogether-2007-in-rome": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:21.490Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2007/10/garbage-collection-in-objective-c": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:24.481Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2007/10/new-projects-apache-sling-and-apache-sanselan": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:24.762Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2007/11/apache-ibatis-and-apache-sanselan-session": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:25.335Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2007/11/arrived-in-atlanta-for-apachecon": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:27.916Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2007/11/creating-osgi-services-with-the-apache-felix-scr-plugin": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:27.998Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2007/11/jcr-in-action-session": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:28.453Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2007/11/leaving-orlando": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:31.283Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2007/11/orlando-florida": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:31.634Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2007/11/portals-track-at-apachecon": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:31.815Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2007/11/the-musical-box-live-in-hamburg": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:34.726Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2007/12/back-in-paderborn": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:34.783Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2007/12/cocoon-portal-and-jcr": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:35.288Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2007/12/conference-season-2008": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:38.177Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2008/04/apachecon-eu-in-amsterdam": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:38.737Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2008/04/cocoon-22-is-released": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:38.867Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2008/04/cool-eclipse-plugin-mvn-indexer": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:41.198Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2008/04/innovation-at-apache-the-fun-is-back-with-apache-sling": {
+    "status": "live",
+    "attempts": 2,
+    "ts": "2026-10-12T19:46:10.295Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok",
+    "lastError": "about:error in delivered html"
+  },
+  "/2008/04/thanks-to-apache-commons-support-for-osgi": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:42.217Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2008/08/happy-birthday-madonna": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:44.488Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2008/10/first-steps-with-jquery": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:45.949Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2008/10/ray-wilson-live-in-paderborn": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:46.319Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2008/11/heading-east": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:48.379Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2008/11/heading-west": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:49.151Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2008/11/interesting-session-in-new-orleans": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:49.670Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2008/11/osgiapachecon": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:51.755Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2008/11/sling-polo-shirts-arrived": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:52.341Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2008/11/what-happened-to-the-springframework-site": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:52.957Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2009/01/portlets-and-osgi": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:55.140Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2009/02/getting-started-with-portal-servers-and-spec-compliance": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:55.564Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2009/03/conference-season-apachecon-europe-and-jax": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:56.369Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2009/03/portals-meetup-at-apachecon-europe": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:58.655Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2009/04/jax-apache-sling-and-accidental-complexity": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:44:58.875Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2009/04/rapid-development-with-apache-sling-using-an-ide": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T20:23:50.081Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2009/11/increasing-interest-in-jcr-and-apache-sling": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:45:02.532Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2011/04/apache-axis2-book": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:45:03.490Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2015/04/hello-world": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:45:04.169Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2015/08/osgi-components-simply-simple-part-i": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:45:05.958Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2015/08/osgi-components-simply-simple-part-ii": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:45:07.385Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2015/11/osgi-components-simply-simple-part-iii": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:45:07.469Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2016/04/example-osgi-web-application": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:45:09.425Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2016/04/http-whiteboard-simply-simple-part-i": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:45:10.884Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2016/05/building-osgi-bundles-with-apache-maven": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:45:11.021Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2016/05/migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:45:12.884Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2016/09/http-whiteboard-simply-simple-part-ii": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:45:14.487Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2016/10/http-whiteboard-simply-simple-part-iii": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:45:14.737Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2017/07/new-osgi-configuration-features-r7": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:45:16.412Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2017/08/osgi-declarative-services-configuration-binding": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:45:17.931Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2020/07/guide-on-using-osgi-configurations": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:45:18.167Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/2024/02/value-created-by-developers": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T19:45:21.679Z",
+    "put": 201,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  },
+  "/category/everything": {
+    "status": "live",
+    "attempts": 1,
+    "ts": "2026-10-12T20:23:50.081Z",
+    "put": 200,
+    "preview": 200,
+    "live": 200,
+    "verify": "ok"
+  }
+}
