@@ -15,6 +15,7 @@ import {
   toClassName,
   toCamelCase,
 } from './aem.js';
+import { decorateArchiveLinks } from './archives.js';
 
 if (window.trustedTypes && window.trustedTypes.createPolicy) {
   const innerTT = window.trustedTypes.createPolicy('tt-inner', {
@@ -225,6 +226,7 @@ export function decorateMain(main) {
   if (main === document.querySelector('body > main')) decorateEntries(main);
   decorateBlocks(main);
   decorateButtons(main);
+  decorateArchiveLinks(main);
 }
 
 /**

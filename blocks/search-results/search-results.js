@@ -1,9 +1,12 @@
 import {
   buildBlock, decorateBlock, loadBlock, loadCSS,
 } from '../../scripts/aem.js';
+import { archiveHref, decorateArchiveLinks } from '../../scripts/archives.js';
 
 /**
  * Search results — the /search page (source: WordPress search, Twenty Twelve search.php).
+ * Also serves the archives: `m=YYYYMM` lists that month's posts and `tag={slug}` that tag's
+ * posts, newest first, under a "Monthly Archives: …" / "Tag Archives: …" heading.
  * Reads `s` (the source's parameter; `q` accepted too), ranks the query index like the source
  * shows it — title matches first, then description, then body text, newest first within each —
  * and renders each hit as a listing entry (title link, excerpt, entry meta) after the
@@ -34,10 +37,11 @@ const dateKey = (row) => {
   return m ? m[0].replace(/\D/g, '') : '0';
 };
 
+const byDate = (a, b) => dateKey(b).localeCompare(dateKey(a));
+
 function rank(rows, query) {
   const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
   const hasAll = (s) => terms.every((t) => String(s || '').toLowerCase().includes(t));
-  const byDate = (a, b) => dateKey(b).localeCompare(dateKey(a));
   const title = rows.filter((r) => hasAll(r.title)).sort(byDate);
   const desc = rows.filter((r) => !hasAll(r.title) && hasAll(r.description)).sort(byDate);
   const text = rows.filter((r) => !hasAll(r.title) && !hasAll(r.description) && hasAll(r.text))
@@ -51,6 +55,39 @@ function rank(rows, query) {
   });
 }
 
+// archive listings (source: WordPress `?m=YYYYMM` and `?tag={slug}`, Twenty Twelve archive.php
+// and tag.php): the matching rows newest first, under "Monthly/Tag Archives: <label>"
+function monthArchive(month) {
+  const label = new Date(Date.UTC(month.slice(0, 4), month.slice(4) - 1))
+    .toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+  return {
+    label,
+    heading: 'Monthly Archives: ',
+    title: () => label,
+    param: { m: month },
+    match: (rows) => rows.filter((r) => dateKey(r).startsWith(month)),
+  };
+}
+
+function tagArchive(tag) {
+  const href = `/search?${new URLSearchParams({ tag })}`;
+  const archive = {
+    label: tag, // replaced by the tag's display name from the first matching entry
+    heading: 'Tag Archives: ',
+    title: () => `${archive.label} Archives`,
+    param: { tag },
+  };
+  archive.match = (rows) => rows.filter((r) => {
+    const tmp = document.createElement('div');
+    tmp.innerHTML = r.meta || '';
+    const link = [...tmp.querySelectorAll('a[href]')]
+      .find((a) => archiveHref(a.getAttribute('href')) === href);
+    if (link) archive.label = link.textContent;
+    return !!link;
+  });
+  return archive;
+}
+
 function entryMeta(html) {
   const meta = document.createElement('div');
   meta.className = 'entry-meta';
@@ -60,6 +97,7 @@ function entryMeta(html) {
     if (!cell.querySelector(':scope > div')) meta.append(...cell.childNodes);
   });
   if (!meta.childNodes.length) meta.append(...tmp.childNodes);
+  decorateArchiveLinks(meta);
   const author = meta.querySelector('a[href*="/author/"]');
   const before = author?.previousSibling;
   if (before?.nodeType === Node.TEXT_NODE && before.textContent.lastIndexOf(' by') >= 0) {
@@ -97,21 +135,29 @@ function entrySection(row) {
 
 export default async function decorate(block) {
   const params = new URLSearchParams(window.location.search);
-  const query = (params.get('s') || params.get('q') || '').trim();
+  const month = params.get('m') || '';
+  const tag = (params.get('tag') || '').trim();
+  let archive = null;
+  if (/^\d{6}$/.test(month)) archive = monthArchive(month);
+  else if (tag) archive = tagArchive(tag);
+  const query = archive ? '' : (params.get('s') || params.get('q') || '').trim();
   const section = block.closest('.section');
   const main = block.closest('main');
   const header = main?.querySelector('.section.archive-header');
   loadCSS(`${window.hlx.codeBasePath}/blocks/entry-meta/entry-meta.css`);
 
-  const hits = query ? rank(await fetchIndex(), query) : [];
-  document.title = `You searched for ${query} - A Matter of Unimportance`;
+  let hits = [];
+  if (archive) hits = archive.match(await fetchIndex()).sort(byDate);
+  else if (query) hits = rank(await fetchIndex(), query);
+  document.title = `${archive ? archive.title() : `You searched for ${query}`} - A Matter of Unimportance`;
 
   if (hits.length) {
     const h1 = header?.querySelector('h1');
     if (h1) {
       const span = document.createElement('span');
-      span.textContent = query;
-      h1.append(' ', span);
+      span.textContent = archive ? archive.label : query;
+      if (archive) h1.replaceChildren(archive.heading, span);
+      else h1.append(' ', span);
     }
     const pages = Math.ceil(hits.length / PAGE_SIZE);
     const page = Math.min(Math.max(parseInt(params.get('paged'), 10) || 1, 1), pages);
@@ -122,7 +168,7 @@ export default async function decorate(block) {
         const p = document.createElement('p');
         if (n < 1 || n > pages) return p;
         const a = document.createElement('a');
-        const u = new URLSearchParams({ s: query });
+        const u = new URLSearchParams(archive ? archive.param : { s: query });
         if (n > 1) u.set('paged', n);
         a.href = `${window.location.pathname}?${u}`;
         a.innerHTML = html;
