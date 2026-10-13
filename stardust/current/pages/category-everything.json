@@ -1,0 +1,877 @@
+{
+  "_provenance": {
+    "renderedBy": "playwright",
+    "fetchedAt": "2026-10-12T18:01:15.237Z",
+    "waitMode": "medium",
+    "waitMs": 2500,
+    "httpStatus": 200
+  },
+  "slug": "category-everything",
+  "url": "https://blog.osoco.de/category/everything/",
+  "renderedBy": "playwright",
+  "fetchedAt": "2026-10-12T18:01:15.237Z",
+  "finalUrl": "https://blog.osoco.de/category/everything/",
+  "title": "Everything Archives - A Matter of Unimportance",
+  "description": null,
+  "og": {
+    "title": "Everything Archives - A Matter of Unimportance",
+    "description": null,
+    "image": null,
+    "type": "article"
+  },
+  "headings": [
+    {
+      "tag": "h1",
+      "text": "A Matter of Unimportance"
+    },
+    {
+      "tag": "h2",
+      "text": "The world won't listen…."
+    },
+    {
+      "tag": "h1",
+      "text": "Category Archives: Everything"
+    },
+    {
+      "tag": "h1",
+      "text": "Value created by Developers"
+    },
+    {
+      "tag": "h1",
+      "text": "Guide on Using OSGi Configurations"
+    },
+    {
+      "tag": "h2",
+      "text": "Do not talk to Configuration Admin"
+    },
+    {
+      "tag": "h2",
+      "text": "Be Aware of Configuration Plugins"
+    },
+    {
+      "tag": "h2",
+      "text": "ManagedService(Factory)"
+    },
+    {
+      "tag": "h2",
+      "text": "How to Talk to Configuration Admin"
+    },
+    {
+      "tag": "h2",
+      "text": "Avoid Configuration Binding"
+    },
+    {
+      "tag": "h1",
+      "text": "Hello world!"
+    },
+    {
+      "tag": "h1",
+      "text": "Apache Axis2 Book"
+    },
+    {
+      "tag": "h1",
+      "text": "Increasing Interest in JCR and Apache Sling"
+    },
+    {
+      "tag": "h1",
+      "text": "Rapid Development with Apache Sling using an IDE"
+    },
+    {
+      "tag": "h1",
+      "text": "JAX, Apache Sling and Accidental Complexity"
+    },
+    {
+      "tag": "h1",
+      "text": "Portals Meetup at ApacheCon Europe"
+    },
+    {
+      "tag": "h1",
+      "text": "Conference Season – ApacheCon Europe and JAX"
+    },
+    {
+      "tag": "h1",
+      "text": "Getting Started with Portal Servers and Spec Compliance"
+    },
+    {
+      "tag": "h3",
+      "text": "Recent Posts"
+    },
+    {
+      "tag": "h3",
+      "text": "Archives"
+    },
+    {
+      "tag": "h3",
+      "text": "Categories"
+    },
+    {
+      "tag": "h3",
+      "text": "Meta"
+    }
+  ],
+  "body": [
+    "Home",
+    "Blog",
+    "Privacy Policy",
+    "The following is a non serious article about using generative AI on top of silly ideas.",
+    "Recently I was reading a paper on the internet about developers creating value. At some point it hit me, that you can actually combine those two words “value” and “developer” into a single one: “devalueper”. As it is so obvious to do this, I searched the internet for them, but didn’t find anything. So I asked my new friend copilot about the definition of that term. And I was really surprised that copilot new about it and also came up with another term. While I thought about “devalueper” being something positive, a developer creating value, it seems it is quite the opposite. This is what copilot came up with:",
+    "Devaluepers is a term that combines the words “developers” and “devalue”. It is used to describe developers who produce low-quality code, cause bugs, or harm the value of a project. It is often used as an insult or a joke by other developers. Some examples of devaluepers are:",
+    "Developers who copy and paste code from the internet without understanding it or testing it.",
+    "Developers who write code that is hard to read, maintain, or debug.",
+    "Developers who ignore best practices, standards, or guidelines for coding.",
+    "Developers who introduce security vulnerabilities or performance issues in their code.",
+    "Developers who do not document their code or write tests for it.",
+    "Devaluepers are the opposite of valuepers, who are developers who create high-quality code, solve problems, and add value to a project. Valuepers are respected and appreciated by their peers and clients. Some examples of valuepers are:",
+    "Developers who write clean, elegant, and efficient code that follows the principles of software engineering.",
+    "Developers who use appropriate tools, frameworks, and libraries to enhance their productivity and functionality.",
+    "Developers who adhere to coding conventions, style guides, and best practices for their language and platform.",
+    "Developers who test their code thoroughly, fix bugs, and optimize performance.",
+    "Developers who document their code clearly, write unit tests, and use version control.",
+    "If you want to be a valueper and not a devalueper, you should:",
+    "Learn the fundamentals of programming and computer science.",
+    "Keep your skills and knowledge up to date with the latest trends and technologies.",
+    "Choose the right tools and languages for your project and use them effectively.",
+    "Write code that is easy to understand, modify, and reuse.",
+    "Follow the standards and guidelines for your code quality, security, and performance.",
+    "Test your code regularly, debug it carefully, and refactor it when necessary.",
+    "Document your code properly, write unit tests, and use version control.",
+    "Seek feedback, collaborate, and communicate with other developers.",
+    "Configuration Admin is amongst the most used services from the OSGi specification. But on the other hand, the usage is barely noticed. Component frameworks like Declarative Services (DS) or CDI Integration take care of the heavy lifting. Configuration Admin allows to create, update and delete configurations. It is up to the implementation where these configurations are stored. A configuration has a unique persistent identifier (PID) and a dictionary of properties. This guide explains how to best interact with Configuration Admin when writing OSGi code. It is based on over a decade of experience working on large enterprise applications using OSGi. It might not apply to every OSGi application.",
+    "The basic rule for dealing with OSGi configurations is very simply: do not write code that talks to Configuration Admin directly. But of course you should use OSGi configurations to configure your application. So how does that work? The answer is very easy: let someone else talk to Configuration Admin and do the work for you.",
+    "A very nice way to develop OSGi components and services is to use Declarative Services (DS). By using Java annotations, the component code tells DS which configuration(s) it wants to consume. DS does all the hard work behind the scenes. Defining a Component Property Type simplifies the usage further. A component property type provides type conversion and default values.",
+    "But if it is that easy why am I writing this? It is good to know some of the details about configuration handling – especially in cases where you cannot use DS.",
+    "OSGi configurations are used to configure the whole system. In many cases that includes configurations for connections to other systems or services. Such configurations usually include endpoints and credentials. The values for these properties might depend on your environment: a different endpoint is used in development than in production. In addition, you don’t want to store credentials or any other secrets directly in your code or configuration.",
+    "A good mechanism for managing such configurations is to use “late binding” of the values. Instead of storing the values directly in the OSGi configuration you use placeholders. The placeholders get replaced at runtime with the real values. Support for such placeholders usually comes in the form of Configuration Plugins. The Apache Felix Interpolation Plugin is a very nice plugin supporting environment variables, system properties and secrets. For example, a configuration for a connection could look like this (using the Configurator JSON notation) :",
+    "It uses environment variables for the url and the username and a secret for the password. With such an approach, the configuration stored in Configuration Admin only contains the above visible placeholders. However, when the configurations is provided to the code using the configuration, a plugin like the Apache Felix Interpolation Plugin needs to be invoked, replacing the placeholders with real values and then handing out the configuration.",
+    "The good news is, if you are using Declarative Services this happens automatically and you don’t have to worry about it.",
+    "However, sometimes there are use cases where you either can’t or want to use Declarative Services (or a similar component framework). The second best way to deal with configurations is to register either a ManagedService or ManagedServiceFactory. These are basically callbacks which are called by Configuration Admin with the configurations, the registered service is interested in. And the good part is, Configuration Admin calls the configuration plugins before handing out the configuration.",
+    "Threefore it is advisable to either use Declarative Services or register a managed service for consuming OSGi configurations. But there might be some very rare use cases where both is not possible and you need to talk to Configuration Admin directly.",
+    "First, as explained, try to avoid this situation. If you can’t, be aware of the following points. If you want to get a configuration from Configuration Admin do not use one of the getter methods like getConfiguration or getFactoryConfiguration. These methods have side effects and will create such a configuration if it does not exist! Use listConfigurations instead:",
+    "Once you have the configuration, the next thing is to get its properties – there is a method called getProperties on a Configuration object – but do you remember the placeholders and configuration plugins? If you call getProperties these are not invoked, and the values will be the placeholders itself! Therefore don’t use that method for consuming configurations – use getProcessedProperties instead. That method invokes all plugins before handing out the properties.",
+    "To identify the caller getProcessedProperties takes a required ServiceReference as a parameter. If you already have a reference at hand, use it – if not, you need to register a service in the service registry.",
+    "Finally, if you want to create configurations, the previously mentioned getter methods (getConfiguration and getFactoryConfiguration) can be used to do so. Make sure that you use the variant which takes the additional location parameter and pass in null for the location. If you don’t do this, then the configuration gets bound to your bundle and will not be delivered to other consumers anymore. Configuration binding and targeting is a complicated topic – which is best to avoid. Of course, as always, there are good use cases for these features. Only use it if you really need it. This article contains some information about configuration binding and DS.",
+    "I hope with these tips, handling OSGi configurations becomes very easy. Just as a recap:",
+    "Use component frameworks like Declarative Services – all hard work is done for you",
+    "If that’s not possible, use ManagedService or ManagedServiceFactory – again most of the hard work is done for you",
+    "If that’s also not possible, make sure to not create configurations as a side effect and use the right method to get properties",
+    "Avoid configuration binding and targeting if possible",
+    "It took some time, but my website has a undergone several changes – which hopefully enable me to blog about interesting stuff in the future. The past has not seen frequent updates from me, the main reason (excuse?) being very old software in my web space. I’ve now removed all that stuff and replaced it with something new…",
+    "Let’s see how this works",
+    "I recently had the change to review the second edition of the Apache Axis2 book from Deepal Jayasinghe and Afkham Azeez. I think it gives a nice overview of the various web services aspects and how to develop applications with Apache Axis2. On the one hand it can be used as a reference for the various web services standards and Java APIs in this area, on the other hand it also covers important topics like clustering and enterprise integration patterns. It comes with samples which show how to use Axis2. In general its a nice book which you consider when using Axis2. Some examples or descriptions could be a little bit more detailed though. There is still the Packt Graphic Apps and Libs Campaign.",
+    "I’m attending some tech conferences in the Java space for several years now; for the last years I’m trying to push JCR, Apache Jackrabbit, and Apache Sling at various occasions – mostly through several talks. It seems to me that there is a change/increase in interest for these topics. While two years ago, people have not been really that interested in JCR and usually asked questions along the line of “why should i use this? I have a database, it works fine” etc., this has definitly changed now. There are more and more people interested in alternatives to a POD (plain old database). It seems to me that the pain with traditional dbs is now too much and they’re searching for nosql solutions. Don’t get me wrong, JCR is not the golden hammer for data storage – there are valid use cases for PODs, but there are also many use cases where an alternative like JCR is much better suited. Today people ask questions like “I looked at jcr, I have this problem, and I think I could do it this way. What do you think?” and of course variations on this theme. I don’t think that this is motivated through the NOSQL hype, I ratherthink that this is a parallel movement which has the same origin. In addition, these people seems to know a lot about Apache Jackrabbit and usually ask deep going questions. As I’m not working on Jackrabbit itself – I’m a user of Jackrabbit – these questions usually give me a hard time 🙂 While I have a hard time with Jackrabbit questions, people seem often to have a hard time understanding the needs for Apache Sling. For one this might be cause they are still living in their POD driven world and know how to handle applications based on databases. Building applications on top of NOSQL solutions is a slightly different thing. When it comes to Apache Sling which is a web framework, it is immediately compared against web application frameworks with all the nice ui features, widget libraries and whatnot. And as Sling does not provide a UI library it is often immediately discarded. But on the bright side as soon as people realize that they need something like JCR and now need a way to get all this content stored in the repository out to the users in a nice, elegant and flexible way, they also realize that Apache Sling helps a lot. So my hope is that the adaption of JCR is increasing (and I think that is already the case) and that this drives the adoption of Apache Sling as well 🙂 And of course we are not day dreaming in Apache Sling – we will continue it’s development and add missing pieces or provide bridges etc.",
+    "Apache Sling allows you to use scripts to render your content. Usually these scripts are stored in the repository as specific path. While it is possible to directly edit a script in the repository (using WebDAV), this editing happens out of your project’s context. But fortunately there is a better way! Usually your project consists of modules (or a single module) which are deployed as OSGi bundles. To get your scripts into the repository, you add the scripts as resources to your project and use the initial content feature from Apache Sling to add the scripts to the repository. So you usually end up with your module (bundle) checked out in your IDE (Eclipse for example), you do your initial development here (develop your OSGi services and scripts). For testing purposes you deploy the bundle (using the Maven Sling Plugin) which copies your scripts into the repository. From here they get picked up by Sling. If you now edit your scripts directly in the repository you have to take care to synchronize the changes with your checked out project in your IDE which can be an error prone and annoying task. Or you can edit the scripts in your IDE and then either redeploy your bundle or manually copy the scripts via WebDAV – which doesn’t make the process easier. Fortunately Sling provides some tooling which makes these extra steps obsolete – actually we have this feature for a long time now but I always forgot to write about it…of course the following is only interesting for you, if you’re using Maven for your project. Now, imagine your scripts are for your own node types which use the namespace prefix “myapp”, so you have a “src/main/resources/SLING-INF/content” (this is a convention for initial content) directory in your project. This content directory now contains a sub directory “libs” (or “apps” or any other configured search path) with your scripts. Underneath “libs” you have the “myapp” folder with a folder for each node type and this folder contains then your scripts (it’s really easier than it is to describe in textual form). You’ll add a configuration for the Maven Bundle Plugin for adding the initial content header to your pom.xml: <Sling-Initial-Content> SLING-INF/content/libs/myapp;overwrite:=true;path:=/libs/myapp </Sling-Initial-Content> This basically copies the contents of the “/libs/myapp” folder on bundle install into the repository at the same location. On each update the contents gets overwritten. Now add the Maven Sling Plugin to your pom.xml: <plugin> <groupId>org.apache.sling</groupId> <artifactId>maven-sling-plugin</artifactId> <version>2.0.3-incubator-SNAPSHOT</version> <executions> <execution> <id>install-bundle</id> <goals> <goal>validate</goal> <goal>install</goal> </goals> <configuration> <mountByFS>true</mountByFS> </configuration> </execution> </executions> </plugin> In the configuration above you can spot to new features of the latest plugin version: the validate goal will validate all *.json files and more important for our topic, the configuration “mountByFS” with the value “true”. Apache Sling has an extension bundle called file system provider (aka fsresource) which allows you to mount a file system path into the resource tree. So basically you can point for example the Sling resource path /myphotos to some directory on your server containing photos. This allows you to directly use files with Sling without copying them into the repository. Once you have installed this bundle into Sling and use the above configuration, each time you build your bundle with Maven and do a “mvn install”, the Maven Sling plugin will create a fsresource configuration for your initial content. In our case the Sling resource path “/libs/myapp” points to the file system directory “/src/main/resources/SLING-INF/content/libs/myapp”. So once you’ve done an initial install of your bundle, you can directly change the scripts in your IDE in your project. And the changes get immediately active, no need to sync and no need to copy. This makes development turnarounds for scripting much shorter as there is no turnaround any more. The whole thing comes with a little drawback – with the configuration from above, your build fails if no Sling instance is reachable. So you should use a Maven profile for this configuration.",
+    "This year the number one Java conference in Germany, the JAX 09, is great as always. With nearly the same number of attendees it’s crowded in the positive sense – although you have to go to a session in time to get a good seat. I’ve seen a lot of highlights today – but first was my own presentation about JCR, OSGi, Scripting and REST – which presented the great Apache Sling web framework. Apache Sling uses Apache Felix as the OSGi framework and Apache Jackrabbit for the content repository. My session was very well attended, more than I expected, and while preparing the talk I noticed that I actually have more presentation material for JCR/Jackrabbit and OSGi/Felix than for Sling itself; although Sling is of course the topic of the session. I think this shows that Sling is really a very clever framework, leveraging existing stuff and combining it in a productive way – this goes hand in hand with the great keynote tonight from Neal Ford – now, I can’t summarize it for you, but one of the key points was: don’t make things more complex than they should be (just because somethings that it makes sense or is cool). Look around and make use if available stuff – even if that doesn’t look cool for your developers. Most of the time is spent on accidental complexicy which in the end causes projects to fail. I’m in the software world for over 20 years now and Neal is spot on with his message; i’ve seen a lot of projects fail because of this or because of one (or more) of the anti-patterns Neal mentioned. Unfortunately I missed the sessions from Neal’s collegue Ted Neward which I enjoyed last year, but I saw an interesting session about the tools in Spring IDE for Spring, OSGi and Spring DM – now this looks pretty cool to me; I’m not in favour of using Spring as I think that there are more lightweight 🙂 solutions when it comes to OSGi – but on the other hand giving the fact that everyone and his dog knows Spring and given such good tooling with Spring IDE, it’s really hard to advocate something else. With the upcomming OSGi blueprint specification this will also have an impact on OSGi. And in the light of Neal’s talk, what could possible reasons be to not use this stuff? It would be great if the tooling would work with any OSGi framework and not just the Spring server. But these are just excerpts from the day – and it’s just the first day; I’m looking forward to tomorrow when the OSGi day takes place! During the breaks I’m trying to finish some stuff for the upcomming Sling release – we hope to get it out in the next weeks. So stay tuned.",
+    "If you’re attending the ApacheCon Europe in Amsterdam in two weeks and if you’re interested in portals or portal related stuff (and I guess we all are interested into portals, right?), then you should join the portals meetup and add yourself here. Even if you’re not into portals but are interested in visiting a zoo, there are a lot of hippo’s and dinosaurs (yes, really!) there. So it’s fun for everyone 🙂",
+    "In just two weeks the conference season for 2009 starts. This spring I’ll speak at the ApacheCon in Amsterdam about OSGi and some of the stuff we have at Apache for using OSGi within your own project. Later, in April, it’s JAX time again – and again with a new location. My talk for the JAX is about the great Apache Sling project (JCR, REST, OSGi etc.). I’m happy to see that OSGi is one of the key topics for the conference with a lot of famous people there 🙂 Going to these conferences for several years now, I still think that the chance to meet people and talk with them is one of the greatest things – and especially these two conferences provide excellent opportunities. So don’t miss them! See you in Amsterdam and/or Mainz, Germany 🙂",
+    "In the last months I had the nice and interesting opportunity to try out several portal servers – ranging from open source to the big commercial ones. As a summary upfront, the first time experience of nearly all solutions is REALLY ANNOYING; in some cases it’s unbelievable how poor and confusing everything is. Just as a disclaimer, this is my personal opinion after playing around with these servers for just a short time.",
+    "But let’s be more precise…I started with looking for open source portal servers implementing the JSR 286. Due to bad experience in the past I avoided the JBoss portal (this might be unfair as my experience is two years old.). Apache Jetspeed does not support the standard yet, so I looked for Exo and Liferay. I think their web sites are overloaded, they look too much like a brochure for me and getting to the real downloads requires too many clicks.",
+    "After downloading Exo, I found a nice README in the root directory which tells you briefly how to start the portal and what the admin credentials are. Nice and easy. Unfortunately after starting the whole thing, I got lost as I found no way to deploy my portlet. Afer downloading the docs (again some clicks) I found out that the downloaded version does not support the deployment of portlets through the UI. I think deployment through the UI is a number one feature. So I immediately stopped here and went to Liferay.",
+    "They have the same shiny web site, sigh, and after downloading you have “something” extracted. The provided README is the Apache Tomcat README, so no real clue about how to start this thing. As I’m able to start Tomcat and know the default port I could get the portal running easily. Looking for the admin credentials required to download the docs and search for it. It took me some more reading that for Liferay everything is a plugin, even a portlet. So I uploaded my portlet through the UI and got it running immediately. I didn’t found any spec related problems with my portlet, however the AJAX based UI of Liferay seems to have sometimes problems with render parameters.",
+    "Then it was time for the commercial ones. Fortunately I had someone else downloading and installing WebSphere and Weblogic Portal for me and providing me the admin credentials. Of these two, WebSphere is slow, has an overloaded admin UI, but deploying your portlet through the UI is nice and easy. I didn’t found any spec related problems. Nothing more to say about this one 🙂",
+    "But the nightmare of every portal developer is Weblogic Portal. It seems to be even slower than WebSphere, is full of bugs and has a more than overloaded and unstructured admin UI. There is no menu for deploying a portlet. So I went to the website, and really got lost. It took me some time to find a small guide explaining how to deploy JSR 168 portlets…hmm but I had a 286 portlet. Ok, let’s try it anyway. The unbelievable thing is that the UI for uploading a portlet is not linked from the portal admin console. It seems that this vendor is rather ashamed of having this. And after you type the secret url in your browser, you know why. Honestly, I’m really bad in doing nice looking html pages, but I think I could have done even this one better. Ok, good looking is not important in this case, so I ignored that and happily uploaded my portlet. Then I knew why these things cost a fortune….it took the server three minutes to deploy my little portlet – at least that’s what was displayed after three minutes. So back to the real admin console and trying to find my latest deployed stuff…hmm, where is it? Ok, consulting the same docs again, it explained that I have to configure a WSRP provider. Wait a minute…did you say WSRP, like in WSRP = Web Serices for Remote Portlets? Oh well, my portlet is running locally (hopefully), so it makes sense to configure something running remotely. Indeed. Shrug, just follow the docs and you will find success…of course, not! Ok *something* is wrong. Now, if you’ve seen one of these server beasts you know that they have a separate server console where you can see and configure millions of things (the more configurations you have the better the product is, I guess), so after several clicks I found out that my portlet application had not been deployed correctly. How could this be? It wasn’t my fault, so it should be the servers fault..ok to keep a really long story short, in order to deploy a portlet application you have to copy it physically to the hard drive on the portal server, invoke the browser based UI and upload the application through the browser (again). This must be some strange security feature or one of those evil developers still laughing today in his cubicle about this funny joke he did. (Oh and btw, don’t use Firefox 3 to upload your portal applicaiton, the server is not capable of handling the requests correctly…but fortunately the server happily accepts the requests and pretends that everything is fine)",
+    "Ok, but the best part was still to come. I went back to the portal admin console, configured the WSRP consumer (still, can someone explain me why? – ok, I’ve an idea why it could be this way, but I think it’s wrong to impose technical decisions on the UI.). From here everything went smoothly, I configured the portlet, added it to the page, got some server crashes and broken pages and finally came to the page with my portlet. Remember that this was a JSR 286 portlet deployed through the JSR 168 import tool? Ah well, everything went fine until my portlet should render itself. Some wired exceptions occured.",
+    "After some experiments it turned out that the server exposes the portlet 2.0 API and is able to deploy portlets relying on this API and using the new deployment descriptor. And if you inspect the API version from within your portlet it confirms to be a 2.0 compliant portal server. BUT as soon as you invoke a 2.0 feature you get an exception. I have zero idea what the intension of such an implementation is. Perhaps it’s again this developer in his cubicle? Or is it a whole team making fun of dumb users like me?",
+    "So after reducing my portlet to just use JSR 168 features it nearly worked – except for some more quirks and errors in the implementation of the spec. As a summary, I don’t want to use the WebLogic Portal server again.",
+    "In general, Liferay seems to be a good open source solution, if they only would add a small README to the downloaded archve. Without a deployment functionality, Exo is of no interest for me. If you’re into complicated UIs, slow running servers with zillions of features noone needs, use WebSphere – forget about WebLogic. The portlet API 2.0 spec compliants seems to be given with Liferay and WebSphere. So now I’m waiting for Jetspeed to finalize their support 🙂",
+    "Value created by Developers",
+    "The Truth about AEM Run Modes",
+    "Guide on Using OSGi Configurations",
+    "OSGi Declarative Services – Configuration Binding",
+    "New OSGi Configuration Features in R7",
+    "February 2024",
+    "July 2021",
+    "July 2020",
+    "August 2017",
+    "July 2017",
+    "October 2016",
+    "September 2016",
+    "May 2016",
+    "April 2016",
+    "November 2015",
+    "August 2015",
+    "April 2015",
+    "April 2011",
+    "November 2009",
+    "April 2009",
+    "March 2009",
+    "February 2009",
+    "January 2009",
+    "November 2008",
+    "October 2008",
+    "August 2008",
+    "April 2008",
+    "December 2007",
+    "November 2007",
+    "October 2007",
+    "August 2007",
+    "July 2007",
+    "June 2007",
+    "Everything",
+    "OSGi",
+    "Software",
+    "Uncategorized",
+    "Log in",
+    "Entries feed",
+    "Comments feed",
+    "WordPress.org"
+  ],
+  "codeBlocks": [
+    "1\n2\n3\n4\n5\n6\n7\n\t\n{\n  \"de.osoco.business.server\" : {\n    \"url\" : \"$[env:BUSINESS_SERVER_URL]\",\n    \"user\": \"$[env:BUSINESS_SERVER_USER]\",\n    \"password\" : \"$[secret:business.server.pw]\"\n  }\n}",
+    "1\n2\n3\n4\n5\n6\n7\n8\n\t\nConfigurationAdmin ca = ...;\nConfiguration[] configs =  \n      ca.listConfigurations(\"service.pid=de.osoco.business.server\");\nif ( configs != null &amp;&amp; configs.length > 0 ) {\n    // use configuration (we just assume we got only one configuration back)\n    Configuration cfg = configs[0];\n    ...\n}"
+  ],
+  "ctas": [
+    {
+      "label": "A Matter of Unimportance",
+      "href": "https://blog.osoco.de/"
+    },
+    {
+      "label": "Home",
+      "href": "https://blog.osoco.de/"
+    },
+    {
+      "label": "Blog",
+      "href": "https://blog.osoco.de/blog/"
+    },
+    {
+      "label": "Privacy Policy",
+      "href": "https://blog.osoco.de/privacy-policy/"
+    },
+    {
+      "label": "Value created by Developers",
+      "href": "https://blog.osoco.de/2024/02/value-created-by-developers/"
+    },
+    {
+      "label": "Everything",
+      "href": "https://blog.osoco.de/category/everything/"
+    },
+    {
+      "label": "Uncategorized",
+      "href": "https://blog.osoco.de/category/uncategorized/"
+    },
+    {
+      "label": "developer",
+      "href": "https://blog.osoco.de/tag/developer/"
+    },
+    {
+      "label": "fun",
+      "href": "https://blog.osoco.de/tag/fun/"
+    },
+    {
+      "label": "value",
+      "href": "https://blog.osoco.de/tag/value/"
+    },
+    {
+      "label": "2024-02-08",
+      "href": "https://blog.osoco.de/2024/02/value-created-by-developers/"
+    },
+    {
+      "label": "Guide on Using OSGi Configurations",
+      "href": "https://blog.osoco.de/2020/07/guide-on-using-osgi-configurations/"
+    },
+    {
+      "label": "Configuration Admin",
+      "href": "https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.cm.html"
+    },
+    {
+      "label": "Declarative Services",
+      "href": "https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.component.html"
+    },
+    {
+      "label": "CDI Integration",
+      "href": "https://docs.osgi.org/specification/osgi.enterprise/7.0.0/service.cdi.html"
+    },
+    {
+      "label": "Declarative Services",
+      "href": "https://blog.osoco.de/2015/08/osgi-components-simply-simple-part-i/"
+    },
+    {
+      "label": "Component Property Type",
+      "href": "https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.component.html#service.component-component.property.types"
+    },
+    {
+      "label": "Configuration Plugins",
+      "href": "https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.cm.html#i1459884"
+    },
+    {
+      "label": "Apache Felix Interpolation Plugin",
+      "href": "https://github.com/apache/felix-dev/blob/master/configadmin-plugins/interpolation/README.md"
+    },
+    {
+      "label": "Configurator JSON notation",
+      "href": "https://blog.osoco.de/2017/07/new-osgi-configuration-features-r7/"
+    },
+    {
+      "label": "ManagedService",
+      "href": "https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.cm.html#d0e11202"
+    },
+    {
+      "label": "ManagedServiceFactory",
+      "href": "https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.cm.html#i1299227"
+    },
+    {
+      "label": "This article",
+      "href": "https://blog.osoco.de/2017/08/osgi-declarative-services-configuration-binding/"
+    },
+    {
+      "label": "Everything",
+      "href": "https://blog.osoco.de/category/everything/"
+    },
+    {
+      "label": "OSGi",
+      "href": "https://blog.osoco.de/category/software/osgi/"
+    },
+    {
+      "label": "Software",
+      "href": "https://blog.osoco.de/category/software/"
+    },
+    {
+      "label": "OSGi",
+      "href": "https://blog.osoco.de/tag/osgi/"
+    },
+    {
+      "label": "2020-07-10",
+      "href": "https://blog.osoco.de/2020/07/guide-on-using-osgi-configurations/"
+    },
+    {
+      "label": "Hello world!",
+      "href": "https://blog.osoco.de/2015/04/hello-world/"
+    },
+    {
+      "label": "Everything",
+      "href": "https://blog.osoco.de/category/everything/"
+    },
+    {
+      "label": "2015-04-28",
+      "href": "https://blog.osoco.de/2015/04/hello-world/"
+    },
+    {
+      "label": "Apache Axis2 Book",
+      "href": "https://blog.osoco.de/2011/04/apache-axis2-book/"
+    },
+    {
+      "label": "Apache Axis2 book",
+      "href": "http://www.packtpub.com/apache-axis2-web-services/book"
+    },
+    {
+      "label": "Campaign",
+      "href": "http://www.packtpub.com/article/graphic-open-source"
+    },
+    {
+      "label": "Everything",
+      "href": "https://blog.osoco.de/category/everything/"
+    },
+    {
+      "label": "2011-04-28",
+      "href": "https://blog.osoco.de/2011/04/apache-axis2-book/"
+    },
+    {
+      "label": "Increasing Interest in JCR and Apache Sling",
+      "href": "https://blog.osoco.de/2009/11/increasing-interest-in-jcr-and-apache-sling/"
+    },
+    {
+      "label": "Everything",
+      "href": "https://blog.osoco.de/category/everything/"
+    },
+    {
+      "label": "2009-11-26",
+      "href": "https://blog.osoco.de/2009/11/increasing-interest-in-jcr-and-apache-sling/"
+    },
+    {
+      "label": "Rapid Development with Apache Sling using an IDE",
+      "href": "https://blog.osoco.de/2009/04/rapid-development-with-apache-sling-using-an-ide/"
+    },
+    {
+      "label": "Everything",
+      "href": "https://blog.osoco.de/category/everything/"
+    },
+    {
+      "label": "2009-04-22",
+      "href": "https://blog.osoco.de/2009/04/rapid-development-with-apache-sling-using-an-ide/"
+    },
+    {
+      "label": "JAX, Apache Sling and Accidental Complexity",
+      "href": "https://blog.osoco.de/2009/04/jax-apache-sling-and-accidental-complexity/"
+    },
+    {
+      "label": "Everything",
+      "href": "https://blog.osoco.de/category/everything/"
+    },
+    {
+      "label": "2009-04-22",
+      "href": "https://blog.osoco.de/2009/04/jax-apache-sling-and-accidental-complexity/"
+    },
+    {
+      "label": "Portals Meetup at ApacheCon Europe",
+      "href": "https://blog.osoco.de/2009/03/portals-meetup-at-apachecon-europe/"
+    },
+    {
+      "label": "here",
+      "href": "http://wiki.apache.org/portals/MeetupAmsterdam2009"
+    },
+    {
+      "label": "Everything",
+      "href": "https://blog.osoco.de/category/everything/"
+    },
+    {
+      "label": "2009-03-10",
+      "href": "https://blog.osoco.de/2009/03/portals-meetup-at-apachecon-europe/"
+    },
+    {
+      "label": "Conference Season – ApacheCon Europe and JAX",
+      "href": "https://blog.osoco.de/2009/03/conference-season-apachecon-europe-and-jax/"
+    },
+    {
+      "label": "Everything",
+      "href": "https://blog.osoco.de/category/everything/"
+    },
+    {
+      "label": "2009-03-08",
+      "href": "https://blog.osoco.de/2009/03/conference-season-apachecon-europe-and-jax/"
+    },
+    {
+      "label": "Getting Started with Portal Servers and Spec Compliance",
+      "href": "https://blog.osoco.de/2009/02/getting-started-with-portal-servers-and-spec-compliance/"
+    },
+    {
+      "label": "Everything",
+      "href": "https://blog.osoco.de/category/everything/"
+    },
+    {
+      "label": "2009-02-13",
+      "href": "https://blog.osoco.de/2009/02/getting-started-with-portal-servers-and-spec-compliance/"
+    },
+    {
+      "label": "← Older posts",
+      "href": "https://blog.osoco.de/category/everything/page/2/"
+    },
+    {
+      "label": "Value created by Developers",
+      "href": "https://blog.osoco.de/2024/02/value-created-by-developers/"
+    },
+    {
+      "label": "The Truth about AEM Run Modes",
+      "href": "https://blog.osoco.de/2021/07/the-truth-about-aem-run-modes/"
+    },
+    {
+      "label": "Guide on Using OSGi Configurations",
+      "href": "https://blog.osoco.de/2020/07/guide-on-using-osgi-configurations/"
+    },
+    {
+      "label": "OSGi Declarative Services – Configuration Binding",
+      "href": "https://blog.osoco.de/2017/08/osgi-declarative-services-configuration-binding/"
+    },
+    {
+      "label": "New OSGi Configuration Features in R7",
+      "href": "https://blog.osoco.de/2017/07/new-osgi-configuration-features-r7/"
+    },
+    {
+      "label": "February 2024",
+      "href": "https://blog.osoco.de/2024/02/"
+    },
+    {
+      "label": "July 2021",
+      "href": "https://blog.osoco.de/2021/07/"
+    },
+    {
+      "label": "July 2020",
+      "href": "https://blog.osoco.de/2020/07/"
+    },
+    {
+      "label": "August 2017",
+      "href": "https://blog.osoco.de/2017/08/"
+    },
+    {
+      "label": "July 2017",
+      "href": "https://blog.osoco.de/2017/07/"
+    },
+    {
+      "label": "October 2016",
+      "href": "https://blog.osoco.de/2016/10/"
+    },
+    {
+      "label": "September 2016",
+      "href": "https://blog.osoco.de/2016/09/"
+    },
+    {
+      "label": "May 2016",
+      "href": "https://blog.osoco.de/2016/05/"
+    },
+    {
+      "label": "April 2016",
+      "href": "https://blog.osoco.de/2016/04/"
+    },
+    {
+      "label": "November 2015",
+      "href": "https://blog.osoco.de/2015/11/"
+    },
+    {
+      "label": "August 2015",
+      "href": "https://blog.osoco.de/2015/08/"
+    },
+    {
+      "label": "April 2015",
+      "href": "https://blog.osoco.de/2015/04/"
+    },
+    {
+      "label": "April 2011",
+      "href": "https://blog.osoco.de/2011/04/"
+    },
+    {
+      "label": "November 2009",
+      "href": "https://blog.osoco.de/2009/11/"
+    },
+    {
+      "label": "April 2009",
+      "href": "https://blog.osoco.de/2009/04/"
+    },
+    {
+      "label": "March 2009",
+      "href": "https://blog.osoco.de/2009/03/"
+    },
+    {
+      "label": "February 2009",
+      "href": "https://blog.osoco.de/2009/02/"
+    },
+    {
+      "label": "January 2009",
+      "href": "https://blog.osoco.de/2009/01/"
+    },
+    {
+      "label": "November 2008",
+      "href": "https://blog.osoco.de/2008/11/"
+    },
+    {
+      "label": "October 2008",
+      "href": "https://blog.osoco.de/2008/10/"
+    },
+    {
+      "label": "August 2008",
+      "href": "https://blog.osoco.de/2008/08/"
+    },
+    {
+      "label": "April 2008",
+      "href": "https://blog.osoco.de/2008/04/"
+    },
+    {
+      "label": "December 2007",
+      "href": "https://blog.osoco.de/2007/12/"
+    },
+    {
+      "label": "November 2007",
+      "href": "https://blog.osoco.de/2007/11/"
+    },
+    {
+      "label": "October 2007",
+      "href": "https://blog.osoco.de/2007/10/"
+    },
+    {
+      "label": "August 2007",
+      "href": "https://blog.osoco.de/2007/08/"
+    },
+    {
+      "label": "July 2007",
+      "href": "https://blog.osoco.de/2007/07/"
+    },
+    {
+      "label": "June 2007",
+      "href": "https://blog.osoco.de/2007/06/"
+    },
+    {
+      "label": "Everything",
+      "href": "https://blog.osoco.de/category/everything/"
+    },
+    {
+      "label": "OSGi",
+      "href": "https://blog.osoco.de/category/software/osgi/"
+    },
+    {
+      "label": "Software",
+      "href": "https://blog.osoco.de/category/software/"
+    },
+    {
+      "label": "Uncategorized",
+      "href": "https://blog.osoco.de/category/uncategorized/"
+    },
+    {
+      "label": "Log in",
+      "href": "https://blog.osoco.de/wp-login.php"
+    },
+    {
+      "label": "Entries feed",
+      "href": "https://blog.osoco.de/feed/"
+    },
+    {
+      "label": "Comments feed",
+      "href": "https://blog.osoco.de/comments/feed/"
+    },
+    {
+      "label": "WordPress.org",
+      "href": "https://wordpress.org/"
+    },
+    {
+      "label": "Privacy Policy",
+      "href": "https://blog.osoco.de/privacy-policy/"
+    },
+    {
+      "label": "Proudly powered by WordPress",
+      "href": "https://wordpress.org/"
+    }
+  ],
+  "links": [
+    "https://blog.osoco.de/category/everything/#content",
+    "https://blog.osoco.de/",
+    "https://blog.osoco.de/blog/",
+    "https://blog.osoco.de/privacy-policy/",
+    "https://blog.osoco.de/2024/02/value-created-by-developers/",
+    "https://blog.osoco.de/category/everything/",
+    "https://blog.osoco.de/category/uncategorized/",
+    "https://blog.osoco.de/tag/developer/",
+    "https://blog.osoco.de/tag/fun/",
+    "https://blog.osoco.de/tag/value/",
+    "https://blog.osoco.de/author/cziegeler/",
+    "https://blog.osoco.de/2020/07/guide-on-using-osgi-configurations/",
+    "https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.cm.html",
+    "https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.component.html",
+    "https://docs.osgi.org/specification/osgi.enterprise/7.0.0/service.cdi.html",
+    "https://blog.osoco.de/2015/08/osgi-components-simply-simple-part-i/",
+    "https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.component.html#service.component-component.property.types",
+    "https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.cm.html#i1459884",
+    "https://github.com/apache/felix-dev/blob/master/configadmin-plugins/interpolation/README.md",
+    "https://blog.osoco.de/2017/07/new-osgi-configuration-features-r7/",
+    "https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.cm.html#d0e11202",
+    "https://docs.osgi.org/specification/osgi.cmpn/7.0.0/service.cm.html#i1299227",
+    "https://blog.osoco.de/2017/08/osgi-declarative-services-configuration-binding/",
+    "https://blog.osoco.de/category/software/osgi/",
+    "https://blog.osoco.de/category/software/",
+    "https://blog.osoco.de/tag/osgi/",
+    "https://blog.osoco.de/2015/04/hello-world/",
+    "https://blog.osoco.de/2011/04/apache-axis2-book/",
+    "http://www.packtpub.com/apache-axis2-web-services/book",
+    "http://www.packtpub.com/article/graphic-open-source",
+    "https://blog.osoco.de/2009/11/increasing-interest-in-jcr-and-apache-sling/",
+    "https://blog.osoco.de/2009/04/rapid-development-with-apache-sling-using-an-ide/",
+    "https://blog.osoco.de/2009/04/jax-apache-sling-and-accidental-complexity/",
+    "https://blog.osoco.de/2009/03/portals-meetup-at-apachecon-europe/",
+    "http://wiki.apache.org/portals/MeetupAmsterdam2009",
+    "https://blog.osoco.de/2009/03/conference-season-apachecon-europe-and-jax/",
+    "https://blog.osoco.de/2009/02/getting-started-with-portal-servers-and-spec-compliance/",
+    "https://blog.osoco.de/category/everything/page/2/",
+    "https://blog.osoco.de/2021/07/the-truth-about-aem-run-modes/",
+    "https://blog.osoco.de/2024/02/",
+    "https://blog.osoco.de/2021/07/",
+    "https://blog.osoco.de/2020/07/",
+    "https://blog.osoco.de/2017/08/",
+    "https://blog.osoco.de/2017/07/",
+    "https://blog.osoco.de/2016/10/",
+    "https://blog.osoco.de/2016/09/",
+    "https://blog.osoco.de/2016/05/",
+    "https://blog.osoco.de/2016/04/",
+    "https://blog.osoco.de/2015/11/",
+    "https://blog.osoco.de/2015/08/",
+    "https://blog.osoco.de/2015/04/",
+    "https://blog.osoco.de/2011/04/",
+    "https://blog.osoco.de/2009/11/",
+    "https://blog.osoco.de/2009/04/",
+    "https://blog.osoco.de/2009/03/",
+    "https://blog.osoco.de/2009/02/",
+    "https://blog.osoco.de/2009/01/",
+    "https://blog.osoco.de/2008/11/",
+    "https://blog.osoco.de/2008/10/",
+    "https://blog.osoco.de/2008/08/",
+    "https://blog.osoco.de/2008/04/",
+    "https://blog.osoco.de/2007/12/",
+    "https://blog.osoco.de/2007/11/",
+    "https://blog.osoco.de/2007/10/",
+    "https://blog.osoco.de/2007/08/",
+    "https://blog.osoco.de/2007/07/",
+    "https://blog.osoco.de/2007/06/",
+    "https://blog.osoco.de/wp-login.php",
+    "https://blog.osoco.de/feed/",
+    "https://blog.osoco.de/comments/feed/",
+    "https://wordpress.org/"
+  ],
+  "media": {
+    "imgs": [],
+    "allImgCount": 0,
+    "cssBackgrounds": [],
+    "modals": [],
+    "videos": [],
+    "iframes": []
+  },
+  "customProps": {
+    "--wp-block-synced-color": "#7a00df",
+    "--wp-block-synced-color--rgb": "122,0,223",
+    "--wp-bound-block-color": "#7a00df",
+    "--wp-editor-canvas-background": "#ddd",
+    "--wp-admin-theme-color": "#007cba",
+    "--wp-admin-theme-color--rgb": "0,124,186",
+    "--wp-admin-theme-color-darker-10": "#006ba1",
+    "--wp-admin-theme-color-darker-10--rgb": "0,107,160.5",
+    "--wp-admin-theme-color-darker-20": "#005a87",
+    "--wp-admin-theme-color-darker-20--rgb": "0,90,135",
+    "--wp-admin-border-width-focus": "2px",
+    "--wp--preset--font-size--normal": "16px",
+    "--wp--preset--font-size--huge": "42px",
+    "--wp--preset--aspect-ratio--square": "1",
+    "--wp--preset--aspect-ratio--4-3": "4/3",
+    "--wp--preset--aspect-ratio--3-4": "3/4",
+    "--wp--preset--aspect-ratio--3-2": "3/2",
+    "--wp--preset--aspect-ratio--2-3": "2/3",
+    "--wp--preset--aspect-ratio--16-9": "16/9",
+    "--wp--preset--aspect-ratio--9-16": "9/16",
+    "--wp--preset--color--black": "#000000",
+    "--wp--preset--color--cyan-bluish-gray": "#abb8c3",
+    "--wp--preset--color--white": "#fff",
+    "--wp--preset--color--pale-pink": "#f78da7",
+    "--wp--preset--color--vivid-red": "#cf2e2e",
+    "--wp--preset--color--luminous-vivid-orange": "#ff6900",
+    "--wp--preset--color--luminous-vivid-amber": "#fcb900",
+    "--wp--preset--color--light-green-cyan": "#7bdcb5",
+    "--wp--preset--color--vivid-green-cyan": "#00d084",
+    "--wp--preset--color--pale-cyan-blue": "#8ed1fc",
+    "--wp--preset--color--vivid-cyan-blue": "#0693e3",
+    "--wp--preset--color--vivid-purple": "#9b51e0",
+    "--wp--preset--color--blue": "#21759b",
+    "--wp--preset--color--dark-gray": "#444",
+    "--wp--preset--color--medium-gray": "#9f9f9f",
+    "--wp--preset--color--light-gray": "#e6e6e6",
+    "--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple": "linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%)",
+    "--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan": "linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%)",
+    "--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange": "linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%)",
+    "--wp--preset--gradient--luminous-vivid-orange-to-vivid-red": "linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%)",
+    "--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray": "linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%)",
+    "--wp--preset--gradient--cool-to-warm-spectrum": "linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%)",
+    "--wp--preset--gradient--blush-light-purple": "linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%)",
+    "--wp--preset--gradient--blush-bordeaux": "linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%)",
+    "--wp--preset--gradient--luminous-dusk": "linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%)",
+    "--wp--preset--gradient--pale-ocean": "linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%)",
+    "--wp--preset--gradient--electric-grass": "linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%)",
+    "--wp--preset--gradient--midnight": "linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%)",
+    "--wp--preset--font-size--small": "13px",
+    "--wp--preset--font-size--medium": "20px",
+    "--wp--preset--font-size--large": "36px",
+    "--wp--preset--font-size--x-large": "42px",
+    "--wp--preset--spacing--20": "0.44rem",
+    "--wp--preset--spacing--30": "0.67rem",
+    "--wp--preset--spacing--40": "1rem",
+    "--wp--preset--spacing--50": "1.5rem",
+    "--wp--preset--spacing--60": "2.25rem",
+    "--wp--preset--spacing--70": "3.38rem",
+    "--wp--preset--spacing--80": "5.06rem",
+    "--wp--preset--shadow--natural": "6px 6px 9px rgba(0, 0, 0, 0.2)",
+    "--wp--preset--shadow--deep": "12px 12px 50px rgba(0, 0, 0, 0.4)",
+    "--wp--preset--shadow--sharp": "6px 6px 0px rgba(0, 0, 0, 0.2)",
+    "--wp--preset--shadow--outlined": "6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0)",
+    "--wp--preset--shadow--crisp": "6px 6px 0px rgb(0, 0, 0)"
+  },
+  "_signals": {
+    "filteredInterstitials": 0,
+    "distinctHeadings": 22,
+    "mainTextLen": 34991,
+    "realImageCount": 0,
+    "trackingOnlyMedia": false,
+    "spaShellSuspect": false,
+    "screenshotMode": "fullPage"
+  },
+  "dynamic": {
+    "endpoints": [],
+    "thirdPartyScriptHosts": [],
+    "truncated": false,
+    "inlineData": [
+      {
+        "id": "wp-emoji-settings",
+        "type": "application/json",
+        "bytes": 247,
+        "topLevelKeys": [
+          "baseUrl",
+          "ext",
+          "svgUrl",
+          "svgExt",
+          "source"
+        ]
+      }
+    ],
+    "globalState": [],
+    "frameworkHints": [
+      "wordpress"
+    ],
+    "forms": [
+      {
+        "action": "https://blog.osoco.de/",
+        "hasAction": true,
+        "method": "get",
+        "sameOrigin": true,
+        "fieldCount": 1,
+        "fieldNames": [
+          "s"
+        ],
+        "search": true
+      }
+    ],
+    "ariaLiveRegions": 0,
+    "triggers": [],
+    "mediaIds": [],
+    "summary": {
+      "sameSiteEndpoints": 0,
+      "thirdPartyEndpoints": 0,
+      "thirdPartyScriptHosts": 0,
+      "inlineDataBlobs": 1,
+      "forms": 1,
+      "searchForms": 1,
+      "hydrated": true
+    }
+  },
+  "screenshot": "assets/screenshots/category-everything.png",
+  "renderedHtml": "pages/category-everything.html",
+  "slots": {
+    "index-headline": "Category Archives: Everything",
+    "card-grid": [
+      {
+        "title": "Value created by Developers",
+        "href": "https://blog.osoco.de/2024/02/value-created-by-developers/"
+      },
+      {
+        "title": "Guide on Using OSGi Configurations",
+        "href": "https://blog.osoco.de/2020/07/guide-on-using-osgi-configurations/"
+      },
+      {
+        "title": "Hello world!",
+        "href": "https://blog.osoco.de/2015/04/hello-world/"
+      },
+      {
+        "title": "Apache Axis2 Book",
+        "href": "https://blog.osoco.de/2011/04/apache-axis2-book/"
+      },
+      {
+        "title": "Increasing Interest in JCR and Apache Sling",
+        "href": "https://blog.osoco.de/2009/11/increasing-interest-in-jcr-and-apache-sling/"
+      },
+      {
+        "title": "Rapid Development with Apache Sling using an IDE",
+        "href": "https://blog.osoco.de/2009/04/rapid-development-with-apache-sling-using-an-ide/"
+      },
+      {
+        "title": "JAX, Apache Sling and Accidental Complexity",
+        "href": "https://blog.osoco.de/2009/04/jax-apache-sling-and-accidental-complexity/"
+      },
+      {
+        "title": "Portals Meetup at ApacheCon Europe",
+        "href": "https://blog.osoco.de/2009/03/portals-meetup-at-apachecon-europe/"
+      },
+      {
+        "title": "Conference Season – ApacheCon Europe and JAX",
+        "href": "https://blog.osoco.de/2009/03/conference-season-apachecon-europe-and-jax/"
+      },
+      {
+        "title": "Getting Started with Portal Servers and Spec Compliance",
+        "href": "https://blog.osoco.de/2009/02/getting-started-with-portal-servers-and-spec-compliance/"
+      }
+    ],
+    "pagination": [
+      {
+        "label": "← Older posts",
+        "href": "https://blog.osoco.de/category/everything/page/2/"
+      }
+    ]
+  }
+}

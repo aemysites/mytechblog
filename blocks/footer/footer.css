@@ -1,20 +1,16 @@
-footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+/* colophon — ported from canon.css (.site-footer, .site-info) */
+footer .footer a {
+  color: #686868;
 }
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+footer .footer a:hover {
+  color: var(--c-link);
 }
 
-footer .footer p {
-  margin: 0;
+footer .footer .site-info .sep {
+  padding: 0 0.3em 0 0.6em;
 }
 
-@media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
-  }
+footer .footer .site-info .sep::before {
+  content: '\002f';
 }

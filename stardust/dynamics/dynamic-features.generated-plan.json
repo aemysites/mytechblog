@@ -1,0 +1,50 @@
+{
+ "_provenance": {
+  "writtenBy": "stardust:dynamics plan",
+  "writtenAt": "2026-10-12T18:20:24.146Z",
+  "input": "stardust/current/_dynamics.json",
+  "target": "https://main--18fbe2a0--aemcoder.aem.page",
+  "migrated": null,
+  "knowledge": null,
+  "chrome": null
+ },
+ "rows": [
+  {
+   "id": "s-site-search-form",
+   "class": "S",
+   "feature": "site search form → /",
+   "pages": 3,
+   "probed": 4,
+   "reach": {
+    "pages": 65,
+    "of": 66
+   },
+   "evidence": [
+    "text:s"
+   ],
+   "pattern": "search-index-backed",
+   "disposition": "index-backed",
+   "reproducibility": "self",
+   "status": "pending",
+   "phase": "search",
+   "decision": "none (corpus = the migrated pages; second corpora stay out)"
+  },
+  {
+   "id": "x-sign-in-account-links",
+   "class": "X",
+   "feature": "sign-in / account links",
+   "pages": 3,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "https://blog.osoco.de/wp-login.php"
+   ],
+   "pattern": "decided-out",
+   "disposition": "decided-out",
+   "reproducibility": "needs-backend",
+   "status": "pending",
+   "phase": "register",
+   "decision": "auth / commerce on the new host?"
+  }
+ ]
+}

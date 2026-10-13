@@ -1,0 +1,68 @@
+/* table — TablePress 3.3.3 default.css over the theme's .entry-content table rules
+   (canon.css .data-table); R-01: the table scrolls in its own box. */
+.table .table-scroll {
+  overflow-x: auto;
+}
+
+.table table {
+  border-bottom: 1px solid var(--c-rule);
+  color: var(--c-muted);
+  font-size: 12px;
+  line-height: 2;
+  margin: 0 0 var(--s-1);
+  border-collapse: collapse;
+  clear: both;
+  table-layout: auto;
+  width: 100%;
+}
+
+.table th {
+  font-size: 11px;
+  line-height: 2.1819;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--c-meta);
+}
+
+.table td,
+.table th {
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  padding: 7px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.table td {
+  color: #111;
+}
+
+.table thead + tbody tr :is(td, th),
+.table tbody tr ~ tr :is(td, th) {
+  border-top: 1px solid #ddd;
+}
+
+.table thead th {
+  background-color: #d9edf7;
+  font-weight: 700;
+  vertical-align: middle;
+  word-break: normal;
+}
+
+.table tbody.is-striped tr:nth-child(odd) :is(td, th) {
+  background-color: #fff;
+}
+
+.table tbody.is-striped tr:nth-child(even) :is(td, th) {
+  background-color: #f9f9f9;
+}
+
+.table tbody tr:hover :is(td, th) {
+  background-color: #f3f3f3;
+}
+
+.table .table-description {
+  clear: both;
+  display: block;
+}

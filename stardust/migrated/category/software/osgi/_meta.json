@@ -1,0 +1,247 @@
+{
+  "slug": "category-software-osgi",
+  "type": "listing",
+  "renderBranch": "A'",
+  "template": "blog",
+  "modules": [
+    "masthead",
+    "sidebar-widgets",
+    "colophon",
+    "post-entry",
+    "post-navigation",
+    "code-block"
+  ],
+  "slotsFilled": [
+    "archive-header",
+    "entry",
+    "entry",
+    "entry",
+    "entry",
+    "entry",
+    "entry",
+    "entry",
+    "entry",
+    "entry",
+    "entry",
+    "nav-below"
+  ],
+  "canonShas": {
+    "header": "22a6ff0f57a1",
+    "footer": "4bbddeeed7f6",
+    "css": "4f7dca61ef71"
+  },
+  "deviations": [],
+  "migrationDecisions": [],
+  "metadata": {
+    "title": "OSGi Archives - A Matter of Unimportance",
+    "description": null,
+    "canonical": null,
+    "lang": "en-US"
+  },
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "OSGi Archives - A Matter of Unimportance",
+    "url": "https://blog.osoco.de/category/software/osgi/"
+  },
+  "migratedAt": "2026-10-12T19:42:35Z",
+  "designMdSha": "bae0208daf50",
+  "designJsonSha": "d9694956c490",
+  "sourceCurrentSha": "00a7cdd89f22",
+  "sourceProposedSha": "0a74d4a923b9",
+  "fidelityTier": "sibling",
+  "archetypeSource": "blog",
+  "archetypeSha": "17b7d7c63077",
+  "variants": [],
+  "gatesPassed": [],
+  "gateEvidence": {},
+  "contentDeviations": [],
+  "assetsBundled": 4,
+  "missingAssets": [],
+  "brokenInternalLinks": [
+    {
+      "href": "https://blog.osoco.de/tag/aem/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/tag/osgi/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/author/cziegeler/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/tag/osgi/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/author/cziegeler/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/author/cziegeler/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/author/cziegeler/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/author/cziegeler/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/author/cziegeler/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/author/cziegeler/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/author/cziegeler/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/author/cziegeler/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/author/cziegeler/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/osgi/page/2/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2024/02/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2021/07/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2020/07/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2017/08/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2017/07/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2016/10/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2016/09/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2016/05/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2016/04/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2015/11/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2015/08/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2015/04/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2011/04/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2009/11/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2009/04/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2009/03/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2009/02/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2009/01/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2008/11/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2008/10/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2008/08/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2008/04/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2007/12/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2007/11/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2007/10/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2007/08/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2007/07/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2007/06/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/wp-login.php",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/feed/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/comments/feed/",
+      "reason": "not-in-inventory"
+    }
+  ],
+  "outputPath": "category/software/osgi/index.html",
+  "outputPathDefault": null,
+  "sidecar": "category/software/osgi/_meta.json",
+  "driverVersion": "1"
+}

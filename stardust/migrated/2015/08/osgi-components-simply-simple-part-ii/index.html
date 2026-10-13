@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<!-- stardust:migrate
+  writtenBy:        stardust:migrate
+  writtenAt:        2026-10-12T19:35:52Z
+  page:             OSGi Components – Simply Simple – Part II - A Matter of Unimportance
+  slug:             2015-08-osgi-components-simply-simple-part-ii
+  pagePath:         migrated/2015/08/osgi-components-simply-simple-part-ii/index.html
+  renderBranch:     A'
+  template:         2021-07-the-truth-about-aem-run-modes
+  archetypePath:    stardust/prototypes/2021-07-the-truth-about-aem-run-modes-proposed.html
+  archetypeSha:     e1e571a3c534
+  sourceCurrent:    stardust/current/pages/2015-08-osgi-components-simply-simple-part-ii.json
+  againstDirection: stardust/direction.md (Active)
+  designMd:         DESIGN.md (sha: bae0208daf50)
+  designJson:       DESIGN.json (sha: d9694956c490)
+  canonShas:        header:22a6ff0f57a1 footer:657a1a00050f css:4f7dca61ef71
+  decisionTrace:    _meta.json
+  brokenInternalLinks: 39
+  stardustVersion:  local
+-->
+<style>
+:root {
+  --c-backdrop: #e6e6e6;
+  --c-page: #fff;
+  --c-rule: #ededed;
+  --c-text: #444;
+  --c-muted: #757575;
+  --c-meta: #636363;
+  --c-title: #515151;
+  --c-nav: #6a6a6a;
+  --c-link: #21759b;
+  --c-link-hover: #0f3647;
+  --c-visited: #9f9f9f;
+  --f-base: 'Open Sans', helvetica, arial, sans-serif;
+  --f-mono: consolas, monaco, 'Lucida Console', monospace;
+  --s-1: 24px;
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"OSGi Components – Simply Simple – Part II - A Matter of Unimportance","mainEntityOfPage":"https://blog.osoco.de/2015/08/osgi-components-simply-simple-part-ii/"}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>OSGi Components – Simply Simple – Part II - A Matter of Unimportance</title>
+<link rel="icon" href="../../../assets/favicon.png">
+<link rel="stylesheet" href="../../../assets/canon.css">
+<link rel="stylesheet" href="../../../assets/article.css">
+</head>
+<body class="tpl-article single-author">
+<div class="site" id="page">
+<header class="site-header" role="banner">
+  <div class="site-branding">
+    <h1 class="site-title"><a href="../../../index.html">A Matter of Unimportance</a></h1>
+    <h2 class="site-description">The world won't listen….</h2>
+  </div>
+  <nav class="main-navigation">
+    <button class="menu-toggle" type="button" aria-expanded="false">Menu</button>
+    <ul class="nav-menu"> <li><a href="../../../index.html">Home</a></li><li><a href="../../../blog/index.html">Blog</a></li> <li><a href="../../../privacy-policy/index.html">Privacy Policy</a></li> </ul>
+  </nav>
+</header>
+<div class="site-main">
+<main class="site-content" id="content" data-template="2021-07-the-truth-about-aem-run-modes">
+<article class="entry" data-section="1">
+  <header class="entry-header"><h1 class="entry-title">OSGi Components – Simply Simple – Part II</h1></header>
+  <div class="entry-content">
+			<p>In <a href="../../../index.html?p=91">part I</a> I motivated that developing OSGi components is plain and simple by Declarative Services and the provided annotations. We learned how to create a component, add lifecycle methods and reference services. If you haven’t read the first part yet, make sure to go there first.</p>
+<p>Usually a component takes some configuration. So let’s have a look at this next.</p>
+<h2>Component Configurations</h2>
+<p>If you want to make your component configurable, the best way of doing this is to leverage the OSGi Configuration Admin (another spec from the OSGi compendium with again a great implementation at Apache Felix). Configuration Admin is a service persisting configurations – these configurations are dictionaries where the key is a string and the value can be one of the simple Java types or an array or collection of such a type. This is usually sufficient for most components.</p>
+<p>Configuration Admin nicely abstracts managing the configuration from your component. As a component developer you don’t need to know where the actual configuration is stored and how it ends up there. Without a component container, you would ask the configuration admin for “your” configuration (though there is some injection support through the ManagedService interface) – but fortunately with DS the container takes care of this and provides your component with the configuration. The component might get the configuration as a parameter for the activate method.</p>
+<p>As mentioned Configuration Admin stores configurations as dictionaries. Whereas the names are of type String, the value can be any type. While your component might expect an integer, e.g. for a port, the actual value stored might be of type String holding an integer value. Therefore it is good style to not assume a specific type but try to convert whatever you get into the expected type. To avoid putting the burden of doing this on the component developer and to support type safe configurations, the configuration for a component can be described in Java. While the following might look a little bit out of the ordinary, stick with me, you’ll get used to it pretty soon and simply love it.</p>
+<p>The way to describe a configuration is by defining a so called Component Property Type: an annotation describing all configuration properties. Let’s assume our component has three configuration properties, then the following annotation would do:</p>
+<div class="code-block" data-lang="java"><table><tbody><tr><td class="gutter"><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></td><td class="code-lines"><div class="line"><code class="keyword">public</code> <code class="color2">@interface</code> <code class="plain">MyComponentConfig {</code></div><div class="line"><code class="spaces">    </code> </div><div class="line"><code class="spaces">    </code><code class="plain">String welcome_message() </code><code class="keyword">default</code> <code class="string">&quot;Hello World!&quot;</code><code class="plain">;</code></div><div class="line"> </div><div class="line"><code class="spaces">    </code><code class="keyword">int</code> <code class="plain">welcome_count() </code><code class="keyword">default</code> <code class="value">3</code><code class="plain">;</code></div><div class="line"> </div><div class="line"><code class="spaces">    </code><code class="keyword">boolean</code> <code class="plain">output_goodbye() </code><code class="keyword">default</code> <code class="keyword">true</code><code class="plain">;</code></div><div class="line"><code class="plain">}</code></div></td></tr></tbody></table></div>
+<p>Defining an annotation instead of a simple interface has the advantage that we can directly specify default values for each property. If no value for a property is stored in configuration admin, the default value is used. Let’s see how to use this:</p>
+<div class="code-block" data-lang="java"><table><tbody><tr><td class="gutter"><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></td><td class="code-lines"><div class="line"><code class="keyword">import</code> <code class="plain">org.osgi.service.component.annotations.Activate;</code></div><div class="line"><code class="keyword">import</code> <code class="plain">org.osgi.service.component.annotations.Component;</code></div><div class="line"> </div><div class="line"><code class="color1">@Component</code></div><div class="line"><code class="keyword">public</code> <code class="keyword">class</code> <code class="plain">MyFirstComponent {</code></div><div class="line"> </div><div class="line"><code class="spaces">    </code><code class="color1">@Activate</code></div><div class="line"><code class="spaces">    </code><code class="keyword">protected</code> <code class="keyword">void</code> <code class="plain">activate( MyComponentConfig config ) {</code></div><div class="line"><code class="spaces">        </code><code class="keyword">for</code><code class="plain">(</code><code class="keyword">int</code> <code class="plain">i = </code><code class="value">0</code><code class="plain">; i &lt; config.welcome_count(); i++ ) {</code></div><div class="line"><code class="spaces">            </code><code class="plain">System.out.println(config.welcome_message());</code></div><div class="line"><code class="spaces">        </code><code class="plain">}</code></div><div class="line"><code class="spaces">    </code><code class="plain">}</code></div><div class="line"><code class="plain">}</code></div></td></tr></tbody></table></div>
+<p>When the above component is activated, SCR tries to get a configuration from the configuration admin and converts it into the used annotation type. Therefore the passed in object returns the value in the correct type for each property. As mentioned if there is no value, the default is returned. This makes handling of configurations very simple and avoids all the usual boilerplate code. The OSGi specification for Declarative Services explains in detail how the type conversion is done and what happens if a value can’t be converted. It also defines the conversion rule from the name of a property in the annotation to a property in configuration admin. In the example above we see the underscore in the names, this is acutally converted to a dot in the property name.</p>
+<p>Taking configurations is as easy as this: define your set of configuration properties as an annotation and pass it as an argument to the activate method. Of course, if you don’t need configuration, leave out these steps and use the zero argument activate method signature – or if you don’t need the activate method at all, leave it out completely.</p>
+<p>With this knowledge we can already develop configurable components capable of using other services. But how do you provide a service for others to be used?</p>
+<h2>Services</h2>
+<p>Offering a service usually consists of two steps. First you define the service API and second you implement this API. Of course, in some cases the API might already exist as someone else defined the interface. If you define your own interface, put it into a public package and export this package – however, as already noted above for the component, a service implementation should never be public but in a private package. It depends on your use case, if you put the interface and the implementation in the same bundle or create an API bundle and an implementation bundle. If you’re implementing an existing interface, this usually is already in another bundle and you can just import it. And if you create public API, don’t forget to use proper versioning for these packages. Have a look at the semantic versioning whitepaper!</p>
+<p>Offering a service is implementing the corresponding interface and registering the component in the OSGi service registry as the service. With the annotations you can just use the @Component annotation. Assume there is an interface EventHandler and your component should be registered as a service for this interface:</p>
+<div class="code-block" data-lang="java"><table><tbody><tr><td class="gutter"><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></td><td class="code-lines"><div class="line"><code class="keyword">import</code> <code class="plain">org.osgi.service.component.annotations.Component;</code></div><div class="line"> </div><div class="line"><code class="color1">@Component</code></div><div class="line"><code class="keyword">public</code> <code class="keyword">class</code> <code class="plain">MyFirstService </code><code class="keyword">implements</code> <code class="plain">EventHandler {</code></div><div class="line"> </div><div class="line"><code class="spaces">   </code><code class="plain">....</code><code class="comments">// implement the EventHandler interface</code></div><div class="line"> </div><div class="line"><code class="plain">}</code></div></td></tr></tbody></table></div>
+<p>Without further specifying anything at the @Component annotation, a component is registered as a  service for all interfaces it directly implements. In this case this is the EventHandler. While this is very convenient, it comes with the problem, that as soon as your component is implementing an interface directly, it gets registered as this service. In some cases this is not what you want. Therefore I suggest to:</p>
+<ol>
+<li>Always explicitely list the service interfaces the component implements:
+<div class="code-block" data-lang="nogutter"><table><tbody><tr><td class="gutter"></td><td class="code-lines"><div class="line"><code class="java color1">@Component</code><code class="java plain">(service = EventHandler.</code><code class="java keyword">class</code><code class="java plain">}</code></div></td></tr></tbody></table></div>
+</li>
+<li>As a default always set the service attribute of the component annotations to the empty array. This prevents the automatic registration:
+<div class="code-block" data-lang="nogutter"><table><tbody><tr><td class="gutter"></td><td class="code-lines"><div class="line"><code class="java color1">@Component</code><code class="java plain">(service = {})</code></div></td></tr></tbody></table></div>
+</li>
+</ol>
+<p>If you follow these simple rules, you can see directly by looking at the @Component annotation which services this component implements and you avoid accidental service registrations, e.g. when refactoring your implementation.</p>
+<h2>Lifecycle of a Service</h2>
+<p>A component which does not provide a service is active for as long as it is satisfied (all referenced services are available and some other conditions we get to later). In contrast, services are instantiated lazy or on demand by DS. This means, as long as no one is using your service, your service is never created nor activated! In most cases this is fine. But there is a catch with this approach one should be aware of: if someone else is starting to use your service, it gets created and activated. As soon as your service is not used anymore, it gets deactivated and destroyed.</p>
+<p>The OSGi spec does not mandate this behavior. The implementation of Declarative Service is free to keep your service around for some time until it is disposed. By default the current Apache Felix implementation immediately disposes such components. However it is possible to configure such a detailed disposal of components. But this leaves you with the problem of configuring this correctly which might not be that easy.</p>
+<p>On the other hand, frequent creation and disposal of an “expensive” service might create a performance bottleneck. For example if this happens being triggered by an event, a request and/or if your service is doing some computation in the activate method.</p>
+<p>In many cases, your actual service is combining a “component” and a “service” part. While the “component” part is the expensive one and should only be done once, the “service” part is lightweight and might simply use the component part. In such cases you might think about splitting your implementation accordingly.</p>
+<p>Or you can either think about holding the service by someone else and therefore keep a reference to it around (which in general sounds hacky though there are valid use cases). Or you can use the immediate flag on the @Component:</p>
+<div class="code-block" data-lang="nogutter"><table><tbody><tr><td class="gutter"></td><td class="code-lines"><div class="line"><code class="java color1">@Component</code><code class="java plain">(service=EventHandler.</code><code class="java keyword">class</code><code class="java plain">, immediate=</code><code class="java keyword">true</code><code class="java plain">)</code></div></td></tr></tbody></table></div>
+<p>With immediate set to true, the component is activated as soon as possible and kept as long as possible. Obviously, this increases things like startup time, memory consumption etc. So it should really be used with care and maybe only after problems are encountered in this area.</p>
+<p>In the past the only situation where we encountered this was implementing an event handler. But with today’s event admin implementations this isn’t even true anymore either. But for completeness lets have a look at that problem: an implementation of the event admin as defined in the OSGi Event Admin Specification might fetch an event handler (service org.osgi.service.event.EventHandler) each time an event should be delivered to this handler. Clearly, this has the advantage that event handlers are only used if there is an event for such a handler. While this might work with a few events, with very frequent events, especially in a multi threaded environment, the same event handler might receive quiet a lot events, even “in parallel”.</p>
+<p>In the past we suggest to make your event handler implementation immediate as otherwise it is potentially created/destroyed with each event for this handler! However, even this is up to the implementation of the event admin. The latest Apache Felix event admin implementation and the Equinox event admin implementation do not create/destroy the instance on each request, they rather create it once the first event for this component arrives and keep a reference to it from that point on. But as this is implementation specific, the above advice might be handy. And again, only use immediate if really required.</p>
+<p>And with this the simple introduction to Declarative Services ends: you now know:</p>
+<ul>
+<li>how to create components</li>
+<li>how to configure components</li>
+<li>how to reference services</li>
+<li>how to provide services</li>
+</ul>
+<p>Of course with most of this we only touched the simple case, which is really sufficient for most use cases. I’ll continue this series with more advanced stuff in the future.</p>
+					</div>
+  <footer class="entry-meta">
+			This entry was posted in <a href="https://blog.osoco.de/category/software/osgi/" data-broken-link="true">OSGi</a>, <a href="https://blog.osoco.de/category/software/" data-broken-link="true">Software</a> on <a href="../../../2015/08/osgi-components-simply-simple-part-ii/index.html" title="11:23"><time datetime="2015-08-31T11:23:09+02:00">2015-08-31</time></a><span class="by-author"> by <a href="../../../author/cziegeler/index.html" title="View all posts by cziegeler" data-broken-link="true">cziegeler</a></span>.								</footer>
+</article>
+<nav class="nav-single" data-section="2">
+  <h3 class="screen-reader-text">Post navigation</h3>
+  <span class="nav-previous"><a href="https://blog.osoco.de/2015/08/osgi-components-simply-simple-part-i/" data-broken-link="true"><span class="meta-nav">←</span> OSGi Components – Simply Simple – Part I</a></span>
+  <span class="nav-next"><a href="../../../2015/11/osgi-components-simply-simple-part-iii/index.html">OSGi Components – Simply Simple – Part III <span class="meta-nav">→</span></a></span>
+</nav>
+</main>
+<aside class="widget-area" role="complementary">
+<section class="widget widget-search">
+  <form class="search-form" role="search" method="get" action="/search">
+    <div><label class="screen-reader-text" for="s">Search for:</label> <input class="search-field" type="text" name="s" id="s" value=""> <input type="submit" value="Search"></div>
+  </form>
+</section>
+<section class="widget">
+  <h3 class="widget-title">Recent Posts</h3>
+  <ul>
+											<li>
+					<a href="../../../2024/02/value-created-by-developers/index.html">Value created by Developers</a>
+									</li>
+											<li>
+					<a href="../../../2021/07/the-truth-about-aem-run-modes/index.html">The Truth about AEM Run Modes</a>
+									</li>
+											<li>
+					<a href="../../../2020/07/guide-on-using-osgi-configurations/index.html">Guide on Using OSGi Configurations</a>
+									</li>
+											<li>
+					<a href="../../../2017/08/osgi-declarative-services-configuration-binding/index.html">OSGi Declarative Services – Configuration Binding</a>
+									</li>
+											<li>
+					<a href="../../../2017/07/new-osgi-configuration-features-r7/index.html">New OSGi Configuration Features in R7</a>
+									</li>
+					</ul>
+</section>
+<section class="widget">
+  <h3 class="widget-title">Archives</h3>
+  <ul>
+					<li><a href="../../../2024/02/index.html" data-broken-link="true">February 2024</a></li>
+	<li><a href="../../../2021/07/index.html" data-broken-link="true">July 2021</a></li>
+	<li><a href="../../../2020/07/index.html" data-broken-link="true">July 2020</a></li>
+	<li><a href="../../../2017/08/index.html" data-broken-link="true">August 2017</a></li>
+	<li><a href="../../../2017/07/index.html" data-broken-link="true">July 2017</a></li>
+	<li><a href="../../../2016/10/index.html" data-broken-link="true">October 2016</a></li>
+	<li><a href="../../../2016/09/index.html" data-broken-link="true">September 2016</a></li>
+	<li><a href="../../../2016/05/index.html" data-broken-link="true">May 2016</a></li>
+	<li><a href="../../../2016/04/index.html" data-broken-link="true">April 2016</a></li>
+	<li><a href="../../../2015/11/index.html" data-broken-link="true">November 2015</a></li>
+	<li><a href="../../../2015/08/index.html" data-broken-link="true">August 2015</a></li>
+	<li><a href="../../../2015/04/index.html" data-broken-link="true">April 2015</a></li>
+	<li><a href="../../../2011/04/index.html" data-broken-link="true">April 2011</a></li>
+	<li><a href="../../../2009/11/index.html" data-broken-link="true">November 2009</a></li>
+	<li><a href="../../../2009/04/index.html" data-broken-link="true">April 2009</a></li>
+	<li><a href="../../../2009/03/index.html" data-broken-link="true">March 2009</a></li>
+	<li><a href="../../../2009/02/index.html" data-broken-link="true">February 2009</a></li>
+	<li><a href="../../../2009/01/index.html" data-broken-link="true">January 2009</a></li>
+	<li><a href="../../../2008/11/index.html" data-broken-link="true">November 2008</a></li>
+	<li><a href="../../../2008/10/index.html" data-broken-link="true">October 2008</a></li>
+	<li><a href="../../../2008/08/index.html" data-broken-link="true">August 2008</a></li>
+	<li><a href="../../../2008/04/index.html" data-broken-link="true">April 2008</a></li>
+	<li><a href="../../../2007/12/index.html" data-broken-link="true">December 2007</a></li>
+	<li><a href="../../../2007/11/index.html" data-broken-link="true">November 2007</a></li>
+	<li><a href="../../../2007/10/index.html" data-broken-link="true">October 2007</a></li>
+	<li><a href="../../../2007/08/index.html" data-broken-link="true">August 2007</a></li>
+	<li><a href="../../../2007/07/index.html" data-broken-link="true">July 2007</a></li>
+	<li><a href="../../../2007/06/index.html" data-broken-link="true">June 2007</a></li>
+			</ul>
+</section>
+<section class="widget">
+  <h3 class="widget-title">Categories</h3>
+  <ul>
+					<li><a href="https://blog.osoco.de/category/everything/" data-broken-link="true">Everything</a>
+</li>
+	<li><a href="https://blog.osoco.de/category/software/osgi/" data-broken-link="true">OSGi</a>
+</li>
+	<li><a href="https://blog.osoco.de/category/software/" data-broken-link="true">Software</a>
+</li>
+	<li><a href="https://blog.osoco.de/category/uncategorized/" data-broken-link="true">Uncategorized</a>
+</li>
+			</ul>
+</section>
+<section class="widget">
+  <h3 class="widget-title">Meta</h3>
+  <ul>
+						<li><a href="../../../wp-login.php" data-broken-link="true">Log in</a></li>
+			<li><a href="../../../feed/index.html" data-broken-link="true">Entries feed</a></li>
+			<li><a href="../../../comments/feed/index.html" data-broken-link="true">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+</section>
+</aside>
+</div>
+<footer class="site-footer" role="contentinfo">
+  <div class="site-info"><a href="../../../privacy-policy/index.html">Privacy Policy</a><span class="sep" role="separator"></span> <a href="https://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a></div>
+</footer>
+</div>
+<script src="../../../assets/chrome.js" defer></script>
+</body>
+</html>

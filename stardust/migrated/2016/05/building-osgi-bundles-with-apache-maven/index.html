@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<!-- stardust:migrate
+  writtenBy:        stardust:migrate
+  writtenAt:        2026-10-12T19:36:56Z
+  page:             Building OSGi Bundles with Apache Maven - A Matter of Unimportance
+  slug:             2016-05-building-osgi-bundles-with-apache-maven
+  pagePath:         migrated/2016/05/building-osgi-bundles-with-apache-maven/index.html
+  renderBranch:     A'
+  template:         2021-07-the-truth-about-aem-run-modes
+  archetypePath:    stardust/prototypes/2021-07-the-truth-about-aem-run-modes-proposed.html
+  archetypeSha:     e1e571a3c534
+  sourceCurrent:    stardust/current/pages/2016-05-building-osgi-bundles-with-apache-maven.json
+  againstDirection: stardust/direction.md (Active)
+  designMd:         DESIGN.md (sha: bae0208daf50)
+  designJson:       DESIGN.json (sha: d9694956c490)
+  canonShas:        header:22a6ff0f57a1 footer:26d5ddd00672 css:4f7dca61ef71
+  decisionTrace:    _meta.json
+  brokenInternalLinks: 38
+  stardustVersion:  local
+-->
+<style>
+:root {
+  --c-backdrop: #e6e6e6;
+  --c-page: #fff;
+  --c-rule: #ededed;
+  --c-text: #444;
+  --c-muted: #757575;
+  --c-meta: #636363;
+  --c-title: #515151;
+  --c-nav: #6a6a6a;
+  --c-link: #21759b;
+  --c-link-hover: #0f3647;
+  --c-visited: #9f9f9f;
+  --f-base: 'Open Sans', helvetica, arial, sans-serif;
+  --f-mono: consolas, monaco, 'Lucida Console', monospace;
+  --s-1: 24px;
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Building OSGi Bundles with Apache Maven - A Matter of Unimportance","mainEntityOfPage":"https://blog.osoco.de/2016/05/building-osgi-bundles-with-apache-maven/"}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Building OSGi Bundles with Apache Maven - A Matter of Unimportance</title>
+<link rel="icon" href="../../../assets/favicon.png">
+<link rel="stylesheet" href="../../../assets/canon.css">
+<link rel="stylesheet" href="../../../assets/article.css">
+</head>
+<body class="tpl-article single-author">
+<div class="site" id="page">
+<header class="site-header" role="banner">
+  <div class="site-branding">
+    <h1 class="site-title"><a href="../../../index.html">A Matter of Unimportance</a></h1>
+    <h2 class="site-description">The world won't listen….</h2>
+  </div>
+  <nav class="main-navigation">
+    <button class="menu-toggle" type="button" aria-expanded="false">Menu</button>
+    <ul class="nav-menu"> <li><a href="../../../index.html">Home</a></li><li><a href="../../../blog/index.html">Blog</a></li> <li><a href="../../../privacy-policy/index.html">Privacy Policy</a></li> </ul>
+  </nav>
+</header>
+<div class="site-main">
+<main class="site-content" id="content" data-template="2021-07-the-truth-about-aem-run-modes">
+<article class="entry" data-section="1">
+  <header class="entry-header"><h1 class="entry-title">Building OSGi Bundles with Apache Maven</h1></header>
+  <div class="entry-content">
+			<p>It seems that still today some developers think that creating an OSGi bundle is complicated – in contrast to simply creating a jar. Well, an OSGi bundle is a jar. The factor which distinguishes the two is that an OSGi bundle has additional manifest entries. Adding those using the right tooling is really simple.</p>
+<p>The more difficult part is creating good modules: clearly separating public API from the implementation and correctly version the API based on the changes you made. But this is a general problem not related to OSGi at all and applies to any Java coding. There are some simple guidelines:</p>
+<ul>
+<li>Leverage packages – put the API in a different package than your implementation. It’s also good still to use a package name for your implementation which makes clear that this is the implementation, e.g. by using <em>impl</em> as one part of the package name.</li>
+<li>Start private and only make public if necessary. Once something is public, you never can make it private without breaking your clients. Starting private makes things easier.</li>
+<li>Use semantic versioning. Whenever you change your public API, make sure to correctly increase the package version depending on the type of change you made.</li>
+</ul>
+<p>Again, these are general guidelines and have nothing to do with OSGi. But OSGi uses headers in the manifest of your jar to know which packages from inside the jar are public API and the version of those packages. This is the export package header. Packages not listed there are private and not accessible to other modules. The other important header is the import package header, specifying which other packages this module is using. This usually comes with a version range, like a bundle is using package foo.bar version 1.1 or higher up to but not including 2.0.</p>
+<p>Therefore, the only required thing to make a bundle out of your jar is more or less calculating these export and import packages headers and adding them to the manifest. But don’t fear, the tooling does this automatically for you. Let’s build a bundle/jar.</p>
+<h1>Using Apache Maven to Create a OSGi Bundle</h1>
+<p>There is always the year old debate on which build tool is the best one, I will not get into this discussion. I simply use what I know best and what I’m <em>forced</em> to use anyway: <a href="http://maven.apache.org">Apache Maven</a>.</p>
+<p>By default, Maven is not adding the additional manifest information to the jar, but there are different plugins for Maven available. For this tutorial, I’ll use the newer bnd Maven Plugin from the <a href="http://bnd.bndtools.org">bnd project</a>.</p>
+<p>Add the following two plugin configurations to your pom. It’s usually a good idea to put this into your parent pom:</p>
+<div class="code-block" data-lang="xml"><table><tbody><tr><td class="gutter"><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></td><td class="code-lines"><div class="line"><code class="plain">&lt;</code><code class="keyword">plugin</code><code class="plain">&gt;</code></div><div class="line"><code class="spaces">    </code><code class="plain">&lt;</code><code class="keyword">groupId</code><code class="plain">&gt;biz.aQute.bnd&lt;/</code><code class="keyword">groupId</code><code class="plain">&gt;</code></div><div class="line"><code class="spaces">    </code><code class="plain">&lt;</code><code class="keyword">artifactId</code><code class="plain">&gt;bnd-maven-plugin&lt;/</code><code class="keyword">artifactId</code><code class="plain">&gt;</code></div><div class="line"><code class="spaces">    </code><code class="plain">&lt;</code><code class="keyword">version</code><code class="plain">&gt;3.2.0&lt;/</code><code class="keyword">version</code><code class="plain">&gt;</code></div><div class="line"><code class="spaces">    </code><code class="plain">&lt;</code><code class="keyword">executions</code><code class="plain">&gt;</code></div><div class="line"><code class="spaces">        </code><code class="plain">&lt;</code><code class="keyword">execution</code><code class="plain">&gt;</code></div><div class="line"><code class="spaces">            </code><code class="plain">&lt;</code><code class="keyword">goals</code><code class="plain">&gt;</code></div><div class="line"><code class="spaces">               </code><code class="plain">&lt;</code><code class="keyword">goal</code><code class="plain">&gt;bnd-process&lt;/</code><code class="keyword">goal</code><code class="plain">&gt;</code></div><div class="line"><code class="spaces">            </code><code class="plain">&lt;/</code><code class="keyword">goals</code><code class="plain">&gt;</code></div><div class="line"><code class="spaces">        </code><code class="plain">&lt;/</code><code class="keyword">execution</code><code class="plain">&gt;</code></div><div class="line"><code class="spaces">    </code><code class="plain">&lt;/</code><code class="keyword">executions</code><code class="plain">&gt;</code></div><div class="line"><code class="spaces">    </code><code class="plain">&lt;</code><code class="keyword">configuration</code><code class="plain">&gt;</code></div><div class="line"><code class="spaces">        </code><code class="plain">&lt;</code><code class="keyword">bnd</code><code class="plain">&gt;</code><code class="color2">&lt;![CDATA[</code></div><div class="line"><code class="spaces">            </code><code class="color2">-exportcontents: ${packages;VERSIONED}</code></div><div class="line"><code class="spaces">        </code><code class="color2">]]&gt;</code><code class="plain">&lt;/</code><code class="keyword">bnd</code><code class="plain">&gt;</code></div><div class="line"><code class="spaces">    </code><code class="plain">&lt;/</code><code class="keyword">configuration</code><code class="plain">&gt;</code></div><div class="line"><code class="plain">&lt;/</code><code class="keyword">plugin</code><code class="plain">&gt;</code></div><div class="line"><code class="plain">&lt;</code><code class="keyword">plugin</code><code class="plain">&gt;</code></div><div class="line"><code class="spaces">    </code><code class="plain">&lt;</code><code class="keyword">groupId</code><code class="plain">&gt;org.apache.maven.plugins&lt;/</code><code class="keyword">groupId</code><code class="plain">&gt;</code></div><div class="line"><code class="spaces">    </code><code class="plain">&lt;</code><code class="keyword">artifactId</code><code class="plain">&gt;maven-jar-plugin&lt;/</code><code class="keyword">artifactId</code><code class="plain">&gt;</code></div><div class="line"><code class="spaces">    </code><code class="plain">&lt;</code><code class="keyword">configuration</code><code class="plain">&gt;</code></div><div class="line"><code class="spaces">        </code><code class="plain">&lt;</code><code class="keyword">useDefaultManifestFile</code><code class="plain">&gt;true&lt;/</code><code class="keyword">useDefaultManifestFile</code><code class="plain">&gt;</code></div><div class="line"><code class="spaces">    </code><code class="plain">&lt;/</code><code class="keyword">configuration</code><code class="plain">&gt;</code></div><div class="line"><code class="plain">&lt;/</code><code class="keyword">plugin</code><code class="plain">&gt;</code></div></td></tr></tbody></table></div>
+<p>The first adds the bnd maven plugin which creates the manifest data and the second instructs the default jar plugin to use the manifest created by the bnd plugin. And that’s it. If you now build your jar project using Maven you’ll have additional manifest entries in there.</p>
+<h2>Standard OSGi Bundle Headers</h2>
+<p>The first entries are standard headers which make your jar a bundle and contain some metadata:</p>
+<ul>
+<li><strong>Bundle-ManifestVersion</strong>: This header is required and marks the jar as a bundle, the value is always 2 (newer OSGi specifications might add more features in which case the number would be increased).</li>
+<li><strong>Bundle-Name</strong>: A human readable name for your bundle. This defaults to your project name from the pom.</li>
+<li><strong>Bundle-SymbolicName</strong>: In combination with the bundle version (see below) the symbolic name provides a key to uniquely identify a bundle. This name should be based on the reverse domain name convention and defaults to the artifact id of your project. I’ll talk a little bit more about this soon.</li>
+<li><strong>Bundle-Version</strong>: The version of your bundle, this defaults to the version of your project.</li>
+</ul>
+<p>There is no magic in the above entries and having them in your jar does not hurt at all. As mentioned above, the symbolic name should be based on the reverse domain name convention. Usually in the Maven world you follow this rule for your group id, like org.mycompany.myproject and then use a simple name for the artifact id like scheduler-api. However a good practice is to use a full qualified name for the artifact id (which usually means you prefix the artifact id with the group id), e.g. org.mycompany.myproject.scheduler-api. Why is this a good idea? It has nothing to do with OSGi and simply makes sure that the final name of the artifact is fully qualified. If you don’t add the group id to the artifact id, the jar filename would be scheduler-api-1.2.3.jar – which is not very descriptive and gives you no clue what this thing is (and it might clash with other projects using the same artifact id).</p>
+<p>The bundle version as any version in software development should increase with continued development/releases. For OSGi this information together with the symbolic name provides a unique key for a bundle and allows OSGi to verify if this exact bundle (name and version) is already installed in the OSGi framework. On a technical level, the bundle version information is more a marketing version.</p>
+<h2>Public API</h2>
+<p>More important than versioning your bundle (which still is important), it’s more important to correctly version your public API which might be used by others. For this add the following dependency to your pom:</p>
+<div class="code-block" data-lang="xml"><table><tbody><tr><td class="gutter"><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></td><td class="code-lines"><div class="line"><code class="plain">&lt;</code><code class="keyword">dependency</code><code class="plain">&gt;</code></div><div class="line"><code class="spaces">    </code><code class="plain">&lt;</code><code class="keyword">groupId</code><code class="plain">&gt;org.osgi&lt;/</code><code class="keyword">groupId</code><code class="plain">&gt;</code></div><div class="line"><code class="spaces">    </code><code class="plain">&lt;</code><code class="keyword">artifactId</code><code class="plain">&gt;osgi.annotation&lt;/</code><code class="keyword">artifactId</code><code class="plain">&gt;</code></div><div class="line"><code class="spaces">    </code><code class="plain">&lt;</code><code class="keyword">version</code><code class="plain">&gt;1.0.0&lt;/</code><code class="keyword">version</code><code class="plain">&gt;</code></div><div class="line"><code class="spaces">    </code><code class="plain">&lt;</code><code class="keyword">scope</code><code class="plain">&gt;provided&lt;/</code><code class="keyword">scoped</code><code class="plain">&gt;</code></div><div class="line"><code class="plain">&lt;/</code><code class="keyword">dependency</code><code class="plain">&gt;</code></div></td></tr></tbody></table></div>
+<p>The above dependency adds some annotations to your project – using the scope “provided” is a good practice as this avoids dragging in transitive dependencies.</p>
+<p>Your public API should be in a separate Java package than your implementation – again this is a general good style and not tied to OSGi at all. If you want to export a package to be used by others, add a package-info.java file within your package:</p>
+<div class="code-block" data-lang="java"><table><tbody><tr><td class="gutter"><div class="line">1</div><div class="line">2</div></td><td class="code-lines"><div class="line"><code class="color1">@org</code><code class="plain">.osgi.annotation.versioning.Version(</code><code class="string">&quot;1.0&quot;</code><code class="plain">)</code></div><div class="line"><code class="keyword">package</code> <code class="plain">org.osoco.software.samples.guessinggame;</code></div></td></tr></tbody></table></div>
+<p>If it’s the first version of your package, simply use 1.0 as the version – from now on once you have released this API as version 1.0, follow <a href="https://www.osgi.org/wp-content/uploads/SemanticVersioning1.pdf">semantic versioning</a>. Build your project again and you will see a header similar to this:</p>
+<pre>Export-Package                org.osoco.software.samples.guessinggame;version=&quot;1.0&quot;</pre>
+<p>As you can see creating the export is really easy, just use the above annotation and done. And the imports are even easier. The plugin analyses your classes and calculates the imports for you. For example for my <a href="https://github.com/cziegeler/samples.guessinggame">sample project</a> it looks like this:</p>
+<pre>Import-Package       javax.servlet;version=&quot;[3.1,4)&quot;,
+                     javax.servlet.http;version=&quot;[3.1,4)&quot;,
+                     org.osoco.software.samples.guessinggame;version=&quot;[1.0,1.1)&quot;</pre>
+<p>And that’s it, your jar is now a bundle and can be used in any OSGi installation as a first class citizen. It’s really simple – and in 96% of your cases the automatic calculation by the tooling is sufficient. There are only rare and special cases where you want to have them differently. In that case, you can configure the plugin accordingly.</p>
+					</div>
+  <footer class="entry-meta">
+			This entry was posted in <a href="https://blog.osoco.de/category/software/osgi/" data-broken-link="true">OSGi</a>, <a href="https://blog.osoco.de/category/software/" data-broken-link="true">Software</a> on <a href="../../../2016/05/building-osgi-bundles-with-apache-maven/index.html" title="17:42"><time datetime="2016-05-20T17:42:00+02:00">2016-05-20</time></a><span class="by-author"> by <a href="../../../author/cziegeler/index.html" title="View all posts by cziegeler" data-broken-link="true">cziegeler</a></span>.								</footer>
+</article>
+<nav class="nav-single" data-section="2">
+  <h3 class="screen-reader-text">Post navigation</h3>
+  <span class="nav-previous"><a href="../../../2016/05/migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations/index.html"><span class="meta-nav">←</span> Migrating from the Apache Felix SCR Annotations to the OSGi Declarative Services Annotations</a></span>
+  <span class="nav-next"><a href="../../../2016/09/http-whiteboard-simply-simple-part-ii/index.html">Http Whiteboard – Simply Simple – Part II <span class="meta-nav">→</span></a></span>
+</nav>
+</main>
+<aside class="widget-area" role="complementary">
+<section class="widget widget-search">
+  <form class="search-form" role="search" method="get" action="/search">
+    <div><label class="screen-reader-text" for="s">Search for:</label> <input class="search-field" type="text" name="s" id="s" value=""> <input type="submit" value="Search"></div>
+  </form>
+</section>
+<section class="widget">
+  <h3 class="widget-title">Recent Posts</h3>
+  <ul>
+											<li>
+					<a href="../../../2024/02/value-created-by-developers/index.html">Value created by Developers</a>
+									</li>
+											<li>
+					<a href="../../../2021/07/the-truth-about-aem-run-modes/index.html">The Truth about AEM Run Modes</a>
+									</li>
+											<li>
+					<a href="../../../2020/07/guide-on-using-osgi-configurations/index.html">Guide on Using OSGi Configurations</a>
+									</li>
+											<li>
+					<a href="../../../2017/08/osgi-declarative-services-configuration-binding/index.html">OSGi Declarative Services – Configuration Binding</a>
+									</li>
+											<li>
+					<a href="../../../2017/07/new-osgi-configuration-features-r7/index.html">New OSGi Configuration Features in R7</a>
+									</li>
+					</ul>
+</section>
+<section class="widget">
+  <h3 class="widget-title">Archives</h3>
+  <ul>
+					<li><a href="../../../2024/02/index.html" data-broken-link="true">February 2024</a></li>
+	<li><a href="../../../2021/07/index.html" data-broken-link="true">July 2021</a></li>
+	<li><a href="../../../2020/07/index.html" data-broken-link="true">July 2020</a></li>
+	<li><a href="../../../2017/08/index.html" data-broken-link="true">August 2017</a></li>
+	<li><a href="../../../2017/07/index.html" data-broken-link="true">July 2017</a></li>
+	<li><a href="../../../2016/10/index.html" data-broken-link="true">October 2016</a></li>
+	<li><a href="../../../2016/09/index.html" data-broken-link="true">September 2016</a></li>
+	<li><a href="../../../2016/05/index.html" data-broken-link="true">May 2016</a></li>
+	<li><a href="../../../2016/04/index.html" data-broken-link="true">April 2016</a></li>
+	<li><a href="../../../2015/11/index.html" data-broken-link="true">November 2015</a></li>
+	<li><a href="../../../2015/08/index.html" data-broken-link="true">August 2015</a></li>
+	<li><a href="../../../2015/04/index.html" data-broken-link="true">April 2015</a></li>
+	<li><a href="../../../2011/04/index.html" data-broken-link="true">April 2011</a></li>
+	<li><a href="../../../2009/11/index.html" data-broken-link="true">November 2009</a></li>
+	<li><a href="../../../2009/04/index.html" data-broken-link="true">April 2009</a></li>
+	<li><a href="../../../2009/03/index.html" data-broken-link="true">March 2009</a></li>
+	<li><a href="../../../2009/02/index.html" data-broken-link="true">February 2009</a></li>
+	<li><a href="../../../2009/01/index.html" data-broken-link="true">January 2009</a></li>
+	<li><a href="../../../2008/11/index.html" data-broken-link="true">November 2008</a></li>
+	<li><a href="../../../2008/10/index.html" data-broken-link="true">October 2008</a></li>
+	<li><a href="../../../2008/08/index.html" data-broken-link="true">August 2008</a></li>
+	<li><a href="../../../2008/04/index.html" data-broken-link="true">April 2008</a></li>
+	<li><a href="../../../2007/12/index.html" data-broken-link="true">December 2007</a></li>
+	<li><a href="../../../2007/11/index.html" data-broken-link="true">November 2007</a></li>
+	<li><a href="../../../2007/10/index.html" data-broken-link="true">October 2007</a></li>
+	<li><a href="../../../2007/08/index.html" data-broken-link="true">August 2007</a></li>
+	<li><a href="../../../2007/07/index.html" data-broken-link="true">July 2007</a></li>
+	<li><a href="../../../2007/06/index.html" data-broken-link="true">June 2007</a></li>
+			</ul>
+</section>
+<section class="widget">
+  <h3 class="widget-title">Categories</h3>
+  <ul>
+					<li><a href="https://blog.osoco.de/category/everything/" data-broken-link="true">Everything</a>
+</li>
+	<li><a href="https://blog.osoco.de/category/software/osgi/" data-broken-link="true">OSGi</a>
+</li>
+	<li><a href="https://blog.osoco.de/category/software/" data-broken-link="true">Software</a>
+</li>
+	<li><a href="https://blog.osoco.de/category/uncategorized/" data-broken-link="true">Uncategorized</a>
+</li>
+			</ul>
+</section>
+<section class="widget">
+  <h3 class="widget-title">Meta</h3>
+  <ul>
+						<li><a href="../../../wp-login.php" data-broken-link="true">Log in</a></li>
+			<li><a href="../../../feed/index.html" data-broken-link="true">Entries feed</a></li>
+			<li><a href="../../../comments/feed/index.html" data-broken-link="true">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+</section>
+</aside>
+</div>
+<footer class="site-footer" role="contentinfo">
+  <div class="site-info"><a href="../../../privacy-policy/index.html">Privacy Policy</a><span class="sep" role="separator"></span> <a href="https://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a></div>
+</footer>
+</div>
+<script src="../../../assets/chrome.js" defer></script>
+</body>
+</html>

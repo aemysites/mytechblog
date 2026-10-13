@@ -1,0 +1,61 @@
+<!doctype html>
+<!-- stardust:provenance writtenBy=stardust:extract writtenAt=2026-10-12T18:25:00Z readArtifacts=stardust/current/_brand-extraction.json,stardust/current/_computed-styles.json,stardust/current/DESIGN.json stardustVersion=0.32.1 -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brand review — A Matter of Unimportance (current state)</title>
+<style>
+@font-face{font-family:'Open Sans';font-weight:400;src:url(assets/fonts/open-sans-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Open Sans';font-weight:700;src:url(assets/fonts/open-sans-latin-700-normal.woff2) format('woff2')}
+body{margin:0;background:#e6e6e6;color:#444;font:14px/1.714 'Open Sans',Helvetica,Arial,sans-serif}
+nav.top{position:sticky;top:0;background:#fff;border-bottom:1px solid #ededed;padding:8px 40px;font-size:12px;text-transform:uppercase}
+nav.top a{color:#6a6a6a;margin-right:24px;text-decoration:none}
+main{max-width:960px;margin:48px auto;background:#fff;padding:24px 40px;box-shadow:0 2px 6px rgba(100,100,100,.3)}
+h1{font-size:26px;color:#515151;margin:0}h2{font-size:11px;text-transform:uppercase;color:#636363;border-top:1px solid #ededed;padding-top:24px;margin-top:48px}
+a{color:#21759b}.sw{display:inline-block;width:120px;margin:0 12px 12px 0;font-size:12px}.sw i{display:block;height:48px;border:1px solid #ededed;border-radius:3px}
+.card{border:1px solid #ededed;border-radius:3px;padding:12px;margin:12px 0}.src{font-size:11px;color:#757575}
+table{border-collapse:collapse;font-size:13px}td,th{border-bottom:1px solid #ededed;padding:4px 12px 4px 0;text-align:left}
+</style>
+</head>
+<body>
+<nav class="top"><a href="#coverage">Coverage</a><a href="#palette">Palette</a><a href="#type">Typography</a><a href="#motifs">Motifs</a><a href="#components">System components</a><a href="#tensions">Tensions</a></nav>
+<main>
+<h1>A Matter of Unimportance</h1>
+<p>The world won't listen…. — current state of https://blog.osoco.de/ (WordPress, Twenty Twelve theme)</p>
+
+<h2 id="coverage">Coverage</h2>
+<p>66 / 66 sitemap pages captured live (Playwright, 0 failures); vision check 66 ok. Types: 1 landing, 1 static, 5 listing, 59 article. Logo: none (text masthead). <span class="src">_crawl-log.json, state.json</span></p>
+
+<h2 id="palette">Palette</h2>
+<div>
+<span class="sw"><i style="background:#e6e6e6"></i>#e6e6e6 backdrop</span><span class="sw"><i style="background:#fff"></i>#ffffff page</span><span class="sw"><i style="background:#ededed"></i>#ededed rule</span><span class="sw"><i style="background:#444"></i>#444444 text</span><span class="sw"><i style="background:#757575"></i>#757575 muted</span><span class="sw"><i style="background:#636363"></i>#636363 meta</span><span class="sw"><i style="background:#515151"></i>#515151 site title</span><span class="sw"><i style="background:#21759b"></i>#21759b link</span>
+</div>
+<p class="src">_brand-extraction.json § palette (census sources per colour)</p>
+
+<h2 id="type">Typography</h2>
+<table><tr><th>Role</th><th>Spec</th></tr>
+<tr><td style="font-size:26px;font-weight:700;color:#515151">Site title</td><td>Open Sans 26/48 700</td></tr>
+<tr><td style="font-size:20px">Entry title</td><td>Open Sans 20/24 400</td></tr>
+<tr><td style="font-size:14px">Body copy</td><td>Open Sans 14/24 400</td></tr>
+<tr><td style="font-size:11px;font-weight:700;text-transform:uppercase;color:#636363">Widget title</td><td>Open Sans 11/24 700 uppercase</td></tr>
+</table>
+<p class="src">_brand-extraction.json § type — scale audit: ad-hoc (Twenty Twelve rem ramp)</p>
+
+<h2 id="motifs">Motifs</h2>
+<p>Radius 3px (330 uses, single value). Shadows: page card 0 2px 6px rgba(100,100,100,.3); button 0 1px 2px rgba(64,64,64,.1). One gradient (button #f4f4f4 → #e6e6e6). <span class="src">_computed-styles.json § aggregate.motifs</span></p>
+
+<h2 id="components">System components</h2>
+<div class="card"><b>Masthead</b> — site title, tagline, bordered page-list nav (66 pages)</div>
+<div class="card"><b>Sidebar</b> — search, Recent Posts, Archives, Categories, Meta (65 pages; not on the front page)</div>
+<div class="card"><b>Colophon</b> — Privacy Policy / Proudly powered by WordPress (66 pages)</div>
+<p class="src">_brand-extraction.json § systemComponents</p>
+
+<h2 id="tensions">Tensions</h2>
+<div class="card"><b>T-scale</b> — Type scale is ad-hoc (26 → 24 → 22 → 21 → 20 → 18 → 16 → 14 → 13 → 11, no consistent ratio).</div>
+<div class="card"><b>T-logo-variants</b> — Only one logo variant captured (none: text-only masthead).</div>
+<div class="card"><b>T-link-content-free</b> — Content-free link labels found (5 occurrences of "here"/"more"-style labels in post bodies).</div>
+<p class="src">Detectors run: T-scale, T-radius-vocab, T-cta-vocab, T-link-content-free, T-logo-variants, T-color-imbalance, T-no-tokens, T-tokens-unused, T-img-alt-generic, T-embed-dominance, T-img-alt-empty, T-nav-conflict, T-temporal-mark.</p>
+</main>
+</body>
+</html>

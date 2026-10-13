@@ -1,0 +1,609 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:extract",
+    "writtenAt": "2026-10-12T18:16:13.898Z",
+    "readArtifacts": [
+      "stardust/current/_computed-styles.json",
+      "stardust/current/css/style.css",
+      "stardust/current/pages/"
+    ],
+    "synthesizedInputs": [],
+    "stardustVersion": "0.32.1"
+  },
+  "site": {
+    "name": "A Matter of Unimportance",
+    "tagline": "The world won't listen….",
+    "originUrl": "https://blog.osoco.de/"
+  },
+  "origins": [
+    {
+      "origin": "https://blog.osoco.de",
+      "role": "primary",
+      "pages": 66
+    }
+  ],
+  "logo": {
+    "source": "none",
+    "note": "text-only masthead (h1.site-title \"A Matter of Unimportance\"); no image logo",
+    "selector": "#masthead .site-title"
+  },
+  "favicon": "stardust/current/assets/favicon.png",
+  "palette": [
+    {
+      "hex": "#757575",
+      "role": "text-muted (meta, widgets)",
+      "weight": 13030,
+      "sources": [
+        {
+          "url": "https://blog.osoco.de/blog/",
+          "selector": "#masthead > hgroup > h2",
+          "prop": "text"
+        },
+        {
+          "url": "https://blog.osoco.de/category/software/",
+          "selector": "#masthead > hgroup > h2",
+          "prop": "text"
+        },
+        {
+          "url": "https://blog.osoco.de/category/software/osgi/",
+          "selector": "#masthead > hgroup > h2",
+          "prop": "text"
+        }
+      ]
+    },
+    {
+      "hex": "#ffffff",
+      "role": "background (page card)",
+      "weight": 3084,
+      "sources": [
+        {
+          "url": "https://blog.osoco.de/category/software/",
+          "selector": "#page",
+          "prop": "background"
+        },
+        {
+          "url": "https://blog.osoco.de/category/software/osgi/",
+          "selector": "#page",
+          "prop": "background"
+        },
+        {
+          "url": "https://blog.osoco.de/blog/",
+          "selector": "#page",
+          "prop": "background"
+        }
+      ]
+    },
+    {
+      "hex": "#444444",
+      "role": "text (body)",
+      "weight": 2712,
+      "sources": [
+        {
+          "url": "https://blog.osoco.de/blog/",
+          "selector": "#content > article:nth-of-type(1) > div > p:nth-of-type(1)",
+          "prop": "text"
+        },
+        {
+          "url": "https://blog.osoco.de/category/software/",
+          "selector": "#content > article:nth-of-type(1) > div > p:nth-of-type(1)",
+          "prop": "text"
+        },
+        {
+          "url": "https://blog.osoco.de/category/software/osgi/",
+          "selector": "#content > article:nth-of-type(1) > div > p:nth-of-type(1)",
+          "prop": "text"
+        }
+      ]
+    },
+    {
+      "hex": "#21759b",
+      "role": "accent (links, hover)",
+      "weight": 1536,
+      "sources": [
+        {
+          "url": "https://blog.osoco.de/category/software/",
+          "selector": "header > h1 > a",
+          "prop": "text"
+        },
+        {
+          "url": "https://blog.osoco.de/category/software/osgi/",
+          "selector": "header > h1 > a",
+          "prop": "text"
+        },
+        {
+          "url": "https://blog.osoco.de/blog/",
+          "selector": "header > h1 > a",
+          "prop": "text"
+        }
+      ]
+    },
+    {
+      "hex": "#6ce26c",
+      "role": "border",
+      "weight": 1278,
+      "sources": [
+        {
+          "url": "https://blog.osoco.de/category/software/",
+          "selector": "pre:nth-of-type(1) > div > div > table > tbody > tr > td:nth-of-type(1) > div:nth-of-type(1)",
+          "prop": "border"
+        },
+        {
+          "url": "https://blog.osoco.de/category/software/osgi/",
+          "selector": "pre:nth-of-type(1) > div > div > table > tbody > tr > td:nth-of-type(1) > div:nth-of-type(1)",
+          "prop": "border"
+        },
+        {
+          "url": "https://blog.osoco.de/2015/08/osgi-components-simply-simple-part-i/",
+          "selector": "div > div:nth-of-type(1) > div > table > tbody > tr > td:nth-of-type(1) > div:nth-of-type(1)",
+          "prop": "border"
+        }
+      ]
+    },
+    {
+      "hex": "#ededed",
+      "role": "surface (page backdrop / rules)",
+      "weight": 934,
+      "sources": [
+        {
+          "url": "https://blog.osoco.de/category/software/",
+          "selector": "#twentytwelve-page-list-menu",
+          "prop": "border"
+        },
+        {
+          "url": "https://blog.osoco.de/category/software/osgi/",
+          "selector": "#twentytwelve-page-list-menu",
+          "prop": "border"
+        },
+        {
+          "url": "https://blog.osoco.de/blog/",
+          "selector": "#twentytwelve-page-list-menu",
+          "prop": "border"
+        }
+      ]
+    },
+    {
+      "hex": "#000000",
+      "role": "nav hover",
+      "weight": 1656,
+      "sources": [
+        {
+          "url": "https://blog.osoco.de/category/software/",
+          "selector": "div > table > tbody > tr > td:nth-of-type(2) > div > div:nth-of-type(1) > code",
+          "prop": "text"
+        },
+        {
+          "url": "https://blog.osoco.de/category/software/osgi/",
+          "selector": "div > table > tbody > tr > td:nth-of-type(2) > div > div:nth-of-type(1) > code",
+          "prop": "text"
+        },
+        {
+          "url": "https://blog.osoco.de/blog/",
+          "selector": "div > table > tbody > tr > td:nth-of-type(2) > div > div:nth-of-type(1) > code",
+          "prop": "text"
+        }
+      ]
+    },
+    {
+      "hex": "#636363",
+      "role": "heading-small (widget/archive titles)",
+      "weight": 1638,
+      "sources": [
+        {
+          "url": "https://blog.osoco.de/category/everything/",
+          "selector": "header > h1",
+          "prop": "text"
+        },
+        {
+          "url": "https://blog.osoco.de/category/software/",
+          "selector": "header > h1",
+          "prop": "text"
+        },
+        {
+          "url": "https://blog.osoco.de/category/software/osgi/",
+          "selector": "header > h1",
+          "prop": "text"
+        }
+      ]
+    },
+    {
+      "hex": "#afafaf",
+      "role": "incidental (code highlighter / misc)",
+      "weight": 1278,
+      "sources": [
+        {
+          "url": "https://blog.osoco.de/category/software/",
+          "selector": "pre:nth-of-type(1) > div > div > table > tbody > tr > td:nth-of-type(1) > div:nth-of-type(1)",
+          "prop": "text"
+        },
+        {
+          "url": "https://blog.osoco.de/category/software/osgi/",
+          "selector": "pre:nth-of-type(1) > div > div > table > tbody > tr > td:nth-of-type(1) > div:nth-of-type(1)",
+          "prop": "text"
+        },
+        {
+          "url": "https://blog.osoco.de/2015/08/osgi-components-simply-simple-part-i/",
+          "selector": "div > div:nth-of-type(1) > div > table > tbody > tr > td:nth-of-type(1) > div:nth-of-type(1)",
+          "prop": "text"
+        }
+      ]
+    },
+    {
+      "hex": "#006699",
+      "role": "incidental (code highlighter / misc)",
+      "weight": 910,
+      "sources": [
+        {
+          "url": "https://blog.osoco.de/category/software/",
+          "selector": "div > table > tbody > tr > td:nth-of-type(2) > div > div:nth-of-type(4) > code:nth-of-type(1)",
+          "prop": "text"
+        },
+        {
+          "url": "https://blog.osoco.de/category/software/osgi/",
+          "selector": "div > table > tbody > tr > td:nth-of-type(2) > div > div:nth-of-type(4) > code:nth-of-type(1)",
+          "prop": "text"
+        },
+        {
+          "url": "https://blog.osoco.de/blog/",
+          "selector": "div > table > tbody > tr > td:nth-of-type(2) > div > div:nth-of-type(4) > code:nth-of-type(1)",
+          "prop": "text"
+        }
+      ]
+    },
+    {
+      "hex": "#dddddd",
+      "role": "incidental (code highlighter / misc)",
+      "weight": 552,
+      "sources": [
+        {
+          "url": "https://blog.osoco.de/2016/05/migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations/",
+          "selector": "#tablepress-1 > tbody > tr:nth-of-type(1) > td:nth-of-type(1)",
+          "prop": "border"
+        },
+        {
+          "url": "https://blog.osoco.de/blog/",
+          "selector": "#tablepress-1 > tbody > tr:nth-of-type(1) > td:nth-of-type(1)",
+          "prop": "border"
+        },
+        {
+          "url": "https://blog.osoco.de/category/software/",
+          "selector": "#tablepress-1 > tbody > tr:nth-of-type(1) > td:nth-of-type(1)",
+          "prop": "border"
+        }
+      ]
+    },
+    {
+      "hex": "#515151",
+      "role": "site-title",
+      "weight": 264,
+      "sources": [
+        {
+          "url": "https://blog.osoco.de/",
+          "selector": "#masthead > hgroup > h1 > a",
+          "prop": "link"
+        },
+        {
+          "url": "https://blog.osoco.de/2007/06/maven-207-is-out/",
+          "selector": "#masthead > hgroup > h1 > a",
+          "prop": "link"
+        },
+        {
+          "url": "https://blog.osoco.de/2007/06/silence-is-over/",
+          "selector": "#masthead > hgroup > h1 > a",
+          "prop": "link"
+        }
+      ]
+    }
+  ],
+  "type": {
+    "families": [
+      {
+        "family": "Open Sans",
+        "role": "heading+body",
+        "weights": [
+          400,
+          700
+        ],
+        "styles": [
+          "normal",
+          "italic"
+        ],
+        "files": [
+          "stardust/current/assets/fonts/open-sans-latin-400-italic.woff2",
+          "stardust/current/assets/fonts/open-sans-latin-400-normal.woff2",
+          "stardust/current/assets/fonts/open-sans-latin-700-italic.woff2",
+          "stardust/current/assets/fonts/open-sans-latin-700-normal.woff2",
+          "stardust/current/assets/fonts/open-sans-latin-ext-400-italic.woff2",
+          "stardust/current/assets/fonts/open-sans-latin-ext-400-normal.woff2",
+          "stardust/current/assets/fonts/open-sans-latin-ext-700-italic.woff2",
+          "stardust/current/assets/fonts/open-sans-latin-ext-700-normal.woff2"
+        ],
+        "licensing": "SIL OFL 1.1 — self-hostable"
+      }
+    ],
+    "headingFamily": "Open Sans",
+    "bodyFamily": "Open Sans",
+    "rootSize": "14px (html 87.5%)",
+    "sizes": [
+      {
+        "px": 26,
+        "count": 66,
+        "headings": 66,
+        "text": 0,
+        "buttons": 0
+      },
+      {
+        "px": 24,
+        "count": 66,
+        "headings": 66,
+        "text": 0,
+        "buttons": 0
+      },
+      {
+        "px": 22,
+        "count": 102,
+        "headings": 102,
+        "text": 0,
+        "buttons": 0
+      },
+      {
+        "px": 21,
+        "count": 120,
+        "headings": 120,
+        "text": 0,
+        "buttons": 0
+      },
+      {
+        "px": 20,
+        "count": 102,
+        "headings": 102,
+        "text": 0,
+        "buttons": 0
+      },
+      {
+        "px": 18,
+        "count": 142,
+        "headings": 142,
+        "text": 0,
+        "buttons": 0
+      },
+      {
+        "px": 16,
+        "count": 2,
+        "headings": 2,
+        "text": 0,
+        "buttons": 0
+      },
+      {
+        "px": 14,
+        "count": 516,
+        "headings": 0,
+        "text": 516,
+        "buttons": 0
+      },
+      {
+        "px": 13,
+        "count": 132,
+        "headings": 132,
+        "text": 0,
+        "buttons": 0
+      },
+      {
+        "px": 11,
+        "count": 724,
+        "headings": 528,
+        "text": 0,
+        "buttons": 196
+      }
+    ],
+    "levels": {
+      "h1": {
+        "fontSize": 21,
+        "fontWeight": "700",
+        "count": 120,
+        "score": 402.58
+      },
+      "h2": {
+        "fontSize": 18,
+        "fontWeight": "700",
+        "count": 142,
+        "score": 375.37
+      },
+      "h3": {
+        "fontSize": 11,
+        "fontWeight": "700",
+        "count": 520,
+        "score": 438.97
+      }
+    },
+    "scaleAudit": {
+      "kind": "ad-hoc",
+      "note": "Twenty Twelve rem ramp: 11/12/13/14/16/18/20/22/24/26px"
+    },
+    "source": "stardust/current/css/style.css"
+  },
+  "spacing": {
+    "unit": "24px (1.714285714rem)",
+    "rhythm": [
+      8,
+      12,
+      14,
+      24,
+      48
+    ],
+    "source": "style.css .site-header / .widget-area .widget"
+  },
+  "motifs": {
+    "radius": {
+      "mode": "3px",
+      "areaMode": "3px",
+      "pill": null,
+      "values": [
+        {
+          "value": "3px",
+          "count": 330,
+          "area": 1115975,
+          "sources": [
+            {
+              "url": "https://blog.osoco.de/",
+              "selector": "#site-navigation > button"
+            },
+            {
+              "url": "https://blog.osoco.de/",
+              "selector": "#post-86 > div > p:nth-of-type(1) > img"
+            },
+            {
+              "url": "https://blog.osoco.de/2007/06/maven-207-is-out/",
+              "selector": "#site-navigation > button"
+            },
+            {
+              "url": "https://blog.osoco.de/2007/06/maven-207-is-out/",
+              "selector": "#s"
+            },
+            {
+              "url": "https://blog.osoco.de/2007/06/maven-207-is-out/",
+              "selector": "#searchsubmit"
+            }
+          ]
+        }
+      ]
+    },
+    "shadows": [
+      {
+        "value": "rgba(64, 64, 64, 0.1) 0px 1px 2px 0px",
+        "count": 196,
+        "sources": [
+          {
+            "url": "https://blog.osoco.de/",
+            "selector": "#site-navigation > button"
+          },
+          {
+            "url": "https://blog.osoco.de/2007/06/maven-207-is-out/",
+            "selector": "#site-navigation > button"
+          },
+          {
+            "url": "https://blog.osoco.de/2007/06/maven-207-is-out/",
+            "selector": "#searchsubmit"
+          },
+          {
+            "url": "https://blog.osoco.de/2007/06/silence-is-over/",
+            "selector": "#site-navigation > button"
+          },
+          {
+            "url": "https://blog.osoco.de/2007/06/silence-is-over/",
+            "selector": "#searchsubmit"
+          }
+        ]
+      },
+      {
+        "value": "rgba(100, 100, 100, 0.3) 0px 2px 6px 0px",
+        "count": 66,
+        "sources": [
+          {
+            "url": "https://blog.osoco.de/",
+            "selector": "#page"
+          },
+          {
+            "url": "https://blog.osoco.de/2007/06/maven-207-is-out/",
+            "selector": "#page"
+          },
+          {
+            "url": "https://blog.osoco.de/2007/06/silence-is-over/",
+            "selector": "#page"
+          },
+          {
+            "url": "https://blog.osoco.de/2007/06/turn-it-on-again-singing-in-the-rain/",
+            "selector": "#page"
+          },
+          {
+            "url": "https://blog.osoco.de/2007/07/apache-felix-100-released/",
+            "selector": "#page"
+          }
+        ]
+      },
+      {
+        "value": "rgba(0, 0, 0, 0.2) 0px 1px 4px 0px",
+        "count": 4,
+        "sources": [
+          {
+            "url": "https://blog.osoco.de/",
+            "selector": "#post-86 > div > p:nth-of-type(1) > img"
+          },
+          {
+            "url": "https://blog.osoco.de/2008/04/innovation-at-apache-the-fun-is-back-with-apache-sling/",
+            "selector": "#post-33 > div > p > a:nth-of-type(3) > img"
+          }
+        ]
+      }
+    ],
+    "gradients": [
+      {
+        "value": "linear-gradient(rgb(244, 244, 244), rgb(230, 230, 230))",
+        "count": 196,
+        "area": 322060,
+        "sources": [
+          {
+            "url": "https://blog.osoco.de/",
+            "selector": "#site-navigation > button"
+          },
+          {
+            "url": "https://blog.osoco.de/2007/06/maven-207-is-out/",
+            "selector": "#site-navigation > button"
+          },
+          {
+            "url": "https://blog.osoco.de/2007/06/maven-207-is-out/",
+            "selector": "#searchsubmit"
+          },
+          {
+            "url": "https://blog.osoco.de/2007/06/silence-is-over/",
+            "selector": "#site-navigation > button"
+          },
+          {
+            "url": "https://blog.osoco.de/2007/06/silence-is-over/",
+            "selector": "#searchsubmit"
+          }
+        ]
+      }
+    ]
+  },
+  "componentStyle": {
+    "buttons": "light grey gradient #f4f4f4→#e6e6e6, 1px #d2d2d2 border, 3px radius, shadow 0 1px 2px rgba(64,64,64,.1) (search submit, menu toggle)",
+    "links": "#21759b, underlined in content",
+    "rules": "1px #ededed hairlines around nav and above footer"
+  },
+  "systemComponents": [
+    {
+      "id": "site-header",
+      "selector": "#masthead",
+      "pages": 66,
+      "contents": "site title + tagline + page-list nav (Home, Blog, Privacy Policy)"
+    },
+    {
+      "id": "sidebar",
+      "selector": "#secondary",
+      "pages": 65,
+      "contents": "search, Recent Posts, Archives, Categories, Meta widgets (absent on the front page template)"
+    },
+    {
+      "id": "site-footer",
+      "selector": "#colophon",
+      "pages": 66,
+      "contents": "Privacy Policy link / Proudly powered by WordPress"
+    }
+  ],
+  "iconFont": null,
+  "voice": {
+    "heroHeadline": "Welcome",
+    "heroLede": "‘OSOCO? What’s this?’, you might ask. Well, actually it’s my personal web space.",
+    "heroImage": "https://blog.osoco.de/wp-content/uploads/2015/08/pet-300x169.jpg",
+    "heroMedium": null,
+    "ctas": [
+      "Search",
+      "Older posts",
+      "Read more"
+    ],
+    "tone": "personal, wry, technical (OSGi / Apache Sling / AEM)"
+  },
+  "voiceTable": {},
+  "crossPromo": {},
+  "register": "brand"
+}

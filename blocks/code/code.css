@@ -1,0 +1,151 @@
+/* code — SyntaxHighlighter 3.0.9b default theme (shCore.css + shThemeDefault.css) and the
+   WordPress preformatted block, ported from canon.css (.code-block, pre.is-wrapped). */
+.code.preformatted pre {
+  box-sizing: border-box;
+  white-space: pre-wrap;
+}
+
+/* the source's preformatted block holds its text directly in the pre: the authored code
+   carrier inherits the pre's type instead of the theme's inline-code rules */
+.code.preformatted code {
+  font: inherit;
+  line-height: inherit;
+}
+
+.code.wrapped .code-frame {
+  border: 1px solid var(--c-rule);
+  color: #666;
+  font-family: var(--f-mono);
+  font-size: 12px;
+  line-height: 1.7143;
+  margin: var(--s-1) 0;
+  overflow: auto;
+  padding: var(--s-1);
+  box-sizing: border-box;
+  white-space: pre-wrap;
+}
+
+.code .code-block {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 1em 0;
+  position: relative;
+  overflow: auto hidden;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  background-color: #fff;
+}
+
+.code .code-block table {
+  table-layout: auto;
+  width: 100%;
+  border: 0;
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+  line-height: 1.1em;
+  border-collapse: collapse;
+}
+
+.code .code-block td {
+  border: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+.code .code-block td.code-lines {
+  width: 100%;
+}
+
+/* the authored pre/code is only a carrier inside the code column */
+.code .code-lines pre {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  color: inherit;
+  font: inherit;
+  white-space: normal;
+}
+
+.code .code-block .line,
+.code .code-block code {
+  font-family: monaco, consolas, 'Bitstream Vera Sans Mono', 'Courier New', courier, monospace;
+  font-size: 1em;
+  line-height: 1.1em;
+  font-weight: normal;
+  font-style: normal;
+  text-align: left;
+  min-height: auto;
+  white-space: pre;
+}
+
+.code .code-lines pre code {
+  display: block;
+  font-size: 1em;
+  line-height: 1.1em;
+}
+
+.code .code-block .line code {
+  display: inline;
+}
+
+.code .code-block .gutter {
+  color: #afafaf;
+}
+
+.code .code-block .gutter .line {
+  text-align: right;
+  padding: 0 0.5em 0 0;
+  margin-right: 1em;
+  border-right: 3px solid #6ce26c;
+}
+
+.code .code-block .plain {
+  color: #000;
+}
+
+.code .code-block .comments {
+  color: #008200;
+}
+
+.code .code-block .string {
+  color: #00f;
+}
+
+.code .code-block .keyword {
+  color: #069;
+  font-weight: bold;
+}
+
+.code .code-block .preprocessor,
+.code .code-block .color1 {
+  color: gray;
+}
+
+.code .code-block .variable {
+  color: #a70;
+}
+
+.code .code-block .value {
+  color: #090;
+}
+
+.code .code-block .functions,
+.code .code-block .color2 {
+  color: #ff1493;
+}
+
+.code .code-block .constants {
+  color: #06c;
+}
+
+.code .code-block .script {
+  font-weight: bold;
+  color: #069;
+}
+
+.code .code-block .color3 {
+  color: red;
+}
+

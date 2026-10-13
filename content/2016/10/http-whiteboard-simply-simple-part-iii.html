@@ -1,0 +1,54 @@
+<body>
+  <header></header>
+  <main>
+    <div><h1>Http Whiteboard – Simply Simple – Part III</h1><p>This is the next part in the series about the OSGi http whiteboard. In my<a href="/2016/09/http-whiteboard-simply-simple-part-ii"> last post</a> I explained how to create an own application servlet context and how to register web components with this context.</p><h2>Bundle Resources</h2><p>Doing as outlined in that post, resource handling (the get resource methods on the servlet context) might not work as you expect as you can’t get resources from the bundle where you web component is defined in. If you want this, you need first of all need to register your ServletContextHelper with the service scope Bundle – this ensures that every using bundle gets its own instance of the ServletContextHelper. And with that a servlet from bundle A gets only resources from bundle A, while the servlet from bundle B gets only the resources from that bundle – although they are registered within the same servlet context.</p><p>Now using DS this looks a little bit complicated, here is the code:</p><div class="code java"><div><div><pre><code>import java.net.URL;
+import java.util.Set;
+ 
+import org.osgi.service.component.ComponentContext;
+import org.osgi.service.component.annotations.Activate;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.ServiceScope;
+import org.osgi.service.http.context.ServletContextHelper;
+import org.osgi.service.http.whiteboard.HttpWhiteboardConstants;
+ 
+@Component(
+        service = ServletContextHelper.class,
+        scope = ServiceScope.BUNDLE,
+        property = {
+                HttpWhiteboardConstants.HTTP_WHITEBOARD_CONTEXT_NAME + "=" + AppServletContext.NAME,
+                HttpWhiteboardConstants.HTTP_WHITEBOARD_CONTEXT_PATH + "=/guessinggame"
+        })
+public class AppServletContext extends ServletContextHelper {
+ 
+    public static final String NAME = "game";
+ 
+    private ServletContextHelper delegatee;
+ 
+    @Activate
+    private void activate(final ComponentContext ctx) {
+        delegatee = new ServletContextHelper(ctx.getUsingBundle()) {};
+    }
+ 
+    @Override
+    public URL getResource(String name) {
+        return delegatee.getResource(name);
+    }
+ 
+    @Override
+    public String getMimeType(String name) {
+        return delegatee.getMimeType(name);
+    }
+ 
+    @Override
+    public Set&lt;String&gt; getResourcePaths(String path) {
+        return delegatee.getResourcePaths(path);
+    }
+ 
+    @Override
+    public String getRealPath(String path) {
+        return delegatee.getRealPath(path);
+    }</code></pre></div></div></div><p>As you can see in the above example, the ServletContextHelper is registered with the Bundle scope. In order to use the provided functionality of the abstract class ServletContextHelper in the activate method a delegatee is created with the bundle using the ServletContextHelper. The different methods then delegate to the delegatee.</p><p>This example looks a little bit complicated, but it is due to the fact that ServletContextHelper only provides to set the bundle through the constructor. And with Declarative Services this is currently a little bit more work to do. But for the upcoming OSGi R7 release, constructor injection is planned, then this should look much cleaner.</p><div class="entry-meta"><div><div>This entry was posted in <a href="/category/software/osgi">OSGi</a>, <a href="/category/software">Software</a> on <a href="/2016/10/http-whiteboard-simply-simple-part-iii" title="15:59">2016-10-07</a> by <a href="https://blog.osoco.de/author/cziegeler/" title="View all posts by cziegeler">cziegeler</a>.</div></div></div><div class="section-metadata"><div><div>Style</div><div>demoted</div></div></div></div>
+    <div><div class="post-nav"><div><div><a href="/2016/09/http-whiteboard-simply-simple-part-ii">← Http Whiteboard – Simply Simple – Part II</a></div><div><a href="/2017/07/new-osgi-configuration-features-r7">New OSGi Configuration Features in R7 →</a></div></div></div><div class="metadata"><div><div>JSON-LD</div><div>{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://blog.osoco.de/2016/10/http-whiteboard-simply-simple-part-iii/#article","isPartOf":{"@id":"https://blog.osoco.de/2016/10/http-whiteboard-simply-simple-part-iii/"},"author":{"name":"cziegeler","@id":"https://blog.osoco.de/#/schema/person/9623d9cbe121389449f141e4c1b108a8"},"headline":"Http Whiteboard &amp;#8211; Simply Simple &amp;#8211; Part III","datePublished":"2016-10-07T13:59:47+00:00","dateModified":"2017-04-12T13:27:08+00:00","mainEntityOfPage":{"@id":"https://blog.osoco.de/2016/10/http-whiteboard-simply-simple-part-iii/"},"wordCount":422,"publisher":{"@id":"https://blog.osoco.de/#/schema/person/9623d9cbe121389449f141e4c1b108a8"},"articleSection":["OSGi","Software"],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://blog.osoco.de/2016/10/http-whiteboard-simply-simple-part-iii/","url":"https://blog.osoco.de/2016/10/http-whiteboard-simply-simple-part-iii/","name":"Http Whiteboard - Simply Simple - Part III - A Matter of Unimportance","isPartOf":{"@id":"https://blog.osoco.de/#website"},"datePublished":"2016-10-07T13:59:47+00:00","dateModified":"2017-04-12T13:27:08+00:00","breadcrumb":{"@id":"https://blog.osoco.de/2016/10/http-whiteboard-simply-simple-part-iii/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://blog.osoco.de/2016/10/http-whiteboard-simply-simple-part-iii/"]}]},{"@type":"BreadcrumbList","@id":"https://blog.osoco.de/2016/10/http-whiteboard-simply-simple-part-iii/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://blog.osoco.de/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://blog.osoco.de/blog/"},{"@type":"ListItem","position":3,"name":"Http Whiteboard &amp;#8211; Simply Simple &amp;#8211; Part III"}]},{"@type":"WebSite","@id":"https://blog.osoco.de/#website","url":"https://blog.osoco.de/","name":"A Matter of Unimportance","description":"The world won&amp;#039;t listen....","publisher":{"@id":"https://blog.osoco.de/#/schema/person/9623d9cbe121389449f141e4c1b108a8"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://blog.osoco.de/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":["Person","Organization"],"@id":"https://blog.osoco.de/#/schema/person/9623d9cbe121389449f141e4c1b108a8","name":"cziegeler","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://secure.gravatar.com/avatar/3551a66cb3ac60c88326bf2bca9e6b473f46b777a2731c6da701f0417ef66143?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/3551a66cb3ac60c88326bf2bca9e6b473f46b777a2731c6da701f0417ef66143?s=96&amp;d=mm&amp;r=g","contentUrl":"https://secure.gravatar.com/avatar/3551a66cb3ac60c88326bf2bca9e6b473f46b777a2731c6da701f0417ef66143?s=96&amp;d=mm&amp;r=g","caption":"cziegeler"},"logo":{"@id":"https://secure.gravatar.com/avatar/3551a66cb3ac60c88326bf2bca9e6b473f46b777a2731c6da701f0417ef66143?s=96&amp;d=mm&amp;r=g"}}]}</div></div><div><div>Title</div><div>Http Whiteboard - Simply Simple - Part III - A Matter of Unimportance</div></div><div><div>Description</div><div>This is the next part in the series about the OSGi http whiteboard. In my last post I explained how to create an own application servlet context and how to register web components with this context. Bundle Resources Doing as outlined in that post, resource handling (the get resource methods on the servlet context) might […]</div></div><div><div>Template</div><div>article</div></div></div></div>
+  </main>
+  <footer></footer>
+</body>

@@ -1,0 +1,35 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:rollout/inventory",
+    "writtenAt": "2026-10-12T18:47:55.973Z",
+    "stardustVersion": "0.0.0"
+  },
+  "target": "aem-eds",
+  "site": {
+    "sourceUrl": "https://blog.osoco.de/",
+    "da": {
+      "org": "aemcoder",
+      "site": "18fbe2a0",
+      "ref": "main"
+    },
+    "liveHost": "main--18fbe2a0--aemcoder.aem.live"
+  },
+  "lastRun": {
+    "at": "2026-10-12T21:05:01.336Z",
+    "pages": {
+      "total": 67,
+      "verified": 67,
+      "deployed": 0,
+      "pending": 0,
+      "contentPending": 0,
+      "stale": 0,
+      "failed": 0
+    },
+    "blocks": {
+      "total": 7,
+      "converted": 0,
+      "pending": 7
+    },
+    "verifyFailures": 0
+  }
+}

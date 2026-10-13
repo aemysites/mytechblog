@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<!-- stardust:migrate
+  writtenBy:        stardust:migrate
+  writtenAt:        2026-10-12T18:46:59Z
+  page:             The Truth about AEM Run Modes - A Matter of Unimportance
+  slug:             2021-07-the-truth-about-aem-run-modes
+  pagePath:         migrated/2021/07/the-truth-about-aem-run-modes/index.html
+  renderBranch:     A
+  sourceProposed:   stardust/prototypes/2021-07-the-truth-about-aem-run-modes-proposed.html
+  sourceCurrent:    stardust/current/pages/2021-07-the-truth-about-aem-run-modes.json
+  againstDirection: stardust/direction.md (Active)
+  designMd:         DESIGN.md (sha: bae0208daf50)
+  designJson:       DESIGN.json (sha: d9694956c490)
+  canonShas:        header:22a6ff0f57a1 footer:4bbddeeed7f6 css:4f7dca61ef71
+  decisionTrace:    _meta.json
+  brokenInternalLinks: 46
+  stardustVersion:  local
+-->
+<style>
+:root {
+  --c-backdrop: #e6e6e6;
+  --c-page: #fff;
+  --c-rule: #ededed;
+  --c-text: #444;
+  --c-muted: #757575;
+  --c-meta: #636363;
+  --c-title: #515151;
+  --c-nav: #6a6a6a;
+  --c-link: #21759b;
+  --c-link-hover: #0f3647;
+  --c-visited: #9f9f9f;
+  --f-base: 'Open Sans', helvetica, arial, sans-serif;
+  --f-mono: consolas, monaco, 'Lucida Console', monospace;
+  --s-1: 24px;
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"The Truth about AEM Run Modes - A Matter of Unimportance","mainEntityOfPage":"https://blog.osoco.de/2021/07/the-truth-about-aem-run-modes/"}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>The Truth about AEM Run Modes - A Matter of Unimportance</title>
+<link rel="icon" href="../../../assets/favicon.png">
+<link rel="stylesheet" href="../../../assets/canon.css">
+<link rel="stylesheet" href="../../../assets/article.css">
+</head>
+<body class="tpl-article single-author">
+<div class="site" id="page">
+<header class="site-header" role="banner">
+  <div class="site-branding">
+    <h1 class="site-title"><a href="../../../index.html">A Matter of Unimportance</a></h1>
+    <h2 class="site-description">The world won't listen….</h2>
+  </div>
+  <nav class="main-navigation">
+    <button class="menu-toggle" type="button" aria-expanded="false">Menu</button>
+    <ul class="nav-menu"> <li><a href="../../../index.html">Home</a></li><li><a href="../../../blog/index.html">Blog</a></li> <li><a href="../../../privacy-policy/index.html">Privacy Policy</a></li> </ul>
+  </nav>
+</header>
+<div class="site-main">
+<main class="site-content" id="content" data-template="2021-07-the-truth-about-aem-run-modes">
+<article class="entry" data-section="1">
+  <header class="entry-header"><h1 class="entry-title">The Truth about AEM Run Modes</h1></header>
+  <div class="entry-content">
+			
+<p>The <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html">Adobe Experience Manager as a Cloud Service (AEM)</a> is a very flexible platform. It allows (customer) developers to extend the two main services, author and publish via Java code. In many cases the exact same code needs to run on both services. However, there are use cases where the code should only run on one of them or behave differently. Similar, a different behaviour or configuration should be used in a development environment versus the production environment.</p>
+
+
+
+<p>AEM provides the concept of <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#runmodes">run modes</a>. A run mode indicates the type of the service as well as the environment type the service is running in. Therefore mutual exclusive run modes exists for author and publish as well as for dev, stage, and prod.</p>
+
+
+
+<p>It is important to note that the concept of run modes is not a runtime concept. Following the <a href="https://12factor.net/">twelve-factory methodology</a> it has been designed as a deployment and provisioning concept. However, over time some bad pracices spread using run mode information at runtime to select different configurations or code paths.</p>
+
+
+
+<h2>Don’t Deploy Unused Code</h2>
+
+
+
+<p>If you want to run different code on author and publish, make the distinction through different deployments: deploy different code on author than on publish. This can be easily achieved by putting common code into a shared bundle and creating separate bundles for author or publish. Use a similar approach for components residing in the repository. This way you do not deploy unused or dead code.</p>
+
+
+
+<p>It is bad practice to deploy the exact same code and then clutter the code with if statements checking for the run mode. The clean way is to just deploy what needs to run on a service.</p>
+
+
+
+<h2>Use Environment-Specific Configuration Values</h2>
+
+
+
+<p>It is a common use case to have different configuration values for different environments. For example when connecting to external services, different endpoints might be used for development than for production. For this create an OSGi configuration that uses <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values">placeholders</a>:</p>
+
+
+
+<pre class="is-wrapped">{
+  &quot;service.endpoint&quot;: &quot;$[env:EXTERNAL_SERVICE_URL]&quot;,
+  &quot;service.user&quot;:&quot;$[env:EXTERNAL_SERVICE_USERNAME]&quot;,
+  &quot;service.password&quot;:&quot;$[secret:EXTERNAL_SERVICE_PASSWORD]&quot;
+}</pre>
+
+
+
+<h2>Use Service-Specific Configurations</h2>
+
+
+
+<p>Similar to environment-specific configuration values there are use cases where you want to have a different configuration for author than for publish. For this just create two OSGi configurations: one is bound to the author run mode, the other one is bound to the publish run mode.</p>
+
+
+
+<p>This can also be combined with placeholders for having environment-specific values which also differ between author and publish.</p>
+
+
+
+<h2>Advanced Use Cases</h2>
+
+
+
+<p>Following the above three rules gives a clear separation and code. It avoids special casing within code which is over time hard to understand and maintain. Even more advanced use cases can be handled this way. For example if you want to have the same service on author and publish but with a different algorithm: Author is always using fresh data within a service, while the data is cached on publish within that service. In such case you might want to use a <a href="https://en.wikipedia.org/wiki/Software_design_pattern#Behavioural_patterns">behavioural pattern</a> like the strategy pattern. This goes back to the first rule. Create different code deployments for author and publish and then use the code through OSGi services from some common shared code base.</p>
+
+
+
+<h2>Use Run Modes for Deployment and Provisioning</h2>
+
+
+
+<p>In summary, it is good practice to leverage run modes for describing the deployment and provisioning. Define precisely which bundles and configurations apply to both, author and publish, as well as which of them only apply for one service.</p>
+
+
+
+<p>Leverage environment-specific configuration values to provision different values for each environment type. But refrain from trying to deploy different code per environment type.</p>
+					</div>
+  <footer class="entry-meta">
+			This entry was posted in <a href="https://blog.osoco.de/category/software/osgi/" data-broken-link="true">OSGi</a>, <a href="https://blog.osoco.de/category/software/" data-broken-link="true">Software</a> and tagged <a href="../../../tag/aem/index.html" data-broken-link="true">AEM</a>, <a href="../../../tag/osgi/index.html" data-broken-link="true">OSGi</a> on <a href="../../../2021/07/the-truth-about-aem-run-modes/index.html" title="15:36"><time datetime="2021-07-30T15:36:01+02:00">2021-07-30</time></a><span class="by-author"> by <a href="../../../author/cziegeler/index.html" title="View all posts by cziegeler" data-broken-link="true">cziegeler</a></span>.								</footer>
+</article>
+<nav class="nav-single" data-section="2">
+  <h3 class="screen-reader-text">Post navigation</h3>
+  <span class="nav-previous"><a href="https://blog.osoco.de/2020/07/guide-on-using-osgi-configurations/" data-broken-link="true"><span class="meta-nav">←</span> Guide on Using OSGi Configurations</a></span>
+  <span class="nav-next"><a href="https://blog.osoco.de/2024/02/value-created-by-developers/" data-broken-link="true">Value created by Developers <span class="meta-nav">→</span></a></span>
+</nav>
+</main>
+<aside class="widget-area" role="complementary">
+<section class="widget widget-search">
+  <form class="search-form" role="search" method="get" action="/search">
+    <div><label class="screen-reader-text" for="s">Search for:</label> <input class="search-field" type="text" name="s" id="s" value=""> <input type="submit" value="Search"></div>
+  </form>
+</section>
+<section class="widget">
+  <h3 class="widget-title">Recent Posts</h3>
+  <ul>
+											<li>
+					<a href="https://blog.osoco.de/2024/02/value-created-by-developers/" data-broken-link="true">Value created by Developers</a>
+									</li>
+											<li>
+					<a href="../../../2021/07/the-truth-about-aem-run-modes/index.html">The Truth about AEM Run Modes</a>
+									</li>
+											<li>
+					<a href="https://blog.osoco.de/2020/07/guide-on-using-osgi-configurations/" data-broken-link="true">Guide on Using OSGi Configurations</a>
+									</li>
+											<li>
+					<a href="https://blog.osoco.de/2017/08/osgi-declarative-services-configuration-binding/" data-broken-link="true">OSGi Declarative Services – Configuration Binding</a>
+									</li>
+											<li>
+					<a href="https://blog.osoco.de/2017/07/new-osgi-configuration-features-r7/" data-broken-link="true">New OSGi Configuration Features in R7</a>
+									</li>
+					</ul>
+</section>
+<section class="widget">
+  <h3 class="widget-title">Archives</h3>
+  <ul>
+					<li><a href="../../../2024/02/index.html" data-broken-link="true">February 2024</a></li>
+	<li><a href="../../../2021/07/index.html" data-broken-link="true">July 2021</a></li>
+	<li><a href="../../../2020/07/index.html" data-broken-link="true">July 2020</a></li>
+	<li><a href="../../../2017/08/index.html" data-broken-link="true">August 2017</a></li>
+	<li><a href="../../../2017/07/index.html" data-broken-link="true">July 2017</a></li>
+	<li><a href="../../../2016/10/index.html" data-broken-link="true">October 2016</a></li>
+	<li><a href="../../../2016/09/index.html" data-broken-link="true">September 2016</a></li>
+	<li><a href="../../../2016/05/index.html" data-broken-link="true">May 2016</a></li>
+	<li><a href="../../../2016/04/index.html" data-broken-link="true">April 2016</a></li>
+	<li><a href="../../../2015/11/index.html" data-broken-link="true">November 2015</a></li>
+	<li><a href="../../../2015/08/index.html" data-broken-link="true">August 2015</a></li>
+	<li><a href="../../../2015/04/index.html" data-broken-link="true">April 2015</a></li>
+	<li><a href="../../../2011/04/index.html" data-broken-link="true">April 2011</a></li>
+	<li><a href="../../../2009/11/index.html" data-broken-link="true">November 2009</a></li>
+	<li><a href="../../../2009/04/index.html" data-broken-link="true">April 2009</a></li>
+	<li><a href="../../../2009/03/index.html" data-broken-link="true">March 2009</a></li>
+	<li><a href="../../../2009/02/index.html" data-broken-link="true">February 2009</a></li>
+	<li><a href="../../../2009/01/index.html" data-broken-link="true">January 2009</a></li>
+	<li><a href="../../../2008/11/index.html" data-broken-link="true">November 2008</a></li>
+	<li><a href="../../../2008/10/index.html" data-broken-link="true">October 2008</a></li>
+	<li><a href="../../../2008/08/index.html" data-broken-link="true">August 2008</a></li>
+	<li><a href="../../../2008/04/index.html" data-broken-link="true">April 2008</a></li>
+	<li><a href="../../../2007/12/index.html" data-broken-link="true">December 2007</a></li>
+	<li><a href="../../../2007/11/index.html" data-broken-link="true">November 2007</a></li>
+	<li><a href="../../../2007/10/index.html" data-broken-link="true">October 2007</a></li>
+	<li><a href="../../../2007/08/index.html" data-broken-link="true">August 2007</a></li>
+	<li><a href="../../../2007/07/index.html" data-broken-link="true">July 2007</a></li>
+	<li><a href="../../../2007/06/index.html" data-broken-link="true">June 2007</a></li>
+			</ul>
+</section>
+<section class="widget">
+  <h3 class="widget-title">Categories</h3>
+  <ul>
+					<li><a href="https://blog.osoco.de/category/everything/" data-broken-link="true">Everything</a>
+</li>
+	<li><a href="https://blog.osoco.de/category/software/osgi/" data-broken-link="true">OSGi</a>
+</li>
+	<li><a href="https://blog.osoco.de/category/software/" data-broken-link="true">Software</a>
+</li>
+	<li><a href="https://blog.osoco.de/category/uncategorized/" data-broken-link="true">Uncategorized</a>
+</li>
+			</ul>
+</section>
+<section class="widget">
+  <h3 class="widget-title">Meta</h3>
+  <ul>
+						<li><a href="../../../wp-login.php" data-broken-link="true">Log in</a></li>
+			<li><a href="../../../feed/index.html" data-broken-link="true">Entries feed</a></li>
+			<li><a href="../../../comments/feed/index.html" data-broken-link="true">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+</section>
+</aside>
+</div>
+<footer class="site-footer" role="contentinfo">
+  <div class="site-info"><a href="../../../privacy-policy/index.html">Privacy Policy</a><span class="sep" role="separator"></span> <a href="https://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a></div>
+</footer>
+</div>
+<script src="../../../assets/chrome.js" defer></script>
+</body>
+</html>

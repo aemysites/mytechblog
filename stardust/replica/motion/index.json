@@ -1,0 +1,260 @@
+{
+  "url": "https://blog.osoco.de/",
+  "width": 360,
+  "headerTimeline": [
+    {
+      "y": 0,
+      "cls": "site-header",
+      "position": "static",
+      "height": "153.391px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": null,
+      "bodyPadTop": "0px",
+      "headerCount": 2
+    },
+    {
+      "y": 0,
+      "cls": "site-header",
+      "position": "static",
+      "height": "153.391px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": null,
+      "bodyPadTop": "0px",
+      "headerCount": 2
+    },
+    {
+      "y": 119,
+      "cls": "site-header",
+      "position": "static",
+      "height": "153.391px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": null,
+      "bodyPadTop": "0px",
+      "headerCount": 2
+    },
+    {
+      "y": 119,
+      "cls": "site-header",
+      "position": "static",
+      "height": "153.391px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": null,
+      "bodyPadTop": "0px",
+      "headerCount": 2
+    },
+    {
+      "y": 119,
+      "cls": "site-header",
+      "position": "static",
+      "height": "153.391px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": null,
+      "bodyPadTop": "0px",
+      "headerCount": 2
+    },
+    {
+      "y": 119,
+      "cls": "site-header",
+      "position": "static",
+      "height": "153.391px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": null,
+      "bodyPadTop": "0px",
+      "headerCount": 2
+    },
+    {
+      "y": 119,
+      "cls": "site-header",
+      "position": "static",
+      "height": "153.391px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": null,
+      "bodyPadTop": "0px",
+      "headerCount": 2
+    },
+    {
+      "y": 119,
+      "cls": "site-header",
+      "position": "static",
+      "height": "153.391px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": null,
+      "bodyPadTop": "0px",
+      "headerCount": 2
+    },
+    {
+      "y": 119,
+      "cls": "site-header",
+      "position": "static",
+      "height": "153.391px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": null,
+      "bodyPadTop": "0px",
+      "headerCount": 2
+    },
+    {
+      "y": 119,
+      "cls": "site-header",
+      "position": "static",
+      "height": "153.391px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": null,
+      "bodyPadTop": "0px",
+      "headerCount": 2
+    },
+    {
+      "y": 90,
+      "cls": "site-header",
+      "position": "static",
+      "height": "153.391px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": null,
+      "bodyPadTop": "0px",
+      "headerCount": 2
+    },
+    {
+      "y": 60,
+      "cls": "site-header",
+      "position": "static",
+      "height": "153.391px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": null,
+      "bodyPadTop": "0px",
+      "headerCount": 2
+    },
+    {
+      "y": 30,
+      "cls": "site-header",
+      "position": "static",
+      "height": "153.391px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": null,
+      "bodyPadTop": "0px",
+      "headerCount": 2
+    },
+    {
+      "y": 0,
+      "cls": "site-header",
+      "position": "static",
+      "height": "153.391px",
+      "transform": "none",
+      "transition": "all",
+      "mainPadTop": null,
+      "bodyPadTop": "0px",
+      "headerCount": 2
+    }
+  ],
+  "widgetSamples": [
+    {
+      "sel": ".menu-toggle",
+      "frames": [
+        {
+          "t": 15213.099999999627,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 15415.599999999627,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 15619,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 15822.399999999441,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        }
+      ]
+    }
+  ],
+  "hoverSamples": [
+    {
+      "sel": "a",
+      "changed": [],
+      "before": {
+        "self": {
+          "transform": "none",
+          "color": "rgb(33, 117, 155)",
+          "background": "rgba(0, 0, 0, 0)",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "all"
+        },
+        "subs": []
+      },
+      "after": {
+        "self": {
+          "transform": "none",
+          "color": "rgb(33, 117, 155)",
+          "background": "rgba(0, 0, 0, 0)",
+          "boxShadow": "none",
+          "opacity": "1",
+          "transition": "all"
+        },
+        "subs": []
+      }
+    }
+  ],
+  "media": {
+    "videos": [],
+    "idleClassMutations": [],
+    "idleClassMutationCount": 0
+  },
+  "events": {
+    "animations": [],
+    "transitions": [],
+    "classMutations": [
+      {
+        "added": [
+          "nav-menu",
+          "toggled-on"
+        ],
+        "el": "div.hfeed.site > header.site-header > nav.main-navigation > div.nav-menu > ul.nav-menu.toggled-on",
+        "y": 0
+      },
+      {
+        "added": [
+          "toggled-on"
+        ],
+        "el": "body.home.wp-singular.page-template > div.hfeed.site > header.site-header > nav.main-navigation > button.menu-toggle.toggled-on",
+        "y": 0
+      },
+      {
+        "added": [
+          "toggled-on"
+        ],
+        "el": "div.hfeed.site > header.site-header > nav.main-navigation > div.nav-menu > ul.nav-menu.toggled-on",
+        "y": 0
+      }
+    ]
+  }
+}

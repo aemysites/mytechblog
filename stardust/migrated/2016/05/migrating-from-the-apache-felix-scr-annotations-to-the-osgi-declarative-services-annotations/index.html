@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<!-- stardust:migrate
+  writtenBy:        stardust:migrate
+  writtenAt:        2026-10-12T19:36:56Z
+  page:             Migrating from the Apache Felix SCR Annotations to the OSGi Declarative Services Annotations - A Matter of Unimportance
+  slug:             2016-05-migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations
+  pagePath:         migrated/2016/05/migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations/index.html
+  renderBranch:     A'
+  template:         2021-07-the-truth-about-aem-run-modes
+  archetypePath:    stardust/prototypes/2021-07-the-truth-about-aem-run-modes-proposed.html
+  archetypeSha:     e1e571a3c534
+  sourceCurrent:    stardust/current/pages/2016-05-migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations.json
+  againstDirection: stardust/direction.md (Active)
+  designMd:         DESIGN.md (sha: bae0208daf50)
+  designJson:       DESIGN.json (sha: d9694956c490)
+  canonShas:        header:22a6ff0f57a1 footer:7a4a2f1c6e65 css:4f7dca61ef71
+  decisionTrace:    _meta.json
+  brokenInternalLinks: 38
+  stardustVersion:  local
+-->
+<style>
+:root {
+  --c-backdrop: #e6e6e6;
+  --c-page: #fff;
+  --c-rule: #ededed;
+  --c-text: #444;
+  --c-muted: #757575;
+  --c-meta: #636363;
+  --c-title: #515151;
+  --c-nav: #6a6a6a;
+  --c-link: #21759b;
+  --c-link-hover: #0f3647;
+  --c-visited: #9f9f9f;
+  --f-base: 'Open Sans', helvetica, arial, sans-serif;
+  --f-mono: consolas, monaco, 'Lucida Console', monospace;
+  --s-1: 24px;
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Migrating from the Apache Felix SCR Annotations to the OSGi Declarative Services Annotations - A Matter of Unimportance","mainEntityOfPage":"https://blog.osoco.de/2016/05/migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations/"}</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Migrating from the Apache Felix SCR Annotations to the OSGi Declarative Services Annotations - A Matter of Unimportance</title>
+<link rel="icon" href="../../../assets/favicon.png">
+<link rel="stylesheet" href="../../../assets/canon.css">
+<link rel="stylesheet" href="../../../assets/article.css">
+</head>
+<body class="tpl-article single-author">
+<div class="site" id="page">
+<header class="site-header" role="banner">
+  <div class="site-branding">
+    <h1 class="site-title"><a href="../../../index.html">A Matter of Unimportance</a></h1>
+    <h2 class="site-description">The world won't listen….</h2>
+  </div>
+  <nav class="main-navigation">
+    <button class="menu-toggle" type="button" aria-expanded="false">Menu</button>
+    <ul class="nav-menu"> <li><a href="../../../index.html">Home</a></li><li><a href="../../../blog/index.html">Blog</a></li> <li><a href="../../../privacy-policy/index.html">Privacy Policy</a></li> </ul>
+  </nav>
+</header>
+<div class="site-main">
+<main class="site-content" id="content" data-template="2021-07-the-truth-about-aem-run-modes">
+<article class="entry" data-section="1">
+  <header class="entry-header"><h1 class="entry-title">Migrating from the Apache Felix SCR Annotations to the OSGi Declarative Services Annotations</h1></header>
+  <div class="entry-content">
+			<p>The Java annotations of the <a href="http://felix.apache.org/documentation/subprojects/apache-felix-maven-scr-plugin/scr-annotations.html">Apache Felix SCR Plugin</a> were one of the first options to use annotations to create the descriptors for OSGi Declarative Services components and OSGi metatype descriptions for the configuration of such components. With the OSGi R6 release from 2015, the annotations of the OSGi specifications provide the same functionality and go even beyond.</p>
+<h1>Migrating from the Apache Felix SCR Annotations</h1>
+<p>Whenever there are competing solutions for the same problem, the question of which one to use arises. In this case, the answer is clear: use the official annotations from the OSGi specifications – for one, they are defined in a standard, but equally important these annotations support all features of Declarative Services R6 – while the Apache Felix annotations only support R5 and it is very unlikely that they will be updated. And that’s the other reason why you should not use the Apache Felix annotations – they are in maintenance mode. Of course, should any bug or problem arise, this will be fixed.</p>
+<p>The second question usually is: Should I migrate existing code? There is no need to bulk migrate existing code. As said, the Apache Felix plugin is still maintained, is open source and simply works. However, if you have to touch your code, migrating the annotations might be a good idea. It also gives you the chance to simplify your code by leveraging the R6 features. That said, if you do so, this of course ties your implementation to an R6 implementation of Declarative Services, like <a href="http://felix.apache.org/documentation/subprojects/apache-felix-service-component-runtime.html">Apache Felix SCR</a>, version 2.0 or higher.</p>
+<h1>Mapping to OSGi Declarative Services Annotations</h1>
+<p>The below table gives you an overview of how to map the annotations.</p>
+<h2>Annotation Mapping</h2>
+
+<div class="table-scroll"><table class="data-table">
+<thead>
+<tr>
+	<th>Apache Felix SCR Annotation</th><th>Description</th><th>OSGi Declarative Services Annotation</th><th>Description</th>
+</tr>
+</thead>
+<tbody class="is-striped">
+<tr>
+	<td>@Component</td><td>The @Component annotation marks a Java class to be used as a component.</td><td>@Component</td><td>This is more or less a strict one-to-one replacement. Only difference is the default behavior for services. See below.</td>
+</tr>
+<tr>
+	<td>@Service</td><td>Marks the component as a service and optionally lists the provided services (classes)</td><td>@Component</td><td>The OSGi annotation has a service attribute which should be used to list the provided services. Be careful, if your component should not provide any service, set this attribute to an empty array.</td>
+</tr>
+<tr>
+	<td>@Reference</td><td>Reference to services, can be used on unary fields or on class level with bind/unbind methods.</td><td>@Reference</td><td>Field references can directly be migrated, for event based references (methods), the @Reference annotation must be put on the bind method. In addition, more options for field references exist.</td>
+</tr>
+<tr>
+	<td>@Activate, @Deactivate, and @Modified</td><td>Mark a method being the activation, deactivation or modified method</td><td>@Activate, @Deactivate, and @Modified</td><td>Straight one-to-one migration.</td>
+</tr>
+<tr>
+	<td>@Property</td><td>Configuration properties and metatype.</td><td>Component Property Type and metatype annotations</td><td>Instead of using a set of @Property annotations, the configuration is described through an annotation (component property type) and OSGi Metatype annotations can be used to add the metatype info.</td>
+</tr>
+</tbody>
+</table></div>
+<span class="table-description">Mapping between Apache Felix SCR Annotations and OSGi Declarative Services Annotations</span>
+
+<p>The above table is of course just a short reference. You’ll find more information in the OSGi specifications and in my Declarative Services Tutorials: <a href="../../../2015/08/osgi-components-simply-simple-part-i/index.html" title="OSGi Components – Simply Simple – Part I">Part I</a>, <a href="../../../2015/08/osgi-components-simply-simple-part-ii/index.html" title="OSGi Components – Simply Simple – Part II">Part II</a>, and <a href="../../../2015/11/osgi-components-simply-simple-part-iii/index.html" title="OSGi Components – Simply Simple – Part III">Part III</a>.</p>
+					</div>
+  <footer class="entry-meta">
+			This entry was posted in <a href="https://blog.osoco.de/category/software/osgi/" data-broken-link="true">OSGi</a>, <a href="https://blog.osoco.de/category/software/" data-broken-link="true">Software</a> on <a href="../../../2016/05/migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations/index.html" title="02:18"><time datetime="2016-05-07T02:18:02+02:00">2016-05-07</time></a><span class="by-author"> by <a href="../../../author/cziegeler/index.html" title="View all posts by cziegeler" data-broken-link="true">cziegeler</a></span>.								</footer>
+</article>
+<nav class="nav-single" data-section="2">
+  <h3 class="screen-reader-text">Post navigation</h3>
+  <span class="nav-previous"><a href="../../../2016/04/example-osgi-web-application/index.html"><span class="meta-nav">←</span> Example OSGi Web Application</a></span>
+  <span class="nav-next"><a href="../../../2016/05/building-osgi-bundles-with-apache-maven/index.html">Building OSGi Bundles with Apache Maven <span class="meta-nav">→</span></a></span>
+</nav>
+</main>
+<aside class="widget-area" role="complementary">
+<section class="widget widget-search">
+  <form class="search-form" role="search" method="get" action="/search">
+    <div><label class="screen-reader-text" for="s">Search for:</label> <input class="search-field" type="text" name="s" id="s" value=""> <input type="submit" value="Search"></div>
+  </form>
+</section>
+<section class="widget">
+  <h3 class="widget-title">Recent Posts</h3>
+  <ul>
+											<li>
+					<a href="../../../2024/02/value-created-by-developers/index.html">Value created by Developers</a>
+									</li>
+											<li>
+					<a href="../../../2021/07/the-truth-about-aem-run-modes/index.html">The Truth about AEM Run Modes</a>
+									</li>
+											<li>
+					<a href="../../../2020/07/guide-on-using-osgi-configurations/index.html">Guide on Using OSGi Configurations</a>
+									</li>
+											<li>
+					<a href="../../../2017/08/osgi-declarative-services-configuration-binding/index.html">OSGi Declarative Services – Configuration Binding</a>
+									</li>
+											<li>
+					<a href="../../../2017/07/new-osgi-configuration-features-r7/index.html">New OSGi Configuration Features in R7</a>
+									</li>
+					</ul>
+</section>
+<section class="widget">
+  <h3 class="widget-title">Archives</h3>
+  <ul>
+					<li><a href="../../../2024/02/index.html" data-broken-link="true">February 2024</a></li>
+	<li><a href="../../../2021/07/index.html" data-broken-link="true">July 2021</a></li>
+	<li><a href="../../../2020/07/index.html" data-broken-link="true">July 2020</a></li>
+	<li><a href="../../../2017/08/index.html" data-broken-link="true">August 2017</a></li>
+	<li><a href="../../../2017/07/index.html" data-broken-link="true">July 2017</a></li>
+	<li><a href="../../../2016/10/index.html" data-broken-link="true">October 2016</a></li>
+	<li><a href="../../../2016/09/index.html" data-broken-link="true">September 2016</a></li>
+	<li><a href="../../../2016/05/index.html" data-broken-link="true">May 2016</a></li>
+	<li><a href="../../../2016/04/index.html" data-broken-link="true">April 2016</a></li>
+	<li><a href="../../../2015/11/index.html" data-broken-link="true">November 2015</a></li>
+	<li><a href="../../../2015/08/index.html" data-broken-link="true">August 2015</a></li>
+	<li><a href="../../../2015/04/index.html" data-broken-link="true">April 2015</a></li>
+	<li><a href="../../../2011/04/index.html" data-broken-link="true">April 2011</a></li>
+	<li><a href="../../../2009/11/index.html" data-broken-link="true">November 2009</a></li>
+	<li><a href="../../../2009/04/index.html" data-broken-link="true">April 2009</a></li>
+	<li><a href="../../../2009/03/index.html" data-broken-link="true">March 2009</a></li>
+	<li><a href="../../../2009/02/index.html" data-broken-link="true">February 2009</a></li>
+	<li><a href="../../../2009/01/index.html" data-broken-link="true">January 2009</a></li>
+	<li><a href="../../../2008/11/index.html" data-broken-link="true">November 2008</a></li>
+	<li><a href="../../../2008/10/index.html" data-broken-link="true">October 2008</a></li>
+	<li><a href="../../../2008/08/index.html" data-broken-link="true">August 2008</a></li>
+	<li><a href="../../../2008/04/index.html" data-broken-link="true">April 2008</a></li>
+	<li><a href="../../../2007/12/index.html" data-broken-link="true">December 2007</a></li>
+	<li><a href="../../../2007/11/index.html" data-broken-link="true">November 2007</a></li>
+	<li><a href="../../../2007/10/index.html" data-broken-link="true">October 2007</a></li>
+	<li><a href="../../../2007/08/index.html" data-broken-link="true">August 2007</a></li>
+	<li><a href="../../../2007/07/index.html" data-broken-link="true">July 2007</a></li>
+	<li><a href="../../../2007/06/index.html" data-broken-link="true">June 2007</a></li>
+			</ul>
+</section>
+<section class="widget">
+  <h3 class="widget-title">Categories</h3>
+  <ul>
+					<li><a href="https://blog.osoco.de/category/everything/" data-broken-link="true">Everything</a>
+</li>
+	<li><a href="https://blog.osoco.de/category/software/osgi/" data-broken-link="true">OSGi</a>
+</li>
+	<li><a href="https://blog.osoco.de/category/software/" data-broken-link="true">Software</a>
+</li>
+	<li><a href="https://blog.osoco.de/category/uncategorized/" data-broken-link="true">Uncategorized</a>
+</li>
+			</ul>
+</section>
+<section class="widget">
+  <h3 class="widget-title">Meta</h3>
+  <ul>
+						<li><a href="../../../wp-login.php" data-broken-link="true">Log in</a></li>
+			<li><a href="../../../feed/index.html" data-broken-link="true">Entries feed</a></li>
+			<li><a href="../../../comments/feed/index.html" data-broken-link="true">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+</section>
+</aside>
+</div>
+<footer class="site-footer" role="contentinfo">
+  <div class="site-info"><a href="../../../privacy-policy/index.html">Privacy Policy</a><span class="sep" role="separator"></span> <a href="https://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a></div>
+</footer>
+</div>
+<script src="../../../assets/chrome.js" defer></script>
+</body>
+</html>

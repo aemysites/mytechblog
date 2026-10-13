@@ -1,0 +1,670 @@
+{
+  "generatedAt": "2026-10-12T21:06:20.551Z",
+  "target": "aem-eds",
+  "site": {
+    "sourceUrl": "https://blog.osoco.de/",
+    "liveHost": "main--18fbe2a0--aemcoder.aem.live"
+  },
+  "stageCount": {
+    "identified": 67,
+    "prototyped": 67,
+    "deployed": 67,
+    "optimised": 54
+  },
+  "stageExclusive": {
+    "identified": 0,
+    "prototyped": 0,
+    "deployed": 13,
+    "optimised": 54
+  },
+  "pages": [
+    {
+      "slug": "index",
+      "path": "/",
+      "stage": "optimised",
+      "templateId": "index",
+      "isTemplate": true,
+      "openFindings": 0
+    },
+    {
+      "slug": "2007-06-maven-207-is-out",
+      "path": "/2007/06/maven-207-is-out",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": true,
+      "openFindings": 0
+    },
+    {
+      "slug": "2007-06-silence-is-over",
+      "path": "/2007/06/silence-is-over",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2007-06-turn-it-on-again-singing-in-the-rain",
+      "path": "/2007/06/turn-it-on-again-singing-in-the-rain",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2007-07-apache-felix-100-released",
+      "path": "/2007/07/apache-felix-100-released",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2007-07-excalibur-sourceresolver-released",
+      "path": "/2007/07/excalibur-sourceresolver-released",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2007-07-movable-type-sucks-wordpress-rocks",
+      "path": "/2007/07/movable-type-sucks-wordpress-rocks",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2007-07-portlet-api-20-and-jcr-20-public-review",
+      "path": "/2007/07/portlet-api-20-and-jcr-20-public-review",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2007-08-maven-release-plugin-removes-headers",
+      "path": "/2007/08/maven-release-plugin-removes-headers",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2007-10-cocoon-gettogether-2007-in-rome",
+      "path": "/2007/10/cocoon-gettogether-2007-in-rome",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2007-10-garbage-collection-in-objective-c",
+      "path": "/2007/10/garbage-collection-in-objective-c",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2007-10-new-projects-apache-sling-and-apache-sanselan",
+      "path": "/2007/10/new-projects-apache-sling-and-apache-sanselan",
+      "stage": "deployed",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 1
+    },
+    {
+      "slug": "2007-11-apache-ibatis-and-apache-sanselan-session",
+      "path": "/2007/11/apache-ibatis-and-apache-sanselan-session",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2007-11-arrived-in-atlanta-for-apachecon",
+      "path": "/2007/11/arrived-in-atlanta-for-apachecon",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2007-11-creating-osgi-services-with-the-apache-felix-scr-plugin",
+      "path": "/2007/11/creating-osgi-services-with-the-apache-felix-scr-plugin",
+      "stage": "deployed",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 1
+    },
+    {
+      "slug": "2007-11-jcr-in-action-session",
+      "path": "/2007/11/jcr-in-action-session",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2007-11-leaving-orlando",
+      "path": "/2007/11/leaving-orlando",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2007-11-orlando-florida",
+      "path": "/2007/11/orlando-florida",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2007-11-portals-track-at-apachecon",
+      "path": "/2007/11/portals-track-at-apachecon",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2007-11-the-musical-box-live-in-hamburg",
+      "path": "/2007/11/the-musical-box-live-in-hamburg",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2007-12-back-in-paderborn",
+      "path": "/2007/12/back-in-paderborn",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2007-12-cocoon-portal-and-jcr",
+      "path": "/2007/12/cocoon-portal-and-jcr",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2007-12-conference-season-2008",
+      "path": "/2007/12/conference-season-2008",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2008-04-apachecon-eu-in-amsterdam",
+      "path": "/2008/04/apachecon-eu-in-amsterdam",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2008-04-cocoon-22-is-released",
+      "path": "/2008/04/cocoon-22-is-released",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2008-04-cool-eclipse-plugin-mvn-indexer",
+      "path": "/2008/04/cool-eclipse-plugin-mvn-indexer",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2008-04-innovation-at-apache-the-fun-is-back-with-apache-sling",
+      "path": "/2008/04/innovation-at-apache-the-fun-is-back-with-apache-sling",
+      "stage": "deployed",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 1
+    },
+    {
+      "slug": "2008-04-thanks-to-apache-commons-support-for-osgi",
+      "path": "/2008/04/thanks-to-apache-commons-support-for-osgi",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2008-08-happy-birthday-madonna",
+      "path": "/2008/08/happy-birthday-madonna",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2008-10-first-steps-with-jquery",
+      "path": "/2008/10/first-steps-with-jquery",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2008-10-ray-wilson-live-in-paderborn",
+      "path": "/2008/10/ray-wilson-live-in-paderborn",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2008-11-heading-east",
+      "path": "/2008/11/heading-east",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2008-11-heading-west",
+      "path": "/2008/11/heading-west",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2008-11-interesting-session-in-new-orleans",
+      "path": "/2008/11/interesting-session-in-new-orleans",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2008-11-osgiapachecon",
+      "path": "/2008/11/osgiapachecon",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2008-11-sling-polo-shirts-arrived",
+      "path": "/2008/11/sling-polo-shirts-arrived",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2008-11-what-happened-to-the-springframework-site",
+      "path": "/2008/11/what-happened-to-the-springframework-site",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2009-01-portlets-and-osgi",
+      "path": "/2009/01/portlets-and-osgi",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2009-02-getting-started-with-portal-servers-and-spec-compliance",
+      "path": "/2009/02/getting-started-with-portal-servers-and-spec-compliance",
+      "stage": "deployed",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 1
+    },
+    {
+      "slug": "2009-03-conference-season-apachecon-europe-and-jax",
+      "path": "/2009/03/conference-season-apachecon-europe-and-jax",
+      "stage": "deployed",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 1
+    },
+    {
+      "slug": "2009-03-portals-meetup-at-apachecon-europe",
+      "path": "/2009/03/portals-meetup-at-apachecon-europe",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2009-04-jax-apache-sling-and-accidental-complexity",
+      "path": "/2009/04/jax-apache-sling-and-accidental-complexity",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2009-04-rapid-development-with-apache-sling-using-an-ide",
+      "path": "/2009/04/rapid-development-with-apache-sling-using-an-ide",
+      "stage": "deployed",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 1
+    },
+    {
+      "slug": "2009-11-increasing-interest-in-jcr-and-apache-sling",
+      "path": "/2009/11/increasing-interest-in-jcr-and-apache-sling",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2011-04-apache-axis2-book",
+      "path": "/2011/04/apache-axis2-book",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2015-04-hello-world",
+      "path": "/2015/04/hello-world",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2015-08-osgi-components-simply-simple-part-i",
+      "path": "/2015/08/osgi-components-simply-simple-part-i",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2015-08-osgi-components-simply-simple-part-ii",
+      "path": "/2015/08/osgi-components-simply-simple-part-ii",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2015-11-osgi-components-simply-simple-part-iii",
+      "path": "/2015/11/osgi-components-simply-simple-part-iii",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2016-04-example-osgi-web-application",
+      "path": "/2016/04/example-osgi-web-application",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2016-04-http-whiteboard-simply-simple-part-i",
+      "path": "/2016/04/http-whiteboard-simply-simple-part-i",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2016-05-building-osgi-bundles-with-apache-maven",
+      "path": "/2016/05/building-osgi-bundles-with-apache-maven",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2016-05-migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations",
+      "path": "/2016/05/migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations",
+      "stage": "deployed",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 1
+    },
+    {
+      "slug": "2016-09-http-whiteboard-simply-simple-part-ii",
+      "path": "/2016/09/http-whiteboard-simply-simple-part-ii",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2016-10-http-whiteboard-simply-simple-part-iii",
+      "path": "/2016/10/http-whiteboard-simply-simple-part-iii",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2017-07-new-osgi-configuration-features-r7",
+      "path": "/2017/07/new-osgi-configuration-features-r7",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2017-08-osgi-declarative-services-configuration-binding",
+      "path": "/2017/08/osgi-declarative-services-configuration-binding",
+      "stage": "deployed",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 1
+    },
+    {
+      "slug": "2020-07-guide-on-using-osgi-configurations",
+      "path": "/2020/07/guide-on-using-osgi-configurations",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "2021-07-the-truth-about-aem-run-modes",
+      "path": "/2021/07/the-truth-about-aem-run-modes",
+      "stage": "optimised",
+      "templateId": "2021-07-the-truth-about-aem-run-modes",
+      "isTemplate": true,
+      "openFindings": 0
+    },
+    {
+      "slug": "2024-02-value-created-by-developers",
+      "path": "/2024/02/value-created-by-developers",
+      "stage": "optimised",
+      "templateId": "article",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "blog",
+      "path": "/blog",
+      "stage": "deployed",
+      "templateId": "blog",
+      "isTemplate": true,
+      "openFindings": 1
+    },
+    {
+      "slug": "category-everything",
+      "path": "/category/everything",
+      "stage": "deployed",
+      "templateId": "listing",
+      "isTemplate": true,
+      "openFindings": 1
+    },
+    {
+      "slug": "category-software",
+      "path": "/category/software",
+      "stage": "deployed",
+      "templateId": "listing",
+      "isTemplate": false,
+      "openFindings": 1
+    },
+    {
+      "slug": "category-software-osgi",
+      "path": "/category/software/osgi",
+      "stage": "deployed",
+      "templateId": "listing",
+      "isTemplate": false,
+      "openFindings": 1
+    },
+    {
+      "slug": "category-uncategorized",
+      "path": "/category/uncategorized",
+      "stage": "deployed",
+      "templateId": "listing",
+      "isTemplate": false,
+      "openFindings": 1
+    },
+    {
+      "slug": "privacy-policy",
+      "path": "/privacy-policy",
+      "stage": "optimised",
+      "templateId": "privacy-policy",
+      "isTemplate": true,
+      "openFindings": 0
+    },
+    {
+      "slug": "search",
+      "path": "/search",
+      "stage": "optimised",
+      "templateId": "search",
+      "isTemplate": true,
+      "openFindings": 0
+    }
+  ],
+  "templates": [
+    {
+      "id": "2021-07-the-truth-about-aem-run-modes",
+      "archetype": "2021-07-the-truth-about-aem-run-modes",
+      "pageCount": 1,
+      "stages": {
+        "identified": 0,
+        "prototyped": 0,
+        "deployed": 0,
+        "optimised": 1
+      }
+    },
+    {
+      "id": "article",
+      "archetype": "2007-06-maven-207-is-out",
+      "pageCount": 58,
+      "stages": {
+        "identified": 0,
+        "prototyped": 0,
+        "deployed": 8,
+        "optimised": 50
+      }
+    },
+    {
+      "id": "blog",
+      "archetype": "blog",
+      "pageCount": 1,
+      "stages": {
+        "identified": 0,
+        "prototyped": 0,
+        "deployed": 1,
+        "optimised": 0
+      }
+    },
+    {
+      "id": "index",
+      "archetype": "index",
+      "pageCount": 1,
+      "stages": {
+        "identified": 0,
+        "prototyped": 0,
+        "deployed": 0,
+        "optimised": 1
+      }
+    },
+    {
+      "id": "listing",
+      "archetype": "category-everything",
+      "pageCount": 4,
+      "stages": {
+        "identified": 0,
+        "prototyped": 0,
+        "deployed": 4,
+        "optimised": 0
+      }
+    },
+    {
+      "id": "privacy-policy",
+      "archetype": "privacy-policy",
+      "pageCount": 1,
+      "stages": {
+        "identified": 0,
+        "prototyped": 0,
+        "deployed": 0,
+        "optimised": 1
+      }
+    },
+    {
+      "id": "search",
+      "archetype": "search",
+      "pageCount": 1,
+      "stages": {
+        "identified": 0,
+        "prototyped": 0,
+        "deployed": 0,
+        "optimised": 1
+      }
+    }
+  ],
+  "blocks": {
+    "total": 7,
+    "converted": 0
+  },
+  "quality": {
+    "overall": 97,
+    "dimensions": {
+      "brand-tensions": null,
+      "design-ux": null,
+      "accessibility": null,
+      "seo": 100,
+      "content-conversion": null,
+      "ai-search": 100,
+      "cross-page": 92
+    },
+    "severity": {
+      "P1": 0,
+      "P2": 0,
+      "P3": 2
+    },
+    "history": [
+      64,
+      94,
+      97
+    ]
+  },
+  "findings": {
+    "byFixability": {
+      "design-pass": 2,
+      "out-of-scope": 8
+    },
+    "byAutofix": {}
+  }
+}

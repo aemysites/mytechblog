@@ -1,0 +1,12 @@
+/* search-results — source style.css .entry-summary (L764, L822) */
+main .entry-summary {
+  line-height: 1.7143;
+}
+
+main .entry-summary p {
+  margin: 0 0 var(--s-1);
+}
+
+main .section.entry .entry-content > p {
+  margin: 0 0 var(--s-1);
+}

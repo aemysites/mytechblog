@@ -1,0 +1,70 @@
+{
+ "_provenance": {
+  "writtenBy": "stardust:dynamics check",
+  "writtenAt": "2026-10-12T20:59:06.408Z",
+  "origin": "https://main--18fbe2a0--aemcoder.aem.live",
+  "parity": "stardust/dynamics/parity.json"
+ },
+ "results": [
+  {
+   "feature": "Sidebar site search",
+   "id": "s-site-search-form",
+   "class": "search",
+   "status": "implemented",
+   "type": "fetch-json",
+   "pass": true,
+   "detail": "200 · 61 rows · keys columns,data,offset,limit,total,:type",
+   "thirdParty": "",
+   "ms": 1954,
+   "environmentLimit": null
+  },
+  {
+   "feature": "Sidebar site search",
+   "id": "s-site-search-form",
+   "class": "search",
+   "status": "implemented",
+   "type": "search-query",
+   "pass": true,
+   "detail": "2 results (source 2) · first: apache ibatis and apache sanselan session · matches the source",
+   "thirdParty": "",
+   "ms": 1889,
+   "environmentLimit": null
+  },
+  {
+   "feature": "Sidebar site search",
+   "id": "s-site-search-form",
+   "class": "search",
+   "status": "implemented",
+   "type": "search-query",
+   "pass": true,
+   "detail": "10 results (source 10) · first: guide on using osgi configurations · matches the source",
+   "thirdParty": "",
+   "ms": 1868,
+   "environmentLimit": null
+  },
+  {
+   "feature": "Sidebar site search",
+   "id": "s-site-search-form",
+   "class": "search",
+   "status": "implemented",
+   "type": "dom-count",
+   "pass": true,
+   "detail": "1 × aside form[role=search][action='/search'] input[name=s] (min 1)",
+   "thirdParty": "",
+   "ms": 1841,
+   "environmentLimit": null
+  },
+  {
+   "feature": "Blog index + category archives",
+   "id": "l-post-listings",
+   "class": "static-snapshot",
+   "status": "static-snapshot",
+   "type": "dom-count",
+   "pass": true,
+   "detail": "10 × main .section.entry (min 10)",
+   "thirdParty": "",
+   "ms": 2021,
+   "environmentLimit": null
+  }
+ ]
+}

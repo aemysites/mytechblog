@@ -1,0 +1,177 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:rollout/blocks",
+    "writtenAt": "2026-10-12T18:48:04.627Z",
+    "readArtifacts": [
+      "stardust/rollout/coverage/pages.json"
+    ],
+    "stardustVersion": "0.0.0"
+  },
+  "generatedAt": "2026-10-12T18:48:04.627Z",
+  "blocks": [
+    {
+      "id": "archive-navigation",
+      "label": "archive-navigation",
+      "kind": "module",
+      "signature": "module:archive-navigation",
+      "source": null,
+      "usedByTemplates": [
+        "blog"
+      ],
+      "usedByPages": [
+        "blog"
+      ],
+      "instanceCount": 1,
+      "delivery": {
+        "status": "pending",
+        "edsBlockName": "archive-navigation",
+        "blockPath": null,
+        "convertedAt": null
+      }
+    },
+    {
+      "id": "code-block",
+      "label": "code-block",
+      "kind": "module",
+      "signature": "module:code-block",
+      "source": null,
+      "usedByTemplates": [
+        "2021-07-the-truth-about-aem-run-modes",
+        "blog"
+      ],
+      "usedByPages": [
+        "2021-07-the-truth-about-aem-run-modes",
+        "blog"
+      ],
+      "instanceCount": 2,
+      "delivery": {
+        "status": "pending",
+        "edsBlockName": "code-block",
+        "blockPath": null,
+        "convertedAt": null
+      }
+    },
+    {
+      "id": "colophon",
+      "label": "colophon",
+      "kind": "module",
+      "signature": "module:colophon",
+      "source": null,
+      "usedByTemplates": [
+        "2021-07-the-truth-about-aem-run-modes",
+        "blog",
+        "index",
+        "privacy-policy"
+      ],
+      "usedByPages": [
+        "2021-07-the-truth-about-aem-run-modes",
+        "blog",
+        "index",
+        "privacy-policy"
+      ],
+      "instanceCount": 4,
+      "delivery": {
+        "status": "pending",
+        "edsBlockName": "colophon",
+        "blockPath": null,
+        "convertedAt": null
+      }
+    },
+    {
+      "id": "masthead",
+      "label": "masthead",
+      "kind": "module",
+      "signature": "module:masthead",
+      "source": null,
+      "usedByTemplates": [
+        "2021-07-the-truth-about-aem-run-modes",
+        "blog",
+        "index",
+        "privacy-policy"
+      ],
+      "usedByPages": [
+        "2021-07-the-truth-about-aem-run-modes",
+        "blog",
+        "index",
+        "privacy-policy"
+      ],
+      "instanceCount": 4,
+      "delivery": {
+        "status": "pending",
+        "edsBlockName": "masthead",
+        "blockPath": null,
+        "convertedAt": null
+      }
+    },
+    {
+      "id": "post-entry",
+      "label": "post-entry",
+      "kind": "module",
+      "signature": "module:post-entry",
+      "source": null,
+      "usedByTemplates": [
+        "2021-07-the-truth-about-aem-run-modes",
+        "blog",
+        "index",
+        "privacy-policy"
+      ],
+      "usedByPages": [
+        "2021-07-the-truth-about-aem-run-modes",
+        "blog",
+        "index",
+        "privacy-policy"
+      ],
+      "instanceCount": 4,
+      "delivery": {
+        "status": "pending",
+        "edsBlockName": "post-entry",
+        "blockPath": null,
+        "convertedAt": null
+      }
+    },
+    {
+      "id": "post-navigation",
+      "label": "post-navigation",
+      "kind": "module",
+      "signature": "module:post-navigation",
+      "source": null,
+      "usedByTemplates": [
+        "2021-07-the-truth-about-aem-run-modes"
+      ],
+      "usedByPages": [
+        "2021-07-the-truth-about-aem-run-modes"
+      ],
+      "instanceCount": 1,
+      "delivery": {
+        "status": "pending",
+        "edsBlockName": "post-navigation",
+        "blockPath": null,
+        "convertedAt": null
+      }
+    },
+    {
+      "id": "sidebar-widgets",
+      "label": "sidebar-widgets",
+      "kind": "module",
+      "signature": "module:sidebar-widgets",
+      "source": null,
+      "usedByTemplates": [
+        "2021-07-the-truth-about-aem-run-modes",
+        "blog",
+        "privacy-policy"
+      ],
+      "usedByPages": [
+        "2021-07-the-truth-about-aem-run-modes",
+        "blog",
+        "privacy-policy"
+      ],
+      "instanceCount": 3,
+      "delivery": {
+        "status": "pending",
+        "edsBlockName": "sidebar-widgets",
+        "blockPath": null,
+        "convertedAt": null
+      }
+    }
+  ]
+}

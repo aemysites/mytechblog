@@ -1,0 +1,44 @@
+<body>
+  <header></header>
+  <main>
+    <div><h1>OSGi Components – Simply Simple – Part III</h1><p>In the previous two parts (<a href="/?p=91">Part I</a> and <a href="/?p=107">Part II</a>) you learned how to use Declarative Services to develop your own components and services for OSGi. The topics included:</p><ul><li>Creating components</li>
+<li>Component lifecycle</li>
+<li>Component configuration</li>
+<li>Using services through references</li>
+<li>Providing services</li></ul><p>In this part we’ll cover another interesting topic:</p><h2>Metatype Generation</h2><p>The metatype specification (OSGi Compendium Chapter 105) provides a way to describe the configuration for a component. In general an OSGi configuration is just a dictionary with arbitrary key-value pairs. By defining a metatype description for the configuration, the developer of a component can define which properties together with their type the component expects. Such a metatype information can be used at runtime to generate forms to edit/create the configuration of a component. For example the Apache Felix Web Console does exactly that.</p><p>Now if you look at Part II of this series, if a component is configurable it contains already a component annotation for its properties:</p><div class="code java"><div><div><pre><code>public @interface MyComponentConfig {
+      
+    String welcome_message() default "Hello World!";
+  
+    int welcome_count() default 3;
+  
+    boolean output_goodbye() default true;
+}</code></pre></div></div></div><p>The above annotation already defines all possible properties together with their default values. Therefore the only thing you have to do is provide some human readable information like a label and a description for both, the configuration as a whole and each property. This can be done with some annotations from the metatype specification:</p><div class="code java"><div><div><pre><code>import org.osgi.service.metatype.annotations.AttributeDefinition;
+import org.osgi.service.metatype.annotations.ObjectClassDefinition;
+ 
+@ObjectClassDefinition(name = "Hello World Configuration",
+        description = "The configuration for the hello world component.")
+public @interface MyComponentConfig {
+      
+    @AttributeDefinition(name="Welcome Message", description="This message is displayed on startup of the component.")
+    String welcome_message() default "Hello World!";
+  
+    @AttributeDefinition(name="Welcome Message Count", description="This is the number of times, the welcome message will be displayed. " +
+                              "If less than one, no message will be displayed.")
+    int welcome_count() default 3;
+  
+    @AttributeDefinition(name="Output Goodbye", description="Set this if the component should output a goodbye message.")
+    boolean output_goodbye() default true;
+}</code></pre></div></div></div><p>The @ObjectClassDefinition annotation is used on the whole configuration annotation and for each attribute, the @AttributeDefinition annotation is used. With these annotations a metatype description for the <em>MyComponentConfig</em> class will be generated. However, we want to bind this configuration to our component which is a different class. Therefore you have to specify the @Designate annotation on your component class:</p><div class="code java"><div><div><pre><code>import org.osgi.service.metatype.annotations.Designate;
+ 
+@Component
+@Designate( ocd = MyComponentConfig.class )
+public class MyFirstComponent {
+  
+    @Activate
+    protected void activate( MyComponentConfig config ) {
+    ...
+}</code></pre></div></div></div><p>And this will generate the metatype information for your component. It’s really easy to do such and it helps the user of your component to easily figure out how your component can be configured.</p><div class="entry-meta"><div><div>This entry was posted in <a href="/category/software/osgi">OSGi</a>, <a href="/category/software">Software</a> on <a href="/2015/11/osgi-components-simply-simple-part-iii" title="14:40">2015-11-27</a> by <a href="https://blog.osoco.de/author/cziegeler/" title="View all posts by cziegeler">cziegeler</a>.</div></div></div><div class="section-metadata"><div><div>Style</div><div>demoted</div></div></div></div>
+    <div><div class="post-nav"><div><div><a href="/2015/08/osgi-components-simply-simple-part-ii">← OSGi Components – Simply Simple – Part II</a></div><div><a href="/2016/04/http-whiteboard-simply-simple-part-i">Http Whiteboard – Simply Simple – Part I →</a></div></div></div><div class="metadata"><div><div>JSON-LD</div><div>{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://blog.osoco.de/2015/11/osgi-components-simply-simple-part-iii/#article","isPartOf":{"@id":"https://blog.osoco.de/2015/11/osgi-components-simply-simple-part-iii/"},"author":{"name":"cziegeler","@id":"https://blog.osoco.de/#/schema/person/9623d9cbe121389449f141e4c1b108a8"},"headline":"OSGi Components &amp;#8211; Simply Simple &amp;#8211; Part III","datePublished":"2015-11-27T13:40:49+00:00","dateModified":"2017-08-23T12:18:44+00:00","mainEntityOfPage":{"@id":"https://blog.osoco.de/2015/11/osgi-components-simply-simple-part-iii/"},"wordCount":489,"publisher":{"@id":"https://blog.osoco.de/#/schema/person/9623d9cbe121389449f141e4c1b108a8"},"articleSection":["OSGi","Software"],"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://blog.osoco.de/2015/11/osgi-components-simply-simple-part-iii/","url":"https://blog.osoco.de/2015/11/osgi-components-simply-simple-part-iii/","name":"OSGi Components - Simply Simple - Part III - A Matter of Unimportance","isPartOf":{"@id":"https://blog.osoco.de/#website"},"datePublished":"2015-11-27T13:40:49+00:00","dateModified":"2017-08-23T12:18:44+00:00","breadcrumb":{"@id":"https://blog.osoco.de/2015/11/osgi-components-simply-simple-part-iii/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://blog.osoco.de/2015/11/osgi-components-simply-simple-part-iii/"]}]},{"@type":"BreadcrumbList","@id":"https://blog.osoco.de/2015/11/osgi-components-simply-simple-part-iii/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://blog.osoco.de/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://blog.osoco.de/blog/"},{"@type":"ListItem","position":3,"name":"OSGi Components &amp;#8211; Simply Simple &amp;#8211; Part III"}]},{"@type":"WebSite","@id":"https://blog.osoco.de/#website","url":"https://blog.osoco.de/","name":"A Matter of Unimportance","description":"The world won&amp;#039;t listen....","publisher":{"@id":"https://blog.osoco.de/#/schema/person/9623d9cbe121389449f141e4c1b108a8"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://blog.osoco.de/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":["Person","Organization"],"@id":"https://blog.osoco.de/#/schema/person/9623d9cbe121389449f141e4c1b108a8","name":"cziegeler","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://secure.gravatar.com/avatar/3551a66cb3ac60c88326bf2bca9e6b473f46b777a2731c6da701f0417ef66143?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/3551a66cb3ac60c88326bf2bca9e6b473f46b777a2731c6da701f0417ef66143?s=96&amp;d=mm&amp;r=g","contentUrl":"https://secure.gravatar.com/avatar/3551a66cb3ac60c88326bf2bca9e6b473f46b777a2731c6da701f0417ef66143?s=96&amp;d=mm&amp;r=g","caption":"cziegeler"},"logo":{"@id":"https://secure.gravatar.com/avatar/3551a66cb3ac60c88326bf2bca9e6b473f46b777a2731c6da701f0417ef66143?s=96&amp;d=mm&amp;r=g"}}]}</div></div><div><div>Title</div><div>OSGi Components - Simply Simple - Part III - A Matter of Unimportance</div></div><div><div>Description</div><div>In the previous two parts (Part I and Part II) you learned how to use Declarative Services to develop your own components and services for OSGi. The topics included: Creating components Component lifecycle Component configuration Using services through references Providing services In this part we’ll cover another interesting topic: Metatype Generation The metatype specification (OSGi Compendium Chapter […]</div></div><div><div>Template</div><div>article</div></div></div></div>
+  </main>
+  <footer></footer>
+</body>

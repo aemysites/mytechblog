@@ -1,0 +1,221 @@
+{
+  "slug": "2020-07-guide-on-using-osgi-configurations",
+  "type": "article",
+  "renderBranch": "A'",
+  "template": "2021-07-the-truth-about-aem-run-modes",
+  "modules": [
+    "masthead",
+    "sidebar-widgets",
+    "colophon",
+    "post-entry",
+    "post-navigation",
+    "code-block"
+  ],
+  "slotsFilled": [
+    "entry",
+    "nav-single"
+  ],
+  "canonShas": {
+    "header": "22a6ff0f57a1",
+    "footer": "d97fad7587a5",
+    "css": "4f7dca61ef71"
+  },
+  "deviations": [],
+  "migrationDecisions": [],
+  "metadata": {
+    "title": "Guide on Using OSGi Configurations - A Matter of Unimportance",
+    "description": null,
+    "canonical": null,
+    "lang": "en-US"
+  },
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Guide on Using OSGi Configurations - A Matter of Unimportance",
+    "mainEntityOfPage": "https://blog.osoco.de/2020/07/guide-on-using-osgi-configurations/"
+  },
+  "migratedAt": "2026-10-12T19:35:52Z",
+  "designMdSha": "bae0208daf50",
+  "designJsonSha": "d9694956c490",
+  "sourceCurrentSha": "0cbdff72bbb4",
+  "sourceProposedSha": "46f0a4e86142",
+  "fidelityTier": "sibling",
+  "archetypeSource": "2021-07-the-truth-about-aem-run-modes",
+  "archetypeSha": "e1e571a3c534",
+  "variants": [],
+  "gatesPassed": [],
+  "gateEvidence": {},
+  "contentDeviations": [],
+  "assetsBundled": 4,
+  "missingAssets": [],
+  "brokenInternalLinks": [
+    {
+      "href": "https://blog.osoco.de/2015/08/osgi-components-simply-simple-part-i/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/everything/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/osgi/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/tag/osgi/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/author/cziegeler/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2024/02/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2021/07/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2020/07/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2017/08/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2017/07/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2016/10/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2016/09/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2016/05/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2016/04/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2015/11/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2015/08/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2015/04/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2011/04/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2009/11/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2009/04/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2009/03/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2009/02/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2009/01/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2008/11/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2008/10/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2008/08/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2008/04/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2007/12/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2007/11/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2007/10/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2007/08/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2007/07/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2007/06/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/category/everything/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/osgi/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/uncategorized/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/wp-login.php",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/feed/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/comments/feed/",
+      "reason": "not-in-inventory"
+    }
+  ],
+  "outputPath": "2020/07/guide-on-using-osgi-configurations/index.html",
+  "outputPathDefault": null,
+  "sidecar": "2020/07/guide-on-using-osgi-configurations/_meta.json",
+  "driverVersion": "1"
+}

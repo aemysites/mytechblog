@@ -1,0 +1,2546 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:migrate",
+    "writtenAt": "2026-10-12T19:42:52Z",
+    "stardustVersion": "0.32.1"
+  },
+  "site": {
+    "originUrl": "https://blog.osoco.de/",
+    "deployUrl": null,
+    "extractedAt": "2026-10-12T18:05:22.176Z",
+    "pageCap": 100,
+    "totalDiscovered": 66,
+    "crawled": 66,
+    "captureGaps": []
+  },
+  "direction": {
+    "resolvedAt": "2026-10-12T18:19:16.861Z",
+    "phrase": "replica --hands-off (preserve)",
+    "directionFile": "stardust/direction.md",
+    "iaFidelity": "verbatim"
+  },
+  "handsOff": true,
+  "flow": "replica",
+  "flowChosenAt": "2026-10-12T18:05:22.176Z",
+  "flowSource": "user-phrase",
+  "pages": [
+    {
+      "slug": "index",
+      "url": "https://blog.osoco.de/",
+      "title": "Welcome - A Matter of Unimportance",
+      "type": "landing",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:07.917Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-10-12T18:42:57Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-10-12T18:45:02Z",
+          "approvedBy": "hands-off"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/index.json",
+      "prototypePath": "stardust/prototypes/index-proposed.html",
+      "migratedPath": null
+    },
+    {
+      "slug": "blog",
+      "url": "https://blog.osoco.de/blog/",
+      "title": "Blog - A Matter of Unimportance",
+      "type": "listing",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:09.518Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-10-12T18:42:57Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-10-12T18:45:02Z",
+          "approvedBy": "hands-off"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/blog.json",
+      "prototypePath": "stardust/prototypes/blog-proposed.html",
+      "migratedPath": null
+    },
+    {
+      "slug": "privacy-policy",
+      "url": "https://blog.osoco.de/privacy-policy/",
+      "title": "Privacy Policy - A Matter of Unimportance",
+      "type": "static",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:07.914Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-10-12T18:42:57Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-10-12T18:45:02Z",
+          "approvedBy": "hands-off"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/privacy-policy.json",
+      "prototypePath": "stardust/prototypes/privacy-policy-proposed.html",
+      "migratedPath": null
+    },
+    {
+      "slug": "category-everything",
+      "url": "https://blog.osoco.de/category/everything/",
+      "title": "Everything Archives - A Matter of Unimportance",
+      "type": "listing",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:15.237Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/category-everything.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "category-uncategorized",
+      "url": "https://blog.osoco.de/category/uncategorized/",
+      "title": "Uncategorized Archives - A Matter of Unimportance",
+      "type": "listing",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:14.560Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/category-uncategorized.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "category-software",
+      "url": "https://blog.osoco.de/category/software/",
+      "title": "Software Archives - A Matter of Unimportance",
+      "type": "listing",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:16.737Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/category-software.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2024-02-value-created-by-developers",
+      "url": "https://blog.osoco.de/2024/02/value-created-by-developers/",
+      "title": "Value created by Developers - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:20.617Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2024-02-value-created-by-developers.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2021-07-the-truth-about-aem-run-modes",
+      "url": "https://blog.osoco.de/2021/07/the-truth-about-aem-run-modes/",
+      "title": "The Truth about AEM Run Modes - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:21.781Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-10-12T18:42:56Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-10-12T18:45:02Z",
+          "approvedBy": "hands-off"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2021-07-the-truth-about-aem-run-modes.json",
+      "prototypePath": "stardust/prototypes/2021-07-the-truth-about-aem-run-modes-proposed.html",
+      "migratedPath": null
+    },
+    {
+      "slug": "category-software-osgi",
+      "url": "https://blog.osoco.de/category/software/osgi/",
+      "title": "OSGi Archives - A Matter of Unimportance",
+      "type": "listing",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:24.242Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/category-software-osgi.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2017-08-osgi-declarative-services-configuration-binding",
+      "url": "https://blog.osoco.de/2017/08/osgi-declarative-services-configuration-binding/",
+      "title": "OSGi Declarative Services - Configuration Binding - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:26.532Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2017-08-osgi-declarative-services-configuration-binding.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2020-07-guide-on-using-osgi-configurations",
+      "url": "https://blog.osoco.de/2020/07/guide-on-using-osgi-configurations/",
+      "title": "Guide on Using OSGi Configurations - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:28.038Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2020-07-guide-on-using-osgi-configurations.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2015-11-osgi-components-simply-simple-part-iii",
+      "url": "https://blog.osoco.de/2015/11/osgi-components-simply-simple-part-iii/",
+      "title": "OSGi Components - Simply Simple - Part III - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:30.241Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2015-11-osgi-components-simply-simple-part-iii.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2015-08-osgi-components-simply-simple-part-ii",
+      "url": "https://blog.osoco.de/2015/08/osgi-components-simply-simple-part-ii/",
+      "title": "OSGi Components – Simply Simple – Part II - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:33.037Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2015-08-osgi-components-simply-simple-part-ii.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2017-07-new-osgi-configuration-features-r7",
+      "url": "https://blog.osoco.de/2017/07/new-osgi-configuration-features-r7/",
+      "title": "New OSGi Configuration Features in R7 - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:34.145Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2017-07-new-osgi-configuration-features-r7.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2016-09-http-whiteboard-simply-simple-part-ii",
+      "url": "https://blog.osoco.de/2016/09/http-whiteboard-simply-simple-part-ii/",
+      "title": "Http Whiteboard - Simply Simple - Part II - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:36.131Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2016-09-http-whiteboard-simply-simple-part-ii.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2015-08-osgi-components-simply-simple-part-i",
+      "url": "https://blog.osoco.de/2015/08/osgi-components-simply-simple-part-i/",
+      "title": "OSGi Components - Simply Simple - Part I - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:39.352Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2015-08-osgi-components-simply-simple-part-i.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2016-10-http-whiteboard-simply-simple-part-iii",
+      "url": "https://blog.osoco.de/2016/10/http-whiteboard-simply-simple-part-iii/",
+      "title": "Http Whiteboard - Simply Simple - Part III - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:40.059Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2016-10-http-whiteboard-simply-simple-part-iii.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2016-05-building-osgi-bundles-with-apache-maven",
+      "url": "https://blog.osoco.de/2016/05/building-osgi-bundles-with-apache-maven/",
+      "title": "Building OSGi Bundles with Apache Maven - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:42.230Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2016-05-building-osgi-bundles-with-apache-maven.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2016-04-http-whiteboard-simply-simple-part-i",
+      "url": "https://blog.osoco.de/2016/04/http-whiteboard-simply-simple-part-i/",
+      "title": "Http Whiteboard - Simply Simple - Part I - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:45.220Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2016-04-http-whiteboard-simply-simple-part-i.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2016-04-example-osgi-web-application",
+      "url": "https://blog.osoco.de/2016/04/example-osgi-web-application/",
+      "title": "Example OSGi Web Application - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:45.900Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2016-04-example-osgi-web-application.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2016-05-migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations",
+      "url": "https://blog.osoco.de/2016/05/migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations/",
+      "title": "Migrating from the Apache Felix SCR Annotations to the OSGi Declarative Services Annotations - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:48.207Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2016-05-migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2015-04-hello-world",
+      "url": "https://blog.osoco.de/2015/04/hello-world/",
+      "title": "Hello world! - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:51.048Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2015-04-hello-world.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2011-04-apache-axis2-book",
+      "url": "https://blog.osoco.de/2011/04/apache-axis2-book/",
+      "title": "Apache Axis2 Book - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:51.807Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2011-04-apache-axis2-book.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2009-11-increasing-interest-in-jcr-and-apache-sling",
+      "url": "https://blog.osoco.de/2009/11/increasing-interest-in-jcr-and-apache-sling/",
+      "title": "Increasing Interest in JCR and Apache Sling - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:54.070Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2009-11-increasing-interest-in-jcr-and-apache-sling.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2009-04-rapid-development-with-apache-sling-using-an-ide",
+      "url": "https://blog.osoco.de/2009/04/rapid-development-with-apache-sling-using-an-ide/",
+      "title": "Rapid Development with Apache Sling using an IDE - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:57.001Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2009-04-rapid-development-with-apache-sling-using-an-ide.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2009-04-jax-apache-sling-and-accidental-complexity",
+      "url": "https://blog.osoco.de/2009/04/jax-apache-sling-and-accidental-complexity/",
+      "title": "JAX, Apache Sling and Accidental Complexity - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:57.700Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2009-04-jax-apache-sling-and-accidental-complexity.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2009-03-portals-meetup-at-apachecon-europe",
+      "url": "https://blog.osoco.de/2009/03/portals-meetup-at-apachecon-europe/",
+      "title": "Portals Meetup at ApacheCon Europe - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:01:59.888Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2009-03-portals-meetup-at-apachecon-europe.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2009-03-conference-season-apachecon-europe-and-jax",
+      "url": "https://blog.osoco.de/2009/03/conference-season-apachecon-europe-and-jax/",
+      "title": "Conference Season - ApacheCon Europe and JAX - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:02.814Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2009-03-conference-season-apachecon-europe-and-jax.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2009-02-getting-started-with-portal-servers-and-spec-compliance",
+      "url": "https://blog.osoco.de/2009/02/getting-started-with-portal-servers-and-spec-compliance/",
+      "title": "Getting Started with Portal Servers and Spec Compliance - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:03.694Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2009-02-getting-started-with-portal-servers-and-spec-compliance.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2009-01-portlets-and-osgi",
+      "url": "https://blog.osoco.de/2009/01/portlets-and-osgi/",
+      "title": "Portlets and OSGi - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:05.943Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2009-01-portlets-and-osgi.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2008-11-heading-east",
+      "url": "https://blog.osoco.de/2008/11/heading-east/",
+      "title": "Heading East - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:08.732Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2008-11-heading-east.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2008-11-heading-west",
+      "url": "https://blog.osoco.de/2008/11/heading-west/",
+      "title": "Heading West - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:09.562Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2008-11-heading-west.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2008-11-osgiapachecon",
+      "url": "https://blog.osoco.de/2008/11/osgiapachecon/",
+      "title": "OSGi@ApacheCon - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:11.845Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2008-11-osgiapachecon.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2008-11-what-happened-to-the-springframework-site",
+      "url": "https://blog.osoco.de/2008/11/what-happened-to-the-springframework-site/",
+      "title": "What happened to the Springframework site? - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:14.614Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2008-11-what-happened-to-the-springframework-site.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2008-11-sling-polo-shirts-arrived",
+      "url": "https://blog.osoco.de/2008/11/sling-polo-shirts-arrived/",
+      "title": "Sling Polo Shirts Arrived - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:15.452Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2008-11-sling-polo-shirts-arrived.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2008-11-interesting-session-in-new-orleans",
+      "url": "https://blog.osoco.de/2008/11/interesting-session-in-new-orleans/",
+      "title": "Interesting Sessions in New Orleans - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:17.738Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2008-11-interesting-session-in-new-orleans.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2008-10-first-steps-with-jquery",
+      "url": "https://blog.osoco.de/2008/10/first-steps-with-jquery/",
+      "title": "First Steps With jQuery - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:20.527Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2008-10-first-steps-with-jquery.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2008-10-ray-wilson-live-in-paderborn",
+      "url": "https://blog.osoco.de/2008/10/ray-wilson-live-in-paderborn/",
+      "title": "Ray Wilson Live in Paderborn - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:21.306Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2008-10-ray-wilson-live-in-paderborn.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2008-08-happy-birthday-madonna",
+      "url": "https://blog.osoco.de/2008/08/happy-birthday-madonna/",
+      "title": "Happy Birthday Madonna - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:23.565Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2008-08-happy-birthday-madonna.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2008-04-cool-eclipse-plugin-mvn-indexer",
+      "url": "https://blog.osoco.de/2008/04/cool-eclipse-plugin-mvn-indexer/",
+      "title": "Cool Eclipse Plugin: Mvn Indexer - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:26.278Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2008-04-cool-eclipse-plugin-mvn-indexer.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2008-04-innovation-at-apache-the-fun-is-back-with-apache-sling",
+      "url": "https://blog.osoco.de/2008/04/innovation-at-apache-the-fun-is-back-with-apache-sling/",
+      "title": "Innovation at Apache: The Fun is Back with Apache Sling - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:27.195Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2008-04-innovation-at-apache-the-fun-is-back-with-apache-sling.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2008-04-cocoon-22-is-released",
+      "url": "https://blog.osoco.de/2008/04/cocoon-22-is-released/",
+      "title": "Cocoon 2.2 is Released - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:29.409Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2008-04-cocoon-22-is-released.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2008-04-thanks-to-apache-commons-support-for-osgi",
+      "url": "https://blog.osoco.de/2008/04/thanks-to-apache-commons-support-for-osgi/",
+      "title": "Thanks to Apache Commons - Support for OSGi - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:32.148Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2008-04-thanks-to-apache-commons-support-for-osgi.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2008-04-apachecon-eu-in-amsterdam",
+      "url": "https://blog.osoco.de/2008/04/apachecon-eu-in-amsterdam/",
+      "title": "ApacheCon EU in Amsterdam - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:33.090Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2008-04-apachecon-eu-in-amsterdam.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2007-12-cocoon-portal-and-jcr",
+      "url": "https://blog.osoco.de/2007/12/cocoon-portal-and-jcr/",
+      "title": "Cocoon Portal and JCR - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:35.234Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2007-12-cocoon-portal-and-jcr.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2007-12-conference-season-2008",
+      "url": "https://blog.osoco.de/2007/12/conference-season-2008/",
+      "title": "Conference Season 2008 - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:37.986Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2007-12-conference-season-2008.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2007-12-back-in-paderborn",
+      "url": "https://blog.osoco.de/2007/12/back-in-paderborn/",
+      "title": "Back in Paderborn - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:38.941Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2007-12-back-in-paderborn.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2007-11-leaving-orlando",
+      "url": "https://blog.osoco.de/2007/11/leaving-orlando/",
+      "title": "Leaving Orlando - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:41.080Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2007-11-leaving-orlando.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2007-11-orlando-florida",
+      "url": "https://blog.osoco.de/2007/11/orlando-florida/",
+      "title": "Orlando, Florida - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:43.918Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2007-11-orlando-florida.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2007-11-portals-track-at-apachecon",
+      "url": "https://blog.osoco.de/2007/11/portals-track-at-apachecon/",
+      "title": "Portals Track at ApacheCon - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:44.790Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2007-11-portals-track-at-apachecon.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2007-11-apache-ibatis-and-apache-sanselan-session",
+      "url": "https://blog.osoco.de/2007/11/apache-ibatis-and-apache-sanselan-session/",
+      "title": "Apache iBatis and Apache Sanselan Session - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:46.941Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2007-11-apache-ibatis-and-apache-sanselan-session.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2007-11-jcr-in-action-session",
+      "url": "https://blog.osoco.de/2007/11/jcr-in-action-session/",
+      "title": "JCR in Action Session - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:49.788Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2007-11-jcr-in-action-session.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2007-11-creating-osgi-services-with-the-apache-felix-scr-plugin",
+      "url": "https://blog.osoco.de/2007/11/creating-osgi-services-with-the-apache-felix-scr-plugin/",
+      "title": "Creating OSGi Services with the Apache Felix SCR Plugin - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:50.651Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2007-11-creating-osgi-services-with-the-apache-felix-scr-plugin.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2007-11-the-musical-box-live-in-hamburg",
+      "url": "https://blog.osoco.de/2007/11/the-musical-box-live-in-hamburg/",
+      "title": "The Musical Box Live in Hamburg - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:52.807Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2007-11-the-musical-box-live-in-hamburg.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2007-11-arrived-in-atlanta-for-apachecon",
+      "url": "https://blog.osoco.de/2007/11/arrived-in-atlanta-for-apachecon/",
+      "title": "Arrived in Atlanta for ApacheCon - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:55.699Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2007-11-arrived-in-atlanta-for-apachecon.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2007-10-garbage-collection-in-objective-c",
+      "url": "https://blog.osoco.de/2007/10/garbage-collection-in-objective-c/",
+      "title": "Garbage Collection in Objective-C - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:56.555Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2007-10-garbage-collection-in-objective-c.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2007-10-new-projects-apache-sling-and-apache-sanselan",
+      "url": "https://blog.osoco.de/2007/10/new-projects-apache-sling-and-apache-sanselan/",
+      "title": "New Projects: Apache Sling and Apache Sanselan - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:02:58.636Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2007-10-new-projects-apache-sling-and-apache-sanselan.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2007-10-cocoon-gettogether-2007-in-rome",
+      "url": "https://blog.osoco.de/2007/10/cocoon-gettogether-2007-in-rome/",
+      "title": "Cocoon GetTogether 2007 in Rome - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:03:01.606Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2007-10-cocoon-gettogether-2007-in-rome.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2007-08-maven-release-plugin-removes-headers",
+      "url": "https://blog.osoco.de/2007/08/maven-release-plugin-removes-headers/",
+      "title": "Maven Release Plugin Removes Headers - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:03:02.421Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2007-08-maven-release-plugin-removes-headers.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2007-07-portlet-api-20-and-jcr-20-public-review",
+      "url": "https://blog.osoco.de/2007/07/portlet-api-20-and-jcr-20-public-review/",
+      "title": "Portlet-API 2.0 and JCR 2.0 Public Review - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:03:04.494Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2007-07-portlet-api-20-and-jcr-20-public-review.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2007-07-apache-felix-100-released",
+      "url": "https://blog.osoco.de/2007/07/apache-felix-100-released/",
+      "title": "Apache Felix 1.0.0 Released - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:03:07.753Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2007-07-apache-felix-100-released.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2007-07-movable-type-sucks-wordpress-rocks",
+      "url": "https://blog.osoco.de/2007/07/movable-type-sucks-wordpress-rocks/",
+      "title": "Movable Type Sucks - WordPress Rocks - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:03:08.316Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2007-07-movable-type-sucks-wordpress-rocks.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2007-07-excalibur-sourceresolver-released",
+      "url": "https://blog.osoco.de/2007/07/excalibur-sourceresolver-released/",
+      "title": "Excalibur SourceResolver Released - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:03:10.364Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2007-07-excalibur-sourceresolver-released.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2007-06-maven-207-is-out",
+      "url": "https://blog.osoco.de/2007/06/maven-207-is-out/",
+      "title": "Maven 2.0.7 is out - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:03:13.834Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2007-06-maven-207-is-out.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2007-06-turn-it-on-again-singing-in-the-rain",
+      "url": "https://blog.osoco.de/2007/06/turn-it-on-again-singing-in-the-rain/",
+      "title": "Turn It On Again - Singing in the rain - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:03:14.162Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2007-06-turn-it-on-again-singing-in-the-rain.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "2007-06-silence-is-over",
+      "url": "https://blog.osoco.de/2007/06/silence-is-over/",
+      "title": "Silence is over - A Matter of Unimportance",
+      "type": "article",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-10-12T18:03:16.261Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-10-12T18:19:19Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-10-12T19:42:52Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/2007-06-silence-is-over.json",
+      "prototypePath": null,
+      "migratedPath": null
+    }
+  ],
+  "migrate": {
+    "at": "2026-10-12T19:42:35Z",
+    "outputDir": "stardust/migrated/",
+    "selfContained": true,
+    "pageMap": [
+      {
+        "sourceUrl": "/",
+        "outputPath": "index.html",
+        "slug": "index",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/blog/",
+        "outputPath": "blog/index.html",
+        "slug": "blog",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/privacy-policy/",
+        "outputPath": "privacy-policy/index.html",
+        "slug": "privacy-policy",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/category/everything/",
+        "outputPath": "category/everything/index.html",
+        "slug": "category-everything",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/category/uncategorized/",
+        "outputPath": "category/uncategorized/index.html",
+        "slug": "category-uncategorized",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/category/software/",
+        "outputPath": "category/software/index.html",
+        "slug": "category-software",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2024/02/value-created-by-developers/",
+        "outputPath": "2024/02/value-created-by-developers/index.html",
+        "slug": "2024-02-value-created-by-developers",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2021/07/the-truth-about-aem-run-modes/",
+        "outputPath": "2021/07/the-truth-about-aem-run-modes/index.html",
+        "slug": "2021-07-the-truth-about-aem-run-modes",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/category/software/osgi/",
+        "outputPath": "category/software/osgi/index.html",
+        "slug": "category-software-osgi",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2017/08/osgi-declarative-services-configuration-binding/",
+        "outputPath": "2017/08/osgi-declarative-services-configuration-binding/index.html",
+        "slug": "2017-08-osgi-declarative-services-configuration-binding",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2020/07/guide-on-using-osgi-configurations/",
+        "outputPath": "2020/07/guide-on-using-osgi-configurations/index.html",
+        "slug": "2020-07-guide-on-using-osgi-configurations",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2015/11/osgi-components-simply-simple-part-iii/",
+        "outputPath": "2015/11/osgi-components-simply-simple-part-iii/index.html",
+        "slug": "2015-11-osgi-components-simply-simple-part-iii",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2015/08/osgi-components-simply-simple-part-ii/",
+        "outputPath": "2015/08/osgi-components-simply-simple-part-ii/index.html",
+        "slug": "2015-08-osgi-components-simply-simple-part-ii",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2017/07/new-osgi-configuration-features-r7/",
+        "outputPath": "2017/07/new-osgi-configuration-features-r7/index.html",
+        "slug": "2017-07-new-osgi-configuration-features-r7",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2016/09/http-whiteboard-simply-simple-part-ii/",
+        "outputPath": "2016/09/http-whiteboard-simply-simple-part-ii/index.html",
+        "slug": "2016-09-http-whiteboard-simply-simple-part-ii",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2015/08/osgi-components-simply-simple-part-i/",
+        "outputPath": "2015/08/osgi-components-simply-simple-part-i/index.html",
+        "slug": "2015-08-osgi-components-simply-simple-part-i",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2016/10/http-whiteboard-simply-simple-part-iii/",
+        "outputPath": "2016/10/http-whiteboard-simply-simple-part-iii/index.html",
+        "slug": "2016-10-http-whiteboard-simply-simple-part-iii",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2016/05/building-osgi-bundles-with-apache-maven/",
+        "outputPath": "2016/05/building-osgi-bundles-with-apache-maven/index.html",
+        "slug": "2016-05-building-osgi-bundles-with-apache-maven",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2016/04/http-whiteboard-simply-simple-part-i/",
+        "outputPath": "2016/04/http-whiteboard-simply-simple-part-i/index.html",
+        "slug": "2016-04-http-whiteboard-simply-simple-part-i",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2016/04/example-osgi-web-application/",
+        "outputPath": "2016/04/example-osgi-web-application/index.html",
+        "slug": "2016-04-example-osgi-web-application",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2016/05/migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations/",
+        "outputPath": "2016/05/migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations/index.html",
+        "slug": "2016-05-migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2015/04/hello-world/",
+        "outputPath": "2015/04/hello-world/index.html",
+        "slug": "2015-04-hello-world",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2011/04/apache-axis2-book/",
+        "outputPath": "2011/04/apache-axis2-book/index.html",
+        "slug": "2011-04-apache-axis2-book",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2009/11/increasing-interest-in-jcr-and-apache-sling/",
+        "outputPath": "2009/11/increasing-interest-in-jcr-and-apache-sling/index.html",
+        "slug": "2009-11-increasing-interest-in-jcr-and-apache-sling",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2009/04/rapid-development-with-apache-sling-using-an-ide/",
+        "outputPath": "2009/04/rapid-development-with-apache-sling-using-an-ide/index.html",
+        "slug": "2009-04-rapid-development-with-apache-sling-using-an-ide",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2009/04/jax-apache-sling-and-accidental-complexity/",
+        "outputPath": "2009/04/jax-apache-sling-and-accidental-complexity/index.html",
+        "slug": "2009-04-jax-apache-sling-and-accidental-complexity",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2009/03/portals-meetup-at-apachecon-europe/",
+        "outputPath": "2009/03/portals-meetup-at-apachecon-europe/index.html",
+        "slug": "2009-03-portals-meetup-at-apachecon-europe",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2009/03/conference-season-apachecon-europe-and-jax/",
+        "outputPath": "2009/03/conference-season-apachecon-europe-and-jax/index.html",
+        "slug": "2009-03-conference-season-apachecon-europe-and-jax",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2009/02/getting-started-with-portal-servers-and-spec-compliance/",
+        "outputPath": "2009/02/getting-started-with-portal-servers-and-spec-compliance/index.html",
+        "slug": "2009-02-getting-started-with-portal-servers-and-spec-compliance",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2009/01/portlets-and-osgi/",
+        "outputPath": "2009/01/portlets-and-osgi/index.html",
+        "slug": "2009-01-portlets-and-osgi",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2008/11/heading-east/",
+        "outputPath": "2008/11/heading-east/index.html",
+        "slug": "2008-11-heading-east",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2008/11/heading-west/",
+        "outputPath": "2008/11/heading-west/index.html",
+        "slug": "2008-11-heading-west",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2008/11/osgiapachecon/",
+        "outputPath": "2008/11/osgiapachecon/index.html",
+        "slug": "2008-11-osgiapachecon",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2008/11/what-happened-to-the-springframework-site/",
+        "outputPath": "2008/11/what-happened-to-the-springframework-site/index.html",
+        "slug": "2008-11-what-happened-to-the-springframework-site",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2008/11/sling-polo-shirts-arrived/",
+        "outputPath": "2008/11/sling-polo-shirts-arrived/index.html",
+        "slug": "2008-11-sling-polo-shirts-arrived",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2008/11/interesting-session-in-new-orleans/",
+        "outputPath": "2008/11/interesting-session-in-new-orleans/index.html",
+        "slug": "2008-11-interesting-session-in-new-orleans",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2008/10/first-steps-with-jquery/",
+        "outputPath": "2008/10/first-steps-with-jquery/index.html",
+        "slug": "2008-10-first-steps-with-jquery",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2008/10/ray-wilson-live-in-paderborn/",
+        "outputPath": "2008/10/ray-wilson-live-in-paderborn/index.html",
+        "slug": "2008-10-ray-wilson-live-in-paderborn",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2008/08/happy-birthday-madonna/",
+        "outputPath": "2008/08/happy-birthday-madonna/index.html",
+        "slug": "2008-08-happy-birthday-madonna",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2008/04/cool-eclipse-plugin-mvn-indexer/",
+        "outputPath": "2008/04/cool-eclipse-plugin-mvn-indexer/index.html",
+        "slug": "2008-04-cool-eclipse-plugin-mvn-indexer",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2008/04/innovation-at-apache-the-fun-is-back-with-apache-sling/",
+        "outputPath": "2008/04/innovation-at-apache-the-fun-is-back-with-apache-sling/index.html",
+        "slug": "2008-04-innovation-at-apache-the-fun-is-back-with-apache-sling",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2008/04/cocoon-22-is-released/",
+        "outputPath": "2008/04/cocoon-22-is-released/index.html",
+        "slug": "2008-04-cocoon-22-is-released",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2008/04/thanks-to-apache-commons-support-for-osgi/",
+        "outputPath": "2008/04/thanks-to-apache-commons-support-for-osgi/index.html",
+        "slug": "2008-04-thanks-to-apache-commons-support-for-osgi",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2008/04/apachecon-eu-in-amsterdam/",
+        "outputPath": "2008/04/apachecon-eu-in-amsterdam/index.html",
+        "slug": "2008-04-apachecon-eu-in-amsterdam",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2007/12/cocoon-portal-and-jcr/",
+        "outputPath": "2007/12/cocoon-portal-and-jcr/index.html",
+        "slug": "2007-12-cocoon-portal-and-jcr",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2007/12/conference-season-2008/",
+        "outputPath": "2007/12/conference-season-2008/index.html",
+        "slug": "2007-12-conference-season-2008",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2007/12/back-in-paderborn/",
+        "outputPath": "2007/12/back-in-paderborn/index.html",
+        "slug": "2007-12-back-in-paderborn",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2007/11/leaving-orlando/",
+        "outputPath": "2007/11/leaving-orlando/index.html",
+        "slug": "2007-11-leaving-orlando",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2007/11/orlando-florida/",
+        "outputPath": "2007/11/orlando-florida/index.html",
+        "slug": "2007-11-orlando-florida",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2007/11/portals-track-at-apachecon/",
+        "outputPath": "2007/11/portals-track-at-apachecon/index.html",
+        "slug": "2007-11-portals-track-at-apachecon",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2007/11/apache-ibatis-and-apache-sanselan-session/",
+        "outputPath": "2007/11/apache-ibatis-and-apache-sanselan-session/index.html",
+        "slug": "2007-11-apache-ibatis-and-apache-sanselan-session",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2007/11/jcr-in-action-session/",
+        "outputPath": "2007/11/jcr-in-action-session/index.html",
+        "slug": "2007-11-jcr-in-action-session",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2007/11/creating-osgi-services-with-the-apache-felix-scr-plugin/",
+        "outputPath": "2007/11/creating-osgi-services-with-the-apache-felix-scr-plugin/index.html",
+        "slug": "2007-11-creating-osgi-services-with-the-apache-felix-scr-plugin",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2007/11/the-musical-box-live-in-hamburg/",
+        "outputPath": "2007/11/the-musical-box-live-in-hamburg/index.html",
+        "slug": "2007-11-the-musical-box-live-in-hamburg",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2007/11/arrived-in-atlanta-for-apachecon/",
+        "outputPath": "2007/11/arrived-in-atlanta-for-apachecon/index.html",
+        "slug": "2007-11-arrived-in-atlanta-for-apachecon",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2007/10/garbage-collection-in-objective-c/",
+        "outputPath": "2007/10/garbage-collection-in-objective-c/index.html",
+        "slug": "2007-10-garbage-collection-in-objective-c",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2007/10/new-projects-apache-sling-and-apache-sanselan/",
+        "outputPath": "2007/10/new-projects-apache-sling-and-apache-sanselan/index.html",
+        "slug": "2007-10-new-projects-apache-sling-and-apache-sanselan",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2007/10/cocoon-gettogether-2007-in-rome/",
+        "outputPath": "2007/10/cocoon-gettogether-2007-in-rome/index.html",
+        "slug": "2007-10-cocoon-gettogether-2007-in-rome",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2007/08/maven-release-plugin-removes-headers/",
+        "outputPath": "2007/08/maven-release-plugin-removes-headers/index.html",
+        "slug": "2007-08-maven-release-plugin-removes-headers",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2007/07/portlet-api-20-and-jcr-20-public-review/",
+        "outputPath": "2007/07/portlet-api-20-and-jcr-20-public-review/index.html",
+        "slug": "2007-07-portlet-api-20-and-jcr-20-public-review",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2007/07/apache-felix-100-released/",
+        "outputPath": "2007/07/apache-felix-100-released/index.html",
+        "slug": "2007-07-apache-felix-100-released",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2007/07/movable-type-sucks-wordpress-rocks/",
+        "outputPath": "2007/07/movable-type-sucks-wordpress-rocks/index.html",
+        "slug": "2007-07-movable-type-sucks-wordpress-rocks",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2007/07/excalibur-sourceresolver-released/",
+        "outputPath": "2007/07/excalibur-sourceresolver-released/index.html",
+        "slug": "2007-07-excalibur-sourceresolver-released",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2007/06/maven-207-is-out/",
+        "outputPath": "2007/06/maven-207-is-out/index.html",
+        "slug": "2007-06-maven-207-is-out",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2007/06/turn-it-on-again-singing-in-the-rain/",
+        "outputPath": "2007/06/turn-it-on-again-singing-in-the-rain/index.html",
+        "slug": "2007-06-turn-it-on-again-singing-in-the-rain",
+        "outputPathDefault": null
+      },
+      {
+        "sourceUrl": "/2007/06/silence-is-over/",
+        "outputPath": "2007/06/silence-is-over/index.html",
+        "slug": "2007-06-silence-is-over",
+        "outputPathDefault": null
+      }
+    ],
+    "totalAssetsBundled": 14,
+    "bundledAssets": [
+      "article.css",
+      "canon.css",
+      "chrome.js",
+      "favicon.png",
+      "fonts/open-sans-latin-400-italic.woff2",
+      "fonts/open-sans-latin-400-normal.woff2",
+      "fonts/open-sans-latin-700-italic.woff2",
+      "fonts/open-sans-latin-700-normal.woff2",
+      "fonts/open-sans-latin-ext-400-normal.woff2",
+      "fonts/open-sans-latin-ext-700-normal.woff2",
+      "landing.css",
+      "listing.css",
+      "media/pet-300x169.jpg",
+      "static.css"
+    ],
+    "pages": [
+      {
+        "slug": "index",
+        "file": "stardust/migrated/index.html",
+        "assetsBundled": 11
+      },
+      {
+        "slug": "privacy-policy",
+        "file": "stardust/migrated/privacy-policy/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "blog",
+        "file": "stardust/migrated/blog/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2021-07-the-truth-about-aem-run-modes",
+        "file": "stardust/migrated/2021/07/the-truth-about-aem-run-modes/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2024-02-value-created-by-developers",
+        "file": "stardust/migrated/2024/02/value-created-by-developers/index.html",
+        "assetsBundled": 10
+      },
+      {
+        "slug": "2017-08-osgi-declarative-services-configuration-binding",
+        "file": "stardust/migrated/2017/08/osgi-declarative-services-configuration-binding/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2020-07-guide-on-using-osgi-configurations",
+        "file": "stardust/migrated/2020/07/guide-on-using-osgi-configurations/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2015-11-osgi-components-simply-simple-part-iii",
+        "file": "stardust/migrated/2015/11/osgi-components-simply-simple-part-iii/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2015-08-osgi-components-simply-simple-part-ii",
+        "file": "stardust/migrated/2015/08/osgi-components-simply-simple-part-ii/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2017-07-new-osgi-configuration-features-r7",
+        "file": "stardust/migrated/2017/07/new-osgi-configuration-features-r7/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2016-09-http-whiteboard-simply-simple-part-ii",
+        "file": "stardust/migrated/2016/09/http-whiteboard-simply-simple-part-ii/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2015-08-osgi-components-simply-simple-part-i",
+        "file": "stardust/migrated/2015/08/osgi-components-simply-simple-part-i/index.html",
+        "assetsBundled": 10
+      },
+      {
+        "slug": "2016-10-http-whiteboard-simply-simple-part-iii",
+        "file": "stardust/migrated/2016/10/http-whiteboard-simply-simple-part-iii/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2016-05-building-osgi-bundles-with-apache-maven",
+        "file": "stardust/migrated/2016/05/building-osgi-bundles-with-apache-maven/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2016-04-http-whiteboard-simply-simple-part-i",
+        "file": "stardust/migrated/2016/04/http-whiteboard-simply-simple-part-i/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2016-04-example-osgi-web-application",
+        "file": "stardust/migrated/2016/04/example-osgi-web-application/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2016-05-migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations",
+        "file": "stardust/migrated/2016/05/migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2015-04-hello-world",
+        "file": "stardust/migrated/2015/04/hello-world/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2011-04-apache-axis2-book",
+        "file": "stardust/migrated/2011/04/apache-axis2-book/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2009-11-increasing-interest-in-jcr-and-apache-sling",
+        "file": "stardust/migrated/2009/11/increasing-interest-in-jcr-and-apache-sling/index.html",
+        "assetsBundled": 10
+      },
+      {
+        "slug": "2009-04-rapid-development-with-apache-sling-using-an-ide",
+        "file": "stardust/migrated/2009/04/rapid-development-with-apache-sling-using-an-ide/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2009-04-jax-apache-sling-and-accidental-complexity",
+        "file": "stardust/migrated/2009/04/jax-apache-sling-and-accidental-complexity/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2009-03-portals-meetup-at-apachecon-europe",
+        "file": "stardust/migrated/2009/03/portals-meetup-at-apachecon-europe/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2009-03-conference-season-apachecon-europe-and-jax",
+        "file": "stardust/migrated/2009/03/conference-season-apachecon-europe-and-jax/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2009-02-getting-started-with-portal-servers-and-spec-compliance",
+        "file": "stardust/migrated/2009/02/getting-started-with-portal-servers-and-spec-compliance/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2009-01-portlets-and-osgi",
+        "file": "stardust/migrated/2009/01/portlets-and-osgi/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2008-11-heading-east",
+        "file": "stardust/migrated/2008/11/heading-east/index.html",
+        "assetsBundled": 10
+      },
+      {
+        "slug": "2008-11-heading-west",
+        "file": "stardust/migrated/2008/11/heading-west/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2008-11-osgiapachecon",
+        "file": "stardust/migrated/2008/11/osgiapachecon/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2008-11-what-happened-to-the-springframework-site",
+        "file": "stardust/migrated/2008/11/what-happened-to-the-springframework-site/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2008-11-sling-polo-shirts-arrived",
+        "file": "stardust/migrated/2008/11/sling-polo-shirts-arrived/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2008-11-interesting-session-in-new-orleans",
+        "file": "stardust/migrated/2008/11/interesting-session-in-new-orleans/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2008-10-first-steps-with-jquery",
+        "file": "stardust/migrated/2008/10/first-steps-with-jquery/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2008-10-ray-wilson-live-in-paderborn",
+        "file": "stardust/migrated/2008/10/ray-wilson-live-in-paderborn/index.html",
+        "assetsBundled": 10
+      },
+      {
+        "slug": "2008-08-happy-birthday-madonna",
+        "file": "stardust/migrated/2008/08/happy-birthday-madonna/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2008-04-cool-eclipse-plugin-mvn-indexer",
+        "file": "stardust/migrated/2008/04/cool-eclipse-plugin-mvn-indexer/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2008-04-innovation-at-apache-the-fun-is-back-with-apache-sling",
+        "file": "stardust/migrated/2008/04/innovation-at-apache-the-fun-is-back-with-apache-sling/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2008-04-cocoon-22-is-released",
+        "file": "stardust/migrated/2008/04/cocoon-22-is-released/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2008-04-thanks-to-apache-commons-support-for-osgi",
+        "file": "stardust/migrated/2008/04/thanks-to-apache-commons-support-for-osgi/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2008-04-apachecon-eu-in-amsterdam",
+        "file": "stardust/migrated/2008/04/apachecon-eu-in-amsterdam/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2007-12-cocoon-portal-and-jcr",
+        "file": "stardust/migrated/2007/12/cocoon-portal-and-jcr/index.html",
+        "assetsBundled": 10
+      },
+      {
+        "slug": "2007-12-conference-season-2008",
+        "file": "stardust/migrated/2007/12/conference-season-2008/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2007-12-back-in-paderborn",
+        "file": "stardust/migrated/2007/12/back-in-paderborn/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2007-11-leaving-orlando",
+        "file": "stardust/migrated/2007/11/leaving-orlando/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2007-11-orlando-florida",
+        "file": "stardust/migrated/2007/11/orlando-florida/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2007-11-portals-track-at-apachecon",
+        "file": "stardust/migrated/2007/11/portals-track-at-apachecon/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2007-11-apache-ibatis-and-apache-sanselan-session",
+        "file": "stardust/migrated/2007/11/apache-ibatis-and-apache-sanselan-session/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2007-11-jcr-in-action-session",
+        "file": "stardust/migrated/2007/11/jcr-in-action-session/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2007-11-creating-osgi-services-with-the-apache-felix-scr-plugin",
+        "file": "stardust/migrated/2007/11/creating-osgi-services-with-the-apache-felix-scr-plugin/index.html",
+        "assetsBundled": 10
+      },
+      {
+        "slug": "2007-11-the-musical-box-live-in-hamburg",
+        "file": "stardust/migrated/2007/11/the-musical-box-live-in-hamburg/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2007-11-arrived-in-atlanta-for-apachecon",
+        "file": "stardust/migrated/2007/11/arrived-in-atlanta-for-apachecon/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2007-10-garbage-collection-in-objective-c",
+        "file": "stardust/migrated/2007/10/garbage-collection-in-objective-c/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2007-10-new-projects-apache-sling-and-apache-sanselan",
+        "file": "stardust/migrated/2007/10/new-projects-apache-sling-and-apache-sanselan/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2007-10-cocoon-gettogether-2007-in-rome",
+        "file": "stardust/migrated/2007/10/cocoon-gettogether-2007-in-rome/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2007-08-maven-release-plugin-removes-headers",
+        "file": "stardust/migrated/2007/08/maven-release-plugin-removes-headers/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2007-07-portlet-api-20-and-jcr-20-public-review",
+        "file": "stardust/migrated/2007/07/portlet-api-20-and-jcr-20-public-review/index.html",
+        "assetsBundled": 10
+      },
+      {
+        "slug": "2007-07-apache-felix-100-released",
+        "file": "stardust/migrated/2007/07/apache-felix-100-released/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2007-07-movable-type-sucks-wordpress-rocks",
+        "file": "stardust/migrated/2007/07/movable-type-sucks-wordpress-rocks/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2007-07-excalibur-sourceresolver-released",
+        "file": "stardust/migrated/2007/07/excalibur-sourceresolver-released/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2007-06-maven-207-is-out",
+        "file": "stardust/migrated/2007/06/maven-207-is-out/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2007-06-turn-it-on-again-singing-in-the-rain",
+        "file": "stardust/migrated/2007/06/turn-it-on-again-singing-in-the-rain/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "2007-06-silence-is-over",
+        "file": "stardust/migrated/2007/06/silence-is-over/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "category-everything",
+        "file": "stardust/migrated/category/everything/index.html",
+        "assetsBundled": 10
+      },
+      {
+        "slug": "category-uncategorized",
+        "file": "stardust/migrated/category/uncategorized/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "category-software",
+        "file": "stardust/migrated/category/software/index.html",
+        "assetsBundled": 4
+      },
+      {
+        "slug": "category-software-osgi",
+        "file": "stardust/migrated/category/software/osgi/index.html",
+        "assetsBundled": 4
+      }
+    ],
+    "missingAssets": [],
+    "cleanedAssets": [],
+    "lastRun": {
+      "at": "2026-10-12T19:42:35Z",
+      "rendered": [
+        "category-everything",
+        "category-uncategorized",
+        "category-software",
+        "category-software-osgi"
+      ],
+      "unchanged": [],
+      "refused": [],
+      "passthrough": []
+    }
+  }
+}

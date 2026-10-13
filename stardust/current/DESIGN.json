@@ -1,0 +1,1883 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:extract",
+    "writtenAt": "2026-10-12T18:17:05.635Z",
+    "readArtifacts": [
+      "stardust/current/_brand-extraction.json",
+      "stardust/current/_computed-styles.json",
+      "stardust/current/css/style.css"
+    ],
+    "stardustVersion": "0.32.1"
+  },
+  "name": "A Matter of Unimportance",
+  "tokens": {
+    "colors": {
+      "backdrop": "#e6e6e6",
+      "page": "#ffffff",
+      "rule": "#ededed",
+      "text": "#444444",
+      "text-muted": "#757575",
+      "text-meta": "#636363",
+      "site-title": "#515151",
+      "nav": "#6a6a6a",
+      "link": "#21759b",
+      "link-visited": "#9f9f9f"
+    },
+    "fonts": {
+      "base": "'Open Sans', Helvetica, Arial, sans-serif"
+    },
+    "rootFontSize": "14px",
+    "radius": "3px",
+    "shadows": {
+      "page": "0 2px 6px rgba(100,100,100,.3)",
+      "button": "0 1px 2px rgba(64,64,64,.1)"
+    }
+  },
+  "extensions": {
+    "componentStyle": {
+      "buttons": "light grey gradient #f4f4f4→#e6e6e6, 1px #d2d2d2 border, 3px radius, shadow 0 1px 2px rgba(64,64,64,.1) (search submit, menu toggle)",
+      "links": "#21759b, underlined in content",
+      "rules": "1px #ededed hairlines around nav and above footer"
+    },
+    "motifs": {
+      "radius": {
+        "mode": "3px",
+        "areaMode": "3px",
+        "pill": null,
+        "values": [
+          {
+            "value": "3px",
+            "count": 330,
+            "area": 1115975,
+            "sources": [
+              {
+                "url": "https://blog.osoco.de/",
+                "selector": "#site-navigation > button"
+              },
+              {
+                "url": "https://blog.osoco.de/",
+                "selector": "#post-86 > div > p:nth-of-type(1) > img"
+              },
+              {
+                "url": "https://blog.osoco.de/2007/06/maven-207-is-out/",
+                "selector": "#site-navigation > button"
+              },
+              {
+                "url": "https://blog.osoco.de/2007/06/maven-207-is-out/",
+                "selector": "#s"
+              },
+              {
+                "url": "https://blog.osoco.de/2007/06/maven-207-is-out/",
+                "selector": "#searchsubmit"
+              }
+            ]
+          }
+        ]
+      },
+      "shadows": [
+        {
+          "value": "rgba(64, 64, 64, 0.1) 0px 1px 2px 0px",
+          "count": 196,
+          "sources": [
+            {
+              "url": "https://blog.osoco.de/",
+              "selector": "#site-navigation > button"
+            },
+            {
+              "url": "https://blog.osoco.de/2007/06/maven-207-is-out/",
+              "selector": "#site-navigation > button"
+            },
+            {
+              "url": "https://blog.osoco.de/2007/06/maven-207-is-out/",
+              "selector": "#searchsubmit"
+            },
+            {
+              "url": "https://blog.osoco.de/2007/06/silence-is-over/",
+              "selector": "#site-navigation > button"
+            },
+            {
+              "url": "https://blog.osoco.de/2007/06/silence-is-over/",
+              "selector": "#searchsubmit"
+            }
+          ]
+        },
+        {
+          "value": "rgba(100, 100, 100, 0.3) 0px 2px 6px 0px",
+          "count": 66,
+          "sources": [
+            {
+              "url": "https://blog.osoco.de/",
+              "selector": "#page"
+            },
+            {
+              "url": "https://blog.osoco.de/2007/06/maven-207-is-out/",
+              "selector": "#page"
+            },
+            {
+              "url": "https://blog.osoco.de/2007/06/silence-is-over/",
+              "selector": "#page"
+            },
+            {
+              "url": "https://blog.osoco.de/2007/06/turn-it-on-again-singing-in-the-rain/",
+              "selector": "#page"
+            },
+            {
+              "url": "https://blog.osoco.de/2007/07/apache-felix-100-released/",
+              "selector": "#page"
+            }
+          ]
+        },
+        {
+          "value": "rgba(0, 0, 0, 0.2) 0px 1px 4px 0px",
+          "count": 4,
+          "sources": [
+            {
+              "url": "https://blog.osoco.de/",
+              "selector": "#post-86 > div > p:nth-of-type(1) > img"
+            },
+            {
+              "url": "https://blog.osoco.de/2008/04/innovation-at-apache-the-fun-is-back-with-apache-sling/",
+              "selector": "#post-33 > div > p > a:nth-of-type(3) > img"
+            }
+          ]
+        }
+      ],
+      "gradients": [
+        {
+          "value": "linear-gradient(rgb(244, 244, 244), rgb(230, 230, 230))",
+          "count": 196,
+          "area": 322060,
+          "sources": [
+            {
+              "url": "https://blog.osoco.de/",
+              "selector": "#site-navigation > button"
+            },
+            {
+              "url": "https://blog.osoco.de/2007/06/maven-207-is-out/",
+              "selector": "#site-navigation > button"
+            },
+            {
+              "url": "https://blog.osoco.de/2007/06/maven-207-is-out/",
+              "selector": "#searchsubmit"
+            },
+            {
+              "url": "https://blog.osoco.de/2007/06/silence-is-over/",
+              "selector": "#site-navigation > button"
+            },
+            {
+              "url": "https://blog.osoco.de/2007/06/silence-is-over/",
+              "selector": "#searchsubmit"
+            }
+          ]
+        }
+      ]
+    },
+    "voice": {
+      "heroHeadline": "Welcome",
+      "heroLede": "‘OSOCO? What’s this?’, you might ask. Well, actually it’s my personal web space.",
+      "heroImage": "https://blog.osoco.de/wp-content/uploads/2015/08/pet-300x169.jpg",
+      "heroMedium": null,
+      "ctas": [
+        "Search",
+        "Older posts",
+        "Read more"
+      ],
+      "tone": "personal, wry, technical (OSGi / Apache Sling / AEM)"
+    },
+    "sourceBreakpoints": [
+      600,
+      960
+    ],
+    "modules": [
+      {
+        "id": "candidate-masthead",
+        "name": "masthead",
+        "slots": [
+          {
+            "name": "site-title",
+            "type": "link",
+            "required": true
+          },
+          {
+            "name": "tagline",
+            "type": "text"
+          },
+          {
+            "name": "nav",
+            "type": "link-list"
+          }
+        ],
+        "instances": [
+          {
+            "slug": "index",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "blog",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "privacy-policy",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "category-everything",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "category-uncategorized",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "category-software",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2024-02-value-created-by-developers",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2021-07-the-truth-about-aem-run-modes",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "category-software-osgi",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2017-08-osgi-declarative-services-configuration-binding",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2020-07-guide-on-using-osgi-configurations",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2015-11-osgi-components-simply-simple-part-iii",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2015-08-osgi-components-simply-simple-part-ii",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2017-07-new-osgi-configuration-features-r7",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2016-09-http-whiteboard-simply-simple-part-ii",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2015-08-osgi-components-simply-simple-part-i",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2016-10-http-whiteboard-simply-simple-part-iii",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2016-05-building-osgi-bundles-with-apache-maven",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2016-04-http-whiteboard-simply-simple-part-i",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2016-04-example-osgi-web-application",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2016-05-migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2015-04-hello-world",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2011-04-apache-axis2-book",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2009-11-increasing-interest-in-jcr-and-apache-sling",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2009-04-rapid-development-with-apache-sling-using-an-ide",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2009-04-jax-apache-sling-and-accidental-complexity",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2009-03-portals-meetup-at-apachecon-europe",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2009-03-conference-season-apachecon-europe-and-jax",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2009-02-getting-started-with-portal-servers-and-spec-compliance",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2009-01-portlets-and-osgi",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2008-11-heading-east",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2008-11-heading-west",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2008-11-osgiapachecon",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2008-11-what-happened-to-the-springframework-site",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2008-11-sling-polo-shirts-arrived",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2008-11-interesting-session-in-new-orleans",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2008-10-first-steps-with-jquery",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2008-10-ray-wilson-live-in-paderborn",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2008-08-happy-birthday-madonna",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2008-04-cool-eclipse-plugin-mvn-indexer",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2008-04-innovation-at-apache-the-fun-is-back-with-apache-sling",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2008-04-cocoon-22-is-released",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2008-04-thanks-to-apache-commons-support-for-osgi",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2008-04-apachecon-eu-in-amsterdam",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2007-12-cocoon-portal-and-jcr",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2007-12-conference-season-2008",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2007-12-back-in-paderborn",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2007-11-leaving-orlando",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2007-11-orlando-florida",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2007-11-portals-track-at-apachecon",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2007-11-apache-ibatis-and-apache-sanselan-session",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2007-11-jcr-in-action-session",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2007-11-creating-osgi-services-with-the-apache-felix-scr-plugin",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2007-11-the-musical-box-live-in-hamburg",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2007-11-arrived-in-atlanta-for-apachecon",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2007-10-garbage-collection-in-objective-c",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2007-10-new-projects-apache-sling-and-apache-sanselan",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2007-10-cocoon-gettogether-2007-in-rome",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2007-08-maven-release-plugin-removes-headers",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2007-07-portlet-api-20-and-jcr-20-public-review",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2007-07-apache-felix-100-released",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2007-07-movable-type-sucks-wordpress-rocks",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2007-07-excalibur-sourceresolver-released",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2007-06-maven-207-is-out",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2007-06-turn-it-on-again-singing-in-the-rain",
+            "selector": "#masthead"
+          },
+          {
+            "slug": "2007-06-silence-is-over",
+            "selector": "#masthead"
+          }
+        ],
+        "status": "candidate"
+      },
+      {
+        "id": "candidate-sidebar",
+        "name": "sidebar-widgets",
+        "slots": [
+          {
+            "name": "search",
+            "type": "form"
+          },
+          {
+            "name": "recent-posts",
+            "type": "link-list"
+          },
+          {
+            "name": "archives",
+            "type": "link-list"
+          },
+          {
+            "name": "categories",
+            "type": "link-list"
+          },
+          {
+            "name": "meta",
+            "type": "link-list"
+          }
+        ],
+        "instances": [
+          {
+            "slug": "blog",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "privacy-policy",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "category-everything",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "category-uncategorized",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "category-software",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2024-02-value-created-by-developers",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2021-07-the-truth-about-aem-run-modes",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "category-software-osgi",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2017-08-osgi-declarative-services-configuration-binding",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2020-07-guide-on-using-osgi-configurations",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2015-11-osgi-components-simply-simple-part-iii",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2015-08-osgi-components-simply-simple-part-ii",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2017-07-new-osgi-configuration-features-r7",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2016-09-http-whiteboard-simply-simple-part-ii",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2015-08-osgi-components-simply-simple-part-i",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2016-10-http-whiteboard-simply-simple-part-iii",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2016-05-building-osgi-bundles-with-apache-maven",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2016-04-http-whiteboard-simply-simple-part-i",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2016-04-example-osgi-web-application",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2016-05-migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2015-04-hello-world",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2011-04-apache-axis2-book",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2009-11-increasing-interest-in-jcr-and-apache-sling",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2009-04-rapid-development-with-apache-sling-using-an-ide",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2009-04-jax-apache-sling-and-accidental-complexity",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2009-03-portals-meetup-at-apachecon-europe",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2009-03-conference-season-apachecon-europe-and-jax",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2009-02-getting-started-with-portal-servers-and-spec-compliance",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2009-01-portlets-and-osgi",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2008-11-heading-east",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2008-11-heading-west",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2008-11-osgiapachecon",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2008-11-what-happened-to-the-springframework-site",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2008-11-sling-polo-shirts-arrived",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2008-11-interesting-session-in-new-orleans",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2008-10-first-steps-with-jquery",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2008-10-ray-wilson-live-in-paderborn",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2008-08-happy-birthday-madonna",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2008-04-cool-eclipse-plugin-mvn-indexer",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2008-04-innovation-at-apache-the-fun-is-back-with-apache-sling",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2008-04-cocoon-22-is-released",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2008-04-thanks-to-apache-commons-support-for-osgi",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2008-04-apachecon-eu-in-amsterdam",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2007-12-cocoon-portal-and-jcr",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2007-12-conference-season-2008",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2007-12-back-in-paderborn",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2007-11-leaving-orlando",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2007-11-orlando-florida",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2007-11-portals-track-at-apachecon",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2007-11-apache-ibatis-and-apache-sanselan-session",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2007-11-jcr-in-action-session",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2007-11-creating-osgi-services-with-the-apache-felix-scr-plugin",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2007-11-the-musical-box-live-in-hamburg",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2007-11-arrived-in-atlanta-for-apachecon",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2007-10-garbage-collection-in-objective-c",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2007-10-new-projects-apache-sling-and-apache-sanselan",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2007-10-cocoon-gettogether-2007-in-rome",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2007-08-maven-release-plugin-removes-headers",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2007-07-portlet-api-20-and-jcr-20-public-review",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2007-07-apache-felix-100-released",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2007-07-movable-type-sucks-wordpress-rocks",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2007-07-excalibur-sourceresolver-released",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2007-06-maven-207-is-out",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2007-06-turn-it-on-again-singing-in-the-rain",
+            "selector": "#secondary"
+          },
+          {
+            "slug": "2007-06-silence-is-over",
+            "selector": "#secondary"
+          }
+        ],
+        "status": "candidate"
+      },
+      {
+        "id": "candidate-colophon",
+        "name": "colophon",
+        "slots": [
+          {
+            "name": "links",
+            "type": "link-list"
+          }
+        ],
+        "instances": [
+          {
+            "slug": "index",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "blog",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "privacy-policy",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "category-everything",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "category-uncategorized",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "category-software",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2024-02-value-created-by-developers",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2021-07-the-truth-about-aem-run-modes",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "category-software-osgi",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2017-08-osgi-declarative-services-configuration-binding",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2020-07-guide-on-using-osgi-configurations",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2015-11-osgi-components-simply-simple-part-iii",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2015-08-osgi-components-simply-simple-part-ii",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2017-07-new-osgi-configuration-features-r7",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2016-09-http-whiteboard-simply-simple-part-ii",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2015-08-osgi-components-simply-simple-part-i",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2016-10-http-whiteboard-simply-simple-part-iii",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2016-05-building-osgi-bundles-with-apache-maven",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2016-04-http-whiteboard-simply-simple-part-i",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2016-04-example-osgi-web-application",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2016-05-migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2015-04-hello-world",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2011-04-apache-axis2-book",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2009-11-increasing-interest-in-jcr-and-apache-sling",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2009-04-rapid-development-with-apache-sling-using-an-ide",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2009-04-jax-apache-sling-and-accidental-complexity",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2009-03-portals-meetup-at-apachecon-europe",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2009-03-conference-season-apachecon-europe-and-jax",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2009-02-getting-started-with-portal-servers-and-spec-compliance",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2009-01-portlets-and-osgi",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2008-11-heading-east",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2008-11-heading-west",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2008-11-osgiapachecon",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2008-11-what-happened-to-the-springframework-site",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2008-11-sling-polo-shirts-arrived",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2008-11-interesting-session-in-new-orleans",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2008-10-first-steps-with-jquery",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2008-10-ray-wilson-live-in-paderborn",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2008-08-happy-birthday-madonna",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2008-04-cool-eclipse-plugin-mvn-indexer",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2008-04-innovation-at-apache-the-fun-is-back-with-apache-sling",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2008-04-cocoon-22-is-released",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2008-04-thanks-to-apache-commons-support-for-osgi",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2008-04-apachecon-eu-in-amsterdam",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2007-12-cocoon-portal-and-jcr",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2007-12-conference-season-2008",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2007-12-back-in-paderborn",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2007-11-leaving-orlando",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2007-11-orlando-florida",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2007-11-portals-track-at-apachecon",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2007-11-apache-ibatis-and-apache-sanselan-session",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2007-11-jcr-in-action-session",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2007-11-creating-osgi-services-with-the-apache-felix-scr-plugin",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2007-11-the-musical-box-live-in-hamburg",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2007-11-arrived-in-atlanta-for-apachecon",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2007-10-garbage-collection-in-objective-c",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2007-10-new-projects-apache-sling-and-apache-sanselan",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2007-10-cocoon-gettogether-2007-in-rome",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2007-08-maven-release-plugin-removes-headers",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2007-07-portlet-api-20-and-jcr-20-public-review",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2007-07-apache-felix-100-released",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2007-07-movable-type-sucks-wordpress-rocks",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2007-07-excalibur-sourceresolver-released",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2007-06-maven-207-is-out",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2007-06-turn-it-on-again-singing-in-the-rain",
+            "selector": "#colophon"
+          },
+          {
+            "slug": "2007-06-silence-is-over",
+            "selector": "#colophon"
+          }
+        ],
+        "status": "candidate"
+      },
+      {
+        "id": "candidate-post-entry",
+        "name": "post-entry",
+        "slots": [
+          {
+            "name": "title",
+            "type": "link"
+          },
+          {
+            "name": "content",
+            "type": "richtext"
+          },
+          {
+            "name": "entry-meta",
+            "type": "text"
+          }
+        ],
+        "instances": [
+          {
+            "slug": "blog",
+            "selector": "article.post"
+          },
+          {
+            "slug": "category-everything",
+            "selector": "article.post"
+          },
+          {
+            "slug": "category-uncategorized",
+            "selector": "article.post"
+          },
+          {
+            "slug": "category-software",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2024-02-value-created-by-developers",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2021-07-the-truth-about-aem-run-modes",
+            "selector": "article.post"
+          },
+          {
+            "slug": "category-software-osgi",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2017-08-osgi-declarative-services-configuration-binding",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2020-07-guide-on-using-osgi-configurations",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2015-11-osgi-components-simply-simple-part-iii",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2015-08-osgi-components-simply-simple-part-ii",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2017-07-new-osgi-configuration-features-r7",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2016-09-http-whiteboard-simply-simple-part-ii",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2015-08-osgi-components-simply-simple-part-i",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2016-10-http-whiteboard-simply-simple-part-iii",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2016-05-building-osgi-bundles-with-apache-maven",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2016-04-http-whiteboard-simply-simple-part-i",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2016-04-example-osgi-web-application",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2016-05-migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2015-04-hello-world",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2011-04-apache-axis2-book",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2009-11-increasing-interest-in-jcr-and-apache-sling",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2009-04-rapid-development-with-apache-sling-using-an-ide",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2009-04-jax-apache-sling-and-accidental-complexity",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2009-03-portals-meetup-at-apachecon-europe",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2009-03-conference-season-apachecon-europe-and-jax",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2009-02-getting-started-with-portal-servers-and-spec-compliance",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2009-01-portlets-and-osgi",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2008-11-heading-east",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2008-11-heading-west",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2008-11-osgiapachecon",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2008-11-what-happened-to-the-springframework-site",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2008-11-sling-polo-shirts-arrived",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2008-11-interesting-session-in-new-orleans",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2008-10-first-steps-with-jquery",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2008-10-ray-wilson-live-in-paderborn",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2008-08-happy-birthday-madonna",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2008-04-cool-eclipse-plugin-mvn-indexer",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2008-04-innovation-at-apache-the-fun-is-back-with-apache-sling",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2008-04-cocoon-22-is-released",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2008-04-thanks-to-apache-commons-support-for-osgi",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2008-04-apachecon-eu-in-amsterdam",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2007-12-cocoon-portal-and-jcr",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2007-12-conference-season-2008",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2007-12-back-in-paderborn",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2007-11-leaving-orlando",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2007-11-orlando-florida",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2007-11-portals-track-at-apachecon",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2007-11-apache-ibatis-and-apache-sanselan-session",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2007-11-jcr-in-action-session",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2007-11-creating-osgi-services-with-the-apache-felix-scr-plugin",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2007-11-the-musical-box-live-in-hamburg",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2007-11-arrived-in-atlanta-for-apachecon",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2007-10-garbage-collection-in-objective-c",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2007-10-new-projects-apache-sling-and-apache-sanselan",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2007-10-cocoon-gettogether-2007-in-rome",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2007-08-maven-release-plugin-removes-headers",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2007-07-portlet-api-20-and-jcr-20-public-review",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2007-07-apache-felix-100-released",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2007-07-movable-type-sucks-wordpress-rocks",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2007-07-excalibur-sourceresolver-released",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2007-06-maven-207-is-out",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2007-06-turn-it-on-again-singing-in-the-rain",
+            "selector": "article.post"
+          },
+          {
+            "slug": "2007-06-silence-is-over",
+            "selector": "article.post"
+          }
+        ],
+        "status": "candidate"
+      },
+      {
+        "id": "candidate-code-block",
+        "name": "code-block",
+        "slots": [
+          {
+            "name": "code",
+            "type": "code"
+          }
+        ],
+        "instances": [
+          {
+            "slug": "2015-08-osgi-components-simply-simple-part-i",
+            "selector": ".syntaxhighlighter"
+          },
+          {
+            "slug": "2015-08-osgi-components-simply-simple-part-ii",
+            "selector": ".syntaxhighlighter"
+          },
+          {
+            "slug": "2015-11-osgi-components-simply-simple-part-iii",
+            "selector": ".syntaxhighlighter"
+          },
+          {
+            "slug": "2016-04-http-whiteboard-simply-simple-part-i",
+            "selector": ".syntaxhighlighter"
+          },
+          {
+            "slug": "2016-05-building-osgi-bundles-with-apache-maven",
+            "selector": ".syntaxhighlighter"
+          },
+          {
+            "slug": "2016-09-http-whiteboard-simply-simple-part-ii",
+            "selector": ".syntaxhighlighter"
+          },
+          {
+            "slug": "2016-10-http-whiteboard-simply-simple-part-iii",
+            "selector": ".syntaxhighlighter"
+          },
+          {
+            "slug": "2020-07-guide-on-using-osgi-configurations",
+            "selector": ".syntaxhighlighter"
+          },
+          {
+            "slug": "blog",
+            "selector": ".syntaxhighlighter"
+          },
+          {
+            "slug": "category-everything",
+            "selector": ".syntaxhighlighter"
+          },
+          {
+            "slug": "category-software-osgi",
+            "selector": ".syntaxhighlighter"
+          },
+          {
+            "slug": "category-software",
+            "selector": ".syntaxhighlighter"
+          }
+        ],
+        "status": "candidate",
+        "note": "SyntaxHighlighter Evolved (shCore.css + shThemeDefault.css); JS-rendered table of numbered lines"
+      },
+      {
+        "id": "candidate-post-nav",
+        "name": "post-navigation",
+        "slots": [
+          {
+            "name": "previous",
+            "type": "link"
+          },
+          {
+            "name": "next",
+            "type": "link"
+          }
+        ],
+        "instances": [
+          {
+            "slug": "2024-02-value-created-by-developers",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2021-07-the-truth-about-aem-run-modes",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2017-08-osgi-declarative-services-configuration-binding",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2020-07-guide-on-using-osgi-configurations",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2015-11-osgi-components-simply-simple-part-iii",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2015-08-osgi-components-simply-simple-part-ii",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2017-07-new-osgi-configuration-features-r7",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2016-09-http-whiteboard-simply-simple-part-ii",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2015-08-osgi-components-simply-simple-part-i",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2016-10-http-whiteboard-simply-simple-part-iii",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2016-05-building-osgi-bundles-with-apache-maven",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2016-04-http-whiteboard-simply-simple-part-i",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2016-04-example-osgi-web-application",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2016-05-migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2015-04-hello-world",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2011-04-apache-axis2-book",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2009-11-increasing-interest-in-jcr-and-apache-sling",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2009-04-rapid-development-with-apache-sling-using-an-ide",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2009-04-jax-apache-sling-and-accidental-complexity",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2009-03-portals-meetup-at-apachecon-europe",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2009-03-conference-season-apachecon-europe-and-jax",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2009-02-getting-started-with-portal-servers-and-spec-compliance",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2009-01-portlets-and-osgi",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2008-11-heading-east",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2008-11-heading-west",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2008-11-osgiapachecon",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2008-11-what-happened-to-the-springframework-site",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2008-11-sling-polo-shirts-arrived",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2008-11-interesting-session-in-new-orleans",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2008-10-first-steps-with-jquery",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2008-10-ray-wilson-live-in-paderborn",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2008-08-happy-birthday-madonna",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2008-04-cool-eclipse-plugin-mvn-indexer",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2008-04-innovation-at-apache-the-fun-is-back-with-apache-sling",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2008-04-cocoon-22-is-released",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2008-04-thanks-to-apache-commons-support-for-osgi",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2008-04-apachecon-eu-in-amsterdam",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2007-12-cocoon-portal-and-jcr",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2007-12-conference-season-2008",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2007-12-back-in-paderborn",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2007-11-leaving-orlando",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2007-11-orlando-florida",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2007-11-portals-track-at-apachecon",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2007-11-apache-ibatis-and-apache-sanselan-session",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2007-11-jcr-in-action-session",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2007-11-creating-osgi-services-with-the-apache-felix-scr-plugin",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2007-11-the-musical-box-live-in-hamburg",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2007-11-arrived-in-atlanta-for-apachecon",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2007-10-garbage-collection-in-objective-c",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2007-10-new-projects-apache-sling-and-apache-sanselan",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2007-10-cocoon-gettogether-2007-in-rome",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2007-08-maven-release-plugin-removes-headers",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2007-07-portlet-api-20-and-jcr-20-public-review",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2007-07-apache-felix-100-released",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2007-07-movable-type-sucks-wordpress-rocks",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2007-07-excalibur-sourceresolver-released",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2007-06-maven-207-is-out",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2007-06-turn-it-on-again-singing-in-the-rain",
+            "selector": "nav.nav-single"
+          },
+          {
+            "slug": "2007-06-silence-is-over",
+            "selector": "nav.nav-single"
+          }
+        ],
+        "status": "candidate"
+      },
+      {
+        "id": "candidate-archive-nav",
+        "name": "archive-navigation",
+        "slots": [
+          {
+            "name": "older",
+            "type": "link"
+          },
+          {
+            "name": "newer",
+            "type": "link"
+          }
+        ],
+        "instances": [
+          {
+            "slug": "blog",
+            "selector": "#nav-below"
+          },
+          {
+            "slug": "category-everything",
+            "selector": "#nav-below"
+          },
+          {
+            "slug": "category-uncategorized",
+            "selector": "#nav-below"
+          },
+          {
+            "slug": "category-software",
+            "selector": "#nav-below"
+          },
+          {
+            "slug": "category-software-osgi",
+            "selector": "#nav-below"
+          }
+        ],
+        "status": "candidate"
+      }
+    ],
+    "breakpoints": {
+      "containerMaxWidth": "1040px",
+      "probeWidth": 2560,
+      "shellMaxWidth": "1040px",
+      "caps": [
+        {
+          "kind": "shell",
+          "px": 1040,
+          "via": "max-width",
+          "selector": "#page",
+          "pages": [
+            "https://blog.osoco.de/",
+            "https://blog.osoco.de/blog/",
+            "https://blog.osoco.de/privacy-policy/",
+            "https://blog.osoco.de/2021/07/the-truth-about-aem-run-modes/"
+          ]
+        },
+        {
+          "kind": "content",
+          "px": 625,
+          "via": "fixed",
+          "selector": "#primary",
+          "pages": [
+            "https://blog.osoco.de/blog/"
+          ]
+        },
+        {
+          "kind": "module",
+          "px": 1496,
+          "via": "fixed",
+          "selector": "table > tbody > tr > td.code",
+          "pages": [
+            "https://blog.osoco.de/blog/"
+          ]
+        },
+        {
+          "kind": "module",
+          "px": 840,
+          "via": "fixed",
+          "selector": "table > tbody > tr > td.code",
+          "pages": [
+            "https://blog.osoco.de/blog/"
+          ]
+        },
+        {
+          "kind": "module",
+          "px": 616,
+          "via": "fixed",
+          "selector": "article.post.type-post > div.entry-content > p > a",
+          "pages": [
+            "https://blog.osoco.de/blog/",
+            "https://blog.osoco.de/privacy-policy/",
+            "https://blog.osoco.de/2021/07/the-truth-about-aem-run-modes/"
+          ]
+        },
+        {
+          "kind": "module",
+          "px": 589,
+          "via": "fixed",
+          "selector": "article.post.type-post > div.entry-content > ul.wp-block-list > li",
+          "pages": [
+            "https://blog.osoco.de/blog/"
+          ]
+        },
+        {
+          "kind": "module",
+          "px": 547,
+          "via": "fixed",
+          "selector": "table > tbody > tr > td.code",
+          "pages": [
+            "https://blog.osoco.de/blog/"
+          ]
+        },
+        {
+          "kind": "module",
+          "px": 523,
+          "via": "fixed",
+          "selector": "table > tbody > tr > td.code",
+          "pages": [
+            "https://blog.osoco.de/blog/"
+          ]
+        },
+        {
+          "kind": "module",
+          "px": 250,
+          "via": "fixed",
+          "selector": "#secondary",
+          "pages": [
+            "https://blog.osoco.de/blog/",
+            "https://blog.osoco.de/privacy-policy/",
+            "https://blog.osoco.de/2021/07/the-truth-about-aem-run-modes/"
+          ]
+        }
+      ],
+      "modules": [
+        {
+          "url": "https://blog.osoco.de/",
+          "section": 0,
+          "selector": "#page > a.screen-reader-text.skip-link",
+          "px": null
+        },
+        {
+          "url": "https://blog.osoco.de/",
+          "section": 1,
+          "selector": "#masthead",
+          "px": null
+        },
+        {
+          "url": "https://blog.osoco.de/",
+          "section": 2,
+          "selector": "#main",
+          "px": null
+        },
+        {
+          "url": "https://blog.osoco.de/",
+          "section": 3,
+          "selector": "#colophon",
+          "px": null
+        },
+        {
+          "url": "https://blog.osoco.de/blog/",
+          "section": 0,
+          "selector": "#page > a.screen-reader-text.skip-link",
+          "px": null
+        },
+        {
+          "url": "https://blog.osoco.de/blog/",
+          "section": 1,
+          "selector": "#masthead",
+          "px": null
+        },
+        {
+          "url": "https://blog.osoco.de/blog/",
+          "section": 2,
+          "selector": "#main",
+          "px": 1496
+        },
+        {
+          "url": "https://blog.osoco.de/blog/",
+          "section": 3,
+          "selector": "#colophon",
+          "px": null
+        },
+        {
+          "url": "https://blog.osoco.de/privacy-policy/",
+          "section": 0,
+          "selector": "#page > a.screen-reader-text.skip-link",
+          "px": null
+        },
+        {
+          "url": "https://blog.osoco.de/privacy-policy/",
+          "section": 1,
+          "selector": "#masthead",
+          "px": null
+        },
+        {
+          "url": "https://blog.osoco.de/privacy-policy/",
+          "section": 2,
+          "selector": "#main",
+          "px": 625
+        },
+        {
+          "url": "https://blog.osoco.de/privacy-policy/",
+          "section": 3,
+          "selector": "#colophon",
+          "px": null
+        },
+        {
+          "url": "https://blog.osoco.de/2021/07/the-truth-about-aem-run-modes/",
+          "section": 0,
+          "selector": "#page > a.screen-reader-text.skip-link",
+          "px": null
+        },
+        {
+          "url": "https://blog.osoco.de/2021/07/the-truth-about-aem-run-modes/",
+          "section": 1,
+          "selector": "#masthead",
+          "px": null
+        },
+        {
+          "url": "https://blog.osoco.de/2021/07/the-truth-about-aem-run-modes/",
+          "section": 2,
+          "selector": "#main",
+          "px": 625
+        },
+        {
+          "url": "https://blog.osoco.de/2021/07/the-truth-about-aem-run-modes/",
+          "section": 3,
+          "selector": "#colophon",
+          "px": null
+        }
+      ],
+      "capRegister": [
+        "contentMaxWidth differs between archetypes: 1040 (https://blog.osoco.de/), 625 (https://blog.osoco.de/blog/), 1040 (https://blog.osoco.de/privacy-policy/), 1040 (https://blog.osoco.de/2021/07/the-truth-about-aem-run-modes/) — decide per template in the inconsistency register",
+        "module cap 1496px on a single section (table > tbody > tr > td.code, https://blog.osoco.de/blog/) — intent or mistake? register it"
+      ],
+      "capProvenance": {
+        "writtenBy": "skills/replica/scripts/cap-probe.mjs",
+        "writtenAt": "2026-10-12T18:17:17.020Z",
+        "baseWidth": 1440,
+        "urls": [
+          "https://blog.osoco.de/",
+          "https://blog.osoco.de/blog/",
+          "https://blog.osoco.de/privacy-policy/",
+          "https://blog.osoco.de/2021/07/the-truth-about-aem-run-modes/"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "tiny-text",
+        "value": "*",
+        "files": [
+          "stardust/current/brand-review.html"
+        ],
+        "createdAt": "2026-10-12T18:18:40.830Z",
+        "reason": "agent: brand review documents the source site's own 11px widget-title/source-caption spec (replica, design kept as captured)"
+      },
+      {
+        "rule": "overused-font",
+        "value": "open sans",
+        "createdAt": "2026-10-12T18:45:37.460Z",
+        "reason": "agent: same-design replica — Open Sans is the source site's own captured typeface (stardust/current/css/fonts.css); changing it would violate the replica contract"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "media/osoco/pet-300x169.jpg": {
+    "status": "uploaded",
+    "file": "stardust/.work/deploy/media-osoco/pet-300x169.jpg",
+    "size": 15916,
+    "sha256": "d3f88f8f7f3d257219abce7d85ae3bac00055b064c2d44d434b8e1eada9dd86f",
+    "contentType": "image/jpeg",
+    "source": null,
+    "contentUrl": "https://content.da.live/aemcoder/18fbe2a0/media/osoco/pet-300x169.jpg",
+    "httpStatus": 201,
+    "attempts": 1,
+    "ts": "2026-10-12T19:01:37.998Z"
+  }
+}

@@ -2,19 +2,31 @@ import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 /**
- * loads and decorates the footer
+ * Colophon (site-info): the /footer document's paragraphs move into `.site-info`; a decorative
+ * separator (rendered as "/" by CSS, like the source) sits between consecutive links.
  * @param {Element} block The footer block element
  */
 export default async function decorate(block) {
-  // load footer as fragment
+  if (block.querySelector(':scope > .site-info')) return;
   const footerMeta = getMetadata('footer');
   const footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
   const fragment = await loadFragment(footerPath);
+  if (!fragment) return;
 
-  // decorate footer DOM
+  const info = document.createElement('div');
+  info.className = 'site-info';
+  fragment.querySelectorAll('.default-content-wrapper > *').forEach((el) => info.append(el));
+  info.querySelectorAll('a').forEach((a) => {
+    const next = a.nextElementSibling;
+    if (next && next.tagName === 'A') {
+      const sep = document.createElement('span');
+      sep.className = 'sep';
+      sep.setAttribute('role', 'separator');
+      sep.setAttribute('aria-hidden', 'true');
+      a.after(sep);
+    }
+  });
+
   block.textContent = '';
-  const footer = document.createElement('div');
-  while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
-
-  block.append(footer);
+  block.append(info);
 }

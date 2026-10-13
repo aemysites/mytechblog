@@ -1,0 +1,236 @@
+{
+ "tool": "chrome-explore",
+ "url": "https://main--18fbe2a0--aemcoder.aem.page/privacy-policy",
+ "at": "2026-10-12T19:15:31.460Z",
+ "shots": "stardust/.work/chrome/header-build",
+ "widths": {
+  "360": {
+   "root": "body>header",
+   "controls": [
+    {
+     "name": "A Matter of Unimportance",
+     "key": "a matter of unimportance",
+     "role": "link",
+     "kind": "link",
+     "sel": "#a-matter-of-unimportance>a",
+     "href": "https://main--18fbe2a0--aemcoder.aem.page/",
+     "expanded": null,
+     "rect": [
+      24,
+      24,
+      312,
+      62
+     ],
+     "actions": {}
+    },
+    {
+     "name": "Menu",
+     "key": "menu",
+     "role": "toggle",
+     "kind": "drawer",
+     "sel": "body>header>div>nav>button",
+     "expanded": "false",
+     "rect": [
+      154,
+      148,
+      52,
+      30
+     ],
+     "actions": {
+      "click": {
+       "opened": true,
+       "hidden": 0,
+       "panel": {
+        "links": [
+         {
+          "text": "Home",
+          "href": "https://main--18fbe2a0--aemcoder.aem.page/"
+         },
+         {
+          "text": "Blog",
+          "href": "https://main--18fbe2a0--aemcoder.aem.page/blog"
+         },
+         {
+          "text": "Privacy Policy",
+          "href": "https://main--18fbe2a0--aemcoder.aem.page/privacy-policy"
+         }
+        ],
+        "headings": [],
+        "images": 0,
+        "inputs": [],
+        "buttons": [],
+        "options": 0,
+        "rect": [
+         24,
+         177,
+         312,
+         123
+        ]
+       },
+       "expanded": "true",
+       "focus": "trigger",
+       "scrollLock": false,
+       "motion": [],
+       "shot": "360-001-Menu-click.png"
+      },
+      "key": {
+       "opened": true,
+       "hidden": 0,
+       "panel": {
+        "links": [
+         {
+          "text": "Home",
+          "href": "https://main--18fbe2a0--aemcoder.aem.page/"
+         },
+         {
+          "text": "Blog",
+          "href": "https://main--18fbe2a0--aemcoder.aem.page/blog"
+         },
+         {
+          "text": "Privacy Policy",
+          "href": "https://main--18fbe2a0--aemcoder.aem.page/privacy-policy"
+         }
+        ],
+        "headings": [],
+        "images": 0,
+        "inputs": [],
+        "buttons": [],
+        "options": 0,
+        "rect": [
+         24,
+         177,
+         312,
+         123
+        ]
+       },
+       "expanded": "true",
+       "focus": "trigger",
+       "scrollLock": false,
+       "motion": [],
+       "shot": "360-002-Menu-key.png",
+       "tabReachesPanel": true
+      }
+     },
+     "close": {
+      "escape": false,
+      "focusReturn": false,
+      "outside": false,
+      "toggle": true
+     },
+     "children": []
+    }
+   ],
+   "scroll": [
+    {
+     "at": "top",
+     "y": 0,
+     "top": 0,
+     "height": 201,
+     "position": "static",
+     "inView": true
+    },
+    {
+     "at": "down",
+     "y": 1000,
+     "top": -1000,
+     "height": 201,
+     "position": "static",
+     "inView": false
+    },
+    {
+     "at": "up",
+     "y": 700,
+     "top": -700,
+     "height": 201,
+     "position": "static",
+     "inView": false
+    },
+    {
+     "at": "back",
+     "y": 0,
+     "top": 0,
+     "height": 201,
+     "position": "static",
+     "inView": true
+    }
+   ],
+   "states": 2,
+   "truncated": null,
+   "loads": 6
+  },
+  "1440": {
+   "root": "body>header",
+   "controls": [
+    {
+     "name": "A Matter of Unimportance",
+     "key": "a matter of unimportance",
+     "role": "link",
+     "kind": "link",
+     "sel": "#a-matter-of-unimportance>a",
+     "href": "https://main--18fbe2a0--aemcoder.aem.page/",
+     "expanded": null,
+     "rect": [
+      240,
+      72,
+      342,
+      48
+     ],
+     "actions": {}
+    },
+    {
+     "name": "Home",
+     "key": "home",
+     "role": "link",
+     "kind": "link",
+     "sel": "#site-menu>ul>li:nth-of-type(1)>a",
+     "href": "https://main--18fbe2a0--aemcoder.aem.page/",
+     "expanded": null,
+     "rect": [
+      240,
+      169,
+      36,
+      44
+     ],
+     "actions": {}
+    },
+    {
+     "name": "Blog",
+     "key": "blog",
+     "role": "link",
+     "kind": "link",
+     "sel": "#site-menu>ul>li:nth-of-type(2)>a",
+     "href": "https://main--18fbe2a0--aemcoder.aem.page/blog",
+     "expanded": null,
+     "rect": [
+      316,
+      169,
+      32,
+      44
+     ],
+     "actions": {}
+    },
+    {
+     "name": "Privacy Policy",
+     "key": "privacy policy",
+     "role": "link",
+     "kind": "link",
+     "sel": "#site-menu>ul>li:nth-of-type(3)>a",
+     "href": "https://main--18fbe2a0--aemcoder.aem.page/privacy-policy",
+     "expanded": null,
+     "rect": [
+      391,
+      169,
+      97,
+      44
+     ],
+     "actions": {}
+    }
+   ],
+   "scroll": [],
+   "states": 0,
+   "truncated": null,
+   "loads": 1
+  }
+ },
+ "probe": "matter"
+}

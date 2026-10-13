@@ -1,0 +1,33 @@
+version: 1
+
+indices:
+  default:
+    include:
+      - '/**'
+    exclude:
+      - '/nav'
+      - '/footer'
+      - '/sidebar'
+      - '/search'
+      - '/blog'
+      - '/category/**'
+    target: /query-index.json
+    properties:
+      title:
+        select: main h1
+        value: textContent(el)
+      description:
+        select: head > meta[name="description"]
+        value: attribute(el, "content")
+      meta:
+        select: main .entry-meta
+        value: innerHTML(el)
+      text:
+        select: main > div:first-of-type
+        value: textContent(el)
+      template:
+        select: head > meta[name="template"]
+        value: attribute(el, "content")
+      lastModified:
+        select: none
+        value: parseTimestamp(headers["last-modified"], "ddd, DD MMM YYYY hh:mm:ss GMT")

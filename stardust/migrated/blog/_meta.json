@@ -1,0 +1,489 @@
+{
+  "slug": "blog",
+  "type": "listing",
+  "renderBranch": "A",
+  "template": null,
+  "modules": [
+    "masthead",
+    "sidebar-widgets",
+    "colophon",
+    "post-entry",
+    "code-block",
+    "archive-navigation"
+  ],
+  "slotsFilled": [
+    "entry",
+    "entry",
+    "entry",
+    "entry",
+    "entry",
+    "entry",
+    "entry",
+    "entry",
+    "entry",
+    "entry",
+    "nav-below"
+  ],
+  "canonShas": {
+    "header": "b32540176122",
+    "footer": "3c5fac23b42f",
+    "css": "4f7dca61ef71"
+  },
+  "deviations": [],
+  "migrationDecisions": [],
+  "metadata": {
+    "title": "Blog - A Matter of Unimportance",
+    "description": null,
+    "canonical": null,
+    "lang": "en-US"
+  },
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Blog - A Matter of Unimportance",
+    "url": "https://blog.osoco.de/blog/"
+  },
+  "migratedAt": "2026-10-12T18:46:59Z",
+  "designMdSha": "bae0208daf50",
+  "designJsonSha": "d9694956c490",
+  "sourceCurrentSha": "32cc2dbf1c45",
+  "sourceProposedSha": "17b7d7c63077",
+  "fidelityTier": "archetype",
+  "archetypeSource": null,
+  "archetypeSha": null,
+  "variants": [],
+  "gatesPassed": [],
+  "gateEvidence": {},
+  "contentDeviations": [
+    {
+      "kind": "heading-level",
+      "source": "10 entry titles as <h1>; content <h1> in entries 4-9",
+      "target": "first entry title <h1>, entry titles 2-10 <h2>; entries with content <h1> authored one level down (Style demoted)",
+      "reason": "delivery contract: exactly one <h1> per page (delivery-lint P1); entry-header and .section.demoted CSS keep sizes identical"
+    }
+  ],
+  "assetsBundled": 4,
+  "missingAssets": [],
+  "brokenInternalLinks": [
+    {
+      "href": "https://blog.osoco.de/2024/02/value-created-by-developers/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/everything/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/uncategorized/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/tag/developer/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/tag/fun/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/tag/value/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2024/02/value-created-by-developers/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/author/cziegeler/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/osgi/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/tag/aem/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/tag/osgi/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/author/cziegeler/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2020/07/guide-on-using-osgi-configurations/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/2015/08/osgi-components-simply-simple-part-i/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/2017/07/new-osgi-configuration-features-r7/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/2017/08/osgi-declarative-services-configuration-binding/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/everything/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/osgi/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/tag/osgi/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2020/07/guide-on-using-osgi-configurations/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/author/cziegeler/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2017/08/osgi-declarative-services-configuration-binding/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/2015/08/osgi-components-simply-simple-part-ii/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/osgi/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/2017/08/osgi-declarative-services-configuration-binding/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/author/cziegeler/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2017/07/new-osgi-configuration-features-r7/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/2015/08/osgi-components-simply-simple-part-i/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/osgi/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/2017/07/new-osgi-configuration-features-r7/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/author/cziegeler/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2016/10/http-whiteboard-simply-simple-part-iii/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "http://blog.osoco.de/2016/09/http-whiteboard-simply-simple-part-ii/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/osgi/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/2016/10/http-whiteboard-simply-simple-part-iii/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/author/cziegeler/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2016/09/http-whiteboard-simply-simple-part-ii/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/osgi/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/2016/09/http-whiteboard-simply-simple-part-ii/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/author/cziegeler/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2016/05/building-osgi-bundles-with-apache-maven/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/osgi/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/2016/05/building-osgi-bundles-with-apache-maven/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/author/cziegeler/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2016/05/migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "http://blog.osoco.de/2015/08/osgi-components-simply-simple-part-i/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "http://blog.osoco.de/2015/08/osgi-components-simply-simple-part-ii/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "http://blog.osoco.de/2015/11/osgi-components-simply-simple-part-iii/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/osgi/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/2016/05/migrating-from-the-apache-felix-scr-annotations-to-the-osgi-declarative-services-annotations/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/author/cziegeler/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2016/04/example-osgi-web-application/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/osgi/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/2016/04/example-osgi-web-application/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/author/cziegeler/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/blog/page/2/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2024/02/value-created-by-developers/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/2020/07/guide-on-using-osgi-configurations/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/2017/08/osgi-declarative-services-configuration-binding/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/2017/07/new-osgi-configuration-features-r7/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/2024/02/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2021/07/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2020/07/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2017/08/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2017/07/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2016/10/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2016/09/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2016/05/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2016/04/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2015/11/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2015/08/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2015/04/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2011/04/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2009/11/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2009/04/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2009/03/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2009/02/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2009/01/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2008/11/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2008/10/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2008/08/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2008/04/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2007/12/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2007/11/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2007/10/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2007/08/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2007/07/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/2007/06/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/category/everything/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/osgi/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/software/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/category/uncategorized/",
+      "reason": "in-inventory-not-migrated"
+    },
+    {
+      "href": "https://blog.osoco.de/wp-login.php",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/feed/",
+      "reason": "not-in-inventory"
+    },
+    {
+      "href": "https://blog.osoco.de/comments/feed/",
+      "reason": "not-in-inventory"
+    }
+  ],
+  "outputPath": "blog/index.html",
+  "outputPathDefault": null,
+  "sidecar": "blog/_meta.json",
+  "driverVersion": "1"
+}
